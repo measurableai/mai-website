@@ -15,7 +15,11 @@ const Layout = ({ children, headerMode }) => {
         <Link to="/">Home</Link>
       </header>
       <main>{children}</main>
-      <footer>
+      <footer
+        style={{
+          textAlign: "center",
+        }}
+      >
         <Link to="/press">Press</Link>
       </footer>
     </>
