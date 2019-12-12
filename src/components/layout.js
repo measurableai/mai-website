@@ -1,19 +1,31 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Global, css } from "@emotion/core"
 
 import "normalize.css"
+
+import Header from "../components/Header"
+
+const global = css`
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+  }
+`
 
 const Layout = ({ children, headerMode }) => {
   return (
     <>
-      <header
-        style={{
-          position: "absolute",
-          color: headerMode === "light" ? "white" : "black",
-        }}
-      >
-        <Link to="/">Home</Link>
-      </header>
+      <Global styles={global} />
+      <Header />
       <main>{children}</main>
       <footer
         style={{

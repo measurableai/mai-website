@@ -8,7 +8,9 @@ const theme = {
     "linear-gradient(90deg,rgba(0, 3, 29, 100),rgba(0, 3, 28, 53) 50%,rgba(0, 3, 24, 0))",
     "linear-gradient(-90deg,#B3FFCB,#FFFFFF 50%)",
     "linear-gradient(90deg,#B3FFCB,#FFFFFF 50%)",
+    "linear-gradient(45deg,#A665FF,#68FF92)",
   ],
+  zIndices: [100],
 }
 // aliases
 theme.colors.purples.dark = theme.colors.purples[0]
@@ -20,5 +22,7 @@ theme.linearGradients.purpleLightToDark = theme.linearGradients[0]
 theme.linearGradients.purpleDarkToLight = theme.linearGradients[1]
 theme.linearGradients.greenLightToDark = theme.linearGradients[2]
 theme.linearGradients.greenDarkToLight = theme.linearGradients[3]
+theme.linearGradients.purpleToGreen = theme.linearGradients[4]
+theme.zIndices.header = theme.zIndices[0]
 
 export default theme
