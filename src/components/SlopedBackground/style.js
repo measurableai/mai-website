@@ -1,7 +1,6 @@
-import React from "react"
 import { css } from "@emotion/core"
 
-const background = css`
+export const background = css`
   min-height: 450px;
   width: 100%;
   position: relative;
@@ -23,24 +22,26 @@ const background = css`
   }
 `
 
-export const Background = ({
-  children,
-  className,
-  slopedBackgroundColor,
-  slopedBackgroundImage,
-}) => (
-  <div
-    css={css`
-      ${background}
-      &::before {
-        ${slopedBackgroundImage &&
-          `background-image: ${slopedBackgroundImage};`}
-        ${slopedBackgroundColor &&
-          `background-color: ${slopedBackgroundColor};`}
-      }
-    `}
-    className={className}
-  >
-    {children}
-  </div>
-)
+export const navigation = css`
+  position: absolute !important;
+  height: 80px;
+  top: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const line = color => css`
+  width: 1px;
+  transform: scaleX(0.5);
+  height: 0px;
+  transition: height 0.3s;
+  background-color: ${color};
+`
+
+export const cirlce = color => css`
+  width: 9px;
+  height: 9px;
+  border: solid 0.5px ${color};
+  border-radius: 10px;
+`

@@ -47,16 +47,19 @@ const IndexPage = () => {
         <p>Section 4</p>
       </SlopedSection>
       <SlopedSection
+        mode="dark"
         slopedBackgroundImage={theme.linearGradients.greenLightToDark}
       >
         <p>Section 5</p>
       </SlopedSection>
       <SlopedSection
+        mode="dark"
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
         <p>Section 6</p>
       </SlopedSection>
       <SlopedSection
+        mode="dark"
         css={lastSection}
         slopedBackgroundColor={theme.colors.greens.dark}
       >
