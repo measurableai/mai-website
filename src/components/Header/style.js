@@ -19,5 +19,10 @@ export const content = theme => css`
 `
 
 export const textButtonMargin = css`
-  margin-left: 3rem;
+  margin-left: 2rem;
+`
+
+export const buttonsContainter = css`
+  display: flex;
+  align-items: center;
 `
