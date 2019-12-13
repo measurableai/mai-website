@@ -3,16 +3,19 @@ import { Link } from "gatsby"
 import { Global, css } from "@emotion/core"
 
 import "normalize.css"
+import "typeface-roboto"
+import "typeface-barlow-condensed"
 
 import Header from "../components/Header"
 
-const global = css`
+const global = theme => css`
   html {
     font-size: 62.5%;
   }
 
   body {
     font-size: 1.6rem;
+    font-family: ${theme.fonts.body};
   }
 
   button {
