@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 import FreeTrialButton from "../../components/FreeTrialButton"
 import TextButton from "../../components/TextButton"
@@ -12,15 +13,19 @@ import {
   buttonsContainter,
 } from "./style"
 
-const Header = ({ children, mode, ...props }) => (
+const Header = () => (
   <div css={container}>
     <div css={content}>
       <img width={218} height={30} src={logo} alt="Measurable AI" />
       <div css={buttonsContainter}>
         <FreeTrialButton />
-        <TextButton css={textButtonMargin}>Data Insights</TextButton>
+        <TextButton css={textButtonMargin}>
+          <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
+        </TextButton>
         <LanguageDropdown css={textButtonMargin} />
-        <TextButton css={textButtonMargin}>Login</TextButton>
+        <TextButton css={textButtonMargin}>
+          <FormattedMessage id="login" defaultMessage="Login" />
+        </TextButton>
       </div>
     </div>
   </div>

@@ -1,17 +1,19 @@
 import React, { useState, useMemo, useCallback } from "react"
 import Select, { components } from "react-select"
 import { useTheme } from "emotion-theming"
+import { useIntl, changeLocale } from "gatsby-plugin-intl"
 
 import { singleValue, optionIcon, arrowDown } from "./style"
 import LanguageIconWhite from "../../assets/language-icon-white.svg"
 import LanguageEngIcon from "../../assets/language-eng.svg"
 import LanguageTCIcon from "../../assets/language-tc.svg"
 import LanguageSCIcon from "../../assets/language-sc.svg"
+import localeEnum from "../enums/locale"
 
 const options = [
-  { value: "chocolate", label: "ENG", Icon: LanguageEngIcon },
-  { value: "strawberry", label: "繁體", Icon: LanguageTCIcon },
-  { value: "vanilla", label: "简体", Icon: LanguageSCIcon },
+  { value: localeEnum.EN_US, label: "ENG", Icon: LanguageEngIcon },
+  { value: localeEnum.ZH_HK, label: "繁體", Icon: LanguageTCIcon },
+  { value: localeEnum.ZH_CN, label: "简体", Icon: LanguageSCIcon },
 ]
 
 const SingleValue = ({ children, ...props }) => (
@@ -40,7 +42,10 @@ const DropdownIndicator = props => (
 )
 
 const LanguageDropdown = props => {
-  const [selectedOption, setSelectedOption] = useState(options[0])
+  const intl = useIntl()
+  const [selectedOption, setSelectedOption] = useState(
+    options.find(option => option.value === intl.locale) || options[0]
+  )
   const theme = useTheme()
 
   const styles = useMemo(
@@ -107,6 +112,7 @@ const LanguageDropdown = props => {
   )
 
   const handleChange = useCallback(selectedOption => {
+    changeLocale(selectedOption.value)
     setSelectedOption(selectedOption)
   }, [])
 
