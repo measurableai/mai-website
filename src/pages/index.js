@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroBackground from "../components/HeroBackground"
 import SlopedSection from "../components/SlopedBackground"
+import DataInsights from "../components/DataInsights"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
@@ -16,7 +17,7 @@ const lastSection = css`
   margin-bottom: 300px;
 `
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   const theme = useTheme()
   return (
     <Layout headerMode="light">
@@ -50,7 +51,7 @@ const IndexPage = () => {
         mode="dark"
         slopedBackgroundImage={theme.linearGradients.greenLightToDark}
       >
-        <p>Section 5</p>
+        <DataInsights posts={data.allWordpressPost} />
       </SlopedSection>
       <SlopedSection
         mode="dark"
@@ -70,3 +71,28 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const postQuery = graphql`
+  query {
+    allWordpressPost {
+      edges {
+        node {
+          id
+          content
+          path
+          slug
+          title
+          wordpress_id
+          link
+          date
+          categories {
+            name
+          }
+          better_featured_image {
+            source_url
+          }
+        }
+      }
+    }
+  }
+`

@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // query content for WordPress posts
   const result = await graphql(`
     query {
-      allWordpressPost(first: 3, offset: 3) {
+      allWordpressPost {
         edges {
           node {
             id
@@ -26,8 +26,17 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
+  // Check for any errors
+  if (result.errors) {
+    console.error(result.errors)
+  }
+
+  // Access query results via object destructuring
+  const { allWordpressPost } = result.data
+
   const postTemplate = path.resolve(`./src/templates/post.js`)
-  result.data.allWordpressPost.edges.forEach(edge => {
+  allWordpressPost.edges.forEach(edge => {
     createPage({
       // will be the url for the page
       path: edge.node.slug,

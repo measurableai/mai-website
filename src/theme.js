@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    purples: ["#18113B", "#221852", "rgba(34, 24, 82, 0.3)"],
+    purples: ["#18113B", "#221852", "rgba(34, 24, 82, 0.5)"],
     greens: ["#39D965", "#68FF92"],
   },
   fonts: {
