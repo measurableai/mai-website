@@ -1,4 +1,12 @@
 {
   "dataInsights": "數據洞察",
-  "login": "登入"
+  "login": "登入",
+
+  "eCommerce-tag": "#E-COMMERCE",
+  "games-tag": "#GAMES",
+  "rideSharing-tag": "#RIDE SHARING",
+  "dating-tag": "#DATING",
+  "entertainment-tag": "#ENTERTAINMENT",
+
+  "readMore": "閱讀更多..."
 }

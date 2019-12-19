@@ -14,6 +14,7 @@ export const title = theme => css`
   color: ${theme.colors.purples.normal};
   text-overflow: nowrap;
   line-height: 0;
+  text-transform: uppercase;
 `
 
 export const tagsContainer = () => css`

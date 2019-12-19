@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
 import {
   container,
@@ -70,33 +71,41 @@ const DataInsights = ({ children, ...props }) => {
   return (
     <Container>
       <TagsContainer>
-        <Title>DATA INSIGHTS</Title>
+        <Title>
+          <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
+        </Title>
         <Tag
           href={endPoint + "e-commerce/"}
           fontSize="1.2rem"
           padding="3px 10px"
         >
-          #E-COMMERCE
+          <FormattedMessage id="eCommerce-tag" defaultMessage="#E-COMMERCE" />
         </Tag>
         <Tag href={endPoint + "games/"} fontSize="1.2rem" padding="3px 10px">
-          #GAMES
+          <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
         </Tag>
         <Tag
           href={endPoint + "ride-sharing/"}
           fontSize="1.2rem"
           padding="3px 10px"
         >
-          #RIDE SHARING
+          <FormattedMessage
+            id="rideSharing-tag"
+            defaultMessage="#RIDE SHARING"
+          />
         </Tag>
         <Tag href={endPoint + "dating/"} fontSize="1.2rem" padding="3px 10px">
-          #DATING
+          <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
         </Tag>
         <Tag
           href={endPoint + "entertainment/"}
           fontSize="1.2rem"
           padding="3px 10px"
         >
-          #ENTERTAINMENT
+          <FormattedMessage
+            id="entertainment-tag"
+            defaultMessage="#ENTERTAINMENT"
+          />
         </Tag>
         <ButtonImage src={purpleRightArrowIcon} href={endPoint} />
       </TagsContainer>

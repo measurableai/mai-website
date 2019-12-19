@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 import {
   blogPostContainer,
@@ -134,7 +135,9 @@ const BlogPost = ({ children, postData, ...props }) => {
             {children}
           </Title>
           <Content>{postData.content.replace(removeHtmlRegex, "")}</Content>
-          <ReadMore>Read more ...</ReadMore>
+          <ReadMore>
+            <FormattedMessage id="readMore" defaultMessage="Read more..." />
+          </ReadMore>
           <ViewCountContainer>
             <ViewCountImage src={viewCountIcon} />
             <ViewCount>320</ViewCount>
