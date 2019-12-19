@@ -17,61 +17,6 @@ import {
 import Tag from "../../components/Tag"
 import viewCountIcon from "./../../images/icon-view@3x.png"
 
-const BlogPost = ({ children, postData, ...props }) => {
-  // console.log("postData in blog post.js", postData)
-
-  // Format Blog Date
-  const dateStr = postData.date.toString()
-  const Year = dateStr.split("-")[0]
-  const Month = dateStr.split("-")[1]
-  const Day = dateStr.split("-")[2].slice(0, 2)
-  const monthArr = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ]
-  const formattedDate = monthArr[Month - 1] + " " + Day + ", " + Year
-
-  // html tag regex
-  const removeHtmlRegex = /(<([^>]+)>)/gi
-
-  return (
-    <>
-      <BlogPostContainer href={postData.link}>
-        <Image src={postData.better_featured_image.source_url} />
-        <PostContainer>
-          <TagAndDateContainer>
-            <Tag fontSize="10px" padding="3px 5px">
-              #{postData.categories[0].name}
-            </Tag>
-            <Date>{formattedDate}</Date>
-          </TagAndDateContainer>
-          <Title {...props}>
-            {postData.title}
-            {children}
-          </Title>
-          <Content>{postData.content.replace(removeHtmlRegex, "")}</Content>
-          <ReadMore>Read more ...</ReadMore>
-          <ViewCountContainer>
-            <ViewCountImage src={viewCountIcon} />
-            <ViewCount>320</ViewCount>
-          </ViewCountContainer>
-        </PostContainer>
-      </BlogPostContainer>
-      <Dot />
-    </>
-  )
-}
-
 const Image = ({ children, src }) => (
   <>
     <img css={image} src={src} alt="Cover">
@@ -145,5 +90,60 @@ const ReadMore = ({ children, theme }) => (
     <p css={readMore}>{children}</p>
   </>
 )
+
+const BlogPost = ({ children, postData, ...props }) => {
+  // console.log("postData in blog post.js", postData)
+
+  // Format Blog Date
+  const dateStr = postData.date.toString()
+  const Year = dateStr.split("-")[0]
+  const Month = dateStr.split("-")[1]
+  const Day = dateStr.split("-")[2].slice(0, 2)
+  const monthArr = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+  const formattedDate = monthArr[Month - 1] + " " + Day + ", " + Year
+
+  // html tag regex
+  const removeHtmlRegex = /(<([^>]+)>)/gi
+
+  return (
+    <>
+      <BlogPostContainer href={postData.link}>
+        <Image src={postData.better_featured_image.source_url} />
+        <PostContainer>
+          <TagAndDateContainer>
+            <Tag fontSize="10px" padding="3px 5px">
+              #{postData.categories[0].name}
+            </Tag>
+            <Date>{formattedDate}</Date>
+          </TagAndDateContainer>
+          <Title {...props}>
+            {postData.title}
+            {children}
+          </Title>
+          <Content>{postData.content.replace(removeHtmlRegex, "")}</Content>
+          <ReadMore>Read more ...</ReadMore>
+          <ViewCountContainer>
+            <ViewCountImage src={viewCountIcon} />
+            <ViewCount>320</ViewCount>
+          </ViewCountContainer>
+        </PostContainer>
+      </BlogPostContainer>
+      <Dot />
+    </>
+  )
+}
 
 export default BlogPost

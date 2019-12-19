@@ -11,9 +11,33 @@ import {
 } from "./style"
 import BlogPost from "../../components/BlogPost"
 import Tag from "../../components/Tag"
-import buttonIcon from "./../../images/purple-arrow@3x.png"
+import purpleRightArrowIcon from "./../../images/purple-right-arrow.svg"
 
 const endPoint = "https://blog.measurable.ai/category/industries/"
+
+const Container = ({ children }) => <div css={container}>{children}</div>
+const Title = ({ children, theme }) => (
+  <p css={theme => title(theme)}>{children}</p>
+)
+const TagsContainer = ({ children }) => (
+  <div css={tagsContainer}>{children}</div>
+)
+const BlogPostContainer1 = ({ children }) => (
+  <div css={blogPostContainer1}>{children}</div>
+)
+const BlogPostContainer2 = ({ children }) => (
+  <div css={blogPostContainer2}>{children}</div>
+)
+const BlogPostContainer3 = ({ children }) => (
+  <div css={blogPostContainer3}>{children}</div>
+)
+const ButtonImage = ({ children, src, href }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <img css={buttonImage} src={src} alt="Button">
+      {children}
+    </img>
+  </a>
+)
 
 const DataInsights = ({ children, posts, ...props }) => (
   <>
@@ -47,7 +71,7 @@ const DataInsights = ({ children, posts, ...props }) => (
         >
           #ENTERTAINMENT
         </Tag>
-        <ButtonImage src={buttonIcon} href={endPoint} />
+        <ButtonImage src={purpleRightArrowIcon} href={endPoint} />
       </TagsContainer>
       <BlogPostContainer1>
         <BlogPost postData={posts.edges[0].node} />
@@ -60,30 +84,6 @@ const DataInsights = ({ children, posts, ...props }) => (
       </BlogPostContainer3>
     </Container>
   </>
-)
-
-const Container = ({ children }) => <div css={container}>{children}</div>
-const Title = ({ children, theme }) => (
-  <p css={theme => title(theme)}>{children}</p>
-)
-const TagsContainer = ({ children }) => (
-  <div css={tagsContainer}>{children}</div>
-)
-const BlogPostContainer1 = ({ children }) => (
-  <div css={blogPostContainer1}>{children}</div>
-)
-const BlogPostContainer2 = ({ children }) => (
-  <div css={blogPostContainer2}>{children}</div>
-)
-const BlogPostContainer3 = ({ children }) => (
-  <div css={blogPostContainer3}>{children}</div>
-)
-const ButtonImage = ({ children, src, href }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
-    <img css={buttonImage} src={src} alt="Button">
-      {children}
-    </img>
-  </a>
 )
 
 export default DataInsights
