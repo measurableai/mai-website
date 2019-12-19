@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 export const blogPostContainer = theme => css`
   display: flex;
   width: 190px;
-  /* max-height: 370px; */
+  max-height: 300px;
   align-items: center;
   flex-direction: column;
   border-left: 1px solid ${theme.colors.purples.light};

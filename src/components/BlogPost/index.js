@@ -10,13 +10,13 @@ import {
   title,
   content,
   dot,
-  viewCountContainer,
-  viewCountImage,
-  viewCount,
+  // viewCountContainer,
+  // viewCountImage,
+  // viewCount,
   readMore,
 } from "./style"
 import Tag from "../../components/Tag"
-import viewCountIcon from "./../../images/icon-view@3x.png"
+// import viewCountIcon from "./../../images/icon-view@3x.png"
 
 const Image = ({ children, src }) => (
   <>
@@ -25,14 +25,25 @@ const Image = ({ children, src }) => (
     </img>
   </>
 )
-const ViewCountImage = ({ children, src }) => (
-  <>
-    <img css={viewCountImage} src={src} alt="View Count">
-      {children}
-    </img>
-  </>
-)
+// const ViewCountImage = ({ children, src }) => (
+//   <>
+//     <img css={viewCountImage} src={src} alt="View Count">
+//       {children}
+//     </img>
+//   </>
+// )
 
+// const ViewCount = ({ children }) => (
+//   <>
+//     <p css={viewCount}>{children}</p>
+//   </>
+// )
+
+// const ViewCountContainer = ({ children }) => (
+//   <>
+//     <div css={viewCountContainer}>{children}</div>
+//   </>
+// )
 const BlogPostContainer = ({ children, href }) => (
   <>
     <a
@@ -55,11 +66,6 @@ const TagAndDateContainer = ({ children }) => (
     <div css={tagAndDateContainer}>{children}</div>
   </>
 )
-const ViewCountContainer = ({ children }) => (
-  <>
-    <div css={viewCountContainer}>{children}</div>
-  </>
-)
 const Date = ({ children }) => (
   <>
     <p css={date}>{children}</p>
@@ -79,11 +85,6 @@ const Title = ({ children }) => (
 const Content = ({ children }) => (
   <>
     <div css={theme => content(theme)}>{children}</div>
-  </>
-)
-const ViewCount = ({ children }) => (
-  <>
-    <p css={viewCount}>{children}</p>
   </>
 )
 const ReadMore = ({ children, theme }) => (
@@ -138,10 +139,10 @@ const BlogPost = ({ children, postData, ...props }) => {
           <ReadMore>
             <FormattedMessage id="readMore" defaultMessage="Read more..." />
           </ReadMore>
-          <ViewCountContainer>
+          {/* <ViewCountContainer>
             <ViewCountImage src={viewCountIcon} />
             <ViewCount>320</ViewCount>
-          </ViewCountContainer>
+          </ViewCountContainer> */}
         </PostContainer>
       </BlogPostContainer>
       <Dot />
