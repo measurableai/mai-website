@@ -1,5 +1,5 @@
 import React from "react"
-
+import { useStaticQuery, graphql } from "gatsby"
 import {
   container,
   title,
@@ -39,8 +39,35 @@ const ButtonImage = ({ children, src, href }) => (
   </a>
 )
 
-const DataInsights = ({ children, posts, ...props }) => (
-  <>
+const DataInsights = ({ children, ...props }) => {
+  const { allWordpressPost } = useStaticQuery(
+    graphql`
+      query {
+        allWordpressPost {
+          edges {
+            node {
+              id
+              content
+              path
+              slug
+              title
+              wordpress_id
+              link
+              date
+              categories {
+                name
+              }
+              better_featured_image {
+                source_url
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  return (
     <Container>
       <TagsContainer>
         <Title>DATA INSIGHTS</Title>
@@ -74,16 +101,16 @@ const DataInsights = ({ children, posts, ...props }) => (
         <ButtonImage src={purpleRightArrowIcon} href={endPoint} />
       </TagsContainer>
       <BlogPostContainer1>
-        <BlogPost postData={posts.edges[0].node} />
+        <BlogPost postData={allWordpressPost.edges[0].node} />
       </BlogPostContainer1>
       <BlogPostContainer2>
-        <BlogPost postData={posts.edges[1].node} />
+        <BlogPost postData={allWordpressPost.edges[1].node} />
       </BlogPostContainer2>
       <BlogPostContainer3>
-        <BlogPost postData={posts.edges[2].node} />
+        <BlogPost postData={allWordpressPost.edges[2].node} />
       </BlogPostContainer3>
     </Container>
-  </>
-)
+  )
+}
 
 export default DataInsights

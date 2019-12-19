@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
         mode="dark"
         slopedBackgroundImage={theme.linearGradients.greenLightToDark}
       >
-        <DataInsights posts={data.allWordpressPost} />
+        <DataInsights />
       </SlopedSection>
       <SlopedSection
         mode="dark"
@@ -71,28 +71,3 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
-
-export const postQuery = graphql`
-  query {
-    allWordpressPost {
-      edges {
-        node {
-          id
-          content
-          path
-          slug
-          title
-          wordpress_id
-          link
-          date
-          categories {
-            name
-          }
-          better_featured_image {
-            source_url
-          }
-        }
-      }
-    }
-  }
-`
