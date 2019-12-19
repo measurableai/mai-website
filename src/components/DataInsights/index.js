@@ -44,7 +44,7 @@ const DataInsights = ({ children, ...props }) => {
   const { allWordpressPost } = useStaticQuery(
     graphql`
       query {
-        allWordpressPost {
+        allWordpressPost(sort: { order: DESC, fields: date }) {
           edges {
             node {
               id

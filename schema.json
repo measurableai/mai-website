@@ -9389,16 +9389,6 @@
             "defaultValue": null
           },
           {
-            "name": "data",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "games_tag",
             "description": "",
             "type": {
@@ -10306,14 +10296,6 @@
           },
           {
             "name": "eCommerce_tag",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "data",
             "description": null,
             "args": [],
             "type": { "kind": "SCALAR", "name": "String", "ofType": null },
@@ -11656,12 +11638,6 @@
           },
           {
             "name": "context___intl___messages___eCommerce_tag",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "context___intl___messages___data",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
