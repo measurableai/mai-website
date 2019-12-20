@@ -12,17 +12,17 @@ export const blogPostContainer = theme => css`
   text-decoration: none;
   margin: 0;
 `
-export const image = () => css`
+export const image = css`
   max-width: 190px;
   max-height: 190px;
   background-size: cover;
   background-position: center;
 `
-export const postContainer = () => css`
+export const postContainer = css`
   max-height: 180px;
   margin: 12px 0px 0px 11px;
 `
-export const tagAndDateContainer = () => css`
+export const tagAndDateContainer = css`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -66,14 +66,14 @@ export const content = theme => css`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 `
-export const viewCountContainer = () => css`
+export const viewCountContainer = css`
   margin: 0;
   width: 100%;
   height: 20px;
   display: flex;
   align-items: center;
 `
-export const viewCountImage = () => css`
+export const viewCountImage = css`
   width: 14px;
   height: 14px;
   background-size: cover;
@@ -98,4 +98,9 @@ export const dot = theme => css`
   background-color: ${theme.colors.purples.light};
   left: -2px;
   flex-grow: 1;
+`
+
+export const blogTag = css`
+  font-size: 10px;
+  padding: 3px 7px;
 `

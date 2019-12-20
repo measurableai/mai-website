@@ -10,6 +10,7 @@ import {
   title,
   content,
   dot,
+  blogTag,
   // viewCountContainer,
   // viewCountImage,
   // viewCount,
@@ -17,6 +18,8 @@ import {
 } from "./style"
 import Tag from "../../components/Tag"
 // import viewCountIcon from "./../../images/icon-view@3x.png"
+
+const BlogTag = props => <Tag css={blogTag} {...props} />
 
 const BlogPost = ({ children, postData, ...props }) => {
   // Format Blog Date
@@ -58,9 +61,7 @@ const BlogPost = ({ children, postData, ...props }) => {
         />
         <div css={postContainer}>
           <div css={tagAndDateContainer}>
-            <Tag fontSize="10px" padding="3px 7px">
-              #{postData.categories[0].name}
-            </Tag>
+            <BlogTag>#{postData.categories[0].name}</BlogTag>
             <p css={date}>{formattedDate}</p>
           </div>
           <div css={theme => title(theme)} {...props}>

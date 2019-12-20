@@ -1,37 +1,17 @@
 import { css } from "@emotion/core"
 
-export const container = () => css`
+export const container = css`
   display: flex;
   flex-direction: column;
   z-index: 1;
   text-align: right;
   align-self: flex-start;
 `
-export const contentContainer = () => css`
+export const contentContainer = css`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   z-index: 1;
-  & > div {
-    position: relative;
-    text-align: left;
-
-    :first-child {
-      top: -180px;
-    }
-
-    :nth-child(2) {
-      top: -150px;
-    }
-
-    :nth-child(3) {
-      top: -50px;
-    }
-
-    :nth-child(4) {
-      top: 50px;
-    }
-  }
 `
 export const title = theme => css`
   font-size: 50px;
@@ -45,32 +25,52 @@ export const title = theme => css`
   text-transform: uppercase;
   position: relative;
 `
-export const titleContainer = theme => css`
+export const titleContainer = css`
   position: relative;
-  top: -160px;
+  top: -20px;
   flex: 1;
 `
-export const tagsContainer = () => css`
-  position: relative;
-  text-align: right;
+export const tagsContainer = css`
   display: flex;
   flex-direction: column;
   flex-wrap: "nowrap";
-  /* top: -200px; */
+  position: relative;
+  top: -50px;
   align-items: flex-end;
-  justify-content: space-between;
-  & > a {
-    margin-top: 12px;
-    :first-child {
-      margin-top: 0px;
-    }
-  }
 `
 
-export const buttonImage = () => css`
+export const buttonImage = css`
   max-width: 45px;
   max-height: 70px;
   background-size: cover;
   background-position: center;
-  margin: 80px 0 0 0;
+  margin: 120px 0 0 0;
+`
+
+export const blogContainer = css`
+  position: relative;
+  display: block;
+  text-align: left;
+  margin-left: 60px;
+`
+
+export const blogContainer1 = css`
+  top: 0px;
+  left: 500px;
+`
+
+export const blogContainer2 = css`
+  top: -180px;
+  left: 250px;
+`
+
+export const blogContainer3 = css`
+  top: -360px;
+  left: 0px;
+`
+
+export const dataInsightsTag = css`
+  margin-top: 12px;
+  font-size: 17px;
+  padding: 2px 14px;
 `

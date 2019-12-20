@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 
-export const tag = (theme, fontSize, margin, padding) => css`
+export const tag = theme => css`
   height: fit-content;
   width: fit-content;
   background-color: ${theme.colors.greens.light};
@@ -8,10 +8,5 @@ export const tag = (theme, fontSize, margin, padding) => css`
   border-radius: 15px;
   vertical-align: middle;
   font-weight: bold;
-  font-size: ${fontSize};
-  margin: ${margin};
-  padding: ${padding};
   text-decoration: none;
-  padding-bottom: 2px;
-  padding-top: 2px;
 `

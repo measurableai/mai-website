@@ -8,6 +8,11 @@ import {
   titleContainer,
   tagsContainer,
   buttonImage,
+  blogContainer,
+  blogContainer1,
+  blogContainer2,
+  blogContainer3,
+  dataInsightsTag,
 } from "./style"
 import BlogPost from "../../components/BlogPost"
 import Tag from "../../components/Tag"
@@ -15,9 +20,9 @@ import purpleRightArrowIcon from "./../../images/purple-right-arrow.svg"
 
 const endPoint = "https://blog.measurable.ai/category/industries/"
 
-const BlogTag = props => <Tag fontSize="17px" padding="0 14px" {...props} />
+const DataInsightsTag = props => <Tag css={dataInsightsTag} {...props} />
 
-const DataInsights = ({ children, ...props }) => {
+const DataInsights = () => {
   const { allWordpressPost } = useStaticQuery(
     graphql`
       query {
@@ -54,39 +59,41 @@ const DataInsights = ({ children, ...props }) => {
       </div>
       <div css={contentContainer}>
         <div css={tagsContainer}>
-          <BlogTag href={endPoint + "e-commerce/"}>
+          <DataInsightsTag href={endPoint + "e-commerce/"}>
             <FormattedMessage id="eCommerce-tag" defaultMessage="#E-COMMERCE" />
-          </BlogTag>
-          <BlogTag href={endPoint + "games/"}>
+          </DataInsightsTag>
+          <DataInsightsTag href={endPoint + "games/"}>
             <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
-          </BlogTag>
-          <BlogTag href={endPoint + "ride-sharing/"}>
+          </DataInsightsTag>
+          <DataInsightsTag href={endPoint + "ride-sharing/"}>
             <FormattedMessage
               id="rideSharing-tag"
               defaultMessage="#RIDE SHARING"
             />
-          </BlogTag>
-          <BlogTag href={endPoint + "dating/"}>
+          </DataInsightsTag>
+          <DataInsightsTag href={endPoint + "dating/"}>
             <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
-          </BlogTag>
-          <BlogTag href={endPoint + "entertainment/"}>
+          </DataInsightsTag>
+          <DataInsightsTag href={endPoint + "entertainment/"}>
             <FormattedMessage
               id="entertainment-tag"
               defaultMessage="#ENTERTAINMENT"
             />
-          </BlogTag>
+          </DataInsightsTag>
           <a href={endPoint} target="_blank" rel="noopener noreferrer">
             <img css={buttonImage} src={purpleRightArrowIcon} alt="Button" />
           </a>
         </div>
         <div>
-          <BlogPost postData={allWordpressPost.edges[0].node} />
-        </div>
-        <div>
-          <BlogPost postData={allWordpressPost.edges[1].node} />
-        </div>
-        <div>
-          <BlogPost postData={allWordpressPost.edges[2].node} />
+          <div css={[blogContainer, blogContainer1]}>
+            <BlogPost postData={allWordpressPost.edges[0].node} />
+          </div>
+          <div css={[blogContainer, blogContainer2]}>
+            <BlogPost postData={allWordpressPost.edges[1].node} />
+          </div>
+          <div css={[blogContainer, blogContainer3]}>
+            <BlogPost postData={allWordpressPost.edges[2].node} />
+          </div>
         </div>
       </div>
     </div>

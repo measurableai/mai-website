@@ -2,12 +2,13 @@ import React from "react"
 
 import { tag } from "./style"
 
-const Tag = ({ children, fontSize, margin, padding, href }) => (
+const Tag = ({ children, href, ...props }) => (
   <a
-    css={theme => tag(theme, fontSize, margin, padding)}
+    css={theme => tag(theme)}
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    {...props}
   >
     {children}
   </a>
