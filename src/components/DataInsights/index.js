@@ -16,30 +16,6 @@ import purpleRightArrowIcon from "./../../images/purple-right-arrow.svg"
 
 const endPoint = "https://blog.measurable.ai/category/industries/"
 
-const Container = ({ children }) => <div css={container}>{children}</div>
-const Title = ({ children, theme }) => (
-  <p css={theme => title(theme)}>{children}</p>
-)
-const TagsContainer = ({ children }) => (
-  <div css={tagsContainer}>{children}</div>
-)
-const BlogPostContainer1 = ({ children }) => (
-  <div css={blogPostContainer1}>{children}</div>
-)
-const BlogPostContainer2 = ({ children }) => (
-  <div css={blogPostContainer2}>{children}</div>
-)
-const BlogPostContainer3 = ({ children }) => (
-  <div css={blogPostContainer3}>{children}</div>
-)
-const ButtonImage = ({ children, src, href }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
-    <img css={buttonImage} src={src} alt="Button">
-      {children}
-    </img>
-  </a>
-)
-
 const DataInsights = ({ children, ...props }) => {
   const { allWordpressPost } = useStaticQuery(
     graphql`
@@ -68,57 +44,51 @@ const DataInsights = ({ children, ...props }) => {
     `
   )
 
+  const BlogTag = props => (
+    <Tag fontSize="1.2rem" padding="3px 10px" {...props} />
+  )
+
   return (
-    <Container>
-      <TagsContainer>
-        <Title>
+    <div css={container}>
+      <div css={tagsContainer}>
+        <p css={theme => title(theme)}>
           <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
-        </Title>
-        <Tag
-          href={endPoint + "e-commerce/"}
-          fontSize="1.2rem"
-          padding="3px 10px"
-        >
+        </p>
+        <BlogTag href={endPoint + "e-commerce/"}>
           <FormattedMessage id="eCommerce-tag" defaultMessage="#E-COMMERCE" />
-        </Tag>
-        <Tag href={endPoint + "games/"} fontSize="1.2rem" padding="3px 10px">
+        </BlogTag>
+        <BlogTag href={endPoint + "games/"}>
           <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
-        </Tag>
-        <Tag
-          href={endPoint + "ride-sharing/"}
-          fontSize="1.2rem"
-          padding="3px 10px"
-        >
+        </BlogTag>
+        <BlogTag href={endPoint + "ride-sharing/"}>
           <FormattedMessage
             id="rideSharing-tag"
             defaultMessage="#RIDE SHARING"
           />
-        </Tag>
-        <Tag href={endPoint + "dating/"} fontSize="1.2rem" padding="3px 10px">
+        </BlogTag>
+        <BlogTag href={endPoint + "dating/"}>
           <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
-        </Tag>
-        <Tag
-          href={endPoint + "entertainment/"}
-          fontSize="1.2rem"
-          padding="3px 10px"
-        >
+        </BlogTag>
+        <BlogTag href={endPoint + "entertainment/"}>
           <FormattedMessage
             id="entertainment-tag"
             defaultMessage="#ENTERTAINMENT"
           />
-        </Tag>
-        <ButtonImage src={purpleRightArrowIcon} href={endPoint} />
-      </TagsContainer>
-      <BlogPostContainer1>
+        </BlogTag>
+        <a href={endPoint} target="_blank" rel="noopener noreferrer">
+          <img css={buttonImage} src={purpleRightArrowIcon} alt="Button" />
+        </a>
+      </div>
+      <div css={blogPostContainer1}>
         <BlogPost postData={allWordpressPost.edges[0].node} />
-      </BlogPostContainer1>
-      <BlogPostContainer2>
+      </div>
+      <div css={blogPostContainer2}>
         <BlogPost postData={allWordpressPost.edges[1].node} />
-      </BlogPostContainer2>
-      <BlogPostContainer3>
+      </div>
+      <div css={blogPostContainer3}>
         <BlogPost postData={allWordpressPost.edges[2].node} />
-      </BlogPostContainer3>
-    </Container>
+      </div>
+    </div>
   )
 }
 

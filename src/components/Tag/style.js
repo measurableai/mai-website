@@ -1,4 +1,3 @@
-// import React from "react"
 import { css } from "@emotion/core"
 
 export const tag = (theme, fontSize, margin, padding) => css`

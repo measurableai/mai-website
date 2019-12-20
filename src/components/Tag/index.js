@@ -2,7 +2,7 @@ import React from "react"
 
 import { tag } from "./style"
 
-const Tag = ({ children, theme, fontSize, margin, padding, href }) => (
+const Tag = ({ children, fontSize, margin, padding, href }) => (
   <a
     css={theme => tag(theme, fontSize, margin, padding)}
     href={href}

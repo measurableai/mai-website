@@ -18,84 +18,7 @@ import {
 import Tag from "../../components/Tag"
 // import viewCountIcon from "./../../images/icon-view@3x.png"
 
-const Image = ({ children, src }) => (
-  <>
-    <img css={image} src={src} alt="Cover">
-      {children}
-    </img>
-  </>
-)
-// const ViewCountImage = ({ children, src }) => (
-//   <>
-//     <img css={viewCountImage} src={src} alt="View Count">
-//       {children}
-//     </img>
-//   </>
-// )
-
-// const ViewCount = ({ children }) => (
-//   <>
-//     <p css={viewCount}>{children}</p>
-//   </>
-// )
-
-// const ViewCountContainer = ({ children }) => (
-//   <>
-//     <div css={viewCountContainer}>{children}</div>
-//   </>
-// )
-const BlogPostContainer = ({ children, href }) => (
-  <>
-    <a
-      css={theme => blogPostContainer(theme)}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {children}
-    </a>
-  </>
-)
-const PostContainer = ({ children, theme }) => (
-  <>
-    <div css={postContainer}>{children}</div>
-  </>
-)
-const TagAndDateContainer = ({ children }) => (
-  <>
-    <div css={tagAndDateContainer}>{children}</div>
-  </>
-)
-const Date = ({ children }) => (
-  <>
-    <p css={date}>{children}</p>
-  </>
-)
-const Dot = ({ children }) => (
-  <>
-    <div css={dot}>{children}</div>
-  </>
-)
-
-const Title = ({ children }) => (
-  <>
-    <div css={theme => title(theme)}>{children}</div>
-  </>
-)
-const Content = ({ children }) => (
-  <>
-    <div css={theme => content(theme)}>{children}</div>
-  </>
-)
-const ReadMore = ({ children, theme }) => (
-  <>
-    <p css={readMore}>{children}</p>
-  </>
-)
-
 const BlogPost = ({ children, postData, ...props }) => {
-  // console.log("postData in blog post.js", postData)
-
   // Format Blog Date
   const dateStr = postData.date.toString()
   const Year = dateStr.split("-")[0]
@@ -122,30 +45,41 @@ const BlogPost = ({ children, postData, ...props }) => {
 
   return (
     <>
-      <BlogPostContainer href={postData.link}>
-        <Image src={postData.better_featured_image.source_url} />
-        <PostContainer>
-          <TagAndDateContainer>
+      <a
+        css={theme => blogPostContainer(theme)}
+        href={postData.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          css={image}
+          src={postData.better_featured_image.source_url}
+          alt="Wordpress Post"
+        />
+        <div css={postContainer}>
+          <div css={tagAndDateContainer}>
             <Tag fontSize="10px" padding="3px 5px">
               #{postData.categories[0].name}
             </Tag>
-            <Date>{formattedDate}</Date>
-          </TagAndDateContainer>
-          <Title {...props}>
+            <p css={date}>{formattedDate}</p>
+          </div>
+          <div css={theme => title(theme)} {...props}>
             {postData.title}
             {children}
-          </Title>
-          <Content>{postData.content.replace(removeHtmlRegex, "")}</Content>
-          <ReadMore>
+          </div>
+          <div css={theme => content(theme)}>
+            {postData.content.replace(removeHtmlRegex, "")}
+          </div>
+          <p css={readMore}>
             <FormattedMessage id="readMore" defaultMessage="Read more..." />
-          </ReadMore>
-          {/* <ViewCountContainer>
-            <ViewCountImage src={viewCountIcon} />
-            <ViewCount>320</ViewCount>
-          </ViewCountContainer> */}
-        </PostContainer>
-      </BlogPostContainer>
-      <Dot />
+          </p>
+          {/* <div css={viewCountContainer}>
+            <img css={viewCountImage} src={viewCountIcon} alt="View Count"/>
+            <p css={viewCount}>320</p>
+          </div> */}
+        </div>
+      </a>
+      <div css={dot} />
     </>
   )
 }

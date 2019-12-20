@@ -17,7 +17,7 @@ const lastSection = css`
   margin-bottom: 300px;
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   const theme = useTheme()
   return (
     <Layout headerMode="light">
