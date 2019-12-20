@@ -1,57 +1,76 @@
 import { css } from "@emotion/core"
 
 export const container = () => css`
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  text-align: right;
+  align-self: flex-start;
+`
+export const contentContainer = () => css`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  justify-items: left;
   z-index: 1;
+  & > div {
+    position: relative;
+    text-align: left;
+
+    :first-child {
+      top: -180px;
+    }
+
+    :nth-child(2) {
+      top: -150px;
+    }
+
+    :nth-child(3) {
+      top: -50px;
+    }
+
+    :nth-child(4) {
+      top: 50px;
+    }
+  }
 `
 export const title = theme => css`
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 50px;
+  font-weight: 600;
   color: ${theme.colors.purples.normal};
   text-overflow: nowrap;
-  line-height: 0;
+  font-style: normal;
+  line-height: 0.75;
+  letter-spacing: 2.6px;
+  text-align: right;
   text-transform: uppercase;
+  position: relative;
 `
-
+export const titleContainer = theme => css`
+  position: relative;
+  top: -160px;
+  flex: 1;
+`
 export const tagsContainer = () => css`
   position: relative;
   text-align: right;
   display: flex;
   flex-direction: column;
   flex-wrap: "nowrap";
-  top: -200px;
+  /* top: -200px; */
   align-items: flex-end;
   justify-content: space-between;
   & > a {
-    margin: 5px 0;
+    margin-top: 12px;
+    :first-child {
+      margin-top: 0px;
+    }
   }
 `
-export const blogPostContainer1 = () => css`
-  text-align: left;
-  max-width: 20%;
-  position: relative;
-  top: 0px;
-`
-export const blogPostContainer2 = () => css`
-  text-align: left;
-  max-width: 20%;
-  position: relative;
-  top: 100px;
-`
-export const blogPostContainer3 = () => css`
-  text-align: left;
-  max-width: 20%;
-  position: relative;
-  top: 200px;
-`
+
 export const buttonImage = () => css`
   max-width: 45px;
   max-height: 70px;
   background-size: cover;
   background-position: center;
-  margin: 100px 0 0 0;
+  margin: 80px 0 0 0;
 `

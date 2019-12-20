@@ -58,7 +58,7 @@ const BlogPost = ({ children, postData, ...props }) => {
         />
         <div css={postContainer}>
           <div css={tagAndDateContainer}>
-            <Tag fontSize="10px" padding="3px 5px">
+            <Tag fontSize="10px" padding="3px 7px">
               #{postData.categories[0].name}
             </Tag>
             <p css={date}>{formattedDate}</p>

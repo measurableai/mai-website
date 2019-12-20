@@ -4,6 +4,7 @@ import { css } from "@emotion/core"
 export const blogPostContainer = theme => css`
   display: flex;
   width: 190px;
+  min-width: 190px;
   max-height: 300px;
   align-items: center;
   flex-direction: column;
@@ -19,14 +20,14 @@ export const image = () => css`
 `
 export const postContainer = () => css`
   max-height: 180px;
-  margin: 10px 0px 10px 10px;
+  margin: 12px 0px 0px 11px;
 `
 export const tagAndDateContainer = () => css`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 5px;
+  margin: 0 0 6px 0;
 `
 export const date = theme => css`
   width: 100%;
@@ -38,16 +39,16 @@ export const date = theme => css`
 export const title = theme => css`
   margin: 0;
   width: 100%;
-  color: ${theme.colors.purples.dark};
+  color: ${theme.colors.purples.normal};
   font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 5px;
-  max-height: 60px;
+  font-size: 17px;
+  margin-bottom: 2px;
+  max-height: 40px;
   line-height: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 `
 export const content = theme => css`
@@ -56,7 +57,7 @@ export const content = theme => css`
   height: 100%;
   max-height: 30px;
   color: ${theme.colors.purples.light};
-  font-size: 0.75rem;
+  font-size: 12px;
   margin-bottom: 5px;
   line-height: 15px;
   text-overflow: ellipsis;
@@ -86,7 +87,7 @@ export const viewCount = theme => css`
 `
 export const readMore = theme => css`
   color: ${theme.colors.greens.dark};
-  font-size: 10px;
+  font-size: 12px;
 `
 
 export const dot = theme => css`

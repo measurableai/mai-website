@@ -5,11 +5,13 @@ export const tag = (theme, fontSize, margin, padding) => css`
   width: fit-content;
   background-color: ${theme.colors.greens.light};
   color: ${theme.colors.purples.normal};
-  border-radius: 12px;
+  border-radius: 15px;
   vertical-align: middle;
   font-weight: bold;
   font-size: ${fontSize};
   margin: ${margin};
   padding: ${padding};
   text-decoration: none;
+  padding-bottom: 2px;
+  padding-top: 2px;
 `

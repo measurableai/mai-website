@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 
 export const background = css`
-  min-height: 450px;
+  min-height: 750px;
   width: 100%;
   position: relative;
   display: flex;
@@ -44,4 +44,12 @@ export const cirlce = color => css`
   height: 9px;
   border: solid 0.5px ${color};
   border-radius: 10px;
+`
+
+export const content = css`
+  position: relative;
+  width: 1024px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  text-align: center;
 `
