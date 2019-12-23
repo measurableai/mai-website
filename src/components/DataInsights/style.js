@@ -47,6 +47,10 @@ export const buttonImage = css`
   margin: 120px 0 0 0;
 `
 
+export const blogsContainer = css`
+  min-width: 750px;
+`
+
 export const blogContainer = css`
   position: relative;
   display: block;

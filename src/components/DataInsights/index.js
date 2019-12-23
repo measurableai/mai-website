@@ -8,6 +8,7 @@ import {
   titleContainer,
   tagsContainer,
   buttonImage,
+  blogsContainer,
   blogContainer,
   blogContainer1,
   blogContainer2,
@@ -84,7 +85,7 @@ const DataInsights = () => {
             <img css={buttonImage} src={purpleRightArrowIcon} alt="Button" />
           </a>
         </div>
-        <div>
+        <div css={blogsContainer}>
           <div css={[blogContainer, blogContainer1]}>
             <BlogPost postData={allWordpressPost.edges[0].node} />
           </div>
