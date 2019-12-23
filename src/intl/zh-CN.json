@@ -6,7 +6,6 @@
   "rideSharing-tag": "#RIDE SHARING",
   "dating-tag": "#DATING",
   "entertainment-tag": "#ENTERTAINMENT",
-  "readMore": "阅读更多...",
   "why": "Why",
   "measurableAI": "Measurable.ai",
   "questionMark": "?",
@@ -45,5 +44,11 @@
   "researchers": "Researchers",
   "merchants": "Merchants",
   "financialInstitutions": "Financial Institutions",
-  "dataReport": "数据报告"
+  "dataReport": "数据报告",
+  "achievements": "ACHIEVEMENTS",
+  "backedBy": "BACKED BY",
+  "trustedBy": "TRUSTED BY",
+
+  "andMore": "and more...",
+  "readMore": "阅读更多..."
 }
