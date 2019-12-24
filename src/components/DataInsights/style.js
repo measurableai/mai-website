@@ -1,10 +1,7 @@
 import { css } from "@emotion/core"
 
 export const container = css`
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  text-align: right;
+  min-height: 787px;
 `
 export const contentContainer = css`
   display: flex;
@@ -26,10 +23,6 @@ export const title = theme => css`
   position: relative;
   margin: 44px 0px 33px 0;
 `
-export const titleContainer = css`
-  position: relative;
-  flex: 1;
-`
 export const tagsContainer = css`
   display: flex;
   flex-direction: column;
@@ -39,46 +32,44 @@ export const tagsContainer = css`
   justify-content: flex-start;
 `
 
+export const buttonContainer = css`
+  margin-top: 130px;
+`
+
 export const buttonImage = css`
   max-width: 45px;
   max-height: 70px;
   background-size: cover;
   background-position: center;
-  margin: 120px 0 0 0;
 `
 
 export const blogsContainer = css`
-  min-width: 750px;
+  display: flex;
+  flex-direction: row-reverse;
 `
 
 export const blogContainer = css`
-  width: 190px;
   position: relative;
-  display: block;
+  display: inline-block;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 34px;
+  margin-right: 26px;
 `
 
 export const blogContainer1 = css`
   top: 36px;
-  left: 500px;
 `
 
 export const blogContainer2 = css`
-  top: -180px;
-  left: 250px;
+  top: 109px;
 `
 
 export const blogContainer3 = css`
-  top: -360px;
-  left: 0px;
+  top: 187px;
 `
 
 export const dataInsightsTag = css`
-  margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 17px;
   padding: 2px 14px;
-`
-export const firstDataInsightsTag = css`
-  margin-top: 0px;
 `

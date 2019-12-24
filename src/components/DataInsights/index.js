@@ -5,15 +5,14 @@ import {
   container,
   contentContainer,
   title,
-  titleContainer,
   tagsContainer,
+  buttonContainer,
   buttonImage,
   blogsContainer,
   blogContainer,
   blogContainer1,
   blogContainer2,
   blogContainer3,
-  firstDataInsightsTag,
   dataInsightsTag,
 } from "./style"
 import BlogPost from "../../components/BlogPost"
@@ -54,17 +53,12 @@ const DataInsights = () => {
 
   return (
     <div css={container}>
-      <div css={titleContainer}>
-        <p css={theme => title(theme)}>
-          <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
-        </p>
-      </div>
+      <p css={theme => title(theme)}>
+        <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
+      </p>
       <div css={contentContainer}>
         <div css={tagsContainer}>
-          <DataInsightsTag
-            css={firstDataInsightsTag}
-            href={endPoint + "e-commerce/"}
-          >
+          <DataInsightsTag href={endPoint + "e-commerce/"}>
             <FormattedMessage id="eCommerce-tag" defaultMessage="#E-COMMERCE" />
           </DataInsightsTag>
           <DataInsightsTag href={endPoint + "games/"}>
@@ -85,7 +79,12 @@ const DataInsights = () => {
               defaultMessage="#ENTERTAINMENT"
             />
           </DataInsightsTag>
-          <a href={endPoint} target="_blank" rel="noopener noreferrer">
+          <a
+            css={buttonContainer}
+            href={endPoint}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img css={buttonImage} src={purpleRightArrowIcon} alt="Button" />
           </a>
         </div>

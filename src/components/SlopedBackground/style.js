@@ -52,4 +52,5 @@ export const content = css`
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   text-align: center;
+  min-height: inherit;
 `
