@@ -5,7 +5,6 @@ export const container = css`
   flex-direction: column;
   z-index: 1;
   text-align: right;
-  align-self: flex-start;
 `
 export const contentContainer = css`
   display: flex;
@@ -14,8 +13,9 @@ export const contentContainer = css`
   z-index: 1;
 `
 export const title = theme => css`
-  font-size: 50px;
+  font-size: 72px;
   font-weight: 600;
+  font-family: ${theme.fonts.heading};
   color: ${theme.colors.purples.normal};
   text-overflow: nowrap;
   font-style: normal;
@@ -24,10 +24,10 @@ export const title = theme => css`
   text-align: right;
   text-transform: uppercase;
   position: relative;
+  margin: 44px 0px 33px 0;
 `
 export const titleContainer = css`
   position: relative;
-  top: -20px;
   flex: 1;
 `
 export const tagsContainer = css`
@@ -35,8 +35,8 @@ export const tagsContainer = css`
   flex-direction: column;
   flex-wrap: "nowrap";
   position: relative;
-  top: -50px;
   align-items: flex-end;
+  justify-content: flex-start;
 `
 
 export const buttonImage = css`
@@ -52,6 +52,7 @@ export const blogsContainer = css`
 `
 
 export const blogContainer = css`
+  width: 190px;
   position: relative;
   display: block;
   text-align: left;
@@ -59,7 +60,7 @@ export const blogContainer = css`
 `
 
 export const blogContainer1 = css`
-  top: 0px;
+  top: 36px;
   left: 500px;
 `
 
@@ -77,4 +78,7 @@ export const dataInsightsTag = css`
   margin-top: 12px;
   font-size: 17px;
   padding: 2px 14px;
+`
+export const firstDataInsightsTag = css`
+  margin-top: 0px;
 `

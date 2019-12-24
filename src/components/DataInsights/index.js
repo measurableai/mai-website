@@ -13,6 +13,7 @@ import {
   blogContainer1,
   blogContainer2,
   blogContainer3,
+  firstDataInsightsTag,
   dataInsightsTag,
 } from "./style"
 import BlogPost from "../../components/BlogPost"
@@ -60,7 +61,10 @@ const DataInsights = () => {
       </div>
       <div css={contentContainer}>
         <div css={tagsContainer}>
-          <DataInsightsTag href={endPoint + "e-commerce/"}>
+          <DataInsightsTag
+            css={firstDataInsightsTag}
+            href={endPoint + "e-commerce/"}
+          >
             <FormattedMessage id="eCommerce-tag" defaultMessage="#E-COMMERCE" />
           </DataInsightsTag>
           <DataInsightsTag href={endPoint + "games/"}>
