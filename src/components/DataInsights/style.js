@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 
 export const container = css`
-  min-height: 787px;
+  min-height: 78.7rem;
 `
 export const contentContainer = css`
   display: flex;
@@ -10,18 +10,18 @@ export const contentContainer = css`
   z-index: 1;
 `
 export const title = theme => css`
-  font-size: 72px;
+  font-size: 7.2rem;
   font-weight: 600;
   font-family: ${theme.fonts.heading};
   color: ${theme.colors.purples.normal};
   text-overflow: nowrap;
   font-style: normal;
   line-height: 0.75;
-  letter-spacing: 2.6px;
+  letter-spacing: 0.26rem;
   text-align: right;
   text-transform: uppercase;
   position: relative;
-  margin: 44px 0px 33px 0;
+  margin: 4.4rem 0px 3.3rem 0;
 `
 export const tagsContainer = css`
   display: flex;
@@ -33,12 +33,12 @@ export const tagsContainer = css`
 `
 
 export const buttonContainer = css`
-  margin-top: 130px;
+  margin-top: 13rem;
 `
 
 export const buttonImage = css`
-  max-width: 45px;
-  max-height: 70px;
+  max-width: 4.5rem;
+  max-height: 7rem;
   background-size: cover;
   background-position: center;
 `
@@ -52,8 +52,8 @@ export const blogContainer = css`
   position: relative;
   display: inline-block;
   text-align: left;
-  margin-left: 34px;
-  margin-right: 26px;
+  margin-left: 3.4rem;
+  margin-right: 2.6rem;
 `
 
 export const blogContainer1 = css`
@@ -69,7 +69,7 @@ export const blogContainer3 = css`
 `
 
 export const dataInsightsTag = css`
-  margin-bottom: 12px;
-  font-size: 17px;
-  padding: 2px 14px;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+  padding: 0.2rem 1.4rem;
 `

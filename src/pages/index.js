@@ -14,7 +14,7 @@ const background = theme => css`
 `
 
 const lastSection = css`
-  margin-bottom: 300px;
+  margin-bottom: 30rem;
 `
 
 const IndexPage = () => {

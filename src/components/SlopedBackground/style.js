@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 
 export const background = css`
-  min-height: 750px;
+  min-height: 75rem;
   width: 100%;
   position: relative;
   display: flex;
@@ -32,23 +32,23 @@ export const navigation = css`
 `
 
 export const line = color => css`
-  width: 1px;
+  width: 0.1rem;
   transform: scaleX(0.5);
-  height: 0px;
+  height: 0rem;
   transition: height 0.3s;
   background-color: ${color};
 `
 
 export const cirlce = color => css`
-  width: 9px;
-  height: 9px;
-  border: solid 0.5px ${color};
-  border-radius: 10px;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: solid 0.05rem ${color};
+  border-radius: 1rem;
 `
 
 export const content = css`
   position: relative;
-  width: 1024px;
+  width: 102.4rem;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   text-align: center;

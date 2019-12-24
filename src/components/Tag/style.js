@@ -5,7 +5,7 @@ export const tag = theme => css`
   width: fit-content;
   background-color: ${theme.colors.greens.light};
   color: ${theme.colors.purples.normal};
-  border-radius: 15px;
+  border-radius: 1.5rem;
   vertical-align: middle;
   font-weight: bold;
   text-decoration: none;

@@ -6,7 +6,7 @@ export const button = theme => css`
   text-transform: uppercase;
   padding: 0.8rem 1rem;
   font-size: 1.4rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
 
   &:hover {
     color: ${theme.colors.greens.light};
