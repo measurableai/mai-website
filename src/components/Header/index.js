@@ -1,10 +1,11 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-import FreeTrialButton from "../../components/FreeTrialButton"
-import TextButton from "../../components/TextButton"
-import LanguageDropdown from "../../components/LanguageDropdown"
-import logo from "../../images/mai-logo.svg"
+import FreeTrialButton from "@/components/FreeTrialButton"
+import TextButton from "@/components/TextButton"
+import LanguageDropdown from "@/components/LanguageDropdown"
+
+import logo from "@/images/mai-logo.svg"
 
 import {
   container,

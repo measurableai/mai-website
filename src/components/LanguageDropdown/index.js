@@ -4,11 +4,11 @@ import { useTheme } from "emotion-theming"
 import { useIntl, changeLocale } from "gatsby-plugin-intl"
 
 import { singleValue, optionIcon, arrowDown } from "./style"
-import LanguageIconWhite from "../../assets/language-icon-white.svg"
-import LanguageEngIcon from "../../assets/language-eng.svg"
-import LanguageTCIcon from "../../assets/language-tc.svg"
-import LanguageSCIcon from "../../assets/language-sc.svg"
-import localeEnum from "../enums/locale"
+import LanguageIconWhite from "@/assets/language-icon-white.svg"
+import LanguageEngIcon from "@/assets/language-eng.svg"
+import LanguageTCIcon from "@/assets/language-tc.svg"
+import LanguageSCIcon from "@/assets/language-sc.svg"
+import localeEnum from "@/enums/locale"
 
 const options = [
   { value: localeEnum.EN_US, label: "ENG", Icon: LanguageEngIcon },

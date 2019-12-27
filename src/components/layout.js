@@ -6,7 +6,7 @@ import "normalize.css"
 import "typeface-roboto"
 import "typeface-barlow-condensed"
 
-import Header from "../components/Header"
+import Header from "@/components/Header"
 
 const global = theme => css`
   html {

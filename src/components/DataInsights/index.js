@@ -15,9 +15,9 @@ import {
   blogContainer3,
   dataInsightsTag,
 } from "./style"
-import BlogPost from "../../components/BlogPost"
-import Tag from "../../components/Tag"
-import purpleRightArrowIcon from "./../../images/purple-right-arrow.svg"
+import BlogPost from "@/components/BlogPost"
+import Tag from "@/components/Tag"
+import purpleRightArrowIcon from "@/images/purple-right-arrow.svg"
 
 const endPoint = "https://blog.measurable.ai/category/industries/"
 

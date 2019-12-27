@@ -2,11 +2,11 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import HeroBackground from "../components/HeroBackground"
-import SlopedSection from "../components/SlopedBackground"
-import DataInsights from "../components/DataInsights"
+import Layout from "@/components/layout"
+import SEO from "@/components/seo"
+import HeroBackground from "@/components/HeroBackground"
+import SlopedSection from "@/components/SlopedBackground"
+import DataInsights from "@/components/DataInsights"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};

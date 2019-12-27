@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { hexToRgba } from "../../utils"
+import { hexToRgba } from "@/utils"
 
 export const container = theme => css`
   position: fixed;

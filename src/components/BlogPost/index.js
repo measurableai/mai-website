@@ -16,8 +16,8 @@ import {
   // viewCount,
   readMore,
 } from "./style"
-import Tag from "../../components/Tag"
-// import viewCountIcon from "./../../images/icon-view@3x.png"
+import Tag from "@/components/Tag"
+// import viewCountIcon from "@/images/icon-view@3x.png"
 
 const BlogTag = props => <Tag css={blogTag} {...props} />
 
