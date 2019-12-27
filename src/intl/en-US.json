@@ -1,4 +1,12 @@
 {
   "dataInsights": "Data Insights",
-  "login": "Login"
+  "login": "Login",
+
+  "eCommerce-tag": "#E-COMMERCE",
+  "games-tag": "#GAMES",
+  "rideSharing-tag": "#RIDE SHARING",
+  "dating-tag": "#DATING",
+  "entertainment-tag": "#ENTERTAINMENT",
+
+  "readMore": "Read more..."
 }

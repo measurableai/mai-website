@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroBackground from "../components/HeroBackground"
 import SlopedSection from "../components/SlopedBackground"
+import DataInsights from "../components/DataInsights"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
@@ -13,7 +14,7 @@ const background = theme => css`
 `
 
 const lastSection = css`
-  margin-bottom: 300px;
+  margin-bottom: 30rem;
 `
 
 const IndexPage = () => {
@@ -50,7 +51,7 @@ const IndexPage = () => {
         mode="dark"
         slopedBackgroundImage={theme.linearGradients.greenLightToDark}
       >
-        <p>Section 5</p>
+        <DataInsights />
       </SlopedSection>
       <SlopedSection
         mode="dark"

@@ -27,6 +27,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // your WordPress source
+        baseUrl: `blog.measurable.ai`,
+        protocol: `https`,
+        // is it hosted on wordpress.com, or self-hosted?
+        hostingWPCOM: false,
+        // does your site use the Advanced Custom Fields Plugin?
+        useACF: false,
+        includedRoutes: ["**/categories", "**/posts"],
+      },
+    },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-extract-schema`,
     {
