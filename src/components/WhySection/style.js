@@ -35,21 +35,12 @@ export const questionMark = theme => css`
 `
 export const contentContainer = css`
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  z-index: 1;
-  position: relative;
-  text-align: left;
-`
-export const whySectionItems = css`
-  display: flex;
 `
 export const whySectionItemContainer = css`
   position: relative;
   display: inline-block;
   text-align: left;
   margin-right: 4.7rem;
-  padding-left: 5px;
   height: 100%;
 `
 export const whySectionItemContainer1 = css`
@@ -59,18 +50,3 @@ export const whySectionItemContainer2 = css`
   top: 55px;
 `
 export const whySectionItemContainer3 = css``
-export const empty = css`
-  height: 17.5rem;
-`
-export const dotLineTitle = theme => css`
-  margin: 0;
-  color: ${theme.colors.white};
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1.12px;
-`
-export const dotLineSubTitle = css`
-  font-size: 1.2rem;
-  text-transform: none;
-  letter-spacing: 1.14px;
-`

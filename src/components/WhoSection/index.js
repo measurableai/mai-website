@@ -4,12 +4,11 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import {
   container,
   titleContainer,
-  imageContainer,
+  imagesContainer,
   titleStyle,
   title,
   subTitle,
   questionMark,
-  empty,
   image,
   image1,
   image2,
@@ -20,6 +19,7 @@ import mediaIcon from "@/images/who-media.svg"
 import merchantsIcon from "@/images/who-merchants.svg"
 import financialInstitutionsIcon from "@/images/who-financialInstitutions.svg"
 import researchersIcon from "@/images/who-researchers.svg"
+import WhoSectionIcon from "@/components/WhoSectionIcon"
 
 const WhoSection = ({ children, ...props }) => (
   <div css={container}>
@@ -37,15 +37,33 @@ const WhoSection = ({ children, ...props }) => (
         </span>
       </p>
     </div>
-    <div css={imageContainer}>
-      <div css={empty} />
-      <img css={[image, image1]} src={mediaIcon} alt="Media" />
-      <img css={[image, image2]} src={researchersIcon} alt="Researchers" />
-      <img css={[image, image3]} src={merchantsIcon} alt="Merchants" />
-      <img
+    <div css={imagesContainer}>
+      <WhoSectionIcon
+        css={[image, image1]}
+        src={mediaIcon}
+        alt={"Media"}
+        header={{ id: "media", defaultMessage: "Media" }}
+      />
+      <WhoSectionIcon
+        css={[image, image2]}
+        src={researchersIcon}
+        alt={"Researchers"}
+        header={{ id: "researchers", defaultMessage: "Researchers" }}
+      />
+      <WhoSectionIcon
+        css={[image, image3]}
+        src={merchantsIcon}
+        alt={"Merchants"}
+        header={{ id: "merchants", defaultMessage: "Merchants" }}
+      />
+      <WhoSectionIcon
         css={[image, image4]}
         src={financialInstitutionsIcon}
-        alt="Financial Institutions"
+        alt={"Financial Institutions"}
+        header={{
+          id: "financialInstitutions",
+          defaultMessage: "Financial Institutions",
+        }}
       />
     </div>
   </div>

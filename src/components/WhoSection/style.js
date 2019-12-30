@@ -5,12 +5,12 @@ export const container = () => css`
   flex-direction: column;
   align-self: flex-start;
   z-index: 1;
-  margin: 4rem 0 0 0;
+  margin: 0;
 `
 export const titleContainer = () => css`
   text-align: right;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin: 4rem 0 1.5rem 0;
 `
 export const titleStyle = theme => css`
   margin: 0;
@@ -34,17 +34,18 @@ export const subTitle = theme => css`
 export const questionMark = theme => css`
   color: ${theme.colors.greens.light};
 `
-export const imageContainer = () => css`
+export const imagesContainer = css`
   display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-end;
 `
 export const image = css`
-  height: 18rem;
-  width: 18rem;
+  display: inline-block;
   margin-right: 3rem;
-  position: relative;
 `
-export const image1 = css``
+export const image1 = css`
+  margin-right: 16rem;
+`
 export const image2 = css`
   top: 5.8rem;
 `
@@ -53,8 +54,4 @@ export const image3 = css`
 `
 export const image4 = css`
   top: 17.3rem;
-`
-export const empty = () => css`
-  max-width: 16rem;
-  flex-grow: 1;
 `

@@ -28,10 +28,12 @@ export const subTitle = theme => css`
 `
 export const titleContainer = css`
   position: relative;
+  height: fit-content;
 `
 export const contentContainer = css`
   min-width: 65.9rem;
   text-align: left;
+  z-index: 1;
 `
 export const whatSectionItemContainer = css`
   position: relative;
@@ -39,7 +41,6 @@ export const whatSectionItemContainer = css`
   text-align: left;
   min-width: 16.9rem;
   margin-left: 7.6rem;
-  z-index: 1;
 `
 export const whatSectionItemContainer1 = css`
   top: 81px;
@@ -50,22 +51,4 @@ export const whatSectionItemContainer2 = css`
 `
 export const whatSectionItemContainer3 = css`
   top: 145px;
-`
-export const dotLineStyle = css`
-  color: white;
-  line-height: 1.5rem;
-  letter-spacing: 1.12px;
-`
-export const dotLineTitle = css`
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-`
-export const dotLineContent = css`
-  font-size: 1.6rem;
-  text-transform: uppercase;
-`
-export const dotLineMore = css`
-  font-size: 1.2rem;
-  margin-top: 3rem;
 `

@@ -8,29 +8,15 @@ import {
   titleStyle,
   title,
   subTitle,
-  dotLineStyle,
-  dotLineTitle,
-  dotLineContent,
-  dotLineMore,
   whatSectionItemContainer,
   whatSectionItemContainer1,
   whatSectionItemContainer2,
   whatSectionItemContainer3,
 } from "./style"
-import ImageDotLineTitle from "@/components/ImageDotLineTitle"
+import ImageDotLine from "@/components/ImageDotLine"
 import tmtIqIcon from "@/images/what-tmtIq.svg"
 import travelIcon from "@/images/what-travel.svg"
 import eCommerceIcon from "@/images/what-eCommerce.svg"
-
-const StyledImageDotLineTitle = props => (
-  <ImageDotLineTitle css={[dotLineStyle, dotLineTitle]} {...props} />
-)
-const StyledImageDotLineContent = props => (
-  <p css={[dotLineStyle, dotLineContent]} {...props} />
-)
-const StyledImageDotLineMore = props => (
-  <p css={[dotLineStyle, dotLineMore]} {...props} />
-)
 
 const WhatSection = () => (
   <div css={container}>
@@ -46,93 +32,60 @@ const WhatSection = () => (
       </p>
     </div>
     <div css={contentContainer}>
-      <div css={[whatSectionItemContainer, whatSectionItemContainer1]}>
-        <img height={50} width={50} src={tmtIqIcon} alt="TMT:IQ" />
-        <StyledImageDotLineTitle invert={true}>
-          <FormattedMessage id="tmtIq" defaultMessage="TMT:IQ" />
-        </StyledImageDotLineTitle>
-        <div>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="tme" defaultMessage="TME" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="nflx" defaultMessage="NFLX" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="yy" defaultMessage="YY" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="momo" defaultMessage="MOMO" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="spot" defaultMessage="SPOT" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="mtch" defaultMessage="MTCH" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineMore>
-            <FormattedMessage id="more" defaultMessage="more..." />
-          </StyledImageDotLineMore>
-        </div>
-      </div>
-      <div css={[whatSectionItemContainer, whatSectionItemContainer2]}>
-        <img height={50} width={50} src={travelIcon} alt="TRAVEL" />
-        <StyledImageDotLineTitle invert={true}>
-          <FormattedMessage id="travel" defaultMessage="TRAVEL" />
-        </StyledImageDotLineTitle>
-        <div>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="mar" defaultMessage="MAR" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="htht" defaultMessage="HTHT" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="qtrp" defaultMessage="QTRP" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="uber" defaultMessage="UBER" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="lyft" defaultMessage="LYFT" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="bkng" defaultMessage="BKNG" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineMore>
-            <FormattedMessage id="more" defaultMessage="more..." />
-          </StyledImageDotLineMore>
-        </div>
-      </div>
-      <div css={[whatSectionItemContainer, whatSectionItemContainer3]}>
-        <img height={50} width={50} src={eCommerceIcon} alt="E-COMMERCE" />
-        <StyledImageDotLineTitle invert={true}>
-          <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
-        </StyledImageDotLineTitle>
-        <div>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="ebay" defaultMessage="EBAY" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="appl" defaultMessage="APPL" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="baba" defaultMessage="BABA" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="htht" defaultMessage="HTHT" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="jd" defaultMessage="JD" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineContent>
-            <FormattedMessage id="pdd" defaultMessage="PDD" />
-          </StyledImageDotLineContent>
-          <StyledImageDotLineMore>
-            <FormattedMessage id="more" defaultMessage="more..." />
-          </StyledImageDotLineMore>
-        </div>
-      </div>
+      <ImageDotLine
+        css={[whatSectionItemContainer, whatSectionItemContainer1]}
+        invert={true}
+        margin={"23px 0"}
+        src={tmtIqIcon}
+        alt={"TMT:IQ"}
+        height={50}
+        width={50}
+        contentTitle={{ id: "tmtIq", defaultMessage: "TMT:IQ" }}
+        contents={[
+          { id: "tme", defaultMessage: "TME" },
+          { id: "nflx", defaultMessage: "NFLX" },
+          { id: "yy", defaultMessage: "YY" },
+          { id: "momo", defaultMessage: "MOMO" },
+          { id: "spot", defaultMessage: "SPOT" },
+          { id: "mtch", defaultMessage: "MTCH" },
+        ]}
+      />
+      <ImageDotLine
+        css={[whatSectionItemContainer, whatSectionItemContainer2]}
+        invert={true}
+        margin={"23px 0"}
+        src={travelIcon}
+        alt={"TRAVEL"}
+        height={50}
+        width={50}
+        contentTitle={{ id: "travel", defaultMessage: "TRAVEL" }}
+        contents={[
+          { id: "mar", defaultMessage: "MAR" },
+          { id: "htht", defaultMessage: "HTHT" },
+          { id: "qtrp", defaultMessage: "QTRP" },
+          { id: "uber", defaultMessage: "UBER" },
+          { id: "lyft", defaultMessage: "LYFT" },
+          { id: "bkng", defaultMessage: "BKNG" },
+        ]}
+      />
+      <ImageDotLine
+        css={[whatSectionItemContainer, whatSectionItemContainer3]}
+        invert={true}
+        margin={"23px 0"}
+        src={eCommerceIcon}
+        alt={"E-COMMERCE"}
+        height={50}
+        width={50}
+        contentTitle={{ id: "eCommerce", defaultMessage: "E-COMMERCE" }}
+        contents={[
+          { id: "ebay", defaultMessage: "EBAY" },
+          { id: "appl", defaultMessage: "APPL" },
+          { id: "baba", defaultMessage: "BABA" },
+          { id: "htht", defaultMessage: "HTHT" },
+          { id: "jd", defaultMessage: "JD" },
+          { id: "pdd", defaultMessage: "PDD" },
+        ]}
+      />
     </div>
   </div>
 )

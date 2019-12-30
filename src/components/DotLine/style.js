@@ -1,28 +1,26 @@
-// import React from "react"
 import { css } from "@emotion/core"
 
-export const container = css`
+export const container = margin => css`
   max-width: 20.4rem;
+  margin: ${!!margin ? margin : "10px 0"};
 `
 export const dotLineContainer = invert => css`
   display: flex;
   width: 100%;
-  margin: 10px auto;
   align-items: center;
   flex-direction: ${invert ? "row-reverse" : "row"};
   flex-wrap: nowrap;
   position: relative;
-  left: ${invert ? "0" : "-5px"};
 `
 export const dot = theme => css`
-  height: 5px;
-  width: 5px;
+  height: 0.73rem;
+  width: 0.73rem;
   background-color: ${theme.colors.white};
   border-radius: 50%;
 `
 export const line = theme => css`
   flex-grow: 1;
-  height: 1px;
+  height: 0.1rem;
   width: 100%;
   background-color: ${theme.colors.white};
   position: relative;

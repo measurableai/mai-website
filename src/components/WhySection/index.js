@@ -9,26 +9,15 @@ import {
   questionMark,
   titleContainer,
   contentContainer,
-  whySectionItems,
   whySectionItemContainer,
   whySectionItemContainer1,
   whySectionItemContainer2,
   whySectionItemContainer3,
-  empty,
-  dotLineTitle,
-  dotLineSubTitle,
 } from "./style"
-import ImageDotLineTitle from "@/components/ImageDotLineTitle"
+import ImageDotLine from "@/components/ImageDotLine"
 import fullConverageIcon from "@/images/why-fullCoverage.svg"
 import realTimeIcon from "@/images/why-realTime.svg"
 import transactionalDataIcon from "@/images/why-transactionalData.svg"
-
-const StyledImageDotLineTitle = props => (
-  <ImageDotLineTitle css={dotLineTitle} {...props} />
-)
-const StyledImageDotLineSubTitle = props => (
-  <span css={[dotLineTitle, dotLineSubTitle]} {...props} />
-)
 
 const WhySection = () => (
   <div css={container}>
@@ -44,71 +33,39 @@ const WhySection = () => (
       </p>
     </div>
     <div css={contentContainer}>
-      <div css={empty} />
-      <div css={whySectionItems}>
-        <div css={[whySectionItemContainer, whySectionItemContainer1]}>
-          <img
-            height={124}
-            width={116}
-            src={transactionalDataIcon}
-            alt="TRANSACTIONAL DATA"
-          />
-          <StyledImageDotLineTitle
-            src={transactionalDataIcon}
-            alt="TRANSACTIONAL DATA"
-          >
-            <FormattedMessage
-              id="transactionalData"
-              defaultMessage="TRANSACTIONAL DATA"
-            />
-            <StyledImageDotLineSubTitle>
-              {" "}
-              <FormattedMessage
-                id="fromOnlineShopers"
-                defaultMessage="from Online Shoppers"
-              />
-            </StyledImageDotLineSubTitle>
-          </StyledImageDotLineTitle>
-        </div>
-        <div css={[whySectionItemContainer, whySectionItemContainer2]}>
-          <img height={134} width={121} src={realTimeIcon} alt="REAL TIME" />
-          <StyledImageDotLineTitle src={realTimeIcon} alt="REAL TIME">
-            <FormattedMessage id="realTime" defaultMessage="REAL-TIME" />
-            <StyledImageDotLineSubTitle>
-              {" "}
-              <FormattedMessage
-                id="dataDashboard"
-                defaultMessage="Data Dashboard"
-              />
-            </StyledImageDotLineSubTitle>
-          </StyledImageDotLineTitle>
-        </div>
-        <div css={[whySectionItemContainer, whySectionItemContainer3]}>
-          <img
-            height={98}
-            width={126}
-            src={fullConverageIcon}
-            alt="FULL COVERAGE"
-          />
-          <StyledImageDotLineTitle
-            css={dotLineTitle}
-            src={fullConverageIcon}
-            alt="FULL COVERAGE"
-          >
-            <FormattedMessage
-              id="fullCoverage"
-              defaultMessage="FULL COVERAGE"
-            />
-            <StyledImageDotLineSubTitle>
-              {" "}
-              <FormattedMessage
-                id="fromUsToAsia"
-                defaultMessage="from US to Asia"
-              />
-            </StyledImageDotLineSubTitle>
-          </StyledImageDotLineTitle>
-        </div>
-      </div>
+      <ImageDotLine
+        css={[whySectionItemContainer, whySectionItemContainer1]}
+        src={transactionalDataIcon}
+        alt={"TRANSACTIONAL DATA"}
+        height={124}
+        width={116}
+        title={{
+          id: "transactionalData",
+          defaultMessage: "TRANSACTIONAL DATA",
+        }}
+        subTitle={{
+          id: "fromOnlineShopers",
+          defaultMessage: "from Online Shoppers",
+        }}
+      />
+      <ImageDotLine
+        css={[whySectionItemContainer, whySectionItemContainer2]}
+        src={realTimeIcon}
+        alt={"REAL TIME"}
+        height={134}
+        width={121}
+        title={{ id: "realTime", defaultMessage: "REAL TIME" }}
+        subTitle={{ id: "dataDashboard", defaultMessage: "Data Dashboard" }}
+      />
+      <ImageDotLine
+        css={[whySectionItemContainer, whySectionItemContainer3]}
+        src={fullConverageIcon}
+        alt={"FULL COVERAGE"}
+        height={98}
+        width={126}
+        title={{ id: "fullCoverage", defaultMessage: "FULL COVERAGE" }}
+        subTitle={{ id: "fromUsToAsia", defaultMessage: "from US to Asia" }}
+      />
     </div>
   </div>
 )
