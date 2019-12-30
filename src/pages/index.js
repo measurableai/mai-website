@@ -7,6 +7,7 @@ import SEO from "@/components/seo"
 import HeroBackground from "@/components/HeroBackground"
 import SlopedSection from "@/components/SlopedBackground"
 import DataInsights from "@/components/DataInsights"
+import DataReportSection from "@/components/DataReportSection"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
@@ -45,7 +46,7 @@ const IndexPage = () => {
       <SlopedSection
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
-        <p>Section 4</p>
+        <DataReportSection />
       </SlopedSection>
       <SlopedSection
         mode="dark"
