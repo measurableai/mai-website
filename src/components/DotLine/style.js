@@ -2,7 +2,6 @@ import { css } from "@emotion/core"
 
 export const container = margin => css`
   max-width: 20.4rem;
-  margin: ${!!margin ? margin : "10px 0"};
 `
 export const dotLineContainer = invert => css`
   display: flex;

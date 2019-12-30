@@ -3,8 +3,8 @@ import { css } from "@emotion/core"
 export const container = css`
   max-width: 20.4rem;
 `
-export const dotLineInvert = invert => css`
-  padding-left: ${invert ? "0" : "0.73rem"};
+export const dotLineInvert = css`
+  padding-left: 0.73rem;
 `
 export const titleStyle = theme => css`
   margin: 0;
@@ -41,20 +41,6 @@ export const dotLineSubTitle = css`
   letter-spacing: 1.14px;
   line-height: 2.4rem;
 `
-export const dotLineContentTitle = css`
-  font-size: 2rem;
-  letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: 2.3rem;
-`
-export const dotLineContent = css`
-  font-size: 1.6rem;
-  letter-spacing: 0.8px;
-  margin-bottom: 1rem;
-`
-export const dotLineMore = css`
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-top: 3rem;
-  letter-spacing: 0.6px;
+export const dotLineContainer = css`
+  margin: 1rem 0;
 `

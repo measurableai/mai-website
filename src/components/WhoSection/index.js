@@ -15,13 +15,14 @@ import {
   image3,
   image4,
 } from "./style"
+import Icon from "./Icon"
+
 import mediaIcon from "@/images/who-media.svg"
 import merchantsIcon from "@/images/who-merchants.svg"
 import financialInstitutionsIcon from "@/images/who-financialInstitutions.svg"
 import researchersIcon from "@/images/who-researchers.svg"
-import WhoSectionIcon from "@/components/WhoSectionIcon"
 
-const WhoSection = ({ children, ...props }) => (
+const WhoSection = () => (
   <div css={container}>
     <div css={titleContainer}>
       <p css={theme => [titleStyle(theme), title(theme)]}>
@@ -38,32 +39,36 @@ const WhoSection = ({ children, ...props }) => (
       </p>
     </div>
     <div css={imagesContainer}>
-      <WhoSectionIcon
+      <Icon
         css={[image, image1]}
         src={mediaIcon}
         alt={"Media"}
-        header={{ id: "media", defaultMessage: "Media" }}
+        header={<FormattedMessage id="media" defaultMessage="Media" />}
       />
-      <WhoSectionIcon
+      <Icon
         css={[image, image2]}
         src={researchersIcon}
         alt={"Researchers"}
-        header={{ id: "researchers", defaultMessage: "Researchers" }}
+        header={
+          <FormattedMessage id="researchers" defaultMessage="Researchers" />
+        }
       />
-      <WhoSectionIcon
+      <Icon
         css={[image, image3]}
         src={merchantsIcon}
         alt={"Merchants"}
-        header={{ id: "merchants", defaultMessage: "Merchants" }}
+        header={<FormattedMessage id="merchants" defaultMessage="Merchants" />}
       />
-      <WhoSectionIcon
+      <Icon
         css={[image, image4]}
         src={financialInstitutionsIcon}
         alt={"Financial Institutions"}
-        header={{
-          id: "financialInstitutions",
-          defaultMessage: "Financial Institutions",
-        }}
+        header={
+          <FormattedMessage
+            id="financialInstitutions"
+            defaultMessage="Financial Institutions"
+          />
+        }
       />
     </div>
   </div>

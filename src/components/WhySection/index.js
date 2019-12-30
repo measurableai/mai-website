@@ -14,7 +14,7 @@ import {
   whySectionItemContainer2,
   whySectionItemContainer3,
 } from "./style"
-import ImageDotLine from "@/components/ImageDotLine"
+import Card from "./Card"
 import fullConverageIcon from "@/images/why-fullCoverage.svg"
 import realTimeIcon from "@/images/why-realTime.svg"
 import transactionalDataIcon from "@/images/why-transactionalData.svg"
@@ -33,38 +33,54 @@ const WhySection = () => (
       </p>
     </div>
     <div css={contentContainer}>
-      <ImageDotLine
+      <Card
         css={[whySectionItemContainer, whySectionItemContainer1]}
         src={transactionalDataIcon}
         alt={"TRANSACTIONAL DATA"}
         height={124}
         width={116}
-        title={{
-          id: "transactionalData",
-          defaultMessage: "TRANSACTIONAL DATA",
-        }}
-        subTitle={{
-          id: "fromOnlineShopers",
-          defaultMessage: "from Online Shoppers",
-        }}
+        title={
+          <FormattedMessage
+            id="transactionalData"
+            defaultMessage="TRANSACTIONAL DATA"
+          />
+        }
+        subTitle={
+          <FormattedMessage
+            id="fromOnlineShopers"
+            defaultMessage="from Online Shoppers"
+          />
+        }
       />
-      <ImageDotLine
+      <Card
         css={[whySectionItemContainer, whySectionItemContainer2]}
         src={realTimeIcon}
         alt={"REAL TIME"}
         height={134}
         width={121}
-        title={{ id: "realTime", defaultMessage: "REAL TIME" }}
-        subTitle={{ id: "dataDashboard", defaultMessage: "Data Dashboard" }}
+        title={<FormattedMessage id="realTime" defaultMessage="REAL TIME" />}
+        subTitle={
+          <FormattedMessage
+            id="dataDashboard"
+            defaultMessage="Data Dashboard"
+          />
+        }
       />
-      <ImageDotLine
+      <Card
         css={[whySectionItemContainer, whySectionItemContainer3]}
         src={fullConverageIcon}
         alt={"FULL COVERAGE"}
         height={98}
         width={126}
-        title={{ id: "fullCoverage", defaultMessage: "FULL COVERAGE" }}
-        subTitle={{ id: "fromUsToAsia", defaultMessage: "from US to Asia" }}
+        title={
+          <FormattedMessage id="fullCoverage" defaultMessage="FULL COVERAGE" />
+        }
+        subTitle={
+          <FormattedMessage
+            id="fromUsToAsia"
+            defaultMessage="from US to Asia"
+          />
+        }
       />
     </div>
   </div>
