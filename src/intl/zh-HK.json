@@ -45,5 +45,17 @@
   "researchers": "Researchers",
   "merchants": "Merchants",
   "financialInstitutions": "Financial Institutions",
-  "dataReport": "數據報告"
+  "dataReport": "數據報告",
+
+  "readyTo": "Ready to",
+  "getStarted": "Get STARTED ?",
+  "subscribe": "SUBSCRIBE",
+  "emailAddress": "Email address",
+  "toOurNewsLetter": "to our newsletter",
+  "poweredBy": "Powered by",
+  "jobs": "JOBS",
+  "press": "PRESS",
+  "privacyPolicy": "PRIVACY  POLICY",
+  "termsOfUse": "TERMS OF USE",
+  "AllRightsReserved": "ALL RIGHTS RESERVED © 2019 Measurable AI"
 }

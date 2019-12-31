@@ -36,13 +36,6 @@ export const buttonContainer = css`
   margin-top: 13rem;
 `
 
-export const buttonImage = css`
-  max-width: 4.5rem;
-  max-height: 7rem;
-  background-size: cover;
-  background-position: center;
-`
-
 export const blogsContainer = css`
   display: flex;
   flex-direction: row-reverse;
