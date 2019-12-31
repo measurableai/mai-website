@@ -20,8 +20,10 @@ const Card = ({ src, alt, contentTitle, contents, ...props }) => {
         <p css={theme => [dotLineStyle(theme), dotLineContentTitle]}>
           {contentTitle}
         </p>
-        {contents.map(content => (
-          <p css={theme => [dotLineStyle(theme), dotLineContent]}>{content}</p>
+        {contents.map((content, index) => (
+          <p css={theme => [dotLineStyle(theme), dotLineContent]} key={index}>
+            {content}
+          </p>
         ))}
         <p css={theme => [dotLineStyle(theme), dotLineMore]}>
           <FormattedMessage id="more" defaultMessage="more ..." />

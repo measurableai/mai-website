@@ -91,16 +91,24 @@ export const readMore = theme => css`
 `
 
 export const dot = theme => css`
-  position: relative;
-  height: 0.5rem;
-  width: 0.5rem;
+  position: absolute;
+  height: 0.3rem;
+  width: 0.3rem;
   border-radius: 1rem;
   background-color: ${theme.colors.purples.light};
-  left: -0.2rem;
-  flex-grow: 1;
+  left: -0.15rem;
 `
 
 export const blogTag = css`
   font-size: 1rem;
   padding: 0.3rem 0.7rem;
+`
+export const anchor = css`
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 `
