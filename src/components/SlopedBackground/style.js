@@ -49,6 +49,7 @@ export const cirlce = color => css`
 export const content = css`
   position: relative;
   width: 102.4rem;
+  box-sizing: border-box;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   text-align: center;
