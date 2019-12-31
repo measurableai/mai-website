@@ -3,17 +3,15 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 
 import {
   container,
-  titleContainer,
   contentContainer,
-  titleStyle,
-  title,
-  subTitle,
   whatSectionItemContainer,
   whatSectionItemContainer1,
   whatSectionItemContainer2,
   whatSectionItemContainer3,
 } from "./style"
 import Card from "./Card"
+
+import ThreeWHeader from "@/components/ThreeWHeader"
 import tmtIqIcon from "@/images/what-tmtIq.svg"
 import travelIcon from "@/images/what-travel.svg"
 import eCommerceIcon from "@/images/what-eCommerce.svg"
@@ -47,22 +45,18 @@ const WhatSection = () => {
   ]
   return (
     <div css={container}>
-      <div css={titleContainer}>
-        <p css={theme => [titleStyle(theme), title(theme)]}>
-          <FormattedMessage id="what" defaultMessage="WHAT" />
-        </p>
-        <p css={theme => [titleStyle(theme), subTitle(theme)]}>
+      <ThreeWHeader
+        header={<FormattedMessage id="what" defaultMessage="WHAT" />}
+        subHeader={
           <FormattedMessage id="doWeCover" defaultMessage="do we cover" />
-          <span>
-            <FormattedMessage id="questionMark" defaultMessage="?" />
-          </span>
-        </p>
-      </div>
+        }
+        questionMark={<FormattedMessage id="questionMark" defaultMessage="?" />}
+      />
       <div css={contentContainer}>
         <Card
           css={[whatSectionItemContainer, whatSectionItemContainer1]}
           src={tmtIqIcon}
-          alt={"TMT:IQ"}
+          alt="TMT:IQ"
           contentTitle={<FormattedMessage id="tmtIq" defaultMessage="TMT:IQ" />}
           contents={contentArr1.map(content => (
             <FormattedMessage
@@ -74,7 +68,7 @@ const WhatSection = () => {
         <Card
           css={[whatSectionItemContainer, whatSectionItemContainer2]}
           src={travelIcon}
-          alt={"TRAVEL"}
+          alt="TRAVEL"
           contentTitle={
             <FormattedMessage id="travel" defaultMessage="TRAVEL" />
           }
@@ -88,7 +82,7 @@ const WhatSection = () => {
         <Card
           css={[whatSectionItemContainer, whatSectionItemContainer3]}
           src={eCommerceIcon}
-          alt={"E-COMMERCE"}
+          alt="E-COMMERCE"
           contentTitle={
             <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
           }

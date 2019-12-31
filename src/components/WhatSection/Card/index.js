@@ -11,7 +11,7 @@ import {
 } from "./style"
 import DotLine from "@/components/DotLine"
 
-const Card = ({ invert, src, alt, contentTitle, contents, ...props }) => {
+const Card = ({ src, alt, contentTitle, contents, ...props }) => {
   return (
     <div css={container} {...props}>
       <img height={50} width={50} src={src} alt={alt} />

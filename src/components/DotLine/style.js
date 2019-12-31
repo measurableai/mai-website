@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 
-export const container = margin => css`
+export const container = css`
   max-width: 20.4rem;
 `
 export const dotLineContainer = invert => css`

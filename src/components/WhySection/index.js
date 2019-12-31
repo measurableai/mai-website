@@ -3,11 +3,6 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 
 import {
   container,
-  title,
-  titleStyle,
-  subTitle,
-  questionMark,
-  titleContainer,
   contentContainer,
   whySectionItemContainer,
   whySectionItemContainer1,
@@ -15,28 +10,26 @@ import {
   whySectionItemContainer3,
 } from "./style"
 import Card from "./Card"
+
+import ThreeWHeader from "@/components/ThreeWHeader"
 import fullConverageIcon from "@/images/why-fullCoverage.svg"
 import realTimeIcon from "@/images/why-realTime.svg"
 import transactionalDataIcon from "@/images/why-transactionalData.svg"
 
 const WhySection = () => (
   <div css={container}>
-    <div css={titleContainer}>
-      <p css={theme => [titleStyle(theme), title(theme)]}>
-        <FormattedMessage id="why" defaultMessage="WHY" />
-      </p>
-      <p css={theme => [titleStyle(theme), subTitle(theme)]}>
+    <ThreeWHeader
+      header={<FormattedMessage id="why" defaultMessage="WHY" />}
+      subHeader={
         <FormattedMessage id="measurableAI" defaultMessage="Measurable.ai" />
-        <span css={questionMark}>
-          <FormattedMessage id="questionMark" defaultMessage="?" />
-        </span>
-      </p>
-    </div>
+      }
+      questionMark={<FormattedMessage id="questionMark" defaultMessage="?" />}
+    />
     <div css={contentContainer}>
       <Card
         css={[whySectionItemContainer, whySectionItemContainer1]}
         src={transactionalDataIcon}
-        alt={"TRANSACTIONAL DATA"}
+        alt="TRANSACTIONAL DATA"
         height={124}
         width={116}
         title={
@@ -55,7 +48,7 @@ const WhySection = () => (
       <Card
         css={[whySectionItemContainer, whySectionItemContainer2]}
         src={realTimeIcon}
-        alt={"REAL TIME"}
+        alt="REAL TIME"
         height={134}
         width={121}
         title={<FormattedMessage id="realTime" defaultMessage="REAL TIME" />}
@@ -69,7 +62,7 @@ const WhySection = () => (
       <Card
         css={[whySectionItemContainer, whySectionItemContainer3]}
         src={fullConverageIcon}
-        alt={"FULL COVERAGE"}
+        alt="FULL COVERAGE"
         height={98}
         width={126}
         title={

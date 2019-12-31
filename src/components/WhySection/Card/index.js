@@ -10,19 +10,7 @@ import {
 } from "./style"
 import DotLine from "@/components/DotLine"
 
-const Card = ({
-  invert,
-  margin,
-  src,
-  alt,
-  height,
-  width,
-  title,
-  subTitle,
-  contentTitle,
-  contents,
-  ...props
-}) => {
+const Card = ({ src, alt, height, width, title, subTitle, ...props }) => {
   return (
     <div css={container} {...props}>
       <img
@@ -32,7 +20,7 @@ const Card = ({
         src={src}
         alt={alt}
       />
-      <DotLine css={dotLineContainer} invert={invert} />
+      <DotLine css={dotLineContainer} invert={false} />
       <div css={dotLineInvert}>
         <p css={theme => [dotLineStyle(theme), dotLineTitle]}>
           {title}
