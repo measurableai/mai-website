@@ -17,3 +17,6 @@ export const subTitle = theme => css`
   color: ${theme.colors.white};
   letter-spacing: 1.2px;
 `
+export const questionMarkStyle = theme => css`
+  color: ${theme.colors.greens.light};
+`
