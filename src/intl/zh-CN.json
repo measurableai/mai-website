@@ -45,5 +45,10 @@
   "researchers": "Researchers",
   "merchants": "Merchants",
   "financialInstitutions": "Financial Institutions",
-  "dataReport": "数据报告"
+  "dataReport": "数据报告",
+
+  "connectingTheDots": "Connecting the dots with",
+  "alternativeData": "ALTERNATIVE DATA",
+  "a": "A",
+  "providesActionableConsumer": "that provides actionable consumer insights based on transactional data."
 }
