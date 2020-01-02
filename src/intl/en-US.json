@@ -1,13 +1,11 @@
 {
   "dataInsights": "Data Insights",
   "login": "Login",
-
   "eCommerce-tag": "#E-COMMERCE",
   "games-tag": "#GAMES",
   "rideSharing-tag": "#RIDE SHARING",
   "dating-tag": "#DATING",
   "entertainment-tag": "#ENTERTAINMENT",
-
   "readMore": "Read more...",
   "why": "Why",
   "measurableAI": "Measurable.ai",
@@ -18,7 +16,6 @@
   "dataDashboard": "Data Dashboard",
   "transactionalData": "TRANSACTIONAL DATA",
   "fromOnlineShopers": "from Online Shoppers",
-
   "what": "What",
   "doWeCover": "do we cover",
   "tmtIq": "TMT:IQ",
@@ -42,11 +39,11 @@
   "jd": "JD",
   "pdd": "PDD",
   "more": "more ...",
-
   "who": "Who",
   "areOurTargetUsers": "are our target users",
   "media": "Media",
   "researchers": "Researchers",
   "merchants": "Merchants",
-  "financialInstitutions": "Financial Institutions"
+  "financialInstitutions": "Financial Institutions",
+  "dataReport": "Data Report"
 }

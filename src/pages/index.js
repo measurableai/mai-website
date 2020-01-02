@@ -10,6 +10,7 @@ import DataInsights from "@/components/DataInsights"
 import WhySection from "@/components/WhySection"
 import WhatSection from "@/components/WhatSection"
 import WhoSection from "@/components/WhoSection"
+import DataReportSection from "@/components/DataReportSection"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
@@ -48,7 +49,7 @@ const IndexPage = () => {
       <SlopedSection
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
-        <p>Section 4</p>
+        <DataReportSection />
       </SlopedSection>
       <SlopedSection
         mode="dark"
