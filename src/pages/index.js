@@ -7,6 +7,9 @@ import SEO from "@/components/seo"
 import HeroBackground from "@/components/HeroBackground"
 import SlopedSection from "@/components/SlopedBackground"
 import DataInsights from "@/components/DataInsights"
+import WhySection from "@/components/WhySection"
+import WhatSection from "@/components/WhatSection"
+import WhoSection from "@/components/WhoSection"
 import DataReportSection from "@/components/DataReportSection"
 
 const background = theme => css`
@@ -29,19 +32,19 @@ const IndexPage = () => {
         slopedBackgroundImage={theme.linearGradients.purpleLightToDark}
         slopedBackgroundColor={theme.colors.purples.dark}
       >
-        <p style={{ color: "white" }}>Section 1</p>
+        <WhySection />
       </SlopedSection>
       <SlopedSection
         slopedBackgroundImage={theme.linearGradients.purpleDarkToLight}
         slopedBackgroundColor={theme.colors.purples.dark}
       >
-        <p style={{ color: "white" }}>Section 2</p>
+        <WhatSection />
       </SlopedSection>
       <SlopedSection
         slopedBackgroundImage={theme.linearGradients.purpleLightToDark}
         slopedBackgroundColor={theme.colors.purples.dark}
       >
-        <p style={{ color: "white" }}>Section 3</p>
+        <WhoSection />
       </SlopedSection>
       <SlopedSection
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
@@ -63,7 +66,7 @@ const IndexPage = () => {
       <SlopedSection
         mode="dark"
         css={lastSection}
-        slopedBackgroundColor={theme.colors.greens.dark}
+        slopedBackgroundColor={theme.colors.greens.light}
       >
         <p>Section 7</p>
       </SlopedSection>

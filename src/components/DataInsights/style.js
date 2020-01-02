@@ -54,6 +54,7 @@ export const blogContainer = css`
   text-align: left;
   margin-left: 3.4rem;
   margin-right: 2.6rem;
+  height: fit-content;
 `
 
 export const blogContainer1 = css`
