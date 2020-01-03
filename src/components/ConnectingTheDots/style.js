@@ -8,7 +8,6 @@ export const container = css`
 `
 export const titleStyle = theme => css`
   margin: 0;
-  font-weight: 600;
   font-family: ${theme.fonts.heading};
   line-height: 7.6rem;
 `
@@ -19,13 +18,13 @@ export const title1 = theme => css`
 `
 export const title2 = theme => css`
   font-size: 6.2rem;
+  font-weight: 600;
   color: ${theme.colors.greens.light};
   letter-spacing: 0.4rem;
   text-transform: uppercase;
 `
 export const subTitleStyle = theme => css`
   margin: 0;
-  font-family: ${theme.fonts.body};
   line-height: 2.6rem;
 `
 export const subTitle1 = theme => css`

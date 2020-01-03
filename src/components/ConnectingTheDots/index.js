@@ -15,41 +15,46 @@ import {
 } from "./style"
 import FreeTrialButton from "@/components/FreeTrialButton"
 
-const ConnectingTheDots = () => (
-  <div css={container}>
-    <div css={titleContainer}>
-      <p css={theme => [titleStyle(theme), title1(theme)]}>
-        <FormattedMessage
-          id="connectingTheDots"
-          defaultMessage="Connecting the dots with"
-        />
-      </p>
-      <p css={theme => [titleStyle(theme), title2(theme)]}>
-        <FormattedMessage
-          id="alternativeData"
-          defaultMessage="ALTERNATIVE DATA"
-        />
-      </p>
-    </div>
-    <div css={subTitleContainer}>
-      <p css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
-        <FormattedMessage id="a" defaultMessage="A" />{" "}
-        <span css={theme => [subTitleStyle(theme), subTitle2(theme)]}>
+const ConnectingTheDots = () => {
+  const dataDashboard = (
+    <FormattedMessage id="dataDashboard" defaultMessage="Data Dashboard" />
+  )
+  return (
+    <div css={container}>
+      <div css={titleContainer}>
+        <p css={theme => [titleStyle(theme), title1(theme)]}>
           <FormattedMessage
-            id="dataDashboard"
-            defaultMessage="Data Dashboard"
+            id="connectingTheDots"
+            defaultMessage="Connecting the dots with"
           />
-        </span>{" "}
-        <span css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
+        </p>
+        <p css={theme => [titleStyle(theme), title2(theme)]}>
           <FormattedMessage
-            id="providesActionableConsumer"
-            defaultMessage="that provides actionable consumer insights based on transactional data."
+            id="alternativeData"
+            defaultMessage="ALTERNATIVE DATA"
           />
-        </span>
-      </p>
+        </p>
+      </div>
+      <div css={subTitleContainer}>
+        <p css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
+          <span css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
+            <FormattedMessage
+              id="providesActionableConsumer"
+              defaultMessage={`A {dataDashboard} that provides actionable consumer insights based on transactional data.`}
+              values={{
+                dataDashboard: (
+                  <span css={theme => [subTitleStyle(theme), subTitle2(theme)]}>
+                    {dataDashboard}
+                  </span>
+                ),
+              }}
+            />
+          </span>
+        </p>
+      </div>
+      <FreeTrialButton css={button} />
     </div>
-    <FreeTrialButton css={button} />
-  </div>
-)
+  )
+}
 
 export default ConnectingTheDots
