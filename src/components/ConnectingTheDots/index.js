@@ -16,9 +16,6 @@ import {
 import FreeTrialButton from "@/components/FreeTrialButton"
 
 const ConnectingTheDots = () => {
-  const dataDashboard = (
-    <FormattedMessage id="dataDashboard" defaultMessage="Data Dashboard" />
-  )
   return (
     <div css={container}>
       <div css={titleContainer}>
@@ -40,11 +37,11 @@ const ConnectingTheDots = () => {
           <span css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
             <FormattedMessage
               id="providesActionableConsumer"
-              defaultMessage={`A {dataDashboard} that provides actionable consumer insights based on transactional data.`}
+              defaultMessage={`A <span>Data Dashboard</span> that provides actionable consumer insights based on transactional data.`}
               values={{
-                dataDashboard: (
+                span: str => (
                   <span css={theme => [subTitleStyle(theme), subTitle2(theme)]}>
-                    {dataDashboard}
+                    {str}
                   </span>
                 ),
               }}
