@@ -1,0 +1,188 @@
+[
+  {
+    "jobTitle": {
+      "en-US": "WEB FRONTEND ENGINEER",
+      "zh-HK": "WEB FRONTEND ENGINEER HK",
+      "zh-CN": "WEB FRONTEND ENGINEER CN"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Develop web app utilizing latest frontend technology such as React, Redux, Angular, Vue, Webpack, HTML5, etc.",
+        "zh-HK": "Develop web app utilizing latest frontend technology such as React, Redux, Angular, Vue, Webpack, HTML5, etc. HK",
+        "zh-CN": "Develop web app utilizing latest frontend technology such as React, Redux, Angular, Vue, Webpack, HTML5, etc. CN"
+      },
+      {
+        "en-US": "Ensure high code quality",
+        "zh-HK": "Ensure high code quality HK",
+        "zh-CN": "Ensure high code quality CN"
+      },
+      {
+        "en-US": "Write efficient, elegant and maintainable code.",
+        "zh-HK": "Write efficient, elegant and maintainable code.",
+        "zh-CN": "Write efficient, elegant and maintainable code."
+      },
+      {
+        "en-US": "Unit-test code for robustness, including edge cases, usability, and general reliability.",
+        "zh-HK": "Unit-test code for robustness, including edge cases, usability, and general reliability.",
+        "zh-CN": "Unit-test code for robustness, including edge cases, usability, and general reliability."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "BS/MS degree in Computer Science, Engineering or a related subject ",
+        "zh-HK": "BS/MS degree in Computer Science, Engineering or a related subject ",
+        "zh-CN": "BS/MS degree in Computer Science, Engineering or a related subject "
+      },
+      {
+        "en-US": "2+ years of experience working as Front End Engineer ",
+        "zh-HK": "2+ years of experience working as Front End Engineer ",
+        "zh-CN": "2+ years of experience working as Front End Engineer "
+      },
+      {
+        "en-US": "Expert knowledge of JavaScript (ES5 and ES6), CSS and HTML5 ",
+        "zh-HK": "Expert knowledge of JavaScript (ES5 and ES6), CSS and HTML5 ",
+        "zh-CN": "Expert knowledge of JavaScript (ES5 and ES6), CSS and HTML5 "
+      },
+      {
+        "en-US": "Experience working with JavaScript frameworks like Angular, React, Vue ",
+        "zh-HK": "Experience working with JavaScript frameworks like Angular, React, Vue ",
+        "zh-CN": "Experience working with JavaScript frameworks like Angular, React, Vue "
+      },
+      {
+        "en-US": "Understanding of user-centered design and mobile first development ",
+        "zh-HK": "Understanding of user-centered design and mobile first development ",
+        "zh-CN": "Understanding of user-centered design and mobile first development "
+      },
+      {
+        "en-US": "Experience with testing practices, frameworks like Cypress, mocha ",
+        "zh-HK": "Experience with testing practices, frameworks like Cypress, mocha ",
+        "zh-CN": "Experience with testing practices, frameworks like Cypress, mocha "
+      },
+      {
+        "en-US": "Proficiency with Chrome Developer Tools",
+        "zh-HK": "Proficiency with Chrome Developer Tools",
+        "zh-CN": "Proficiency with Chrome Developer Tools"
+      },
+      {
+        "en-US": "Proficiency with command line",
+        "zh-HK": "Proficiency with command line",
+        "zh-CN": "Proficiency with command line"
+      }
+    ],
+    "jobPluses": [
+      {
+        "en-US": "Experience with CSS preprocessors like SASS and Stylus ",
+        "zh-HK": "Experience with CSS preprocessors like SASS and Stylus ",
+        "zh-CN": "Experience with CSS preprocessors like SASS and Stylus "
+      },
+      {
+        "en-US": "Experience with continuous integration / continuous delivery process and tools ",
+        "zh-HK": "Experience with continuous integration / continuous delivery process and tools ",
+        "zh-CN": "Experience with continuous integration / continuous delivery process and tools "
+      },
+      {
+        "en-US": "Experience with cloud hosting like AWS or Azure ",
+        "zh-HK": "Experience with cloud hosting like AWS or Azure ",
+        "zh-CN": "Experience with cloud hosting like AWS or Azure "
+      },
+      {
+        "en-US": "Nice to have: Linux administration and Amazon AWS experience",
+        "zh-HK": "Nice to have: Linux administration and Amazon AWS experience",
+        "zh-CN": "Nice to have: Linux administration and Amazon AWS experience"
+      }
+    ]
+  },
+  {
+    "jobTitle": {
+      "en-US": "SENIOR DATA ENGINEER",
+      "zh-HK": "SENIOR DATA ENGINEER HK",
+      "zh-CN": "SENIOR DATA ENGINEER CN"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Define the architecture of MailTime Analytics platform.",
+        "zh-HK": "Define the architecture of MailTime Analytics platform. HK",
+        "zh-CN": "Define the architecture of MailTime Analytics platform. CN"
+      },
+      {
+        "en-US": "Build robust and scalable foundation of data, from logging to streaming pipelines, data filtering and email parser.",
+        "zh-HK": "Build robust and scalable foundation of data, from logging to streaming pipelines, data filtering and email parser. HK",
+        "zh-CN": "Build robust and scalable foundation of data, from logging to streaming pipelines, data filtering and email parser. CN"
+      },
+      {
+        "en-US": "Implement our data stack using modern technologies such as Apache Spark, Kafka, HDFS and Cassandra.",
+        "zh-HK": "Implement our data stack using modern technologies such as Apache Spark, Kafka, HDFS and Cassandra.",
+        "zh-CN": "Implement our data stack using modern technologies such as Apache Spark, Kafka, HDFS and Cassandra."
+      },
+      {
+        "en-US": "Optimize our data pipelines and establish best practices for table schemas, data models and data storage.",
+        "zh-HK": "Optimize our data pipelines and establish best practices for table schemas, data models and data storage.",
+        "zh-CN": "Optimize our data pipelines and establish best practices for table schemas, data models and data storage."
+      },
+      {
+        "en-US": "Build efficient solutions on top of AWS, Azure using Python, Scala and Go.",
+        "zh-HK": "Build efficient solutions on top of AWS, Azure using Python, Scala and Go.",
+        "zh-CN": "Build efficient solutions on top of AWS, Azure using Python, Scala and Go."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "Minimum of 4 years experience building scalable backend systems.",
+        "zh-HK": "Minimum of 4 years experience building scalable backend systems.",
+        "zh-CN": "Minimum of 4 years experience building scalable backend systems."
+      },
+      {
+        "en-US": "Experience working on, and deploying, large scale systems",
+        "zh-HK": "Experience working on, and deploying, large scale systems",
+        "zh-CN": "Experience working on, and deploying, large scale systems"
+      },
+      {
+        "en-US": "Experience working with and managing varied forms of distributed data systems such as Kafka, HDFS, Storm or Spark.",
+        "zh-HK": "Experience working with and managing varied forms of distributed data systems such as Kafka, HDFS, Storm or Spark.",
+        "zh-CN": "Experience working with and managing varied forms of distributed data systems such as Kafka, HDFS, Storm or Spark."
+      },
+      {
+        "en-US": " Experience working with popular cloud solutions such as AWS, Azure or GCP.",
+        "zh-HK": " Experience working with popular cloud solutions such as AWS, Azure or GCP.",
+        "zh-CN": " Experience working with popular cloud solutions such as AWS, Azure or GCP."
+      },
+      {
+        "en-US": "Knowledge of Docker and Kubernetes.",
+        "zh-HK": "Knowledge of Docker and Kubernetes.",
+        "zh-CN": "Knowledge of Docker and Kubernetes."
+      },
+      {
+        "en-US": "Love to work with high volume heterogeneous data and distributed systems.",
+        "zh-HK": "Love to work with high volume heterogeneous data and distributed systems.",
+        "zh-CN": "Love to work with high volume heterogeneous data and distributed systems."
+      }
+    ],
+    "jobPluses": [
+      {
+        "en-US": "Proven track record of working with large scale data infrastructure.",
+        "zh-HK": "Proven track record of working with large scale data infrastructure.",
+        "zh-CN": "Proven track record of working with large scale data infrastructure."
+      },
+      {
+        "en-US": "Experience working with Hadoop, Cassandra, MongoDB, Redis or MySQL.",
+        "zh-HK": "Experience working with Hadoop, Cassandra, MongoDB, Redis or MySQL.",
+        "zh-CN": "Experience working with Hadoop, Cassandra, MongoDB, Redis or MySQL."
+      },
+      {
+        "en-US": "Expert knowledge of SQL, MapReduce.",
+        "zh-HK": "Expert knowledge of SQL, MapReduce.",
+        "zh-CN": "Expert knowledge of SQL, MapReduce."
+      },
+      {
+        "en-US": "MS/PhD in Computer Science, Applied Mathematics or a related field.",
+        "zh-HK": "MS/PhD in Computer Science, Applied Mathematics or a related field.",
+        "zh-CN": "MS/PhD in Computer Science, Applied Mathematics or a related field."
+      },
+      {
+        "en-US": "Server side shell scripting experience.",
+        "zh-HK": "Server side shell scripting experience.",
+        "zh-CN": "Server side shell scripting experience."
+      }
+    ]
+  }
+]

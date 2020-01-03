@@ -72,5 +72,11 @@
     "companyName": "Company Name"
   },
   "formSubmitSuccess": "Your request has been sent!",
-  "formSubmitFailed": "We failed to send your request. Please try again later!"
+  "formSubmitFailed": "We failed to send your request. Please try again later!",
+
+  "weAreHiring": "We’re HIRING!",
+  "maiJobsEmail": "jobs@measurable.ai",
+  "jobDescriptions": "Job Descriptions:",
+  "jobRequirement": "Requirement:",
+  "jobPlus": "**Plus**"
 }
