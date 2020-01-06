@@ -48,17 +48,6 @@ export const emailAddressContainer = css`
   width: 100%;
   border-bottom: 1px solid #1f014f;
 `
-export const emailAddress = theme => css`
-  margin-right: 13.4rem;
-  margin: 0;
-  font-size: 3.2rem;
-  opacity: 0.3;
-  display: inline-block;
-  color: ${theme.colors.greens.dark};
-`
-export const greenArrow = css`
-  float: right;
-`
 export const subscribe = theme => css`
   font-size: 7.2rem;
   font-family: ${theme.fonts.heading};
@@ -103,4 +92,12 @@ export const logosContainer = css`
 export const contentRightContainer = css`
   display: inline-block;
   text-align: right;
+`
+export const emailInput = theme => css`
+  border: none;
+  font-size: 3.2rem;
+  ::placeholder {
+    color: ${theme.colors.greens.dark};
+    opacity: 0.3;
+  }
 `

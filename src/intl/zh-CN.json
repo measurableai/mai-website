@@ -47,7 +47,7 @@
   "financialInstitutions": "Financial Institutions",
   "dataReport": "数据报告",
 
-  "readyToGetStarted": "Ready to <p>Get STARTED ?</p>",
+  "readyToGetStarted": "Ready to <span>Get STARTED ?</span>",
   "subscribeToOurNewsLetter": "<span>SUBSCRIBE</span> to our newsletter",
   "emailAddress": "Email address",
   "poweredBy": "Powered by",

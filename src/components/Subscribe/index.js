@@ -1,5 +1,4 @@
-import React from "react"
-import { useTheme } from "emotion-theming"
+import React, { useState } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 import {
@@ -11,7 +10,6 @@ import {
   subscribe,
   subscribeTitle,
   emailAddressContainer,
-  emailAddress,
   allRightsReserved,
   poweredBy,
   poweredByContainer,
@@ -20,10 +18,10 @@ import {
   contentLeftContainer,
   logosContainer,
   contentRightContainer,
-  greenArrow,
+  emailInput,
 } from "./style"
 
-import RightArrowIcon from "@/assets/right-arrow.svg"
+import RightArrowIcon from "@/assets/green-right-arrow.svg"
 import mailogo from "@/images/mai-logo-2.svg"
 import mdtLogo from "@/images/mdt-logo.svg"
 import facebookIcon from "@/images/btn-facebook.svg"
@@ -40,15 +38,40 @@ const SocialIcon = ({ last, src, alt }) => (
 const OtherPages = props => (
   <p css={theme => [fontStyle(theme), otherPages(theme)]} {...props}></p>
 )
-const GreenRightArrow = () => {
-  const theme = useTheme()
+
+const GreenRightArrow = () => <RightArrowIcon width={21} height={29} />
+
+const EmailSubscribe = () => {
+  const [email, setEmail] = useState("")
+  const placeholder = (
+    <FormattedMessage id="emailAddress" defaultMessage="Email Address" />
+  )
+
+  const handleSubmit = () => {
+    alert(email + " success to subscribe!")
+  }
+
+  const onChange = e => {
+    setEmail(e.target.value)
+  }
+
   return (
-    <RightArrowIcon
-      css={greenArrow}
-      fill={theme.colors.greens.dark}
-      width={21}
-      height={29}
-    />
+    <form onSubmit={handleSubmit}>
+      <input
+        css={emailInput}
+        type="text"
+        name="email"
+        id="email"
+        placeholder={placeholder.props.defaultMessage}
+        value={email}
+        onChange={onChange}
+      />
+      <label>
+        <button type="button" onClick={handleSubmit}>
+          <GreenRightArrow />
+        </button>
+      </label>
+    </form>
   )
 }
 
@@ -68,13 +91,7 @@ const Subscribe = ({ ...props }) => (
     <div css={contentContainer}>
       <div css={contentLeftContainer}>
         <div css={emailAddressContainer}>
-          <p css={emailAddress}>
-            <FormattedMessage
-              id="emailAddress"
-              defaultMessage="Email Address"
-            />
-          </p>
-          <GreenRightArrow />
+          <EmailSubscribe />
         </div>
         <div>
           <img css={maiImage} src={mailogo} alt="MAI" />

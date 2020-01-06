@@ -27,6 +27,7 @@ const subscribeSection = css`
   margin: 0 auto;
   width: 102.4rem;
   padding: 0 1.2rem;
+  box-sizing: border-box;
 `
 
 const IndexPage = () => {

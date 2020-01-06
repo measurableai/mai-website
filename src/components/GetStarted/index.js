@@ -20,9 +20,14 @@ const GetStarted = () => (
       <p css={theme => [fontStyle(theme), title]}>
         <FormattedMessage
           id="readyToGetStarted"
-          defaultMessage="Ready to <p>Get STARTED ?</p>"
+          defaultMessage={`Ready to <span>Get STARTED ?</span>`}
           values={{
-            p: str => <p css={theme => [fontStyle(theme), subTitle]}>{str}</p>,
+            span: str => (
+              <span css={theme => [fontStyle(theme), subTitle]}>
+                <br />
+                {str}
+              </span>
+            ),
           }}
         />
       </p>
