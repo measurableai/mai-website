@@ -6,7 +6,6 @@
   "rideSharing-tag": "#RIDE SHARING",
   "dating-tag": "#DATING",
   "entertainment-tag": "#ENTERTAINMENT",
-  "readMore": "阅读更多...",
   "why": "Why",
   "measurableAI": "Measurable.ai",
   "questionMark": "?",
@@ -48,5 +47,11 @@
   "dataReport": "数据报告",
 
   "connectingTheDotsWithAlternativeData": "Connecting the dots with <span>ALTERNATIVE DATA</span>",
-  "providesActionableConsumer": "Actionable <span>CONSUMER INSIGHTS</span> based on <span>BILLIONS</span> of <span>TRANSACTIONAL EMAILS</span> for emerging markets"
+  "providesActionableConsumer": "Actionable <span>CONSUMER INSIGHTS</span> based on <span>BILLIONS</span> of <span>TRANSACTIONAL EMAILS</span> for emerging markets",
+  "achievements": "ACHIEVEMENTS",
+  "backedBy": "BACKED BY",
+  "trustedBy": "TRUSTED BY",
+
+  "andMore": "and more...",
+  "readMore": "阅读更多..."
 }
