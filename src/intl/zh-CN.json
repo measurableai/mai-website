@@ -62,5 +62,14 @@
   "trustedBy": "TRUSTED BY",
 
   "andMore": "and more...",
-  "readMore": "阅读更多..."
+  "readMore": "阅读更多...",
+  "requestCallback": "Request a callback",
+  "leaveMessage": "Leave a message",
+  "callbackForm": {
+    "description": "Enter your phone number and we’ll call you back asap.",
+    "name": "Name",
+    "companyName": "Company Name"
+  },
+  "formSubmitSuccess": "Your request has been sent!",
+  "formSubmitFailed": "We failed to send your request. Please try again later!"
 }

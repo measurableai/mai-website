@@ -6,3 +6,13 @@ export function hexToRgba(hex, opacity = 100) {
 
   return "rgba(" + r + "," + g + "," + b + "," + opacity / 100 + ")"
 }
+
+const OFFSET = 127397
+export function getCountryFlagEmoji(countryCode) {
+  // ensure country code is all caps
+  const cc = countryCode.toUpperCase()
+  // return the emoji flag corresponding to countryCode or null
+  return /^[A-Z]{2}$/.test(cc)
+    ? String.fromCodePoint(...[...cc].map(c => c.charCodeAt(0) + OFFSET))
+    : undefined
+}

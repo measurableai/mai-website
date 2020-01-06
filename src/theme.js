@@ -8,6 +8,7 @@ const theme = {
     ],
     greens: ["#39D965", "#68FF92"],
     white: ["#FFFFFF"],
+    red: ["red"],
   },
   fonts: {
     /** based on bootstrap v4.0 */
@@ -31,6 +32,7 @@ theme.colors.purples.superLight = theme.colors.purples[3]
 theme.colors.greens.dark = theme.colors.greens[0]
 theme.colors.greens.light = theme.colors.greens[1]
 theme.colors.white = theme.colors.white[0]
+theme.colors.error = theme.colors.red[0]
 theme.linearGradients.purpleLightToDark = theme.linearGradients[0]
 theme.linearGradients.purpleDarkToLight = theme.linearGradients[1]
 theme.linearGradients.greenLightToDark = theme.linearGradients[2]

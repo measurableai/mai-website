@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby-plugin-intl"
 import { Global, css } from "@emotion/core"
 
 import "normalize.css"
@@ -7,6 +6,7 @@ import "typeface-roboto"
 import "typeface-barlow-condensed"
 
 import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 const global = theme => css`
   html {
@@ -30,13 +30,7 @@ const Layout = ({ children, headerMode }) => {
       <Global styles={global} />
       <Header />
       <main>{children}</main>
-      <footer
-        style={{
-          textAlign: "center",
-        }}
-      >
-        <Link to="/press">Press</Link>
-      </footer>
+      <Footer />
     </>
   )
 }
