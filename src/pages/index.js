@@ -11,6 +11,7 @@ import WhySection from "@/components/WhySection"
 import WhatSection from "@/components/WhatSection"
 import WhoSection from "@/components/WhoSection"
 import DataReportSection from "@/components/DataReportSection"
+import ConnectingTheDots from "@/components/ConnectingTheDots"
 import LogosSection from "@/components/LogosSection"
 
 const background = theme => css`
@@ -27,7 +28,9 @@ const IndexPage = () => {
   return (
     <Layout headerMode="light">
       <SEO title="Home" />
-      <HeroBackground />
+      <HeroBackground>
+        <ConnectingTheDots />
+      </HeroBackground>
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.purpleLightToDark}
