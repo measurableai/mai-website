@@ -13,6 +13,8 @@ import WhoSection from "@/components/WhoSection"
 import DataReportSection from "@/components/DataReportSection"
 import GetStarted from "@/components/GetStarted"
 import Subscribe from "@/components/Subscribe"
+import ConnectingTheDots from "@/components/ConnectingTheDots"
+import LogosSection from "@/components/LogosSection"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
@@ -35,7 +37,9 @@ const IndexPage = () => {
   return (
     <Layout headerMode="light">
       <SEO title="Home" />
-      <HeroBackground />
+      <HeroBackground>
+        <ConnectingTheDots />
+      </HeroBackground>
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.purpleLightToDark}
@@ -70,7 +74,7 @@ const IndexPage = () => {
         mode="dark"
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
-        <p>Section 6</p>
+        <LogosSection />
       </SlopedSection>
       <SlopedSection
         mode="dark"
