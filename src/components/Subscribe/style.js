@@ -3,7 +3,6 @@ import { css } from "@emotion/core"
 export const fontStyle = theme => css`
   margin: 0;
   font-weight: 600;
-  font-family: ${theme.fonts.heading};
   color: ${theme.colors.purples.normal};
   line-height: 1.2;
 `
@@ -28,19 +27,19 @@ export const maiImage = css`
   background-position: center;
   margin-top: 8.6rem;
 `
-export const socialIcon = css`
+export const socialIcon = last => css`
   width: 4.2rem;
   height: 4.2rem;
   background-size: cover;
   background-position: center;
-  margin-right: 2.2rem;
+  margin-right: ${last ? "0" : "2.2rem"};
 `
 export const subscribeContainer = css`
   margin: 22.8rem 0 3.1rem 0;
 `
 export const subscribeTitle = css`
-  font-size: 7.2rem;
-  letter-spacing: 2.14px;
+  font-size: 6rem;
+  letter-spacing: 1.79px;
   text-align: left;
   margin-bottom: 3.1rem;
 `
@@ -60,9 +59,10 @@ export const emailAddress = theme => css`
 export const greenArrow = css`
   float: right;
 `
-export const newsletter = css`
-  font-size: 6rem;
-  letter-spacing: 1.79px;
+export const subscribe = theme => css`
+  font-size: 7.2rem;
+  font-family: ${theme.fonts.heading};
+  letter-spacing: 2.14px;
 `
 export const otherPages = theme => css`
   font-weight: normal;
@@ -81,18 +81,20 @@ export const poweredByContainer = css`
   margin-top: 0.8rem;
 `
 export const allRightsReserved = css`
+  margin: 5.2rem 0;
+  font-weight: normal;
   font-size: 1.1rem;
+  text-align: center;
   letter-spacing: 0.5px;
 `
 export const contentContainer = css`
-  margin-bottom: 5.1rem;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 `
 export const contentLeftContainer = css`
   display: inline-block;
   text-align: left;
-  margin-right: 50rem;
 `
 export const logosContainer = css`
   width: fit-content;

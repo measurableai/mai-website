@@ -23,6 +23,12 @@ const lastSection = css`
   margin-bottom: 30rem;
 `
 
+const subscribeSection = css`
+  margin: 0 auto;
+  width: 102.4rem;
+  padding: 0 1.2rem;
+`
+
 const IndexPage = () => {
   const theme = useTheme()
   return (
@@ -71,8 +77,8 @@ const IndexPage = () => {
         slopedBackgroundColor={theme.colors.greens.light}
       >
         <GetStarted />
-        <Subscribe />
       </SlopedSection>
+      <Subscribe css={subscribeSection} />
     </Layout>
   )
 }

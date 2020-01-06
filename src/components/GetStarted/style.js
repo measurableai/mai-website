@@ -21,4 +21,5 @@ export const title = css`
 export const subTitle = css`
   font-size: 13.2rem;
   margin-bottom: 4.2rem;
+  letter-spacing: 1px;
 `

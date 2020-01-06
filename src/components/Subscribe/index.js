@@ -8,10 +8,10 @@ import {
   maiImage,
   socialIcon,
   subscribeContainer,
+  subscribe,
   subscribeTitle,
   emailAddressContainer,
   emailAddress,
-  newsletter,
   allRightsReserved,
   poweredBy,
   poweredByContainer,
@@ -33,8 +33,8 @@ import twitterIcon from "@/images/btn-twitter.svg"
 import wechatIcon from "@/images/btn-wechat.svg"
 import weiboIcon from "@/images/btn-weibo.svg"
 
-const SocialIcon = ({ src, alt }) => (
-  <img css={socialIcon} src={src} alt={alt} />
+const SocialIcon = ({ last, src, alt }) => (
+  <img css={socialIcon(last)} src={src} alt={alt} />
 )
 
 const OtherPages = props => (
@@ -52,17 +52,17 @@ const GreenRightArrow = () => {
   )
 }
 
-const Subscribe = () => (
-  <div>
+const Subscribe = ({ ...props }) => (
+  <div {...props}>
     <div css={subscribeContainer}>
       <p css={theme => [fontStyle(theme), subscribeTitle]}>
-        <FormattedMessage id="subscribe" defaultMessage="SUBSCRIBE" />{" "}
-        <span css={theme => [fontStyle(theme), newsletter]}>
-          <FormattedMessage
-            id="toOurNewsLetter"
-            defaultMessage="to our newsletter"
-          />
-        </span>
+        <FormattedMessage
+          id="subscribeToOurNewsLetter"
+          defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
+          values={{
+            span: str => <span css={subscribe}>{str}</span>,
+          }}
+        />
       </p>
     </div>
     <div css={contentContainer}>
@@ -91,7 +91,7 @@ const Subscribe = () => (
           <SocialIcon src={twitterIcon} alt="twitter" />
           <SocialIcon src={facebookIcon} alt="facebook" />
           <SocialIcon src={wechatIcon} alt="wechat" />
-          <SocialIcon src={weiboIcon} alt="weibo" />
+          <SocialIcon src={weiboIcon} alt="weibo" last={true} />
         </div>
       </div>
       <div css={contentRightContainer}>
@@ -113,12 +113,10 @@ const Subscribe = () => (
       </div>
     </div>
     <p css={theme => [fontStyle(theme), allRightsReserved]}>
-      <OtherPages>
-        <FormattedMessage
-          id="AllRightsReserved"
-          defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
-        />
-      </OtherPages>
+      <FormattedMessage
+        id="AllRightsReserved"
+        defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
+      />
     </p>
   </div>
 )

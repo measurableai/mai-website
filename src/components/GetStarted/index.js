@@ -18,10 +18,13 @@ const GetStarted = () => (
     <div css={titleContainer}>
       <PurpleRightArrow />
       <p css={theme => [fontStyle(theme), title]}>
-        <FormattedMessage id="readyTo" defaultMessage="Ready to" />
-      </p>
-      <p css={theme => [fontStyle(theme), subTitle]}>
-        <FormattedMessage id="getStarted" defaultMessage="Get STARTED ?" />
+        <FormattedMessage
+          id="readyToGetStarted"
+          defaultMessage="Ready to <p>Get STARTED ?</p>"
+          values={{
+            p: str => <p css={theme => [fontStyle(theme), subTitle]}>{str}</p>,
+          }}
+        />
       </p>
       <PurpleRightArrow />
     </div>
