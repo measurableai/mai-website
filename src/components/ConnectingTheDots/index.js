@@ -21,32 +21,29 @@ const ConnectingTheDots = () => {
       <div css={titleContainer}>
         <p css={theme => [titleStyle(theme), title1(theme)]}>
           <FormattedMessage
-            id="connectingTheDots"
-            defaultMessage="Connecting the dots with"
-          />
-        </p>
-        <p css={theme => [titleStyle(theme), title2(theme)]}>
-          <FormattedMessage
-            id="alternativeData"
-            defaultMessage="ALTERNATIVE DATA"
+            id="connectingTheDotsWithAlternativeData"
+            defaultMessage="Connecting the dots with <p>ALTERNATIVE DATA</p>"
+            values={{
+              p: str => (
+                <p css={theme => [titleStyle(theme), title2(theme)]}>{str}</p>
+              ),
+            }}
           />
         </p>
       </div>
       <div css={subTitleContainer}>
-        <p css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
-          <span css={theme => [subTitleStyle(theme), subTitle1(theme)]}>
-            <FormattedMessage
-              id="providesActionableConsumer"
-              defaultMessage={`A <span>Data Dashboard</span> that provides actionable consumer insights based on transactional data.`}
-              values={{
-                span: str => (
-                  <span css={theme => [subTitleStyle(theme), subTitle2(theme)]}>
-                    {str}
-                  </span>
-                ),
-              }}
-            />
-          </span>
+        <p css={theme => [subTitleStyle, subTitle1(theme)]}>
+          <FormattedMessage
+            id="providesActionableConsumer"
+            defaultMessage={`A <span>Data Dashboard</span> that provides actionable consumer insights based on transactional data.`}
+            values={{
+              span: str => (
+                <span css={theme => [subTitleStyle, subTitle2(theme)]}>
+                  {str}
+                </span>
+              ),
+            }}
+          />
         </p>
       </div>
       <FreeTrialButton css={button} />

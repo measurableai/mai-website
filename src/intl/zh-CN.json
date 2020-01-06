@@ -47,8 +47,6 @@
   "financialInstitutions": "Financial Institutions",
   "dataReport": "数据报告",
 
-  "connectingTheDots": "Connecting the dots with",
-  "alternativeData": "ALTERNATIVE DATA",
-  "a": "A",
+  "connectingTheDotsWithAlternativeData": "Connecting the dots with <p>ALTERNATIVE DATA</p>",
   "providesActionableConsumer": "A <span>Data Dashboard</span> that provides actionable consumer insights based on transactional data."
 }

@@ -2,7 +2,7 @@ import { css } from "@emotion/core"
 
 export const container = css`
   margin: 0 auto;
-  padding-top: 25.9rem;
+  padding-top: 26.1rem;
   text-align: center;
   max-width: 73.8rem;
 `
@@ -23,7 +23,7 @@ export const title2 = theme => css`
   letter-spacing: 0.4rem;
   text-transform: uppercase;
 `
-export const subTitleStyle = theme => css`
+export const subTitleStyle = css`
   margin: 0;
   line-height: 2.6rem;
 `
