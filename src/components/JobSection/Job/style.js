@@ -1,5 +1,8 @@
 import { css } from "@emotion/core"
 
+export const container = css`
+  margin-bottom: 18rem;
+`
 export const title = theme => css`
   margin: 0;
   font-family: ${theme.fonts.heading};
@@ -22,4 +25,10 @@ export const item = theme => css`
   color: ${theme.colors.purples.normal};
   line-height: 3.2rem;
   margin-left: 1rem;
+`
+
+export const targetAnchor = css`
+  position: relative;
+  top: -12rem;
+  text-decoration: none;
 `

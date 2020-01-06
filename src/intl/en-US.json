@@ -75,7 +75,9 @@
   "formSubmitFailed": "We failed to send your request. Please try again later!",
 
   "weAreHiring": "We’re HIRING!",
-  "maiJobsEmail": "jobs@measurable.ai",
+  "joinUs": "Join us in our quest to make communication friendly and efficient! We're looking for full-stack developers to our team in Hong Kong, and we're offering generous equity alongside competitive pay. Not to mention free meals, snacks and drinks, gym room and table tennis, and happy hours!",
+  "emailToApply": "Email <span>jobs@measurable.ai</span> to apply.",
+  "currentOpenings": "Current openings:",
   "jobDescriptions": "Job Descriptions:",
   "jobRequirement": "Requirement:",
   "jobPlus": "**Plus**"

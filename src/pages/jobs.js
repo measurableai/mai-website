@@ -7,7 +7,7 @@ import JobSection from "@/components/JobSection"
 const JobPage = () => (
   <Layout>
     <SEO title="Press" />
-    <h1>Jobs page</h1>
+    {/* <h1>Jobs page</h1> */}
     <JobSection />
   </Layout>
 )
