@@ -22,10 +22,13 @@ const ConnectingTheDots = () => {
         <p css={theme => [titleStyle(theme), title1(theme)]}>
           <FormattedMessage
             id="connectingTheDotsWithAlternativeData"
-            defaultMessage="Connecting the dots with <p>ALTERNATIVE DATA</p>"
+            defaultMessage="Connecting the dots with <span>ALTERNATIVE DATA</span>"
             values={{
-              p: str => (
-                <p css={theme => [titleStyle(theme), title2(theme)]}>{str}</p>
+              span: str => (
+                <span css={theme => [titleStyle(theme), title2(theme)]}>
+                  <br />
+                  {str}
+                </span>
               ),
             }}
           />
@@ -35,7 +38,7 @@ const ConnectingTheDots = () => {
         <p css={theme => [subTitleStyle, subTitle1(theme)]}>
           <FormattedMessage
             id="providesActionableConsumer"
-            defaultMessage={`A <span>Data Dashboard</span> that provides actionable consumer insights based on transactional data.`}
+            defaultMessage="Actionable <span>CONSUMER INSIGHTS</span> based on <span>BILLIONS</span> of <span>TRANSACTIONAL EMAILS</span> for emerging markets"
             values={{
               span: str => (
                 <span css={theme => [subTitleStyle, subTitle2(theme)]}>
