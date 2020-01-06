@@ -11,6 +11,8 @@ import WhySection from "@/components/WhySection"
 import WhatSection from "@/components/WhatSection"
 import WhoSection from "@/components/WhoSection"
 import DataReportSection from "@/components/DataReportSection"
+import GetStarted from "@/components/GetStarted"
+import Subscribe from "@/components/Subscribe"
 import ConnectingTheDots from "@/components/ConnectingTheDots"
 import LogosSection from "@/components/LogosSection"
 
@@ -21,6 +23,13 @@ const background = theme => css`
 
 const lastSection = css`
   margin-bottom: 30rem;
+`
+
+const subscribeSection = css`
+  margin: 0 auto;
+  width: 102.4rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
 `
 
 const IndexPage = () => {
@@ -72,8 +81,9 @@ const IndexPage = () => {
         css={lastSection}
         slopedBackgroundColor={theme.colors.greens.light}
       >
-        <p>Section 7</p>
+        <GetStarted />
       </SlopedSection>
+      <Subscribe css={subscribeSection} />
     </Layout>
   )
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import { useTheme } from "emotion-theming"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
 import {
@@ -7,7 +8,6 @@ import {
   title,
   tagsContainer,
   buttonContainer,
-  buttonImage,
   blogsContainer,
   blogContainer,
   blogContainer1,
@@ -17,13 +17,14 @@ import {
 } from "./style"
 import BlogPost from "@/components/BlogPost"
 import Tag from "@/components/Tag"
-import purpleRightArrowIcon from "@/images/purple-right-arrow.svg"
+import RightArrowIcon from "@/assets/right-arrow.svg"
 
 const endPoint = "https://blog.measurable.ai/category/industries/"
 
 const DataInsightsTag = props => <Tag css={dataInsightsTag} {...props} />
 
 const DataInsights = () => {
+  const theme = useTheme()
   const { allWordpressPost } = useStaticQuery(
     graphql`
       query {
@@ -85,7 +86,11 @@ const DataInsights = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img css={buttonImage} src={purpleRightArrowIcon} alt="Button" />
+            <RightArrowIcon
+              fill={theme.colors.purples.normal}
+              width={46}
+              height={67}
+            />
           </a>
         </div>
         <div css={blogsContainer}>
