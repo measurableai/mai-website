@@ -11,8 +11,8 @@ import {
   andMore,
 } from "./style"
 
+const Image = ({ fluid }) => <Img css={backedByImage} fluid={fluid} />
 const BackedBy = () => {
-  const Image = ({ fluid }) => <Img css={backedByImage} fluid={fluid} />
   const images = useStaticQuery(graphql`
     query {
       backedby01: file(relativePath: { eq: "backedby01.png" }) {

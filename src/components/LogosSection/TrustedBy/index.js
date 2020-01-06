@@ -5,8 +5,8 @@ import Img from "gatsby-image"
 
 import { trustedByImage, andMore } from "./style"
 
+const Image = ({ fluid }) => <Img css={trustedByImage} fluid={fluid} />
 const TrustedBy = () => {
-  const Image = ({ fluid }) => <Img css={trustedByImage} fluid={fluid} />
   const images = useStaticQuery(graphql`
     query {
       trustedby01: file(relativePath: { eq: "trustedby01.png" }) {

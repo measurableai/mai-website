@@ -11,8 +11,8 @@ import {
   inlineContainer1,
 } from "./style"
 
+const Image = ({ fluid }) => <Img css={achievementsImage} fluid={fluid} />
 const Achievements = () => {
-  const Image = ({ fluid }) => <Img css={achievementsImage} fluid={fluid} />
   const images = useStaticQuery(graphql`
     query {
       achievements01: file(relativePath: { eq: "achievements01.png" }) {
