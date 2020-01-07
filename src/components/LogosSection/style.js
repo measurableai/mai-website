@@ -15,11 +15,11 @@ export const achievementsContainer = css`
   margin-right: 9.9rem;
 `
 export const backedByContainer = css`
-  top: 6.6rem;
+  margin-top: 6.6rem;
   margin-right: 9.9rem;
 `
 export const trustedByContainer = css`
-  top: 13.1rem;
+  margin-top: 13.1rem;
 `
 
 export const title = theme => css`

@@ -1,7 +1,8 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const background = css`
-  min-height: 75rem;
+  padding-bottom: 8rem;
   width: 100%;
   position: relative;
   display: flex;
@@ -24,8 +25,8 @@ export const background = css`
 
 export const navigation = css`
   position: absolute !important;
-  height: 80px;
-  top: -80px;
+  height: 8rem;
+  top: -8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,4 +55,10 @@ export const content = css`
   padding-right: 1.2rem;
   text-align: center;
   min-height: inherit;
+
+  ${mq.mobile} {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 `

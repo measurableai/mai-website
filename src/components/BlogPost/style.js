@@ -43,12 +43,12 @@ export const title = theme => css`
   font-weight: bold;
   font-size: 1.7rem;
   margin-bottom: 0.2rem;
-  max-height: 4rem;
+  max-height: 6rem;
   line-height: 2rem;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 `
 export const content = theme => css`

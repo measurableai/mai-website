@@ -18,9 +18,9 @@ export const whySectionItemContainer = css`
   height: 100%;
 `
 export const whySectionItemContainer1 = css`
-  top: 174px;
+  margin-top: 17.4rem;
 `
 export const whySectionItemContainer2 = css`
-  top: 55px;
+  margin-top: 5.5rem;
 `
 export const whySectionItemContainer3 = css``

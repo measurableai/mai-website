@@ -6,12 +6,14 @@ import Img from "gatsby-image"
 import {
   imageContainer,
   backedByImage,
+  lastImage,
   inlineContainer,
   inlineContainer1,
   andMore,
 } from "./style"
 
-const Image = ({ fluid }) => <Img css={backedByImage} fluid={fluid} />
+const Image = props => <Img css={backedByImage} {...props} />
+
 const BackedBy = () => {
   const images = useStaticQuery(graphql`
     query {
@@ -73,7 +75,10 @@ const BackedBy = () => {
         <Image fluid={images.backedby01.childImageSharp.fluid} />
         <Image fluid={images.backedby03.childImageSharp.fluid} />
         <Image fluid={images.backedby05.childImageSharp.fluid} />
-        <Image fluid={images.backedby07.childImageSharp.fluid} />
+        <Image
+          fluid={images.backedby07.childImageSharp.fluid}
+          css={lastImage}
+        />
       </div>
       <div css={inlineContainer}>
         <Image fluid={images.backedby02.childImageSharp.fluid} />

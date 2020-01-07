@@ -19,6 +19,10 @@ export const achievementsImage = css`
   margin-bottom: 6.3rem;
 `
 
+export const lastImage = css`
+  margin-bottom: 0;
+`
+
 export const inlineContainer = css`
   display: inline-block;
 `

@@ -2,7 +2,7 @@ import { css } from "@emotion/core"
 
 export const section = css`
   margin-top: 22.5rem;
-  margin-bottom: 20rem;
+  margin-bottom: 12rem;
 `
 
 export const header = css`

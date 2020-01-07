@@ -25,11 +25,11 @@ export const image1 = css`
   margin-right: 16rem;
 `
 export const image2 = css`
-  top: 5.8rem;
+  margin-top: 5.8rem;
 `
 export const image3 = css`
-  top: 11.5rem;
+  margin-top: 11.5rem;
 `
 export const image4 = css`
-  top: 17.3rem;
+  margin-top: 17.3rem;
 `

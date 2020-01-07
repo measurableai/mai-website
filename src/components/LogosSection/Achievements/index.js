@@ -5,13 +5,15 @@ import Img from "gatsby-image"
 
 import {
   achievementsImage,
+  lastImage,
   imageContainer,
   andMore,
   inlineContainer,
   inlineContainer1,
 } from "./style"
 
-const Image = ({ fluid }) => <Img css={achievementsImage} fluid={fluid} />
+const Image = props => <Img css={achievementsImage} {...props} />
+
 const Achievements = () => {
   const images = useStaticQuery(graphql`
     query {
@@ -73,7 +75,10 @@ const Achievements = () => {
         <Image fluid={images.achievements01.childImageSharp.fluid} />
         <Image fluid={images.achievements03.childImageSharp.fluid} />
         <Image fluid={images.achievements05.childImageSharp.fluid} />
-        <Image fluid={images.achievements07.childImageSharp.fluid} />
+        <Image
+          fluid={images.achievements07.childImageSharp.fluid}
+          css={lastImage}
+        />
       </div>
       <div css={inlineContainer}>
         <Image fluid={images.achievements02.childImageSharp.fluid} />

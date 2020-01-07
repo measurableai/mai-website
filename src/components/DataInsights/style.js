@@ -1,7 +1,8 @@
 import { css } from "@emotion/core"
 
 export const container = css`
-  min-height: 78.7rem;
+  margin-top: 4.4rem;
+  margin-bottom: 4rem;
 `
 export const contentContainer = css`
   display: flex;
@@ -21,12 +22,12 @@ export const title = theme => css`
   text-align: right;
   text-transform: uppercase;
   position: relative;
-  margin: 4.4rem 0px 3.3rem 0;
+  margin: 0 0 3.3rem 0;
 `
 export const tagsContainer = css`
   display: flex;
   flex-direction: column;
-  flex-wrap: "nowrap";
+  flex-wrap: nowrap;
   position: relative;
   align-items: flex-end;
   justify-content: flex-start;
@@ -34,6 +35,7 @@ export const tagsContainer = css`
 
 export const buttonContainer = css`
   margin-top: 13rem;
+  margin-bottom: 13rem;
 `
 
 export const blogsContainer = css`
@@ -51,15 +53,15 @@ export const blogContainer = css`
 `
 
 export const blogContainer1 = css`
-  top: 36px;
+  margin-top: 3.6rem;
 `
 
 export const blogContainer2 = css`
-  top: 109px;
+  margin-top: 10.9rem;
 `
 
 export const blogContainer3 = css`
-  top: 187px;
+  margin-top: 18.7rem;
 `
 
 export const dataInsightsTag = css`
