@@ -96,7 +96,7 @@ const createChartOption = (theme, customData) => ({
       fontSize: 12,
     },
     formatter: params =>
-      `${params.name}<br />${params.marker}${params.seriesName}: ${params.value}`,
+      `${params.marker}${params.seriesName}<br />${params.name}: ${params.value}`,
   },
   series: customData.series.map((series, index) => ({
     type: "line",

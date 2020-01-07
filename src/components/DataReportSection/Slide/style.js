@@ -2,12 +2,13 @@ import { css } from "@emotion/core"
 
 export const slideContainer = css`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 `
 
 export const textContainer = css`
   flex: 1;
+  margin-top: 6rem;
   margin-right: 11rem;
   text-align: left;
 `
