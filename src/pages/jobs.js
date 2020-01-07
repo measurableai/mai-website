@@ -15,7 +15,7 @@ import { emailStyle } from "@/components/JobSection/style"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.greenDarkToLight};
-  margin-bottom: 30rem;
+  margin-bottom: 26.5rem;
 `
 
 const hiringPadding = css`
