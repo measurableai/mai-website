@@ -11,7 +11,7 @@ export const background = css`
 
   &::before {
     content: "";
-    height: 100%;
+    height: calc(100% + 2px); /** +2px to offset the edge rendering issue */
     position: absolute;
     top: 0;
     transform: skewY(-21.5deg);

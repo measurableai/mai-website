@@ -32,6 +32,9 @@ const subscribeSection = css`
   box-sizing: border-box;
 `
 
+const createGreenWhiteLinearGradient = (deg, percentage) =>
+  `linear-gradient(${deg},#B3FFCB,#FFFFFF ${percentage})`
+
 const IndexPage = () => {
   const theme = useTheme()
   return (
@@ -60,19 +63,22 @@ const IndexPage = () => {
         <WhoSection />
       </SlopedSection>
       <SlopedSection
-        slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
+        slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "70%")}
       >
         <DataReportSection />
       </SlopedSection>
       <SlopedSection
         mode="dark"
-        slopedBackgroundImage={theme.linearGradients.greenLightToDark}
+        slopedBackgroundImage={createGreenWhiteLinearGradient(
+          "-111.5deg",
+          "50%"
+        )}
       >
         <DataInsights />
       </SlopedSection>
       <SlopedSection
         mode="dark"
-        slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
+        slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "30%")}
       >
         <LogosSection />
       </SlopedSection>
