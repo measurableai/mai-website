@@ -20,12 +20,14 @@ const background = theme => css`
 
 const hiringPadding = css`
   padding-top: 26.3rem;
+  padding-left: 5.7rem;
 `
 
 const jobsSection = css`
   margin: 0 auto;
   width: 102.4rem;
-  padding: 0 1.2rem;
+  padding-left: 6.9rem;
+  padding-right: 1.2rem;
   box-sizing: border-box;
 `
 
@@ -127,7 +129,7 @@ const JobPage = () => {
       >
         <HiringSection />
       </SlopedSection>
-      <JobsSection css={jobsSection} />
+      <JobsSection />
     </Layout>
   )
 }
