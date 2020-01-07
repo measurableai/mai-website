@@ -38,7 +38,7 @@ const createGreenWhiteLinearGradient = (deg, percentage) =>
 const IndexPage = () => {
   const theme = useTheme()
   return (
-    <Layout headerMode="dark">
+    <Layout>
       <SEO title="Home" />
       <HeroBackground>
         <ConnectingTheDots />
