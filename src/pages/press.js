@@ -6,7 +6,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import Layout from "@/components/layout"
 import SEO from "@/components/seo"
 import SlopedSection from "@/components/SlopedBackground"
-import Press from "@/components/Press"
+import Press from "@/components/PressSection"
 
 const emailStyle = theme => css`
   margin: 0;
@@ -23,6 +23,7 @@ const background = theme => css`
 const shoutOutPadding = css`
   padding-top: 26.3rem;
   padding-left: 5.7rem;
+  text-align: left;
 `
 
 const button = theme => css`
@@ -33,7 +34,7 @@ const button = theme => css`
   font-weight: bold;
 `
 
-const JobPage = () => {
+const PressPage = () => {
   const theme = useTheme()
   return (
     <Layout headerMode="light">
@@ -41,7 +42,6 @@ const JobPage = () => {
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
-        isOtherPage={true}
       >
         <Press
           css={shoutOutPadding}
@@ -91,4 +91,4 @@ const JobPage = () => {
   )
 }
 
-export default JobPage
+export default PressPage

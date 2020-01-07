@@ -8,7 +8,7 @@ import {
   emailMargin,
 } from "./style"
 
-const Press = ({
+const PressSection = ({
   header,
   description1,
   description2,
@@ -25,4 +25,4 @@ const Press = ({
   </div>
 )
 
-export default Press
+export default PressSection

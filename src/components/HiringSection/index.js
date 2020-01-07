@@ -10,7 +10,7 @@ import {
   emailMargin,
 } from "./style"
 
-const Hiring = ({
+const HiringSection = ({
   header,
   description,
   email,
@@ -20,7 +20,6 @@ const Hiring = ({
 }) => (
   <div {...props}>
     <h1 css={title}>{header}</h1>
-
     <p css={theme => [contentFontStyle(theme), content]}>{description}</p>
     <p css={theme => [contentFontStyle(theme), emailMargin]}>{email}</p>
     <p css={contentFontStyle}>{currentOpenings}</p>
@@ -42,4 +41,4 @@ const Hiring = ({
   </div>
 )
 
-export default Hiring
+export default HiringSection

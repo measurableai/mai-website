@@ -6,12 +6,16 @@ import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 import Layout from "@/components/layout"
 import SEO from "@/components/seo"
 import SlopedSection from "@/components/SlopedBackground"
-import Hiring from "@/components/JobSection/Hiring"
-import Job from "@/components/JobSection/Job"
+import Hiring from "@/components/HiringSection"
+import Job from "@/components/JobSection"
 
-import rawData from "@/components/JobSection/jobs.json"
+import rawData from "@/data/jobs.json"
 
-import { emailStyle } from "@/components/JobSection/style"
+const emailStyle = theme => css`
+  margin: 0;
+  color: ${theme.colors.greens.dark};
+  font-size: 2.8rem;
+`
 
 const background = theme => css`
   background-image: ${theme.linearGradients.greenDarkToLight};
@@ -21,6 +25,7 @@ const background = theme => css`
 const hiringPadding = css`
   padding-top: 26.3rem;
   padding-left: 5.7rem;
+  text-align: left;
 `
 
 const jobsSection = css`
@@ -121,11 +126,10 @@ const JobPage = () => {
   const theme = useTheme()
   return (
     <Layout headerMode="light">
-      <SEO title="Press" />
+      <SEO title="Jobs" />
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
-        isOtherPage={true}
       >
         <HiringSection />
       </SlopedSection>

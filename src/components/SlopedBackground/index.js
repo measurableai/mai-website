@@ -75,7 +75,7 @@ const Navigator = ({ mode }) => {
   )
 }
 
-const SlopedSection = ({ children, mode, isOtherPage, ...props }) => (
+const SlopedSection = ({ children, mode, ...props }) => (
   <Background {...props}>
     <Navigator mode={mode} />
     <ContentBox>{children}</ContentBox>
