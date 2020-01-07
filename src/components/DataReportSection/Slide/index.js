@@ -5,6 +5,7 @@ import echarts from "echarts/lib/echarts"
 import "echarts/lib/chart/line"
 import "echarts/lib/component/legend"
 import "echarts/lib/component/title"
+import "echarts/lib/component/tooltip"
 
 import Tag from "@/components/Tag"
 
@@ -16,6 +17,8 @@ import {
   title,
   description,
 } from "./style"
+
+const seriesColor = ["#1f014f", "#AA5bff"]
 
 const createChartOption = (theme, customData) => ({
   title: {
@@ -38,11 +41,9 @@ const createChartOption = (theme, customData) => ({
       fontFamily: theme.fonts.body,
       color: "#210051",
     },
-    data: [
-      {
-        name: customData.legend,
-      },
-    ],
+    data: customData.legend.map(name => ({
+      name,
+    })),
   },
   grid: {
     left: 30,
@@ -53,7 +54,7 @@ const createChartOption = (theme, customData) => ({
       show: false,
     },
     axisLabel: {
-      interval: 2,
+      interval: customData.xAxis.axisLabelInterval || 0,
       margin: 6,
       fontSize: 11,
       fontFamily: theme.fonts.heading,
@@ -65,7 +66,7 @@ const createChartOption = (theme, customData) => ({
         color: theme.colors.greens.dark,
       },
     },
-    data: customData.xAxis,
+    data: customData.xAxis.data,
   },
   yAxis: {
     type: "value",
@@ -73,7 +74,7 @@ const createChartOption = (theme, customData) => ({
       show: false,
     },
     axisLabel: {
-      formatter: `\${value}`,
+      formatter: customData.yAxis.axisLabelFormatter || "{value}",
       fontFamily: theme.fonts.heading,
       fontWeight: 600,
       color: "#210051",
@@ -90,19 +91,24 @@ const createChartOption = (theme, customData) => ({
       },
     },
   },
-  series: [
-    {
-      type: "line",
-      name: customData.legend,
-      symbol: "circle",
-      symbolSize: 5,
-      lineStyle: {
-        width: 0.8,
-      },
-      color: "#1f014f",
-      data: customData.series,
+  tooltip: {
+    textStyle: {
+      fontSize: 12,
     },
-  ],
+    formatter: params =>
+      `${params.name}<br />${params.marker}${params.seriesName}: ${params.value}`,
+  },
+  series: customData.series.map((series, index) => ({
+    type: "line",
+    name: customData.legend[index],
+    symbol: "circle",
+    symbolSize: 5,
+    lineStyle: {
+      width: 0.8,
+    },
+    color: seriesColor[index] || "#1f014f",
+    data: series,
+  })),
 })
 
 const Slide = ({ customData }) => {
@@ -111,17 +117,14 @@ const Slide = ({ customData }) => {
   return (
     <div css={slideContainer}>
       <div css={textContainer}>
-        <Tag css={tag}>#GAMES</Tag>
-        <h3 css={title}>Pokémon Go</h3>
-        <p css={description}>
-          Grossed over USD 2.55 Billion from In-App-Purchases. Average paying
-          user spends around USD $38.63. USD $6.68 per order.
-        </p>
+        <Tag css={tag}>#{customData.slide.tag}</Tag>
+        <h3 css={title}>{customData.slide.title}</h3>
+        <p css={description}>{customData.slide.description}</p>
       </div>
       <ReactEchartsCore
         css={chart}
         echarts={echarts}
-        option={createChartOption(theme, customData)}
+        option={createChartOption(theme, customData.chartOption)}
       />
     </div>
   )

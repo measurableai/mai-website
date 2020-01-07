@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 import Tabs from "./Tabs"
 import Slide from "./Slide"
 import { section, header, heading } from "./style"
-import rawData from "./chartData.json"
+import rawData from "./chartData"
 
 const DataReportSection = () => {
   const intl = useIntl()
@@ -14,10 +14,17 @@ const DataReportSection = () => {
   const data = useMemo(
     () =>
       rawData.map(rawDataItem => {
-        const dataItem = {}
+        const dataItem = { slide: {}, chartOption: {} }
+
         Object.keys(rawDataItem).forEach(key => {
-          dataItem[key] = rawDataItem[key][intl.locale] || rawDataItem[key]
+          dataItem[key] = {}
+
+          Object.keys(rawDataItem[key]).forEach(subKey => {
+            dataItem[key][subKey] =
+              rawDataItem[key][subKey][intl.locale] || rawDataItem[key][subKey]
+          })
         })
+
         return dataItem
       }),
     [intl.locale]
