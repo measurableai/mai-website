@@ -1,25 +1,52 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const container = css`
   margin-top: 13.1rem;
+  margin-bottom: 3.2rem;
+
+  ${mq.mobile} {
+    margin-top: 9rem;
+  }
 `
 export const titleContainer = css`
-  margin: 0 15.2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
+  ${mq.mobile} {
+    margin-top: 2.4rem;
+    margin-bottom: 3.4rem;
+  }
 `
+
+export const arrowContainer = css`
+  margin: 1rem 0;
+`
+
 export const fontStyle = theme => css`
   margin: 0;
   font-weight: 600;
   font-family: ${theme.fonts.heading};
   color: ${theme.colors.purples.normal};
-  line-height: 1.2;
+  line-height: 13.5rem;
+
+  ${mq.mobile} {
+    line-height: 1;
+  }
 `
 export const title = css`
   font-size: 9.6rem;
   letter-spacing: 2.06px;
-  margin-top: 4.2rem;
+
+  ${mq.mobile} {
+    font-size: 7.2rem;
+  }
 `
 export const subTitle = css`
   font-size: 13.2rem;
-  margin-bottom: 4.2rem;
   letter-spacing: 1px;
+
+  ${mq.mobile} {
+    font-size: 8.4rem;
+  }
 `
