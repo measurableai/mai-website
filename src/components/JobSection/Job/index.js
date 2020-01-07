@@ -1,9 +1,10 @@
 import React from "react"
 
-import { container, title, header, item, targetAnchor } from "./style"
+import { container, title, header, list, item, targetAnchor } from "./style"
 
 const Header = ({ children }) => <p css={header}>{children}</p>
 const Item = ({ children }) => <li css={item}>{children}</li>
+const List = ({ children }) => <ul css={list}>{children}</ul>
 
 const Job = ({ jobDetails, description, requirement, plus, ...props }) => (
   <div css={container} {...props}>
@@ -16,23 +17,23 @@ const Job = ({ jobDetails, description, requirement, plus, ...props }) => (
     </a>
     <h2 css={title}>{jobDetails.jobTitle}</h2>
     <Header css={header}>{description}</Header>
-    <ul>
+    <List>
       {jobDetails.jobDescriptions.map((jobDescription, index) => (
         <Item key={index}>{jobDescription}</Item>
       ))}
-    </ul>
+    </List>
     <Header css={header}>{requirement}</Header>
-    <ul>
+    <List>
       {jobDetails.jobRequirements.map((jobRequirement, index) => (
         <Item key={index}>{jobRequirement}</Item>
       ))}
-    </ul>
+    </List>
     <Header css={header}>{plus}</Header>
-    <ul>
+    <List>
       {jobDetails.jobPluses.map((jobPlus, index) => (
         <Item key={index}>{jobPlus}</Item>
       ))}
-    </ul>
+    </List>
   </div>
 )
 

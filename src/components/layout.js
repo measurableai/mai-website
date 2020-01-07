@@ -28,19 +28,9 @@ const Layout = ({ children, headerMode }) => {
   return (
     <>
       <Global styles={global} />
-      <Header />
+      <Header headerMode={headerMode} />
       <main>{children}</main>
       <Footer />
-      <footer
-        style={{
-          textAlign: "center",
-        }}
-      >
-        <Link to="/jobs">Jobs</Link>
-        <Link to="/press">Press</Link>
-        <Link to="/privacypolicy">Privacy Policy</Link>
-        <Link to="/termofuse">Term Of Use</Link>
-      </footer>
     </>
   )
 }

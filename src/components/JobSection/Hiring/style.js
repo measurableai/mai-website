@@ -9,18 +9,24 @@ export const title = theme => css`
   color: ${theme.colors.purples.normal};
 `
 
-export const content = theme => css`
+export const contentFontStyle = theme => css`
   margin: 0;
   color: ${theme.colors.purples.normal};
   font-size: 2rem;
   line-height: 3.6rem;
+`
+
+export const content = css`
+  margin-top: 3.9rem;
+`
+
+export const emailMargin = css`
   margin-top: 3.9rem;
   margin-bottom: 5rem;
 `
 
 export const currentOpeningsContainer = css`
-  margin-top: 5rem;
-  margin-bottom: 26.5rem;
+  margin-top: 0.5rem;
 `
 
 export const jobTitle = theme => css`

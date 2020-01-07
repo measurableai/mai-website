@@ -6,6 +6,8 @@ import {
   currentOpeningsContainer,
   jobTitle,
   jumpAnchor,
+  contentFontStyle,
+  emailMargin,
 } from "./style"
 
 const Hiring = ({
@@ -19,9 +21,9 @@ const Hiring = ({
   <div {...props}>
     <h1 css={title}>{header}</h1>
 
-    <p css={content}>{description}</p>
-    <p css={content}>{email}</p>
-    <p css={content}>{currentOpenings}</p>
+    <p css={theme => [contentFontStyle(theme), content]}>{description}</p>
+    <p css={theme => [contentFontStyle(theme), emailMargin]}>{email}</p>
+    <p css={contentFontStyle}>{currentOpenings}</p>
     <div css={currentOpeningsContainer}>
       {openingJobs.map((openingJob, index) => (
         <>

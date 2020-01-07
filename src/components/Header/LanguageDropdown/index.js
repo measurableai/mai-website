@@ -33,7 +33,7 @@ const DropdownIndicator = props => (
   </components.DropdownIndicator>
 )
 
-const LanguageDropdown = props => {
+const LanguageDropdown = ({ lightModeOn, ...props }) => {
   const intl = useIntl()
   const [selectedOption, setSelectedOption] = useState(
     languageOptions.find(option => option.value === intl.locale) ||
@@ -54,7 +54,7 @@ const LanguageDropdown = props => {
         backgroundColor: "transparent",
         border: "none",
         padding: "0.8rem 1rem",
-        color: "white",
+        color: lightModeOn ? theme.colors.purples.normal : theme.colors.white,
         ":hover": {
           color: theme.colors.greens.light,
         },
@@ -101,7 +101,12 @@ const LanguageDropdown = props => {
         alignItems: "center",
       }),
     }),
-    [theme.colors.greens.light, theme.colors.purples.normal]
+    [
+      lightModeOn,
+      theme.colors.greens.light,
+      theme.colors.purples.normal,
+      theme.colors.white,
+    ]
   )
 
   const handleChange = useCallback(selectedOption => {

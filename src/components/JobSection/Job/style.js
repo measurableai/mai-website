@@ -27,6 +27,10 @@ export const item = theme => css`
   margin-left: 1rem;
 `
 
+export const list = css`
+  margin: 0;
+`
+
 export const targetAnchor = css`
   position: relative;
   top: -12rem;
