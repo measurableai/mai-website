@@ -119,6 +119,123 @@ export default [
   },
   {
     slide: {
+      tag: "Ecommerce",
+      title: {
+        "en-US":
+          "Target and Best Buy are Transforming: Online Sales Datasets of Traditional Retailers",
+        "zh-HK":
+          "Target and Best Buy are Transforming: Online Sales Datasets of Traditional Retailers",
+        "zh-CN":
+          "Target and Best Buy are Transforming: Online Sales Datasets of Traditional Retailers",
+      },
+      description: {
+        "en-US":
+          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most other traditional retailer peers.\nOnline sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years.\nThe average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+        "zh-HK":
+          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most other traditional retailer peers.\nOnline sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years.\nThe average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+        "zh-CN":
+          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most other traditional retailer peers.\nOnline sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years.\nThe average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+      },
+    },
+    chartOption: {
+      title: {
+        "en-US": "Total Spending Index",
+        "zh-HK": "用戶複購率",
+        "zh-CN": "用戶複購率",
+      },
+      legend: {
+        "en-US": ["Best Buy", "Target"],
+        "zh-HK": ["Best Buy", "Target"],
+        "zh-CN": ["Best Buy", "Target"],
+      },
+      xAxis: {
+        axisLabelInterval: 2,
+        data: [
+          "M1\n2018",
+          "M2\n2018",
+          "M3\n2018",
+          "M4\n2018",
+          "M5\n2018",
+          "M6\n2018",
+          "M7\n2018",
+          "M8\n2018",
+          "M9\n2018",
+          "M10\n2018",
+          "M11\n2018",
+          "M12\n2018",
+          "M1\n2019",
+          "M2\n2019",
+          "M3\n2019",
+          "M4\n2019",
+          "M5\n2019",
+          "M6\n2019",
+          "M7\n2019",
+          "M8\n2019",
+          "M9\n2019",
+          "M10\n2019",
+          "M11\n2019",
+        ],
+      },
+      yAxis: {
+        // eslint-disable-next-line
+        axisLabelFormatter: "{value}",
+      },
+      series: [
+        [
+          0.41,
+          0.36,
+          0.5,
+          0.59,
+          0.74,
+          0.99,
+          0.85,
+          1.11,
+          0.97,
+          0.49,
+          1.78,
+          1.07,
+          0.81,
+          0.98,
+          1.21,
+          0.99,
+          1.56,
+          0.97,
+          1.19,
+          1.86,
+          1.48,
+          1.25,
+          3.31,
+        ],
+        [
+          0.09,
+          0.08,
+          0.09,
+          0.11,
+          0.1,
+          0.1,
+          0.12,
+          0.14,
+          0.14,
+          0.14,
+          0.48,
+          0.51,
+          0.19,
+          0.24,
+          0.26,
+          0.26,
+          0.24,
+          0.29,
+          0.33,
+          0.24,
+          0.25,
+          0.27,
+          0.62,
+        ],
+      ],
+    },
+  },
+  {
+    slide: {
       tag: "GAMES",
       title: {
         "en-US": "Chinese Players’ red envelope money goes to Honor of Kings",
