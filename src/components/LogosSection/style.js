@@ -1,31 +1,38 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const container = css`
   display: flex;
   position: relative;
   z-index: 1;
   padding: 4rem 1.2rem;
-`
-export const inlineContainer = css`
-  display: inline-block;
-  position: relative;
+
+  ${mq.mobile} {
+    flex-direction: column;
+    padding: 2.8rem 0rem;
+  }
 `
 
 export const achievementsContainer = css`
   margin-right: 9.9rem;
+
+  ${mq.mobile} {
+    margin-right: 0;
+  }
 `
 export const backedByContainer = css`
   margin-top: 6.6rem;
   margin-right: 9.9rem;
+
+  ${mq.mobile} {
+    margin-top: 0;
+    margin-right: 0;
+  }
 `
 export const trustedByContainer = css`
   margin-top: 13.1rem;
-`
 
-export const title = theme => css`
-  margin: 0;
-  margin-bottom: 3.3rem;
-  font-size: 2.8rem;
-  letter-spacing: 0.6px;
-  color: ${theme.colors.purples.light};
+  ${mq.mobile} {
+    margin-top: 0;
+  }
 `
