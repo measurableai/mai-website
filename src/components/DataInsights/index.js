@@ -6,6 +6,7 @@ import {
   container,
   contentContainer,
   title,
+  tagsAndButtonContainer,
   tagsContainer,
   buttonContainer,
   blogsContainer,
@@ -58,28 +59,33 @@ const DataInsights = () => {
         <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
       </p>
       <div css={contentContainer}>
-        <div css={tagsContainer}>
-          <DataInsightsTag href={endPoint + "e-commerce/"}>
-            <FormattedMessage id="eCommerce-tag" defaultMessage="#E-COMMERCE" />
-          </DataInsightsTag>
-          <DataInsightsTag href={endPoint + "games/"}>
-            <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
-          </DataInsightsTag>
-          <DataInsightsTag href={endPoint + "ride-sharing/"}>
-            <FormattedMessage
-              id="rideSharing-tag"
-              defaultMessage="#RIDE SHARING"
-            />
-          </DataInsightsTag>
-          <DataInsightsTag href={endPoint + "dating/"}>
-            <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
-          </DataInsightsTag>
-          <DataInsightsTag href={endPoint + "entertainment/"}>
-            <FormattedMessage
-              id="entertainment-tag"
-              defaultMessage="#ENTERTAINMENT"
-            />
-          </DataInsightsTag>
+        <div css={tagsAndButtonContainer}>
+          <div css={tagsContainer}>
+            <DataInsightsTag href={endPoint + "e-commerce/"}>
+              <FormattedMessage
+                id="eCommerce-tag"
+                defaultMessage="#E-COMMERCE"
+              />
+            </DataInsightsTag>
+            <DataInsightsTag href={endPoint + "games/"}>
+              <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
+            </DataInsightsTag>
+            <DataInsightsTag href={endPoint + "ride-sharing/"}>
+              <FormattedMessage
+                id="rideSharing-tag"
+                defaultMessage="#RIDE SHARING"
+              />
+            </DataInsightsTag>
+            <DataInsightsTag href={endPoint + "dating/"}>
+              <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
+            </DataInsightsTag>
+            <DataInsightsTag href={endPoint + "entertainment/"}>
+              <FormattedMessage
+                id="entertainment-tag"
+                defaultMessage="#ENTERTAINMENT"
+              />
+            </DataInsightsTag>
+          </div>
           <a
             css={buttonContainer}
             href={endPoint}

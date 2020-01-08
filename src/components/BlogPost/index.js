@@ -20,9 +20,13 @@ import {
 import Tag from "@/components/Tag"
 // import viewCountIcon from "@/images/icon-view@3x.png"
 
+import useMedia from "@/hooks/useMedia"
+
 const BlogTag = props => <Tag css={blogTag} {...props} />
 
 const BlogPost = ({ children, postData, ...props }) => {
+  const isMobile = useMedia([true], false)
+
   // Format Blog Date
   const dateStr = postData.date.toString()
   const Year = dateStr.split("-")[0]
@@ -48,7 +52,7 @@ const BlogPost = ({ children, postData, ...props }) => {
   const removeHtmlRegex = /(<([^>]+)>)/gi
 
   return (
-    <div css={theme => blogPostContainer(theme)}>
+    <div css={blogPostContainer}>
       <a
         css={anchor}
         href={postData.link}
@@ -57,32 +61,39 @@ const BlogPost = ({ children, postData, ...props }) => {
       >
         &nbsp;
       </a>
-      <img
+      <div
         css={image}
-        src={postData.better_featured_image.source_url}
+        style={{
+          backgroundImage: `url("${postData.better_featured_image.source_url}")`,
+        }}
         alt="Wordpress Post"
       />
       <div css={postContainer}>
         <div css={tagAndDateContainer}>
           <BlogTag>#{postData.categories[0].name}</BlogTag>
-          <p css={date}>{formattedDate}</p>
+          {!isMobile && <p css={date}>{formattedDate}</p>}
         </div>
-        <div css={theme => title(theme)} {...props}>
+        <div css={title} {...props}>
           {postData.title}
           {children}
         </div>
-        <div css={theme => content(theme)}>
-          {postData.content.replace(removeHtmlRegex, "")}
-        </div>
-        <p css={readMore}>
-          <FormattedMessage id="readMore" defaultMessage="Read more..." />
-        </p>
+        {!isMobile && (
+          <div css={content}>
+            {postData.content.replace(removeHtmlRegex, "")}
+          </div>
+        )}
+        {!isMobile && (
+          <p css={readMore}>
+            <FormattedMessage id="readMore" defaultMessage="Read more..." />
+          </p>
+        )}
+        {isMobile && <p css={date}>{formattedDate}</p>}
         {/* <div css={viewCountContainer}>
           <img css={viewCountImage} src={viewCountIcon} alt="View Count"/>
           <p css={viewCount}>320</p>
         </div> */}
-        <div css={dot} />
       </div>
+      <div css={dot} />
     </div>
   )
 }
