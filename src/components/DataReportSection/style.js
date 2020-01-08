@@ -1,12 +1,22 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const section = css`
   margin-top: 22.5rem;
   margin-bottom: 12rem;
+
+  ${mq.mobile} {
+    margin-top: 7.7rem;
+    margin-bottom: 2.8rem;
+  }
 `
 
 export const header = css`
   margin-bottom: -2rem;
+
+  ${mq.mobile} {
+    margin-bottom: 2.8rem;
+  }
 `
 
 export const heading = theme => css`
@@ -19,4 +29,10 @@ export const heading = theme => css`
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 1.9rem;
+
+  ${mq.mobile} {
+    font-size: 5.4rem;
+    letter-spacing: 1.95px;
+    margin-bottom: 0.8rem;
+  }
 `

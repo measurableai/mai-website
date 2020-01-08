@@ -29,7 +29,9 @@ const createChartOption = (theme, customData) => ({
       fontSize: 14,
       fontWeight: "normal",
       color: "#210051",
+      width: "100%",
     },
+    top: 14,
   },
   legend: {
     top: "bottom",

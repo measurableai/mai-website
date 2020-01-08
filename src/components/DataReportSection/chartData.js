@@ -19,7 +19,7 @@ export default [
     chartOption: {
       title: {
         "en-US":
-          "Customer Retention Rate - Months Since First Purchases until 2019",
+          "Customer Retention Rate\nMonths Since First Purchases until 2019",
         "zh-HK": "用戶複購率",
         "zh-CN": "用戶複購率",
       },
