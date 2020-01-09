@@ -22,7 +22,7 @@ const background = theme => css`
 `
 
 const lastSection = css`
-  margin-bottom: 30rem;
+  /* margin-bottom: 30rem; */
 `
 
 const subscribeSection = css`

@@ -8,6 +8,7 @@ import {
   jumpAnchor,
   contentFontStyle,
   emailMargin,
+  jobContainer,
 } from "./style"
 
 const HiringSection = ({
@@ -25,8 +26,8 @@ const HiringSection = ({
     <p css={contentFontStyle}>{currentOpenings}</p>
     <div css={currentOpeningsContainer}>
       {openingJobs.map((openingJob, index) => (
-        <>
-          <span css={jobTitle} key={openingJob.toString()}>
+        <div css={jobContainer} key={openingJob.toString()}>
+          <span css={jobTitle}>
             <a
               css={theme => [jobTitle(theme), jumpAnchor]}
               href={`#${openingJob}`}
@@ -34,8 +35,8 @@ const HiringSection = ({
               {openingJob}
             </a>
           </span>
-          {index !== openingJobs.length - 1 && <span>, </span>}
-        </>
+          {index !== openingJobs.length - 1 && <span>, &nbsp;</span>}
+        </div>
       ))}
     </div>
   </div>

@@ -19,6 +19,7 @@ export const emailAddressContainer = css`
   text-align: left;
   width: 38rem;
   border-bottom: 1px solid #1f014f;
+  margin-bottom: 8.61rem;
 `
 export const subscribe = theme => css`
   font-size: 7.2rem;

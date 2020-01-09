@@ -37,3 +37,7 @@ export const jobTitle = theme => css`
 export const jumpAnchor = css`
   text-decoration: none;
 `
+
+export const jobContainer = css`
+  display: inline-block;
+`
