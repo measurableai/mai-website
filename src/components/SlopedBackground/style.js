@@ -1,5 +1,4 @@
 import { css } from "@emotion/core"
-import { mq } from "@/theme"
 
 export const background = css`
   padding-bottom: 8rem;
@@ -45,20 +44,4 @@ export const cirlce = color => css`
   height: 0.9rem;
   border: solid 0.05rem ${color};
   border-radius: 1rem;
-`
-
-export const content = css`
-  position: relative;
-  width: 102.4rem;
-  box-sizing: border-box;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  text-align: center;
-  min-height: inherit;
-
-  ${mq.mobile} {
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 `

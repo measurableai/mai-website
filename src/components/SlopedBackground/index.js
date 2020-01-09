@@ -3,7 +3,9 @@ import { useWindowScroll } from "react-use"
 import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
 
-import { background, navigation, line, cirlce, content } from "./style"
+import ContentBox from "@/components/ContentBox"
+
+import { background, navigation, line, cirlce } from "./style"
 
 const Background = ({
   children,
@@ -76,7 +78,7 @@ const Navigator = ({ mode }) => {
 const SlopedSection = ({ children, mode, ...props }) => (
   <Background {...props}>
     <Navigator mode={mode} />
-    <div css={content}>{children}</div>
+    <ContentBox>{children}</ContentBox>
   </Background>
 )
 
