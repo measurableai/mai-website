@@ -34,6 +34,28 @@ const JobPage = () => {
   const theme = useTheme()
   const intl = useIntl()
 
+  const data = useMemo(
+    () =>
+      rawData.map(rawDataItem => {
+        const dataItem = {}
+        Object.keys(rawDataItem).forEach(key => {
+          if (rawDataItem[key].length !== undefined) {
+            dataItem[key] = []
+            Object.keys(rawDataItem[key]).forEach(sKey => {
+              dataItem[key].push(rawDataItem[key][sKey][intl.locale])
+            })
+          } else {
+            dataItem[key] = rawDataItem[key][intl.locale] || rawDataItem[key]
+          }
+        })
+        return dataItem
+      }),
+    [intl.locale]
+  )
+  const openingJobs = useMemo(() => data.map(dataItem => dataItem.jobTitle), [
+    data,
+  ])
+
   return (
     <Layout headerMode="light">
       <SEO title="Jobs" />
@@ -41,33 +63,10 @@ const JobPage = () => {
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
-        <Hiring
-          css={hiringPadding}
-          openingJobs={rawData.map(
-            rawDataItem => rawDataItem.jobTitle[intl.locale]
-          )}
-        />
+        <Hiring css={hiringPadding} openingJobs={openingJobs} />
       </SlopedSection>
       <div css={jobsSection}>
-        {useMemo(
-          () =>
-            rawData.map(rawDataItem => {
-              const dataItem = {}
-              Object.keys(rawDataItem).forEach(key => {
-                if (rawDataItem[key].length !== undefined) {
-                  dataItem[key] = []
-                  Object.keys(rawDataItem[key]).forEach(sKey => {
-                    dataItem[key].push(rawDataItem[key][sKey][intl.locale])
-                  })
-                } else {
-                  dataItem[key] =
-                    rawDataItem[key][intl.locale] || rawDataItem[key]
-                }
-              })
-              return dataItem
-            }),
-          [intl.locale]
-        ).map((job, index) => (
+        {data.map((job, index) => (
           <Job key={index} jobDetails={job} />
         ))}
       </div>

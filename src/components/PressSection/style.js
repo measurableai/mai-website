@@ -33,6 +33,7 @@ export const emailStyle = theme => css`
   margin: 0;
   color: ${theme.colors.greens.dark};
   font-size: 2.8rem;
+  font-weight: bold;
 `
 export const button = theme => css`
   background: ${theme.colors.purples.normal};
