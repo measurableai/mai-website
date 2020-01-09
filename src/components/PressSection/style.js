@@ -28,3 +28,16 @@ export const content2 = css`
 export const emailMargin = css`
   margin-bottom: 5rem;
 `
+
+export const emailStyle = theme => css`
+  margin: 0;
+  color: ${theme.colors.greens.dark};
+  font-size: 2.8rem;
+`
+export const button = theme => css`
+  background: ${theme.colors.purples.normal};
+  color: ${theme.colors.greens.light};
+  padding: 1.1rem 2.6rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+`

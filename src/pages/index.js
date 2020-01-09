@@ -21,10 +21,6 @@ const background = theme => css`
   background-color: ${theme.colors.purples.dark};
 `
 
-const lastSection = css`
-  /* margin-bottom: 30rem; */
-`
-
 const subscribeSection = css`
   margin: 0 auto;
   width: 102.4rem;
@@ -84,7 +80,6 @@ const IndexPage = () => {
       </SlopedSection>
       <SlopedSection
         mode="dark"
-        css={lastSection}
         slopedBackgroundColor={theme.colors.greens.light}
       >
         <GetStarted />
