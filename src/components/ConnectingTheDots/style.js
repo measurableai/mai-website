@@ -9,7 +9,7 @@ export const container = css`
   text-align: center;
 
   ${mq.mobile} {
-    padding-top: 17.7rem;
+    padding-top: 11.1rem;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 3.7rem;

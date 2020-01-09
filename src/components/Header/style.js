@@ -1,12 +1,25 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 import { hexToRgba } from "@/utils"
 
-export const container = theme => css`
+import { SCROLL_UP } from "@/hooks/useScrollDirection"
+
+export const container = (theme, scrollDirection) => css`
   position: fixed;
   height: 12rem;
   width: 100%;
   background-color: ${hexToRgba(theme.colors.purples.dark, 95)};
   z-index: ${theme.zIndices.header};
+  transition: top 0.2s ease-in-out;
+  top: ${scrollDirection === SCROLL_UP ? 0 : "-12rem"};
+
+  ${mq.mobile} {
+    height: auto;
+    width: calc(100% - 4rem);
+    padding: 2rem;
+
+    top: ${scrollDirection === SCROLL_UP ? 0 : "-7.4rem"};
+  }
 `
 
 export const content = theme => css`
@@ -16,6 +29,10 @@ export const content = theme => css`
   height: 100%;
   width: 100rem;
   margin: auto;
+
+  ${mq.mobile} {
+    width: auto;
+  }
 `
 
 export const textButtonMargin = css`
@@ -25,4 +42,38 @@ export const textButtonMargin = css`
 export const buttonsContainter = css`
   display: flex;
   align-items: center;
+`
+
+export const hamburger = (theme, isMenuOpen) => css`
+  > span {
+    &:first-of-type {
+      ${isMenuOpen && `transform: rotate(45deg) translate(0px, 0px);`}
+    }
+
+    &:nth-of-type(2) {
+      ${isMenuOpen &&
+        `
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      `}
+    }
+
+    &:nth-of-type(3) {
+      ${isMenuOpen && `transform: rotate(-45deg) translate(1px, -1px);`}
+    }
+  }
+`
+
+export const hamburgerLayer = (theme, on) => css`
+  display: block;
+  width: 15px;
+  height: 2px;
+  margin: 4px 0;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 0px 1px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease;
 `

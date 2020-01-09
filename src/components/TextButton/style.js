@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const button = theme => css`
   background-color: transparent;
@@ -10,5 +11,9 @@ export const button = theme => css`
 
   &:hover {
     color: ${theme.colors.greens.light};
+  }
+
+  ${mq.mobile} {
+    font-size: 1.8rem;
   }
 `

@@ -4,17 +4,9 @@ import { useTheme } from "emotion-theming"
 import { useIntl, changeLocale } from "gatsby-plugin-intl"
 
 import { singleValue, optionIcon, arrowDown } from "./style"
-import LanguageIconWhite from "@/assets/language-icon-white.svg"
-import LanguageEngIcon from "@/assets/language-eng.svg"
-import LanguageTCIcon from "@/assets/language-tc.svg"
-import LanguageSCIcon from "@/assets/language-sc.svg"
-import localeEnum from "@/enums/locale"
 
-const options = [
-  { value: localeEnum.EN_US, label: "ENG", Icon: LanguageEngIcon },
-  { value: localeEnum.ZH_HK, label: "繁體", Icon: LanguageTCIcon },
-  { value: localeEnum.ZH_CN, label: "简体", Icon: LanguageSCIcon },
-]
+import languageOptions from "../languageOptions"
+import LanguageIconWhite from "@/assets/language-icon-white.svg"
 
 const SingleValue = ({ children, ...props }) => (
   <div css={singleValue}>
@@ -44,7 +36,8 @@ const DropdownIndicator = props => (
 const LanguageDropdown = props => {
   const intl = useIntl()
   const [selectedOption, setSelectedOption] = useState(
-    options.find(option => option.value === intl.locale) || options[0]
+    languageOptions.find(option => option.value === intl.locale) ||
+      languageOptions[0]
   )
   const theme = useTheme()
 
@@ -122,7 +115,7 @@ const LanguageDropdown = props => {
       components={{ SingleValue, Option, DropdownIndicator }}
       value={selectedOption}
       onChange={handleChange}
-      options={options}
+      options={languageOptions}
       {...props}
     />
   )
