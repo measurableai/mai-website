@@ -7,15 +7,15 @@ import LanguageItemList from "../LanguageItemList"
 
 import { menu, menuItem } from "./style"
 
-const Menu = () => (
+const Menu = ({ lightModeOn }) => (
   <div css={menu}>
-    <LoginButton css={menuItem} />
-    <DataInsightButton css={menuItem} />
+    <LoginButton lightModeOn={lightModeOn} css={menuItem} />
+    <DataInsightButton lightModeOn={lightModeOn} css={menuItem} />
     <div css={menuItem}>
       <LanguageItemList />
     </div>
     <div css={menuItem}>
-      <FreeTrialButton />
+      <FreeTrialButton lightModeOn={lightModeOn} />
     </div>
   </div>
 )

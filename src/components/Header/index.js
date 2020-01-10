@@ -35,7 +35,7 @@ const Header = ({ headerMode }) => {
   }, [scrollDirection])
 
   const lightModeOn = headerMode === "light"
-  
+
   return (
     <div css={theme => container(theme, scrollDirection, lightModeOn)}>
       <div css={content}>
@@ -47,10 +47,16 @@ const Header = ({ headerMode }) => {
         />
         {!isMobile && (
           <div css={buttonsContainter}>
-            <FreeTrialButton />
-            <DataInsightButton css={textButtonMargin} />
-            <LanguageDropdown css={textButtonMargin} />
-            <LoginButton css={textButtonMargin} />
+            <FreeTrialButton lightModeOn={lightModeOn} />
+            <DataInsightButton
+              lightModeOn={lightModeOn}
+              css={textButtonMargin}
+            />
+            <LanguageDropdown
+              lightModeOn={lightModeOn}
+              css={textButtonMargin}
+            />
+            <LoginButton lightModeOn={lightModeOn} css={textButtonMargin} />
           </div>
         )}
         {isMobile && (
@@ -64,7 +70,7 @@ const Header = ({ headerMode }) => {
           </div>
         )}
       </div>
-      {isMenuOpen && isMobile && <Menu />}
+      {isMenuOpen && isMobile && <Menu lightModeOn={lightModeOn} />}
     </div>
   )
 }
