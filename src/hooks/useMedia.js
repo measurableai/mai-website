@@ -23,6 +23,11 @@ function useMedia(values, defaultValue) {
   // Array containing a media query list for each query
   const mediaQueryLists = useMemo(() => {
     const queries = theme.breakpoints.map(bp => `(max-width: ${bp}px)`)
+
+    if (typeof window === "undefined") {
+      return []
+    }
+
     return queries.map(q => window.matchMedia(q))
   }, [theme.breakpoints])
 
