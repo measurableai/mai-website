@@ -11,6 +11,7 @@ import {
   helpButton,
   helpSymbol,
   popoverContainer,
+  popoverContainerMobile,
   popoverHeader,
   closeButton,
   closeSymbol,
@@ -21,6 +22,8 @@ import {
 
 import CallbackIconSrc from "@/images/ico-help-01.svg"
 import MessageIconSrc from "@/images/ico-help-02.svg"
+
+import useMedia from "@/hooks/useMedia"
 
 const MenuItem = forwardRef(({ src, text, alt, ...props }, ref) => (
   <button css={menuItem} ref={ref} {...props}>
@@ -87,11 +90,15 @@ const LowerFooter = () => {
   const onClose = useCallback(() => {
     dispatch({ type: CLOSE })
   }, [])
+  const isMobile = useMedia([true], false)
+  const contentStyle = useMedia([popoverContainerMobile], popoverContainer)
+
   return (
     <div css={container}>
       <div css={content}>
         <Popup
-          key={state.closeCount}
+          modal={isMobile}
+          key={`${isMobile}-${state.closeCount}`}
           trigger={
             <button css={helpButton}>
               <span css={helpSymbol}>?</span>
@@ -99,7 +106,7 @@ const LowerFooter = () => {
             </button>
           }
           closeOnDocumentClick
-          contentStyle={popoverContainer}
+          contentStyle={contentStyle}
           position="top center"
           onClose={onClose}
         >

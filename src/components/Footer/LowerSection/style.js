@@ -60,6 +60,12 @@ export const popoverContainer = {
   flexDirection: "column",
 }
 
+export const popoverContainerMobile = {
+  ...popoverContainer,
+  width: "calc(100% - 2.4rem)",
+  height: "auto",
+}
+
 export const popoverHeader = theme => css`
   background-color: ${theme.colors.greens.light};
   font-size: 1.9rem;
@@ -99,6 +105,7 @@ export const popoverBody = css`
 `
 
 export const menuItem = theme => css`
+  background-color: white;
   border-image: linear-gradient(45deg, #aa5bff 0%, #55ff8d 99%) 1 0 0 1;
   border-width: 0.2rem;
   border-style: solid;
