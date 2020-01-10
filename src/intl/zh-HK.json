@@ -71,6 +71,16 @@
     "name": "Name",
     "companyName": "Company Name"
   },
+  "leaveMessageForm": {
+    "description": "Leave us a message and we’ll get back to you asap.",
+    "name": "Name",
+    "companyName": "Company Name",
+    "email": "Email",
+    "message": "Message"
+  },
+  "emailSubscribeForm": {
+    "description": "You have already subscribed"
+  },
   "formSubmitSuccess": "Your request has been sent!",
   "formSubmitFailed": "We failed to send your request. Please try again later!",
   "help": "HELP",
