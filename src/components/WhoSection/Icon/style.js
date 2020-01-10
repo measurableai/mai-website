@@ -1,10 +1,16 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const container = css`
   position: relative;
-  height: 18rem;
   width: 18rem;
+  height: 18rem;
   text-align: center;
+
+  ${mq.mobile} {
+    width: 13.5rem;
+    height: 13.6rem;
+  }
 `
 export const image = css`
   height: 100%;
@@ -20,4 +26,9 @@ export const title = theme => css`
   position: relative;
   top: 11.8rem;
   max-width: 10rem;
+
+  ${mq.mobile} {
+    font-size: 1.4rem;
+    top: 9rem;
+  }
 `
