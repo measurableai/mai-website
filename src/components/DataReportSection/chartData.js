@@ -9,11 +9,11 @@ export default [
       },
       description: {
         "en-US":
-          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, even though the shorter-period retention curve looks very similar, the long-term retention rate is lower than that of the Brazilian ones.",
+          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, the long-term retention rate is lower than that of the Brazilian ones.",
         "zh-HK":
-          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, even though the shorter-period retention curve looks very similar, the long-term retention rate is lower than that of the Brazilian ones.",
+          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, the long-term retention rate is lower than that of the Brazilian ones.",
         "zh-CN":
-          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, even though the shorter-period retention curve looks very similar, the long-term retention rate is lower than that of the Brazilian ones.",
+          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, the long-term retention rate is lower than that of the Brazilian ones.",
       },
     },
     chartOption: {
@@ -121,20 +121,17 @@ export default [
     slide: {
       tag: "Ecommerce",
       title: {
-        "en-US":
-          "Target and Best Buy are Transforming: Online Sales Datasets of Traditional Retailers",
-        "zh-HK":
-          "Target and Best Buy are Transforming: Online Sales Datasets of Traditional Retailers",
-        "zh-CN":
-          "Target and Best Buy are Transforming: Online Sales Datasets of Traditional Retailers",
+        "en-US": "Target and Best Buy are Transforming Online",
+        "zh-HK": "Target and Best Buy are Transforming Online",
+        "zh-CN": "Target and Best Buy are Transforming Online",
       },
       description: {
         "en-US":
-          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most other traditional retailer peers.\nOnline sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years.\nThe average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most traditional retailers. Online sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years. The average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
         "zh-HK":
-          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most other traditional retailer peers.\nOnline sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years.\nThe average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most traditional retailers. Online sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years. The average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
         "zh-CN":
-          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most other traditional retailer peers.\nOnline sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years.\nThe average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most traditional retailers. Online sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years. The average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
       },
     },
     chartOption: {
@@ -244,11 +241,11 @@ export default [
       },
       description: {
         "en-US":
-          "Grossed over USD 2.55 Billion from In-App-Purchases.\nAverage paying user spends around USD $38.63\nUSD $6.68 per order.",
+          "Tencent’s top grossing game Honor of Kings launched its biggest update with a new feature “Honor Badge” right before the Chinese New Year. It helped the game's revenues peak again in China. In-app-purchase sales in the first week of the holiday month grew by around 150%.",
         "zh-HK":
-          "新賽季發布史上最大更新，\n推出全新“戰令”功能，\n春節假期首周收入環比增長 250% 第一季度用戶平均消費翻倍",
+          "Tencent’s top grossing game Honor of Kings launched its biggest update with a new feature “Honor Badge” right before the Chinese New Year. It helped the game's revenues peak again in China. In-app-purchase sales in the first week of the holiday month grew by around 150%.",
         "zh-CN":
-          "新赛季发布史上最大更新，\n推出全新“战令”功能，\n春节假期首周收入环比增长 250% 第一季度用户平均消费翻倍",
+          "Tencent’s top grossing game Honor of Kings launched its biggest update with a new feature “Honor Badge” right before the Chinese New Year. It helped the game's revenues peak again in China. In-app-purchase sales in the first week of the holiday month grew by around 150%.",
       },
     },
     chartOption: {
@@ -307,9 +304,9 @@ export default [
     slide: {
       tag: "Apps",
       title: {
-        "en-US": "MOMO beats estimates amid pressure from authority ",
-        "zh-HK": "MOMO beats estimates amid pressure from authority ",
-        "zh-CN": "MOMO beats estimates amid pressure from authority ",
+        "en-US": "MOMO beats estimates amid authority pressure",
+        "zh-HK": "MOMO beats estimates amid authority pressure",
+        "zh-CN": "MOMO beats estimates amid authority pressure",
       },
       description: {
         "en-US":
