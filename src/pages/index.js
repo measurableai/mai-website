@@ -16,14 +16,16 @@ import Subscribe from "@/components/Subscribe"
 import ConnectingTheDots from "@/components/ConnectingTheDots"
 import LogosSection from "@/components/LogosSection"
 
+import useMedia from "@/hooks/useMedia"
+
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
   background-color: ${theme.colors.purples.dark};
 `
 
-const subscribeSection = css`
+const subscribeSection = isMobile => css`
   margin: 0 auto;
-  width: 102.4rem;
+  width: ${isMobile ? "100%" : "102.4rem"};
   padding: 0 1.2rem;
   box-sizing: border-box;
 `
@@ -33,6 +35,8 @@ const createGreenWhiteLinearGradient = (deg, percentage) =>
 
 const IndexPage = () => {
   const theme = useTheme()
+  const isMobile = useMedia([true], false)
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -91,7 +95,7 @@ const IndexPage = () => {
       >
         <GetStarted />
       </SlopedSection>
-      <Subscribe css={subscribeSection} />
+      <Subscribe css={subscribeSection(isMobile)} />
     </Layout>
   )
 }

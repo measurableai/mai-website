@@ -17,12 +17,16 @@ import RightArrowIcon from "@/assets/green-right-arrow.svg"
 import useForm from "@/hooks/useForm"
 import { SUBSCRIBE } from "@/api"
 
+import useMedia from "@/hooks/useMedia"
+
 const initialFormState = {
   email_address: "",
 }
 
 const EmailSubscribe = () => {
   const intl = useIntl()
+  const buttonWidth = useMedia([15.8], 21)
+  const buttonHeight = useMedia([21.8], 29)
 
   const formOptions = useMemo(
     () => ({
@@ -56,7 +60,7 @@ const EmailSubscribe = () => {
         />
         <label>
           <button css={arrowButton} type="submit" disabled={disabled}>
-            <RightArrowIcon width={21} height={29} />
+            <RightArrowIcon width={buttonWidth} height={buttonHeight} />
           </button>
         </label>
       </form>
@@ -79,23 +83,34 @@ const EmailSubscribe = () => {
   )
 }
 
-const Subscribe = ({ ...props }) => (
-  <div {...props}>
-    <div css={subscribeContainer}>
-      <p css={theme => [fontStyle(theme), subscribeTitle]}>
-        <FormattedMessage
-          id="subscribeToOurNewsLetter"
-          defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
-          values={{
-            span: str => <span css={subscribe}>{str}</span>,
-          }}
-        />
-      </p>
+const Subscribe = ({ ...props }) => {
+  const isMobile = useMedia([true], false)
+  return (
+    <div {...props}>
+      <div css={subscribeContainer}>
+        <p css={theme => [fontStyle(theme), subscribeTitle]}>
+          <FormattedMessage
+            id="subscribeToOurNewsLetter"
+            defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
+            values={{
+              span: str =>
+                isMobile ? (
+                  <span css={subscribe}>
+                    {str}
+                    <br />
+                  </span>
+                ) : (
+                  <span css={subscribe}>{str}</span>
+                ),
+            }}
+          />
+        </p>
+      </div>
+      <div css={emailAddressContainer}>
+        <EmailSubscribe />
+      </div>
     </div>
-    <div css={emailAddressContainer}>
-      <EmailSubscribe />
-    </div>
-  </div>
-)
+  )
+}
 
 export default Subscribe
