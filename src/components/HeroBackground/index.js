@@ -1,14 +1,13 @@
 import React from "react"
 
-import ContentBox from "@/components/ContentBox"
+import BackgroundWithNavigator from "@/components/BackgroundWithNavigator"
+
 import { background } from "./style"
 
-const Background = ({ children }) => <div css={background}>{children}</div>
-
-const HeroBackground = ({ children }) => (
-  <Background>
-    <ContentBox>{children}</ContentBox>
-  </Background>
+const HeroBackground = ({ children, ...props }) => (
+  <BackgroundWithNavigator css={background} {...props}>
+    {children}
+  </BackgroundWithNavigator>
 )
 
 export default HeroBackground

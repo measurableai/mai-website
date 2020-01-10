@@ -36,34 +36,40 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <HeroBackground>
+      <HeroBackground showNavigator>
         <ConnectingTheDots />
       </HeroBackground>
       <SlopedSection
         css={background}
+        showNavigator
         slopedBackgroundImage={theme.linearGradients.purpleLightToDark}
         slopedBackgroundColor={theme.colors.purples.dark}
       >
         <WhySection />
       </SlopedSection>
       <SlopedSection
+        showNavigator
         slopedBackgroundImage={theme.linearGradients.purpleDarkToLight}
         slopedBackgroundColor={theme.colors.purples.dark}
       >
         <WhatSection />
       </SlopedSection>
       <SlopedSection
+        showNavigator
         slopedBackgroundImage={theme.linearGradients.purpleLightToDark}
         slopedBackgroundColor={theme.colors.purples.dark}
       >
         <WhoSection />
       </SlopedSection>
       <SlopedSection
+        showNavigator
         slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "70%")}
+        mode="dark"
       >
         <DataReportSection />
       </SlopedSection>
       <SlopedSection
+        showNavigator
         mode="dark"
         slopedBackgroundImage={createGreenWhiteLinearGradient(
           "-111.5deg",
@@ -73,6 +79,7 @@ const IndexPage = () => {
         <DataInsights />
       </SlopedSection>
       <SlopedSection
+        showNavigator
         mode="dark"
         slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "30%")}
       >

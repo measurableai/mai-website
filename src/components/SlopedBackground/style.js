@@ -21,27 +21,3 @@ export const background = css`
     position: relative;
   }
 `
-
-export const navigation = css`
-  position: absolute !important;
-  height: 8rem;
-  top: -8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-export const line = color => css`
-  width: 0.1rem;
-  transform: scaleX(0.5);
-  height: 0rem;
-  transition: height 0.3s;
-  background-color: ${color};
-`
-
-export const cirlce = color => css`
-  width: 0.9rem;
-  height: 0.9rem;
-  border: solid 0.05rem ${color};
-  border-radius: 1rem;
-`
