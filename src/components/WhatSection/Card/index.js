@@ -11,10 +11,15 @@ import {
 } from "./style"
 import DotLine from "@/components/DotLine"
 
+import useMedia from "@/hooks/useMedia"
+
 const Card = ({ src, alt, contentTitle, contents, ...props }) => {
+  const width = useMedia([37.5], 50)
+  const height = useMedia([37.5], 50)
+
   return (
     <div css={container} {...props}>
-      <img height={50} width={50} src={src} alt={alt} />
+      <img width={width} height={height} src={src} alt={alt} />
       <DotLine css={dotLineContainer} invert={true} />
       <div>
         <p css={theme => [dotLineStyle(theme), dotLineContentTitle]}>
