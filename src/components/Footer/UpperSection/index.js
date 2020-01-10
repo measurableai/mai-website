@@ -24,11 +24,13 @@ import facebookIcon from "@/images/btn-facebook.svg"
 import linkedinIcon from "@/images/btn-linkedin.svg"
 import mediumIcon from "@/images/btn-medium.svg"
 import twitterIcon from "@/images/btn-twitter.svg"
-import wechatIcon from "@/images/btn-wechat.svg"
+// import wechatIcon from "@/images/btn-wechat.svg"
 import weiboIcon from "@/images/btn-weibo.svg"
 
-const SocialIcon = ({ last, src, alt }) => (
-  <img css={socialIcon(last)} src={src} alt={alt} />
+const SocialIcon = ({ last, src, alt, href }) => (
+  <a href={href} target="_blank" rel="noreferrer noopener">
+    <img css={socialIcon(last)} src={src} alt={alt} />
+  </a>
 )
 
 const OtherPages = props => (
@@ -55,12 +57,33 @@ const UpperFooter = () => (
           </div>
         </div>
         <div css={logosContainer}>
-          <SocialIcon src={linkedinIcon} alt="linkedin" />
-          <SocialIcon src={mediumIcon} alt="medium" />
-          <SocialIcon src={twitterIcon} alt="twitter" />
-          <SocialIcon src={facebookIcon} alt="facebook" />
-          <SocialIcon src={wechatIcon} alt="wechat" />
-          <SocialIcon src={weiboIcon} alt="weibo" last={true} />
+          <SocialIcon
+            src={linkedinIcon}
+            alt="linkedin"
+            href="https://linkedin.com/company/measurable-ai"
+          />
+          <SocialIcon
+            src={mediumIcon}
+            alt="medium"
+            href="https://medium.com/measurable-ai"
+          />
+          <SocialIcon
+            src={twitterIcon}
+            alt="twitter"
+            href="https://twitter.com/MeasurableAI"
+          />
+          <SocialIcon
+            src={facebookIcon}
+            alt="facebook"
+            href="https://fb.me/measurableai"
+          />
+          {/* <SocialIcon src={wechatIcon} alt="wechat" /> */}
+          <SocialIcon
+            src={weiboIcon}
+            alt="weibo"
+            href="https://weibo.com/measurableai"
+            last={true}
+          />
         </div>
       </div>
       <div css={contentRightContainer}>
