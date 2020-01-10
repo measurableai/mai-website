@@ -45,12 +45,17 @@ const PressSection = props => (
         }}
       />
     </p>
-    <button css={button}>
-      <FormattedMessage
-        id="downloadPressKit"
-        defaultMessage="Download Press Kit"
-      />
-    </button>
+    <a
+      href="https://mai-marektingsite.s3-us-west-2.amazonaws.com/MAI+Press+Kit.zip"
+      download
+    >
+      <button css={button}>
+        <FormattedMessage
+          id="downloadPressKit"
+          defaultMessage="Download Press Kit"
+        />
+      </button>
+    </a>
   </div>
 )
 
