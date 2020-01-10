@@ -38,7 +38,7 @@ const EmailSubscribe = () => {
     [intl.locale]
   )
 
-  const { formFields, formStatus, handleSubmit, disabled } = useForm(
+  const { formFields, formStatus, handleSubmit, disabled, errorCode } = useForm(
     initialFormState,
     formOptions
   )
@@ -73,10 +73,17 @@ const EmailSubscribe = () => {
         </p>
       ) : formStatus === "failed" ? (
         <p css={errorMessage}>
-          <FormattedMessage
-            id="formSubmitFailed"
-            defaultMessage="We failed to send your request. Please try again later!"
-          />
+          {errorCode === 201 ? (
+            <FormattedMessage
+              id="emailSubscribeForm.alreadySubscribed"
+              defaultMessage="You have already subscribed."
+            />
+          ) : (
+            <FormattedMessage
+              id="formSubmitFailed"
+              defaultMessage="We failed to send your request. Please try again later!"
+            />
+          )}
         </p>
       ) : null}
     </div>

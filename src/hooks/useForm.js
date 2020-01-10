@@ -7,9 +7,11 @@ const FAILED = "failed"
 
 const initialState = {
   status: DRAFT,
+  errorCode: 0,
 }
 const SET_FIELD = "setField"
 const SET_FORM_STATE = "setFormState"
+const SET_ERROR_CODE = "setErrorCode"
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -24,6 +26,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         status: action.payload,
+      }
+    }
+    case SET_ERROR_CODE: {
+      return {
+        ...state,
+        errorCode: action.payload,
       }
     }
     default:
@@ -88,6 +96,10 @@ export default (initialFormState, { uri, additionalFormBody = null } = {}) => {
         })
 
         if (!response.ok) {
+          const errorBody = await response.json()
+          if (errorBody.error_code) {
+            dispatch({ type: SET_ERROR_CODE, payload: errorBody.error_code })
+          }
           throw new Error("HTTP error, status = " + response.status)
         }
 
@@ -99,5 +111,11 @@ export default (initialFormState, { uri, additionalFormBody = null } = {}) => {
     [additionalFormBody, initialFormState, state, uri]
   )
 
-  return { formFields, formStatus: state.status, handleSubmit, disabled }
+  return {
+    formFields,
+    formStatus: state.status,
+    handleSubmit,
+    disabled,
+    errorCode: state.errorCode,
+  }
 }
