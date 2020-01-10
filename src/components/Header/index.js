@@ -37,6 +37,10 @@ const Header = ({ headerMode }) => {
 
   const lightModeOn = headerMode === "light"
 
+  if (typeof window === `undefined`) {
+    return null
+  }
+
   return (
     <div css={theme => container(theme, scrollDirection, lightModeOn)}>
       <div css={content}>
