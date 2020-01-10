@@ -13,5 +13,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@": path.resolve(__dirname, "src"),
       },
     },
+    externals: {
+      canvas: "commonjs canvas",
+    },
   })
 }

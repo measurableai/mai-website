@@ -6,8 +6,11 @@
 
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
+import jsdom from "jsdom"
 
 import theme from "./src/theme"
+
+global.DOMParser = new jsdom.JSDOM().window.DOMParser
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>
