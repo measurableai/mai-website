@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby-plugin-intl"
 
 import FreeTrialButton from "@/components/FreeTrialButton"
 
@@ -39,12 +40,14 @@ const Header = ({ headerMode }) => {
   return (
     <div css={theme => container(theme, scrollDirection, lightModeOn)}>
       <div css={content}>
-        <img
-          width={logoWidth}
-          height={logoHeight}
-          src={lightModeOn ? logo_purple : logo_white}
-          alt="Measurable AI"
-        />
+        <Link to="/">
+          <img
+            width={logoWidth}
+            height={logoHeight}
+            src={lightModeOn ? logo_purple : logo_white}
+            alt="Measurable AI"
+          />
+        </Link>
         {!isMobile && (
           <div css={buttonsContainter}>
             <FreeTrialButton lightModeOn={lightModeOn} />
