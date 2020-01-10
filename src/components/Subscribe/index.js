@@ -13,7 +13,11 @@ import {
 
 import RightArrowIcon from "@/assets/green-right-arrow.svg"
 
+import useMedia from "@/hooks/useMedia"
+
 const EmailSubscribe = () => {
+  const buttonWidth = useMedia([15.8], 21)
+  const buttonHeight = useMedia([21.8], 29)
   const [email, setEmail] = useState("")
   const placeholder = (
     <FormattedMessage id="emailAddress" defaultMessage="Email Address" />
@@ -40,30 +44,41 @@ const EmailSubscribe = () => {
       />
       <label>
         <button css={arrowButton} type="button" onClick={handleSubmit}>
-          <RightArrowIcon width={21} height={29} />
+          <RightArrowIcon width={buttonWidth} height={buttonHeight} />
         </button>
       </label>
     </form>
   )
 }
 
-const Subscribe = ({ ...props }) => (
-  <div {...props}>
-    <div css={subscribeContainer}>
-      <p css={theme => [fontStyle(theme), subscribeTitle]}>
-        <FormattedMessage
-          id="subscribeToOurNewsLetter"
-          defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
-          values={{
-            span: str => <span css={subscribe}>{str}</span>,
-          }}
-        />
-      </p>
+const Subscribe = ({ ...props }) => {
+  const isMobile = useMedia([true], false)
+  return (
+    <div {...props}>
+      <div css={subscribeContainer}>
+        <p css={theme => [fontStyle(theme), subscribeTitle]}>
+          <FormattedMessage
+            id="subscribeToOurNewsLetter"
+            defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
+            values={{
+              span: str =>
+                isMobile ? (
+                  <span css={subscribe}>
+                    {str}
+                    <br />
+                  </span>
+                ) : (
+                  <span css={subscribe}>{str}</span>
+                ),
+            }}
+          />
+        </p>
+      </div>
+      <div css={emailAddressContainer}>
+        <EmailSubscribe />
+      </div>
     </div>
-    <div css={emailAddressContainer}>
-      <EmailSubscribe />
-    </div>
-  </div>
-)
+  )
+}
 
 export default Subscribe
