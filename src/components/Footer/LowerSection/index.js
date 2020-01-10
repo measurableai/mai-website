@@ -2,7 +2,8 @@ import React, { useReducer, useCallback, forwardRef } from "react"
 import Popup from "reactjs-popup"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-import Callback from "../../Footer/Callback"
+import Callback from "../Callback"
+import LeaveMessage from "../LeaveMessage"
 
 import {
   container,
@@ -111,6 +112,7 @@ const LowerFooter = () => {
             </div>
             <div css={popoverBody}>
               {state.page === PAGE_CALLBACK && <Callback />}
+              {state.page === PAGE_MESSAGE && <LeaveMessage />}
               {!state.page && (
                 <>
                   <MenuItem
@@ -124,6 +126,7 @@ const LowerFooter = () => {
                     }
                   />
                   <MenuItem
+                    onClick={() => dispatch({ type: GO_TO_MESSAGE })}
                     src={MessageIconSrc}
                     text={
                       <FormattedMessage

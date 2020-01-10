@@ -16,13 +16,19 @@ export const message = theme => css`
   margin-top: 0;
 `
 
-export const inputContainer = css`
-  margin-bottom: 1.8rem;
+export const textarea = css`
+  resize: none;
+  margin-bottom: 0;
 `
 
 export const footer = css`
   display: flex;
   flex-direction: column;
+`
+
+export const submittedMessage = css`
+  margin-top: 0;
+  margin-bottom: 0.8rem;
 `
 
 export const errorMessage = theme => css`
