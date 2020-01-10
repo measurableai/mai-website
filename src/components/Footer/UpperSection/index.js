@@ -105,7 +105,7 @@ const UpperFooter = () => (
             />
           </OtherPages>
         </Page>
-        <Page to="/termsofuse">
+        <Page to="/termsOfUse">
           <OtherPages>
             <FormattedMessage id="termsOfUse" defaultMessage="TERMS OF USE" />
           </OtherPages>
