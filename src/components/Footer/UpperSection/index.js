@@ -16,6 +16,7 @@ import {
   logosContainer,
   allRightsReserved,
   pageAnchor,
+  separator,
 } from "./style"
 
 import mailogo from "@/images/mai-logo-2.svg"
@@ -27,12 +28,16 @@ import twitterIcon from "@/images/btn-twitter.svg"
 import wechatIcon from "@/images/btn-wechat.svg"
 import weiboIcon from "@/images/btn-weibo.svg"
 
+import useMedia from "@/hooks/useMedia"
+
 const SocialIcon = ({ last, src, alt }) => (
   <img css={socialIcon(last)} src={src} alt={alt} />
 )
 
 const OtherPages = props => (
-  <p css={theme => [fontStyle(theme), otherPages]} {...props}></p>
+  <>
+    <p css={theme => [fontStyle(theme), otherPages]} {...props} />
+  </>
 )
 
 const Page = ({ children, ...props }) => (
@@ -41,61 +46,67 @@ const Page = ({ children, ...props }) => (
   </Link>
 )
 
-const UpperFooter = () => (
-  <div css={upperFooterContainer}>
-    <div css={contentContainer}>
-      <div css={contentLeftContainer}>
-        <div>
-          <img css={maiImage} src={mailogo} alt="MAI" />
-          <div css={poweredByContainer}>
-            <p css={theme => [fontStyle(theme), poweredBy]}>
-              <FormattedMessage id="poweredBy" defaultMessage="Powered by" />
-            </p>
-            <img css={mdtImage} src={mdtLogo} alt="MDT" />
+const UpperFooter = () => {
+  const isMobile = useMedia([true], false)
+  return (
+    <div css={upperFooterContainer}>
+      <div css={contentContainer}>
+        <div css={contentLeftContainer}>
+          <div>
+            <img css={maiImage} src={mailogo} alt="MAI" />
+            <div css={poweredByContainer}>
+              <p css={theme => [fontStyle(theme), poweredBy]}>
+                <FormattedMessage id="poweredBy" defaultMessage="Powered by" />
+              </p>
+              <img css={mdtImage} src={mdtLogo} alt="MDT" />
+            </div>
+          </div>
+          <div css={logosContainer}>
+            <SocialIcon src={linkedinIcon} alt="linkedin" />
+            <SocialIcon src={mediumIcon} alt="medium" />
+            <SocialIcon src={twitterIcon} alt="twitter" />
+            <SocialIcon src={facebookIcon} alt="facebook" />
+            <SocialIcon src={wechatIcon} alt="wechat" />
+            <SocialIcon src={weiboIcon} alt="weibo" last={true} />
           </div>
         </div>
-        <div css={logosContainer}>
-          <SocialIcon src={linkedinIcon} alt="linkedin" />
-          <SocialIcon src={mediumIcon} alt="medium" />
-          <SocialIcon src={twitterIcon} alt="twitter" />
-          <SocialIcon src={facebookIcon} alt="facebook" />
-          <SocialIcon src={wechatIcon} alt="wechat" />
-          <SocialIcon src={weiboIcon} alt="weibo" last={true} />
+        <div css={contentRightContainer}>
+          <Page to="/jobs">
+            <OtherPages>
+              <FormattedMessage id="jobs" defaultMessage="JOBS" />
+            </OtherPages>
+          </Page>
+          {isMobile ? <span css={separator}> | </span> : ""}
+          <Page to="/press">
+            <OtherPages>
+              <FormattedMessage id="press" defaultMessage="PRESS" />
+            </OtherPages>
+          </Page>
+          {isMobile ? <span css={separator}> | </span> : ""}
+          <Page to="/privacyPolicy">
+            <OtherPages>
+              <FormattedMessage
+                id="privacyPolicy"
+                defaultMessage="PRIVACY  POLICY"
+              />
+            </OtherPages>
+          </Page>
+          {isMobile ? <span css={separator}> | </span> : ""}
+          <Page to="/termsofuse">
+            <OtherPages>
+              <FormattedMessage id="termsOfUse" defaultMessage="TERMS OF USE" />
+            </OtherPages>
+          </Page>
         </div>
       </div>
-      <div css={contentRightContainer}>
-        <Page to="/jobs">
-          <OtherPages>
-            <FormattedMessage id="jobs" defaultMessage="JOBS" />
-          </OtherPages>
-        </Page>
-        <Page to="/press">
-          <OtherPages>
-            <FormattedMessage id="press" defaultMessage="PRESS" />
-          </OtherPages>
-        </Page>
-        <Page to="/privacyPolicy">
-          <OtherPages>
-            <FormattedMessage
-              id="privacyPolicy"
-              defaultMessage="PRIVACY  POLICY"
-            />
-          </OtherPages>
-        </Page>
-        <Page to="/termsofuse">
-          <OtherPages>
-            <FormattedMessage id="termsOfUse" defaultMessage="TERMS OF USE" />
-          </OtherPages>
-        </Page>
-      </div>
+      <p css={theme => [fontStyle(theme), allRightsReserved]}>
+        <FormattedMessage
+          id="AllRightsReserved"
+          defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
+        />
+      </p>
     </div>
-    <p css={theme => [fontStyle(theme), allRightsReserved]}>
-      <FormattedMessage
-        id="AllRightsReserved"
-        defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
-      />
-    </p>
-  </div>
-)
+  )
+}
 
 export default UpperFooter
