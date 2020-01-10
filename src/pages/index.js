@@ -16,18 +16,21 @@ import Subscribe from "@/components/Subscribe"
 import ConnectingTheDots from "@/components/ConnectingTheDots"
 import LogosSection from "@/components/LogosSection"
 
-import useMedia from "@/hooks/useMedia"
+import { mq } from "@/theme"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
   background-color: ${theme.colors.purples.dark};
 `
 
-const subscribeSection = isMobile => css`
+const subscribeSection = css`
   margin: 0 auto;
-  width: ${isMobile ? "100%" : "102.4rem"};
+  width: 102.4rem;
   padding: 0 1.2rem;
   box-sizing: border-box;
+  ${mq.mobile} {
+    width: 100%;
+  }
 `
 
 const createGreenWhiteLinearGradient = (deg, percentage) =>
@@ -35,7 +38,6 @@ const createGreenWhiteLinearGradient = (deg, percentage) =>
 
 const IndexPage = () => {
   const theme = useTheme()
-  const isMobile = useMedia([true], false)
 
   return (
     <Layout>
@@ -95,7 +97,7 @@ const IndexPage = () => {
       >
         <GetStarted />
       </SlopedSection>
-      <Subscribe css={subscribeSection(isMobile)} />
+      <Subscribe css={subscribeSection} />
     </Layout>
   )
 }
