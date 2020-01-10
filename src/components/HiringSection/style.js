@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const title = theme => css`
   margin: 0;
@@ -7,6 +8,10 @@ export const title = theme => css`
   font-weight: 600;
   letter-spacing: 0.01px;
   color: ${theme.colors.purples.normal};
+
+  ${mq.mobile} {
+    font-size: 4.8rem;
+  }
 `
 
 export const contentFontStyle = theme => css`
@@ -14,15 +19,29 @@ export const contentFontStyle = theme => css`
   color: ${theme.colors.purples.normal};
   font-size: 2rem;
   line-height: 3.6rem;
+
+  ${mq.mobile} {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
 `
 
 export const content = css`
   margin-top: 3.9rem;
+
+  ${mq.mobile} {
+    margin-top: 2.6rem;
+  }
 `
 
 export const emailMargin = css`
   margin-top: 3.9rem;
   margin-bottom: 5rem;
+
+  ${mq.mobile} {
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+  }
 `
 
 export const currentOpeningsContainer = css`
@@ -32,6 +51,10 @@ export const currentOpeningsContainer = css`
 export const jobTitle = theme => css`
   color: ${theme.colors.purples.normal};
   border-bottom: 0.1rem solid ${theme.colors.purples.normal};
+
+  ${mq.mobile} {
+    font-size: 1.3rem;
+  }
 `
 
 export const jumpAnchor = css`
@@ -47,4 +70,9 @@ export const emailStyle = theme => css`
   color: ${theme.colors.greens.dark};
   font-size: 2.8rem;
   font-weight: bold;
+
+  ${mq.mobile} {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 `
