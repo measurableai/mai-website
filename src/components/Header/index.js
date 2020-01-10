@@ -55,10 +55,12 @@ const Header = ({ headerMode }) => {
               lightModeOn={lightModeOn}
               css={textButtonMargin}
             />
-            <LanguageDropdown
-              lightModeOn={lightModeOn}
-              css={textButtonMargin}
-            />
+            {process.env.GATSBY_MULTI_LANG === "true" && (
+              <LanguageDropdown
+                lightModeOn={lightModeOn}
+                css={textButtonMargin}
+              />
+            )}
             <LoginButton lightModeOn={lightModeOn} css={textButtonMargin} />
           </div>
         )}

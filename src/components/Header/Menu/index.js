@@ -11,9 +11,11 @@ const Menu = ({ lightModeOn }) => (
   <div css={menu}>
     <LoginButton lightModeOn={lightModeOn} css={menuItem} />
     <DataInsightButton lightModeOn={lightModeOn} css={menuItem} />
-    <div css={menuItem}>
-      <LanguageItemList />
-    </div>
+    {process.env.GATSBY_MULTI_LANG === "true" && (
+      <div css={menuItem}>
+        <LanguageItemList />
+      </div>
+    )}
     <div css={menuItem}>
       <FreeTrialButton lightModeOn={lightModeOn} />
     </div>
