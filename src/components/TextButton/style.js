@@ -1,9 +1,9 @@
 import { css } from "@emotion/core"
 import { mq } from "@/theme"
 
-export const button = theme => css`
+export const button = (theme, lightModeOn) => css`
   background-color: transparent;
-  color: #ffffff;
+  color: ${lightModeOn ? theme.colors.purples.normal : theme.colors.white};
   text-transform: uppercase;
   padding: 0.8rem 1rem;
   font-size: 1.4rem;

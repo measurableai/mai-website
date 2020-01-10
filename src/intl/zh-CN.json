@@ -72,5 +72,19 @@
     "companyName": "Company Name"
   },
   "formSubmitSuccess": "Your request has been sent!",
-  "formSubmitFailed": "We failed to send your request. Please try again later!"
+  "formSubmitFailed": "We failed to send your request. Please try again later!",
+  "help": "HELP",
+
+  "weAreHiring": "We’re HIRING!",
+  "joinUs": "Join us in our quest to make communication friendly and efficient! We're looking for full-stack developers to our team in Hong Kong, and we're offering generous equity alongside competitive pay. Not to mention free meals, snacks and drinks, gym room and table tennis, and happy hours!",
+  "emailToApply": "Email <span>jobs@measurable.ai</span> to apply.",
+  "currentOpenings": "Current openings:",
+  "jobDescriptions": "Job Descriptions:",
+  "jobRequirement": "Requirement:",
+  "jobPlus": "**Plus**",
+  "shoutOutToJournalists": "Shout out to Journalists",
+  "maiProvidesJournalists": "Measurable AI provides journalists with an exclusive database of source for consumer insights and the business world. You can either track consumer trends through our data dashboard, or we can email the data you might need.",
+  "letUsknowYourPublication": "Let us know your publication, story and companies you are looking at, and we'll help !",
+  "emailToPress": "Please contact <span>press@measurable.ai</span>",
+  "downloadPressKit": "Download Press Kit"
 }

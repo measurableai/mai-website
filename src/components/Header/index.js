@@ -7,7 +7,8 @@ import LoginButton from "./LoginButton"
 import DataInsightButton from "./DataInsightButton"
 import Menu from "./Menu"
 
-import logo from "@/images/mai-logo.svg"
+import logo_white from "@/images/mai-logo.svg"
+import logo_purple from "@/images/mai-logo-2.svg"
 
 import useMedia from "@/hooks/useMedia"
 import useScrollDirection, { SCROLL_DOWN } from "@/hooks/useScrollDirection"
@@ -21,34 +22,41 @@ import {
   hamburgerLayer,
 } from "./style"
 
-const Header = () => {
+const Header = ({ headerMode }) => {
   const scrollDirection = useScrollDirection()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isMobile = useMedia([true], false)
   const logoWidth = useMedia([145], 218)
   const logoHeight = useMedia([20], 30)
-
   useEffect(() => {
     if (scrollDirection === SCROLL_DOWN) {
       setIsMenuOpen(false)
     }
   }, [scrollDirection])
 
+  const lightModeOn = headerMode === "light"
+
   return (
-    <div css={theme => container(theme, scrollDirection)}>
+    <div css={theme => container(theme, scrollDirection, lightModeOn)}>
       <div css={content}>
         <img
           width={logoWidth}
           height={logoHeight}
-          src={logo}
+          src={lightModeOn ? logo_purple : logo_white}
           alt="Measurable AI"
         />
         {!isMobile && (
           <div css={buttonsContainter}>
-            <FreeTrialButton />
-            <DataInsightButton css={textButtonMargin} />
-            <LanguageDropdown css={textButtonMargin} />
-            <LoginButton css={textButtonMargin} />
+            <FreeTrialButton lightModeOn={lightModeOn} />
+            <DataInsightButton
+              lightModeOn={lightModeOn}
+              css={textButtonMargin}
+            />
+            <LanguageDropdown
+              lightModeOn={lightModeOn}
+              css={textButtonMargin}
+            />
+            <LoginButton lightModeOn={lightModeOn} css={textButtonMargin} />
           </div>
         )}
         {isMobile && (
@@ -62,7 +70,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      {isMenuOpen && isMobile && <Menu />}
+      {isMenuOpen && isMobile && <Menu lightModeOn={lightModeOn} />}
     </div>
   )
 }

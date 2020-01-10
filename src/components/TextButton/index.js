@@ -2,8 +2,8 @@ import React from "react"
 
 import { button } from "./style.js"
 
-const TextButton = ({ children, ...props }) => (
-  <button css={button} {...props}>
+const TextButton = ({ children, lightModeOn, ...props }) => (
+  <button css={theme => button(theme, lightModeOn)} {...props}>
     {children}
   </button>
 )

@@ -28,7 +28,7 @@ const Layout = ({ children, headerMode }) => {
   return (
     <>
       <Global styles={global} />
-      <Header />
+      <Header headerMode={headerMode} />
       <main>{children}</main>
       <Footer />
     </>

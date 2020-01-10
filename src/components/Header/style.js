@@ -4,14 +4,16 @@ import { hexToRgba } from "@/utils"
 
 import { SCROLL_UP } from "@/hooks/useScrollDirection"
 
-export const container = (theme, scrollDirection) => css`
+export const container = (theme, scrollDirection, lightModeOn) => css`
   position: fixed;
   height: 12rem;
   width: 100%;
-  background-color: ${hexToRgba(theme.colors.purples.dark, 95)};
   z-index: ${theme.zIndices.header};
   transition: top 0.2s ease-in-out;
   top: ${scrollDirection === SCROLL_UP ? 0 : "-12rem"};
+  background-color: ${lightModeOn
+    ? theme.colors.white
+    : hexToRgba(theme.colors.purples.dark, 95)};
 
   ${mq.mobile} {
     height: auto;

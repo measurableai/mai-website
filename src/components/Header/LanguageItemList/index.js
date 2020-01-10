@@ -7,6 +7,7 @@ import { list, button, icon, separator } from "./style"
 
 import languageOptions from "../languageOptions"
 
+// TODO: handle lightModeOn
 const LanguageItemList = () => (
   <div css={list}>
     {languageOptions.map((option, index) => (
