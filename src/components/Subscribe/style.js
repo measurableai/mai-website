@@ -1,5 +1,14 @@
 import { css } from "@emotion/core"
 
+export const form = css`
+  border-bottom: 1px solid #1f014f;
+`
+
+export const errorMessage = theme => css`
+  font-size: 1.2rem;
+  color: ${theme.colors.error};
+`
+
 export const fontStyle = theme => css`
   margin: 0;
   font-weight: 600;
@@ -18,7 +27,6 @@ export const subscribeTitle = css`
 export const emailAddressContainer = css`
   text-align: left;
   width: 38rem;
-  border-bottom: 1px solid #1f014f;
   margin-bottom: 8.61rem;
 `
 export const subscribe = theme => css`
@@ -37,4 +45,8 @@ export const emailInput = theme => css`
 
 export const arrowButton = css`
   float: right;
+
+  &[disabled] {
+    opacity: 0.7;
+  }
 `
