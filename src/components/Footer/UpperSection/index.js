@@ -92,45 +92,42 @@ const UpperFooter = () => {
               last={true}
             />
           </div>
-          <div css={contentRightContainer}>
-            <Page to="/jobs">
-              <OtherPages>
-                <FormattedMessage id="jobs" defaultMessage="JOBS" />
-              </OtherPages>
-            </Page>
-            {isMobile ? <span css={separator}> | </span> : ""}
-            <Page to="/press">
-              <OtherPages>
-                <FormattedMessage id="press" defaultMessage="PRESS" />
-              </OtherPages>
-            </Page>
-            {isMobile ? <span css={separator}> | </span> : ""}
-            <Page to="/privacyPolicy">
-              <OtherPages>
-                <FormattedMessage
-                  id="privacyPolicy"
-                  defaultMessage="PRIVACY  POLICY"
-                />
-              </OtherPages>
-            </Page>
-            {isMobile ? <span css={separator}> | </span> : ""}
-            <Page to="/termsOfUse">
-              <OtherPages>
-                <FormattedMessage
-                  id="termsOfUse"
-                  defaultMessage="TERMS OF USE"
-                />
-              </OtherPages>
-            </Page>
-          </div>
         </div>
-        <p css={theme => [fontStyle(theme), allRightsReserved]}>
-          <FormattedMessage
-            id="AllRightsReserved"
-            defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
-          />
-        </p>
+        <div css={contentRightContainer}>
+          <Page to="/jobs">
+            <OtherPages>
+              <FormattedMessage id="jobs" defaultMessage="JOBS" />
+            </OtherPages>
+          </Page>
+          {isMobile ? <span css={separator}> | </span> : ""}
+          <Page to="/press">
+            <OtherPages>
+              <FormattedMessage id="press" defaultMessage="PRESS" />
+            </OtherPages>
+          </Page>
+          {isMobile ? <span css={separator}> | </span> : ""}
+          <Page to="/privacyPolicy">
+            <OtherPages>
+              <FormattedMessage
+                id="privacyPolicy"
+                defaultMessage="PRIVACY  POLICY"
+              />
+            </OtherPages>
+          </Page>
+          {isMobile ? <span css={separator}> | </span> : ""}
+          <Page to="/termsOfUse">
+            <OtherPages>
+              <FormattedMessage id="termsOfUse" defaultMessage="TERMS OF USE" />
+            </OtherPages>
+          </Page>
+        </div>
       </div>
+      <p css={theme => [fontStyle(theme), allRightsReserved]}>
+        <FormattedMessage
+          id="AllRightsReserved"
+          defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
+        />
+      </p>
     </div>
   )
 }
