@@ -2,8 +2,8 @@ import React from "react"
 import { Global, css } from "@emotion/core"
 
 import "normalize.css"
-import "typeface-roboto"
-import "typeface-barlow-condensed"
+import "@/fonts/roboto.css"
+import "@/fonts/barlow-condensed.css"
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
