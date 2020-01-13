@@ -58,7 +58,13 @@ const UpperFooter = () => {
               <p css={theme => [fontStyle(theme), poweredBy]}>
                 <FormattedMessage id="poweredBy" defaultMessage="Powered by" />
               </p>
-              <img css={mdtImage} src={mdtLogo} alt="MDT" />
+              <a
+                href="https://mdt.io/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img css={mdtImage} src={mdtLogo} alt="MDT" />
+              </a>
             </div>
           </div>
           <div css={logosContainer}>
