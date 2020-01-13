@@ -102,7 +102,7 @@ const LowerFooter = () => {
           trigger={
             <button css={helpButton}>
               <span css={helpSymbol}>?</span>
-              <FormattedMessage id="help" defaultMessage="HELP" />
+              <FormattedMessage id="talkToUs" defaultMessage="TALK TO US" />
             </button>
           }
           closeOnDocumentClick
@@ -112,7 +112,7 @@ const LowerFooter = () => {
         >
           <>
             <div css={popoverHeader}>
-              <FormattedMessage id="help" defaultMessage="HELP" />
+              <FormattedMessage id="talkToUs" defaultMessage="TALK TO US" />
               <button css={closeButton} onClick={onClose}>
                 <div css={closeSymbol} />
               </button>
