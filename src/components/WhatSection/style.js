@@ -15,6 +15,7 @@ export const container = css`
     margin-top: 2.8rem;
     margin: 2.8rem auto 0 auto;
     max-width: 37.5rem;
+    height: 82rem;
   }
 `
 export const contentContainer = css`

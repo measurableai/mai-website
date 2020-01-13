@@ -5,7 +5,6 @@ export const container = css`
   max-width: 20.4rem;
   ${mq.mobile} {
     max-width: 25.4%;
-    /* max-width: 12.8rem; */
   }
 `
 export const dotLineStyle = theme => css`
@@ -22,6 +21,7 @@ export const dotLineContentTitle = css`
 
   ${mq.mobile} {
     font-size: 1.7rem;
+    letter-spacing: 0.4px;
   }
 `
 export const dotLineContent = css`
