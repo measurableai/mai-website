@@ -55,6 +55,10 @@ export const list = css`
 
 export const targetAnchor = css`
   position: relative;
-  top: -12rem;
+  top: -10rem;
   text-decoration: none;
+
+  ${mq.mobile} {
+    top: -8rem;
+  }
 `
