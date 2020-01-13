@@ -12,8 +12,6 @@ export const section = css`
 `
 
 export const header = css`
-  margin-bottom: -2rem;
-
   ${mq.mobile} {
     margin-bottom: 2.8rem;
   }
