@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby-plugin-intl"
+import { useWindowScroll } from "react-use"
 
 import FreeTrialButton from "@/components/FreeTrialButton"
 
@@ -25,6 +26,7 @@ import {
 
 const Header = ({ headerMode }) => {
   const scrollDirection = useScrollDirection()
+  const { y } = useWindowScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isMobile = useMedia([true], false)
   const logoWidth = useMedia([145], 218)
@@ -42,7 +44,7 @@ const Header = ({ headerMode }) => {
   }
 
   return (
-    <div css={theme => container(theme, scrollDirection, lightModeOn)}>
+    <div css={theme => container(theme, scrollDirection, y === 0, lightModeOn)}>
       <div css={content}>
         <Link to="/">
           <img
