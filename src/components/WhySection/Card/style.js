@@ -3,6 +3,10 @@ import { mq } from "@/theme"
 
 export const container = css`
   max-width: 20.4rem;
+
+  ${mq.mobile} {
+    max-width: 55%;
+  }
 `
 export const dotLineInvert = css`
   padding-left: 0.73rem;
