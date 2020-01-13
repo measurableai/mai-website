@@ -113,7 +113,7 @@ const UpperFooter = () => {
             </OtherPages>
           </Page>
           {isMobile ? <span css={separator}> | </span> : ""}
-          <Page to="/termsofuse">
+          <Page to="/termsOfUse">
             <OtherPages>
               <FormattedMessage id="termsOfUse" defaultMessage="TERMS OF USE" />
             </OtherPages>
