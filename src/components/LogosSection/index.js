@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Category from "./Category"
@@ -128,10 +128,40 @@ const LogosSection = props => {
           }
         }
       }
+      backedby04_cn: file(relativePath: { eq: "backedby04_cn.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      backedby06_cn: file(relativePath: { eq: "backedby06_cn.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      backedby07_cn: file(relativePath: { eq: "backedby07_cn.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      trustedby02_cn: file(relativePath: { eq: "trustedby02_cn.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-  const trustedByColumnCount = useMedia([2], 1)
 
+  const trustedByColumnCount = useMedia([2], 1)
+  const intl = useIntl()
+  const english_version = intl.locale === "en-US"
   return (
     <div css={container} {...props}>
       <Category
@@ -158,10 +188,16 @@ const LogosSection = props => {
           images.backedby01.childImageSharp.fluid,
           images.backedby02.childImageSharp.fluid,
           images.backedby03.childImageSharp.fluid,
-          images.backedby04.childImageSharp.fluid,
+          english_version
+            ? images.backedby04.childImageSharp.fluid
+            : images.backedby04_cn.childImageSharp.fluid,
           images.backedby05.childImageSharp.fluid,
-          images.backedby06.childImageSharp.fluid,
-          images.backedby07.childImageSharp.fluid,
+          english_version
+            ? images.backedby06.childImageSharp.fluid
+            : images.backedby06_cn.childImageSharp.fluid,
+          english_version
+            ? images.backedby07.childImageSharp.fluid
+            : images.backedby07_cn.childImageSharp.fluid,
         ]}
       />
       <Category
@@ -170,7 +206,9 @@ const LogosSection = props => {
         columnCount={trustedByColumnCount}
         images={[
           images.trustedby01.childImageSharp.fluid,
-          images.trustedby02.childImageSharp.fluid,
+          english_version
+            ? images.trustedby02.childImageSharp.fluid
+            : images.trustedby02_cn.childImageSharp.fluid,
         ]}
       />
     </div>
