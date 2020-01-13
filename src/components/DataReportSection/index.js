@@ -50,7 +50,13 @@ const DataReportSection = () => {
         dragging={false}
         slideIndex={selectedIndex}
         beforeSlide={() => setIsSliding(true)}
-        afterSlide={() => setIsSliding(false)}
+        afterSlide={slideIndex => {
+          setIsSliding(false)
+          setSelectedIndex(slideIndex)
+        }}
+        autoplay={true}
+        autoplayInterval={3000}
+        wrapAround={true}
       >
         {data.map((item, index) => (
           <Slide key={index} customData={item} />
