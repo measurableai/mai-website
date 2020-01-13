@@ -17,11 +17,11 @@ import RightArrowIcon from "@/assets/green-right-arrow.svg"
 import useForm from "@/hooks/useForm"
 import { SUBSCRIBE } from "@/api"
 
+import useMedia from "@/hooks/useMedia"
+
 const initialFormState = {
   email_address: "",
 }
-
-import useMedia from "@/hooks/useMedia"
 
 const EmailSubscribe = () => {
   const intl = useIntl()
@@ -84,7 +84,6 @@ const EmailSubscribe = () => {
 }
 
 const Subscribe = ({ ...props }) => {
-  const isMobile = useMedia([true], false)
   return (
     <div {...props}>
       <div css={subscribeContainer}>
@@ -93,15 +92,7 @@ const Subscribe = ({ ...props }) => {
             id="subscribeToOurNewsLetter"
             defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
             values={{
-              span: str =>
-                isMobile ? (
-                  <span css={subscribe}>
-                    {str}
-                    <br />
-                  </span>
-                ) : (
-                  <span css={subscribe}>{str}</span>
-                ),
+              span: str => <span css={subscribe}>{str}</span>,
             }}
           />
         </p>

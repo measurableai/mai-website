@@ -37,9 +37,7 @@ const SocialIcon = ({ last, src, alt, href }) => (
 )
 
 const OtherPages = props => (
-  <>
-    <p css={theme => [fontStyle(theme), otherPages]} {...props} />
-  </>
+  <p css={theme => [fontStyle(theme), otherPages]} {...props} />
 )
 
 const Page = ({ children, ...props }) => (

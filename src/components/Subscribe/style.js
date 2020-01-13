@@ -53,6 +53,7 @@ export const subscribe = theme => css`
   ${mq.mobile} {
     font-size: 5.4rem;
     letter-spacing: 1.61px;
+    display: block;
   }
 `
 export const emailInput = theme => css`
