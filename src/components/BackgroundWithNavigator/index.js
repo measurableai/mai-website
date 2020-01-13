@@ -82,6 +82,7 @@ const reducer = (state, action) => {
 const BackgroundWithNavigator = ({
   children,
   showNavigator,
+  backgroundComponent,
   mode,
   ...props
 }) => {
@@ -126,6 +127,7 @@ const BackgroundWithNavigator = ({
   return (
     <div ref={measuredRef} css={background} {...props}>
       {showNavigator && <Navigator height={height} mode={mode} />}
+      {backgroundComponent}
       <ContentBox>{children}</ContentBox>
       <ReactResizeDetector handleHeight onResize={handleResize} />
     </div>

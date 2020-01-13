@@ -2,6 +2,8 @@ import { css } from "@emotion/core"
 import { mq } from "@/theme"
 
 export const background = theme => css`
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,3 +17,11 @@ export const background = theme => css`
     min-height: auto;
   }
 `
+
+export const animation = {
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  left: "50%",
+  transform: "translateX(-50%)",
+}
