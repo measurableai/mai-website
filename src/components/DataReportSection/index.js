@@ -30,6 +30,8 @@ const DataReportSection = () => {
     [intl.locale]
   )
 
+  //TODO: check the bug of wrapAround
+
   return (
     <div css={section}>
       <div css={header}>
@@ -56,7 +58,7 @@ const DataReportSection = () => {
         }}
         autoplay={true}
         autoplayInterval={3000}
-        wrapAround={true}
+        // wrapAround={true}
       >
         {data.map((item, index) => (
           <Slide key={index} customData={item} />
