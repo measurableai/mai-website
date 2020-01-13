@@ -125,7 +125,10 @@ const UpperFooter = () => {
       <p css={theme => [fontStyle(theme), allRightsReserved]}>
         <FormattedMessage
           id="AllRightsReserved"
-          defaultMessage="ALL RIGHTS RESERVED © 2019 Measurable AI"
+          defaultMessage="ALL RIGHTS RESERVED © {year} Measurable AI"
+          values={{
+            year: new Date().getFullYear(),
+          }}
         />
       </p>
     </div>
