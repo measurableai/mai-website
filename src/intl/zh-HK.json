@@ -55,7 +55,7 @@
   "press": "PRESS",
   "privacyPolicy": "PRIVACY  POLICY",
   "termsOfUse": "TERMS OF USE",
-  "AllRightsReserved": "ALL RIGHTS RESERVED © 2019 Measurable AI",
+  "AllRightsReserved": "ALL RIGHTS RESERVED © {year} Measurable AI",
   "connectingTheDotsWithAlternativeData": "Connecting the dots with <span>ALTERNATIVE DATA</span>",
   "providesActionableConsumer": "Actionable <span>CONSUMER INSIGHTS</span> based on <span>BILLIONS</span> of <span>TRANSACTIONAL EMAILS</span> for emerging markets",
   "achievements": "ACHIEVEMENTS",
