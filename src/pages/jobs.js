@@ -2,6 +2,7 @@ import React, { useMemo } from "react"
 import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
 import { useIntl } from "gatsby-plugin-intl"
+import { mq } from "@/theme"
 
 import Layout from "@/components/layout"
 import SEO from "@/components/seo"
@@ -11,31 +12,39 @@ import Job from "@/components/JobSection"
 
 import rawData from "@/data/jobs.json"
 
-import useMedia from "@/hooks/useMedia"
-
 const background = theme => css`
   background-image: ${theme.linearGradients.greenDarkToLight};
   margin-bottom: 26.5rem;
 `
 
-const hiringPadding = isMobile => css`
-  padding-top: ${isMobile ? "8.8rem" : "26.3rem"};
-  padding-left: ${isMobile ? "0" : "5.7rem"};
+const hiringPadding = css`
+  padding-top: 26.3rem;
+  padding-left: 5.7rem;
   text-align: left;
+
+  ${mq.mobile} {
+    padding-top: 8.8rem;
+    padding-left: 0;
+  }
 `
 
-const jobsSection = isMobile => css`
+const jobsSection = css`
   margin: 0 auto;
-  width: ${isMobile ? "100%" : "102.4rem"};
-  padding-left: ${isMobile ? "2rem" : "6.9rem"};
-  padding-right: ${isMobile ? "2rem" : "1.2rem"};
+  width: 102.4rem;
+  padding-left: 6.9rem;
+  padding-right: 1.2rem;
   box-sizing: border-box;
+
+  ${mq.mobile} {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 `
 
 const JobPage = () => {
   const theme = useTheme()
   const intl = useIntl()
-  const isMobile = useMedia([true], false)
 
   const data = useMemo(
     () =>
@@ -66,9 +75,9 @@ const JobPage = () => {
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
-        <Hiring css={hiringPadding(isMobile)} openingJobs={openingJobs} />
+        <Hiring css={hiringPadding} openingJobs={openingJobs} />
       </SlopedSection>
-      <div css={jobsSection(isMobile)}>
+      <div css={jobsSection}>
         {data.map((job, index) => (
           <Job key={index} jobDetails={job} />
         ))}
