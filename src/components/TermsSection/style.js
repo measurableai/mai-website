@@ -17,19 +17,17 @@ export const title = theme => css`
 export const contentFontStyle = theme => css`
   margin: 0;
   color: ${theme.colors.purples.normal};
-  font-size: 2rem;
-  line-height: 3.6rem;
+`
+
+export const content = css`
+  font-size: 1.6rem;
+  line-height: 3.2rem;
 
   ${mq.mobile} {
     font-size: 1.3rem;
-    line-height: 2rem;
   }
 `
 
-export const content1 = css`
-  margin-top: 3.9rem;
-
-  ${mq.mobile} {
-    margin-top: 2.6rem;
-  }
+export const item = css`
+  margin-left: 1rem;
 `
