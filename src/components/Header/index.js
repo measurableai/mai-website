@@ -19,6 +19,7 @@ import {
   container,
   content,
   textButtonMargin,
+  freeTrialButtinMargin,
   buttonsContainter,
   hamburger,
   hamburgerLayer,
@@ -60,7 +61,10 @@ const Header = ({ headerMode }) => {
         </Link>
         {!isMobile && (
           <div css={buttonsContainter}>
-            <FreeTrialButton lightModeOn={lightModeOn} />
+            <FreeTrialButton
+              lightModeOn={lightModeOn}
+              css={freeTrialButtinMargin}
+            />
             <DataInsightButton
               lightModeOn={lightModeOn}
               css={textButtonMargin}

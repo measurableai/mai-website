@@ -48,6 +48,10 @@ export const textButtonMargin = css`
   margin-left: 2rem;
 `
 
+export const freeTrialButtinMargin = css`
+  margin-right: 1rem;
+`
+
 export const buttonsContainter = css`
   display: flex;
   align-items: center;
