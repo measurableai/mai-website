@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useRef } from "react"
+import { useTheme } from "emotion-theming"
 import ReactIdSwiperCustom from "react-id-swiper/lib/ReactIdSwiper.custom"
 import { Swiper, Autoplay } from "swiper/js/swiper.esm"
 import "swiper/css/swiper.css"
@@ -7,16 +8,17 @@ import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 import Tabs from "./Tabs"
 import Slide from "./Slide"
 import { section, header, heading } from "./style"
-import rawData from "./chartData"
+import createRawData from "./chartData"
 
 const DataReportSection = () => {
   const intl = useIntl()
+  const theme = useTheme()
   const [selectedIndex, setSelectedIndex] = useState(0)
   const swiperRef = useRef(null)
   const [isSliding, setIsSliding] = useState(false)
   const data = useMemo(
     () =>
-      rawData.map(rawDataItem => {
+      createRawData(theme).map(rawDataItem => {
         const dataItem = { slide: {}, chartOption: {} }
 
         Object.keys(rawDataItem).forEach(key => {
@@ -30,7 +32,7 @@ const DataReportSection = () => {
 
         return dataItem
       }),
-    [intl.locale]
+    [intl.locale, theme]
   )
 
   const params = useMemo(
