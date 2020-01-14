@@ -19,7 +19,7 @@ export const titleContainer = () => css`
   width: 100%;
 
   ${mq.mobile} {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1.9rem 0;
   }
 `
 export const imagesContainer = css`
