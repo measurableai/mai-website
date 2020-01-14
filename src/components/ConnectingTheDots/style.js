@@ -94,11 +94,8 @@ export const subTitleContainer = css`
 `
 
 export const button = css`
-  width: 27.7rem;
-  height: 5.6rem;
   font-size: 2.81rem;
-  letter-spacing: -0.68px;
-  padding: 1.5rem 1.9rem;
+  padding: 1.5rem 1.88rem;
 
   ${mq.mobile} {
     height: auto;

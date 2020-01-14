@@ -7,6 +7,7 @@ export const button = theme => css`
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
   font-weight: 900;
+  line-height: normal;
 
   &:hover {
     background: linear-gradient(
