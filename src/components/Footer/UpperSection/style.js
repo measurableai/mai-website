@@ -17,7 +17,6 @@ export const upperFooterContainer = theme => css`
 
 export const fontStyle = theme => css`
   margin: 0;
-  font-weight: 600;
   color: ${theme.colors.purples.normal};
   line-height: 1.2;
 `
@@ -84,7 +83,6 @@ export const poweredByContainer = css`
 `
 
 export const otherPages = css`
-  font-weight: normal;
   font-size: 1.4rem;
   letter-spacing: 0.51px;
   margin-top: 1.8rem;
@@ -97,7 +95,6 @@ export const otherPages = css`
 
 export const poweredBy = css`
   display: inline-block;
-  font-weight: normal;
   font-size: 1.1rem;
   margin: auto 0.8rem auto 0;
 
@@ -131,7 +128,6 @@ export const logosContainer = css`
 
 export const allRightsReserved = css`
   margin: 5.2rem 0;
-  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 0.5px;
