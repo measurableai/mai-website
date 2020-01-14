@@ -47,7 +47,7 @@ export const whatSectionItemContainer1 = css`
   margin-left: 0;
 
   ${mq.mobile} {
-    margin-top: 2.2rem;
+    margin-top: 1.9rem;
     margin-left: auto;
   }
 `
