@@ -161,7 +161,7 @@ const LogosSection = props => {
 
   const trustedByColumnCount = useMedia([2], 1)
   const intl = useIntl()
-  const English_version = intl.locale === "en-US"
+  const ENGLISH_VERSION = intl.locale === "en-US"
   return (
     <div css={container} {...props}>
       <Category
@@ -188,14 +188,14 @@ const LogosSection = props => {
           images.backedby01.childImageSharp.fluid,
           images.backedby02.childImageSharp.fluid,
           images.backedby03.childImageSharp.fluid,
-          English_version
+          ENGLISH_VERSION
             ? images.backedby04.childImageSharp.fluid
             : images.backedby04_cn.childImageSharp.fluid,
           images.backedby05.childImageSharp.fluid,
-          English_version
+          ENGLISH_VERSION
             ? images.backedby06.childImageSharp.fluid
             : images.backedby06_cn.childImageSharp.fluid,
-          English_version
+          ENGLISH_VERSION
             ? images.backedby07.childImageSharp.fluid
             : images.backedby07_cn.childImageSharp.fluid,
         ]}
@@ -206,7 +206,7 @@ const LogosSection = props => {
         columnCount={trustedByColumnCount}
         images={[
           images.trustedby01.childImageSharp.fluid,
-          English_version
+          ENGLISH_VERSION
             ? images.trustedby02.childImageSharp.fluid
             : images.trustedby02_cn.childImageSharp.fluid,
         ]}
