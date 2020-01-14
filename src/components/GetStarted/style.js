@@ -25,7 +25,7 @@ export const arrowContainer = css`
 
 export const fontStyle = theme => css`
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-family: ${theme.fonts.heading};
   color: ${theme.colors.purples.normal};
   line-height: 13.5rem;

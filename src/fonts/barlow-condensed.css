@@ -135,7 +135,7 @@
   font-family: 'Barlow Condensed';
   font-style: normal;
   font-display: auto;
-  font-weight: 600;
+  font-weight: 500;
   src:
     local('Barlow Condensed SemiBold '),
     local('Barlow Condensed-SemiBold'),
@@ -148,7 +148,7 @@
   font-family: 'Barlow Condensed';
   font-style: italic;
   font-display: auto;
-  font-weight: 600;
+  font-weight: 500;
   src:
     local('Barlow Condensed SemiBold italic'),
     local('Barlow Condensed-SemiBolditalic'),

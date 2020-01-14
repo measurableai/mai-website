@@ -37,7 +37,7 @@ export const title1 = theme => css`
 `
 export const title2 = theme => css`
   font-size: 6.2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: ${theme.colors.greens.light};
   letter-spacing: 0.4rem;
   text-transform: uppercase;

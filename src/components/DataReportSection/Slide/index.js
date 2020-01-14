@@ -78,7 +78,7 @@ const createChartOption = (theme, customData) => ({
     axisLabel: {
       formatter: customData.yAxis.axisLabelFormatter || "{value}",
       fontFamily: theme.fonts.heading,
-      fontWeight: 600,
+      fontWeight: 500,
       color: "#210051",
       margin: 8,
     },
