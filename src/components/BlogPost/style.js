@@ -93,6 +93,7 @@ export const content = theme => css`
   max-height: 3rem;
   color: ${theme.colors.purples.light};
   font-size: 1.2rem;
+  font-weight: normal;
   margin-bottom: 0.5rem;
   line-height: 1.5rem;
   text-overflow: ellipsis;

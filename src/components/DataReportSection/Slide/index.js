@@ -60,7 +60,7 @@ const createChartOption = (theme, customData) => ({
       margin: 6,
       fontSize: 11,
       fontFamily: theme.fonts.heading,
-      fontWeight: 200,
+      fontWeight: 400,
       color: "#210051",
     },
     axisLine: {
