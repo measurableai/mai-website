@@ -92,7 +92,7 @@ const IndexPage = () => {
         <LogosSection />
       </SlopedSection>
       <SlopedSection
-        mode="dark"
+        showNavigator
         slopedBackgroundColor={theme.colors.greens.light}
       >
         <GetStarted />
