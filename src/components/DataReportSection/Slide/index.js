@@ -37,7 +37,7 @@ const createChartOption = (theme, customData) => ({
     top: "bottom",
     selectedMode: false,
     itemHeight: 7,
-    padding: [26, 0, 0, 0],
+    padding: [26, 0, 5, 0],
     textStyle: {
       fontSize: 11,
       fontFamily: theme.fonts.body,
@@ -113,11 +113,11 @@ const createChartOption = (theme, customData) => ({
   })),
 })
 
-const Slide = ({ customData }) => {
+const Slide = ({ customData, ...props }) => {
   const theme = useTheme()
 
   return (
-    <div css={slideContainer}>
+    <div css={slideContainer} {...props}>
       <div css={textContainer}>
         <Tag css={tag}>#{customData.slide.tag}</Tag>
         <h3 css={title}>{customData.slide.title}</h3>

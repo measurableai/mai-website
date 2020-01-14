@@ -5,6 +5,7 @@ export const slideContainer = css`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
 
   ${mq.mobile} {
     flex-direction: column;
