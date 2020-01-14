@@ -30,8 +30,6 @@ const DataReportSection = () => {
     [intl.locale]
   )
 
-  //TODO: check the bug of wrapAround
-
   return (
     <div css={section}>
       <div css={header}>
@@ -59,6 +57,8 @@ const DataReportSection = () => {
         autoplay={true}
         autoplayInterval={3000}
         // wrapAround={true}
+        // TODO: check the bug of wrapAround
+        // ref: https://github.com/FormidableLabs/nuka-carousel/issues/606
       >
         {data.map((item, index) => (
           <Slide key={index} customData={item} />
