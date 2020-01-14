@@ -44,7 +44,11 @@ const Header = ({ headerMode }) => {
   }
 
   return (
-    <div css={theme => container(theme, scrollDirection, y === 0, lightModeOn)}>
+    <div
+      css={theme =>
+        container(theme, scrollDirection, y === 0 && !isMenuOpen, lightModeOn)
+      }
+    >
       <div css={content}>
         <Link to="/">
           <img
