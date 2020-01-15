@@ -19,6 +19,7 @@ import {
   container,
   content,
   textButtonMargin,
+  freeTrialButtinMargin,
   buttonsContainter,
   hamburger,
   hamburgerLayer,
@@ -44,7 +45,11 @@ const Header = ({ headerMode }) => {
   }
 
   return (
-    <div css={theme => container(theme, scrollDirection, y === 0, lightModeOn)}>
+    <div
+      css={theme =>
+        container(theme, scrollDirection, y === 0 && !isMenuOpen, lightModeOn)
+      }
+    >
       <div css={content}>
         <Link to="/">
           <img
@@ -56,7 +61,10 @@ const Header = ({ headerMode }) => {
         </Link>
         {!isMobile && (
           <div css={buttonsContainter}>
-            <FreeTrialButton lightModeOn={lightModeOn} />
+            <FreeTrialButton
+              lightModeOn={lightModeOn}
+              css={freeTrialButtinMargin}
+            />
             <DataInsightButton
               lightModeOn={lightModeOn}
               css={textButtonMargin}

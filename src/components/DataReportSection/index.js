@@ -1,19 +1,24 @@
-import React, { useState, useMemo } from "react"
-import Carousel from "nuka-carousel"
+import React, { useState, useMemo, useRef } from "react"
+import { useTheme } from "emotion-theming"
+import ReactIdSwiperCustom from "react-id-swiper/lib/ReactIdSwiper.custom"
+import { Swiper, Autoplay } from "swiper/js/swiper.esm"
+import "swiper/css/swiper.css"
 import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import Tabs from "./Tabs"
 import Slide from "./Slide"
 import { section, header, heading } from "./style"
-import rawData from "./chartData"
+import createRawData from "./chartData"
 
 const DataReportSection = () => {
   const intl = useIntl()
+  const theme = useTheme()
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const swiperRef = useRef(null)
   const [isSliding, setIsSliding] = useState(false)
   const data = useMemo(
     () =>
-      rawData.map(rawDataItem => {
+      createRawData(theme).map(rawDataItem => {
         const dataItem = { slide: {}, chartOption: {} }
 
         Object.keys(rawDataItem).forEach(key => {
@@ -27,7 +32,34 @@ const DataReportSection = () => {
 
         return dataItem
       }),
-    [intl.locale]
+    [intl.locale, theme]
+  )
+
+  const params = useMemo(
+    () => ({
+      Swiper,
+      modules: [Autoplay],
+      centeredSlides: true,
+      lazy: true,
+      // TODO: see if we can solve the bug with `loop` is on
+      // loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      on: {
+        slideChange: () => {
+          setSelectedIndex(swiperRef.current.realIndex)
+        },
+        slideChangeTransitionStart: () => {
+          setIsSliding(true)
+        },
+        slideChangeTransitionEnd: () => {
+          setIsSliding(false)
+        },
+      },
+    }),
+    []
   )
 
   return (
@@ -39,31 +71,22 @@ const DataReportSection = () => {
         <Tabs
           numberOfTabs={data.length}
           selectedIndex={selectedIndex}
-          onChange={setSelectedIndex}
+          onChange={index => {
+            if (swiperRef.current) {
+              swiperRef.current.slideTo(index)
+            }
+          }}
           disabled={isSliding}
         />
       </div>
-      <Carousel
-        renderCenterLeftControls={null}
-        renderCenterRightControls={null}
-        renderBottomCenterControls={null}
-        dragging={false}
-        slideIndex={selectedIndex}
-        beforeSlide={() => setIsSliding(true)}
-        afterSlide={slideIndex => {
-          setIsSliding(false)
-          setSelectedIndex(slideIndex)
-        }}
-        autoplay={true}
-        autoplayInterval={3000}
-        // wrapAround={true}
-        // TODO: check the bug of wrapAround
-        // ref: https://github.com/FormidableLabs/nuka-carousel/issues/606
+      <ReactIdSwiperCustom
+        {...params}
+        getSwiper={swiper => (swiperRef.current = swiper)}
       >
         {data.map((item, index) => (
           <Slide key={index} customData={item} />
         ))}
-      </Carousel>
+      </ReactIdSwiperCustom>
     </div>
   )
 }

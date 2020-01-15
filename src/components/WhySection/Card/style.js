@@ -31,7 +31,7 @@ export const dotLineTitle = css`
   }
 `
 export const dotLineSubTitle = css`
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   text-transform: none;
   letter-spacing: 1.14px;
   line-height: 2.4rem;

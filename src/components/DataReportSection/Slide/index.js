@@ -6,8 +6,13 @@ import "echarts/lib/chart/line"
 import "echarts/lib/component/legend"
 import "echarts/lib/component/title"
 import "echarts/lib/component/tooltip"
+import "echarts/lib/component/graphic"
+import "echarts/lib/component/markLine"
+import "echarts/lib/component/markArea"
 
 import Tag from "@/components/Tag"
+
+import watermarkSrc from "@/images/watermark.svg"
 
 import {
   slideContainer,
@@ -37,7 +42,7 @@ const createChartOption = (theme, customData) => ({
     top: "bottom",
     selectedMode: false,
     itemHeight: 7,
-    padding: [26, 0, 0, 0],
+    padding: [26, 0, 5, 0],
     textStyle: {
       fontSize: 11,
       fontFamily: theme.fonts.body,
@@ -50,6 +55,22 @@ const createChartOption = (theme, customData) => ({
   grid: {
     left: 30,
     right: 4,
+  },
+  graphic: {
+    elements: [
+      {
+        type: "image",
+        left: "center",
+        top: "middle",
+        cursor: "default",
+        style: {
+          image: watermarkSrc,
+          width: 157,
+          height: 22,
+        },
+      },
+      ...(customData.graphic || []),
+    ],
   },
   xAxis: {
     axisTick: {
@@ -109,15 +130,15 @@ const createChartOption = (theme, customData) => ({
       width: 0.8,
     },
     color: seriesColor[index] || "#1f014f",
-    data: series,
+    ...series,
   })),
 })
 
-const Slide = ({ customData }) => {
+const Slide = ({ customData, ...props }) => {
   const theme = useTheme()
 
   return (
-    <div css={slideContainer}>
+    <div css={slideContainer} {...props}>
       <div css={textContainer}>
         <Tag css={tag}>#{customData.slide.tag}</Tag>
         <h3 css={title}>{customData.slide.title}</h3>

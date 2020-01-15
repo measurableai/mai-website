@@ -2,7 +2,7 @@ import { css } from "@emotion/core"
 import { mq } from "@/theme"
 
 export const container = css`
-  margin-bottom: 18rem;
+  margin-bottom: 30.6rem;
 
   ${mq.mobile} {
     margin-bottom: 12rem;
@@ -42,6 +42,8 @@ export const item = theme => css`
 
   ${mq.mobile} {
     font-size: 1.3rem;
+    line-height: 1.95rem;
+    margin-bottom: 1.5rem;
   }
 `
 
@@ -55,10 +57,22 @@ export const list = css`
 
 export const targetAnchor = css`
   position: relative;
-  top: -10rem;
+  top: -4rem;
   text-decoration: none;
 
   ${mq.mobile} {
-    top: -8rem;
+    top: -2rem;
+  }
+`
+
+export const greenLine = theme => css`
+  background-color: ${theme.colors.greens.dark};
+  height: 0.1rem;
+  width: 80rem;
+  margin: 0 10rem 10rem 3.2rem;
+
+  ${mq.mobile} {
+    width: 70%;
+    margin: 0 15% 6rem 15%;
   }
 `
