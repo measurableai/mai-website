@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: deploy via SFTP
-          command: lftp sftp://${username}:${password}@${hostname} -e "mirror -v -R ./public ${target_location}"
+          command: lftp sftp://${username}:${password}@${hostname} -e "set sftp:auto-confirm yes ;mirror -v -R ./public ${target_location}; quit"
 
 
 workflows:
