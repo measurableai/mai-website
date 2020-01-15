@@ -16,6 +16,7 @@ const global = theme => css`
   body {
     font-size: 1.6rem;
     font-family: ${theme.fonts.body};
+    font-weight: 300;
   }
 
   button {

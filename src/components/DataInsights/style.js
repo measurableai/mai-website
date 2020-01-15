@@ -22,7 +22,7 @@ export const contentContainer = css`
 `
 export const title = theme => css`
   font-size: 7.2rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: ${theme.fonts.heading};
   color: ${theme.colors.purples.normal};
   text-overflow: nowrap;

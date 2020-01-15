@@ -20,7 +20,7 @@ export const header = css`
 export const heading = theme => css`
   font-family: ${theme.fonts.heading};
   font-size: 7.2rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 0.75;
   letter-spacing: 2.6px;
   color: ${theme.colors.purples.normal};

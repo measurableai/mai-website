@@ -5,7 +5,7 @@ export const title = theme => css`
   margin: 0;
   font-family: ${theme.fonts.heading};
   font-size: 8.4rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.01px;
   color: ${theme.colors.purples.normal};
 

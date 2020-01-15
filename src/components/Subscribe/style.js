@@ -12,7 +12,7 @@ export const errorMessage = theme => css`
 
 export const fontStyle = theme => css`
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   color: ${theme.colors.purples.normal};
   line-height: 1.2;
 `

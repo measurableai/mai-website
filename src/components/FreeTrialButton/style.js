@@ -6,7 +6,7 @@ export const button = theme => css`
   text-transform: uppercase;
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: normal;
 
   &:hover {

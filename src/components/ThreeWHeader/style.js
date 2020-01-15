@@ -3,7 +3,7 @@ import { mq } from "@/theme"
 
 export const titleStyle = theme => css`
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-family: ${theme.fonts.heading};
 `
 export const title = theme => css`
