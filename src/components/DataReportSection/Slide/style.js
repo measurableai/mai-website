@@ -9,6 +9,7 @@ export const slideContainer = css`
 
   ${mq.mobile} {
     flex-direction: column;
+    align-items: center;
   }
 `
 

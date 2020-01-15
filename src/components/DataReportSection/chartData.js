@@ -1,10 +1,10 @@
 import watermarkNetflixSrc from "@/images/watermark-netflix.svg"
-import cnyFlagSrc from "@/images/chart-cny@3x.png"
-import hblFlagSrc from "@/images/chart-hbl@3x.png"
+import cnyFlagSrc from "@/images/chart-cny.svg"
+import hblFlagSrc from "@/images/chart-hbl.svg"
 import bestbuyDataPointIconSrc from "@/images/chart-bestbuy.svg"
 import targetDataPointIconSrc from "@/images/chart-target.svg"
 
-export default theme => [
+export default (theme, isMobile) => [
   {
     slide: {
       tag: "Media Streaming",
@@ -79,6 +79,21 @@ export default theme => [
       yAxis: {
         // eslint-disable-next-line
         axisLabelFormatter: "{value}%",
+      },
+      tooltip: {
+        formatter: params => {
+          const name = `${params.name || params[0].name} months`
+          const contents = []
+          if (Array.isArray(params)) {
+            params.forEach(param =>
+              contents.push(
+                `${param.marker}${param.seriesName}: ${param.value}%`
+              )
+            )
+          }
+
+          return `${name}<br />${contents.join("<br />")}`
+        },
       },
       series: [
         {
@@ -216,12 +231,12 @@ export default theme => [
             {
               value: 1.78,
               symbol: `image://${bestbuyDataPointIconSrc}`,
-              symbolSize: 13,
+              symbolSize: isMobile ? 7 : 13,
             },
             {
               value: 1.07,
               symbol: `image://${bestbuyDataPointIconSrc}`,
-              symbolSize: 13,
+              symbolSize: isMobile ? 7 : 13,
             },
             0.81,
             0.98,
@@ -236,7 +251,7 @@ export default theme => [
             {
               value: 3.31,
               symbol: `image://${bestbuyDataPointIconSrc}`,
-              symbolSize: 13,
+              symbolSize: isMobile ? 7 : 13,
             },
           ],
           markLine: {
@@ -251,32 +266,32 @@ export default theme => [
             data: [
               [
                 {
+                  xAxis: "M11\n2018",
                   yAxis: 0,
-                  x: 235,
                 },
                 {
+                  xAxis: "M11\n2018",
                   yAxis: 1.78,
-                  x: 235,
                 },
               ],
               [
                 {
+                  xAxis: "M12\n2018",
                   yAxis: 0,
-                  x: 255,
                 },
                 {
+                  xAxis: "M12\n2018",
                   yAxis: 1.07,
-                  x: 255,
                 },
               ],
               [
                 {
+                  xAxis: "M11\n2019",
                   yAxis: 0,
-                  x: 471,
                 },
                 {
+                  xAxis: "M11\n2019",
                   yAxis: 3.31,
-                  x: 471,
                 },
               ],
             ],
@@ -297,12 +312,12 @@ export default theme => [
             {
               value: 0.48,
               symbol: `image://${targetDataPointIconSrc}`,
-              symbolSize: 13,
+              symbolSize: isMobile ? 7 : 13,
             },
             {
               value: 0.51,
               symbol: `image://${targetDataPointIconSrc}`,
-              symbolSize: 13,
+              symbolSize: isMobile ? 7 : 13,
             },
             0.19,
             0.24,
@@ -317,7 +332,7 @@ export default theme => [
             {
               value: 0.62,
               symbol: `image://${targetDataPointIconSrc}`,
-              symbolSize: 13,
+              symbolSize: isMobile ? 7 : 13,
             },
           ],
         },
@@ -352,32 +367,6 @@ export default theme => [
         "zh-HK": ["王者榮耀"],
         "zh-CN": ["王者荣耀"],
       },
-      graphic: [
-        {
-          type: "image",
-          left: "117",
-          top: "42",
-          z: 1,
-          cursor: "default",
-          style: {
-            image: hblFlagSrc,
-            width: 70,
-            height: 35,
-          },
-        },
-        {
-          type: "image",
-          left: "222",
-          top: "42",
-          z: 1,
-          cursor: "default",
-          style: {
-            image: cnyFlagSrc,
-            width: 70,
-            height: 35,
-          },
-        },
-      ],
       xAxis: {
         axisLabelInterval: 1,
         data: [
@@ -439,12 +428,30 @@ export default theme => [
               show: false,
             },
             data: [
-              {
-                xAxis: "w3\n2019",
-              },
-              {
-                xAxis: "w6\n2019",
-              },
+              [
+                {
+                  xAxis: "w3\n2019",
+                  yAxis: 0,
+                },
+                {
+                  xAxis: "w3\n2019",
+                  yAxis: 600,
+                  symbol: `image://${hblFlagSrc}`,
+                  symbolSize: isMobile ? [54, 27] : [64, 32],
+                },
+              ],
+              [
+                {
+                  xAxis: "w6\n2019",
+                  yAxis: 0,
+                },
+                {
+                  xAxis: "w6\n2019",
+                  yAxis: 600,
+                  symbol: `image://${cnyFlagSrc}`,
+                  symbolSize: isMobile ? [54, 27] : [64, 32],
+                },
+              ],
             ],
           },
         },
@@ -550,30 +557,62 @@ export default theme => [
             0.63,
             2.88,
           ],
+          markLine: {
+            silent: true,
+            symbol: "none",
+            lineStyle: {
+              type: "dashed",
+              color: theme.colors.purples.light,
+            },
+            label: {
+              show: false,
+            },
+            data: [
+              [
+                {
+                  xAxis: "w19\n2019",
+                  yAxis: 0,
+                },
+                {
+                  xAxis: "w19\n2019",
+                  yAxis: 3,
+                },
+              ],
+              [
+                {
+                  xAxis: "w27\n2019",
+                  yAxis: 0,
+                },
+                {
+                  xAxis: "w27\n2019",
+                  yAxis: 3,
+                },
+              ],
+            ],
+          },
           markArea: {
             silent: true,
             label: {
               show: true,
               position: "insideLeft",
               align: "left",
-              padding: [17, 25, 17, 25],
+              padding: isMobile ? [17, 6, 17, 6] : [17, 25, 17, 25],
               fontFamily: theme.fonts.heading,
-              fontSize: 18,
               fontWeight: 100,
               color: theme.colors.purples.light,
               formatter:
                 "{a|TANTAN}\n{b|app\nremoved\nfrom\nAppStore\nin\nChina}",
               rich: {
                 a: {
-                  fontSize: 18,
-                  fontFamily: theme.fonts.heading,
+                  fontSize: isMobile ? 14 : 18,
+                  fontFamily: theme.fonts.body,
                   fontWeight: 100,
                   lineHeight: 30,
                   color: theme.colors.purples.light,
                 },
                 b: {
-                  fontSize: 18,
-                  fontFamily: theme.fonts.heading,
+                  fontSize: isMobile ? 14 : 18,
+                  fontFamily: theme.fonts.body,
                   fontWeight: 100,
                   lineHeight: 22,
                   color: theme.colors.purples.light,
@@ -582,9 +621,6 @@ export default theme => [
             },
             itemStyle: {
               color: "white",
-              borderWidth: 1,
-              borderType: "dashed",
-              borderColor: theme.colors.purples.light,
             },
             data: [
               [

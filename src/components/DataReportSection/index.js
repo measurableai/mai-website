@@ -10,15 +10,18 @@ import Slide from "./Slide"
 import { section, header, heading } from "./style"
 import createRawData from "./chartData"
 
+import useMedia from "@/hooks/useMedia"
+
 const DataReportSection = () => {
   const intl = useIntl()
   const theme = useTheme()
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const isMobile = useMedia([true], false)
   const swiperRef = useRef(null)
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const [isSliding, setIsSliding] = useState(false)
   const data = useMemo(
     () =>
-      createRawData(theme).map(rawDataItem => {
+      createRawData(theme, isMobile).map(rawDataItem => {
         const dataItem = { slide: {}, chartOption: {} }
 
         Object.keys(rawDataItem).forEach(key => {
@@ -32,7 +35,7 @@ const DataReportSection = () => {
 
         return dataItem
       }),
-    [intl.locale, theme]
+    [intl.locale, isMobile, theme]
   )
 
   const params = useMemo(

@@ -63,6 +63,7 @@ const createChartOption = (theme, customData) => ({
         left: "center",
         top: "middle",
         cursor: "default",
+        bounding: "row",
         style: {
           image: watermarkSrc,
           width: 157,
@@ -116,10 +117,11 @@ const createChartOption = (theme, customData) => ({
   },
   tooltip: {
     textStyle: {
+      align: "left",
       fontSize: 12,
     },
-    formatter: params =>
-      `${params.marker}${params.seriesName}<br />${params.name}: ${params.value}`,
+    trigger: "axis",
+    ...customData.tooltip,
   },
   series: customData.series.map((series, index) => ({
     type: "line",
