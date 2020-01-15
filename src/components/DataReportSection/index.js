@@ -47,7 +47,7 @@ const DataReportSection = () => {
       // TODO: see if we can solve the bug with `loop` is on
       // loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 6000,
         disableOnInteraction: false,
       },
       on: {
