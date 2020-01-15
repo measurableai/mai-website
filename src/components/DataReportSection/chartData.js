@@ -1,4 +1,8 @@
 import watermarkNetflixSrc from "@/images/watermark-netflix.svg"
+import cnyFlagSrc from "@/images/chart-cny@3x.png"
+import hblFlagSrc from "@/images/chart-hbl@3x.png"
+import bestbuyDataPointIconSrc from "@/images/chart-bestbuy.svg"
+import targetDataPointIconSrc from "@/images/chart-target.svg"
 
 export default theme => [
   {
@@ -209,8 +213,16 @@ export default theme => [
             1.11,
             0.97,
             0.49,
-            1.78,
-            1.07,
+            {
+              value: 1.78,
+              symbol: `image://${bestbuyDataPointIconSrc}`,
+              symbolSize: 13,
+            },
+            {
+              value: 1.07,
+              symbol: `image://${bestbuyDataPointIconSrc}`,
+              symbolSize: 13,
+            },
             0.81,
             0.98,
             1.21,
@@ -221,8 +233,54 @@ export default theme => [
             1.86,
             1.48,
             1.25,
-            3.31,
+            {
+              value: 3.31,
+              symbol: `image://${bestbuyDataPointIconSrc}`,
+              symbolSize: 13,
+            },
           ],
+          markLine: {
+            silent: true,
+            symbol: "none",
+            lineStyle: {
+              color: "#a95aff",
+            },
+            label: {
+              show: false,
+            },
+            data: [
+              [
+                {
+                  yAxis: 0,
+                  x: 235,
+                },
+                {
+                  yAxis: 1.78,
+                  x: 235,
+                },
+              ],
+              [
+                {
+                  yAxis: 0,
+                  x: 255,
+                },
+                {
+                  yAxis: 1.07,
+                  x: 255,
+                },
+              ],
+              [
+                {
+                  yAxis: 0,
+                  x: 471,
+                },
+                {
+                  yAxis: 3.31,
+                  x: 471,
+                },
+              ],
+            ],
+          },
         },
         {
           data: [
@@ -236,8 +294,16 @@ export default theme => [
             0.14,
             0.14,
             0.14,
-            0.48,
-            0.51,
+            {
+              value: 0.48,
+              symbol: `image://${targetDataPointIconSrc}`,
+              symbolSize: 13,
+            },
+            {
+              value: 0.51,
+              symbol: `image://${targetDataPointIconSrc}`,
+              symbolSize: 13,
+            },
             0.19,
             0.24,
             0.26,
@@ -248,7 +314,11 @@ export default theme => [
             0.24,
             0.25,
             0.27,
-            0.62,
+            {
+              value: 0.62,
+              symbol: `image://${targetDataPointIconSrc}`,
+              symbolSize: 13,
+            },
           ],
         },
       ],
@@ -282,6 +352,32 @@ export default theme => [
         "zh-HK": ["王者榮耀"],
         "zh-CN": ["王者荣耀"],
       },
+      graphic: [
+        {
+          type: "image",
+          left: "117",
+          top: "42",
+          z: 1,
+          cursor: "default",
+          style: {
+            image: hblFlagSrc,
+            width: 70,
+            height: 35,
+          },
+        },
+        {
+          type: "image",
+          left: "222",
+          top: "42",
+          z: 1,
+          cursor: "default",
+          style: {
+            image: cnyFlagSrc,
+            width: 70,
+            height: 35,
+          },
+        },
+      ],
       xAxis: {
         axisLabelInterval: 1,
         data: [
@@ -336,7 +432,6 @@ export default theme => [
           markLine: {
             silent: true,
             symbol: "none",
-            symbolOffset: [0, -10],
             lineStyle: {
               color: "#a95aff",
             },
@@ -345,11 +440,9 @@ export default theme => [
             },
             data: [
               {
-                // name: "Honor Badge\nlaunched",
                 xAxis: "w3\n2019",
               },
               {
-                // name: "Chinese New\nYear",
                 xAxis: "w6\n2019",
               },
             ],

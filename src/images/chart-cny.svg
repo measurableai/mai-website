@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="35" viewBox="0 0 70 35">
+    <defs>
+        <path id="a" d="M.001.594h70v35h-70z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 -.594)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path fill="#A95AFF" d="M63.955 35.594H.001v-35h63.954a6.046 6.046 0 0 1 6.046 6.045v22.91a6.046 6.046 0 0 1-6.046 6.045" mask="url(#b)"/>
+        </g>
+        <text fill="#FFF" font-family="BarlowCondensed-Medium, Barlow Condensed Medium" font-size="12" font-style="condensed" letter-spacing=".333" transform="translate(0 -.594)">
+            <tspan x="6" y="16.594">Chinese New</tspan> <tspan x="6" y="29.594">Year</tspan>
+        </text>
+    </g>
+</svg>
