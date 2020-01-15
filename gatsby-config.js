@@ -55,8 +55,8 @@ module.exports = {
       options: {
         path: `${__dirname}/src/intl`,
         languages: process.env.GATSBY_MULTI_LANG
-          ? [`en-US`]
-          : [`en-US`, `zh-HK`, `zh-CN`],
+          ? [`en-US`, `zh-HK`, `zh-CN`]
+          : [`en-US`],
         defaultLanguage: `en-US`,
         redirect: true,
       },
