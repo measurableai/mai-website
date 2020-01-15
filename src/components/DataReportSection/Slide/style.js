@@ -3,10 +3,9 @@ import { mq } from "@/theme"
 
 export const slideContainer = css`
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
-  align-items: flex-end;
 
   ${mq.mobile} {
     flex-direction: column;
