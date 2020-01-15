@@ -23,8 +23,8 @@ export const line = color => css`
 `
 
 export const cirlce = color => css`
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1rem;
+  height: 1rem;
   border: solid 0.05rem ${color};
   border-radius: 1rem;
 `
