@@ -104,3 +104,9 @@ export const button = css`
     font-size: 1.86rem;
   }
 `
+
+export const wordBreak = css`
+  ${mq.mobile} {
+    display: block;
+  }
+`

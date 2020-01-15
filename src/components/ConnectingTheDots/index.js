@@ -12,6 +12,7 @@ import {
   titleContainer,
   subTitleContainer,
   button,
+  wordBreak,
 } from "./style"
 import FreeTrialButton from "@/components/FreeTrialButton"
 
@@ -22,11 +23,11 @@ const ConnectingTheDots = () => {
         <p css={theme => [titleStyle(theme), title1(theme)]}>
           <FormattedMessage
             id="connectingTheDotsWithAlternativeData"
-            defaultMessage="Connecting the dots with <span>ALTERNATIVE DATA</span>"
+            defaultMessage="Connecting the <nextline> </nextline>dots with<nextline> </nextline> <span>ALTERNATIVE</span><nextline> </nextline> <span>DATA</span>"
             values={{
+              nextline: () => <span css={wordBreak} />,
               span: str => (
                 <span css={theme => [titleStyle(theme), title2(theme)]}>
-                  <br />
                   {str}
                 </span>
               ),
@@ -38,8 +39,9 @@ const ConnectingTheDots = () => {
         <p css={theme => [subTitleStyle, subTitle1(theme)]}>
           <FormattedMessage
             id="providesActionableConsumer"
-            defaultMessage="Actionable <span>CONSUMER INSIGHTS</span> based on <span>BILLIONS</span> of <span>TRANSACTIONAL EMAILS</span> for emerging markets"
+            defaultMessage="Actionable <span>CONSUMER INSIGHTS</span> <nextline> </nextline>based on <span>BILLIONS</span> of <span>TRANSACTIONAL</span><nextline> </nextline> <span>EMAILS</span> for emerging markets"
             values={{
+              nextline: () => <span css={wordBreak} />,
               span: str => (
                 <span css={theme => [subTitleStyle, subTitle2(theme)]}>
                   {str}
