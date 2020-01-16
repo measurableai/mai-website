@@ -3,7 +3,7 @@ import Lottie from "react-lottie"
 
 import BackgroundWithNavigator from "@/components/BackgroundWithNavigator"
 
-import { background, animation } from "./style"
+import { background, animation, content } from "./style"
 
 import animationData from "./hero-animation.json"
 
@@ -29,7 +29,7 @@ const HeroBackground = ({ children, ...props }) => (
     }
     {...props}
   >
-    {children}
+    <div css={content}>{children}</div>
   </BackgroundWithNavigator>
 )
 

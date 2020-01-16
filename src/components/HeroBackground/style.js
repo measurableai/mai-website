@@ -24,4 +24,9 @@ export const animation = {
   bottom: 0,
   left: "50%",
   transform: "translateX(-50%)",
+  zIndex: 1, // theme.zIndices.background
 }
+
+export const content = theme => css`
+  z-index: ${theme.zIndices.content};
+`
