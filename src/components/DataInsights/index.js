@@ -43,8 +43,14 @@ const DataInsights = () => {
               categories {
                 name
               }
-              better_featured_image {
-                source_url
+              featured_media {
+                localFile {
+                  childImageSharp {
+                    fluid(maxHeight: 190, maxWidth: 190, quality: 100) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
