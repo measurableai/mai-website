@@ -23,7 +23,7 @@ const theme = {
     "linear-gradient(90deg,#B3FFCB,#FFFFFF 50%)",
     "linear-gradient(45deg,#A665FF,#68FF92)",
   ],
-  zIndices: [100],
+  zIndices: [100, 2, 1],
   breakpoints: [1023],
 }
 // aliases
@@ -42,6 +42,8 @@ theme.linearGradients.greenLightToDark = theme.linearGradients[2]
 theme.linearGradients.greenDarkToLight = theme.linearGradients[3]
 theme.linearGradients.purpleToGreen = theme.linearGradients[4]
 theme.zIndices.header = theme.zIndices[0]
+theme.zIndices.content = theme.zIndices[1]
+theme.zIndices.background = theme.zIndices[2]
 
 // TODO: do not export mq. Expose it from theme only
 export const mq = theme.breakpoints.map(bp => `@media (max-width: ${bp}px)`)
