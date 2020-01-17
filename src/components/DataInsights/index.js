@@ -23,6 +23,7 @@ import Tag from "@/components/Tag"
 import RightArrowIcon from "@/assets/right-arrow.svg"
 
 const endPoint = "https://blog.measurable.ai/category/industries/"
+const DELAY = 300
 
 const Title = forwardRef(({ children, innerRef, ...props }, ref) => (
   <p css={title} ref={ref || innerRef} {...props}>
@@ -137,12 +138,12 @@ const DataInsights = () => {
               <BlogPost postData={allWordpressPost.edges[0].node} />
             </BlogContainer>
           </Fade>
-          <Fade refProp="innerRef" left delay={500}>
+          <Fade refProp="innerRef" left delay={DELAY}>
             <BlogContainer css={blogContainer2}>
               <BlogPost postData={allWordpressPost.edges[1].node} />
             </BlogContainer>
           </Fade>
-          <Fade refProp="innerRef" left delay={1000}>
+          <Fade refProp="innerRef" left delay={DELAY * 2}>
             <BlogContainer css={blogContainer3}>
               <BlogPost postData={allWordpressPost.edges[2].node} />
             </BlogContainer>

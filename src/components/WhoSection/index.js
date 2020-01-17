@@ -20,6 +20,8 @@ import merchantsIcon from "@/images/who-merchants.svg"
 import financialInstitutionsIcon from "@/images/who-financialInstitutions.svg"
 import researchersIcon from "@/images/who-researchers.svg"
 
+const DELAY = 300
+
 const WhoSection = () => (
   <div css={container}>
     <Fade right refProp="innerRef">
@@ -49,7 +51,7 @@ const WhoSection = () => (
           }
         />
       </Fade>
-      <Fade refProp="innerRef" left delay={500}>
+      <Fade refProp="innerRef" left delay={DELAY}>
         <Icon
           css={[image, image2]}
           src={merchantsIcon}
@@ -59,7 +61,7 @@ const WhoSection = () => (
           }
         />
       </Fade>
-      <Fade refProp="innerRef" left delay={1000}>
+      <Fade refProp="innerRef" left delay={DELAY * 2}>
         <Icon
           css={[image, image3]}
           src={researchersIcon}
@@ -69,7 +71,7 @@ const WhoSection = () => (
           }
         />
       </Fade>
-      <Fade refProp="innerRef" left delay={1500}>
+      <Fade refProp="innerRef" left delay={DELAY * 3}>
         <Icon
           css={[image, image4]}
           src={mediaIcon}

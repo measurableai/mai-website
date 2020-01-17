@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, forwardRef } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import { useWindowScroll } from "react-use"
 import Fade from "react-reveal/Fade"
@@ -20,10 +20,15 @@ import fullConverageIcon from "@/images/why-fullCoverage.svg"
 import realTimeIcon from "@/images/why-realTime.svg"
 import transactionalDataIcon from "@/images/why-transactionalData.svg"
 
+const ContentContainer = forwardRef(({ children, innerRef, ...props }, ref) => (
+  <div css={contentContainer} ref={ref || innerRef} {...props}>
+    {children}
+  </div>
+))
+
 const WhySection = () => {
   const { y } = useWindowScroll()
   const [revealed, setRevealed] = useState(false)
-  const isMobile = useMedia([true], false)
   const transactionWidth = useMedia([87], 116)
   const transactionHeight = useMedia([93], 124)
   const skuLevelWidth = useMedia([90.8], 121)
@@ -53,13 +58,8 @@ const WhySection = () => {
           }
         />
       </Fade>
-      <div css={contentContainer}>
-        <Fade
-          refProp="innerRef"
-          left
-          when={revealed || y > 0}
-          delay={isMobile ? 0 : 1000}
-        >
+      <Fade refProp="innerRef" when={revealed || y > 0} left cascade>
+        <ContentContainer>
           <Card
             css={[whySectionItemContainer, whySectionItemContainer1]}
             src={transactionalDataIcon}
@@ -79,8 +79,6 @@ const WhySection = () => {
               />
             }
           />
-        </Fade>
-        <Fade refProp="innerRef" left delay={500}>
           <Card
             css={[whySectionItemContainer, whySectionItemContainer2]}
             src={realTimeIcon}
@@ -97,8 +95,6 @@ const WhySection = () => {
               />
             }
           />
-        </Fade>
-        <Fade refProp="innerRef" left delay={isMobile ? 1000 : 0}>
           <Card
             css={[whySectionItemContainer, whySectionItemContainer3]}
             src={fullConverageIcon}
@@ -118,8 +114,8 @@ const WhySection = () => {
               />
             }
           />
-        </Fade>
-      </div>
+        </ContentContainer>
+      </Fade>
     </div>
   )
 }

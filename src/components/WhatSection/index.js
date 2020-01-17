@@ -17,6 +17,8 @@ import tmtIqIcon from "@/images/what-tmtIq.svg"
 import travelIcon from "@/images/what-travel.svg"
 import eCommerceIcon from "@/images/what-eCommerce.svg"
 
+const DELAY = 300
+
 const WhatSection = () => {
   const contentArr1 = [
     { id: "tme", defaultMessage: "TME" },
@@ -74,7 +76,7 @@ const WhatSection = () => {
             ))}
           />
         </Fade>
-        <Fade refProp="innerRef" right delay={500}>
+        <Fade refProp="innerRef" right delay={DELAY}>
           <Card
             css={[whatSectionItemContainer, whatSectionItemContainer2]}
             src={travelIcon}
@@ -90,7 +92,7 @@ const WhatSection = () => {
             ))}
           />
         </Fade>
-        <Fade refProp="innerRef" right delay={1000}>
+        <Fade refProp="innerRef" right delay={DELAY * 2}>
           <Card
             css={[whatSectionItemContainer, whatSectionItemContainer3]}
             src={eCommerceIcon}
