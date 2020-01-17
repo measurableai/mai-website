@@ -16,8 +16,8 @@ const theme = {
     heading: `"Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
   },
   linearGradients: [
-    "linear-gradient(-90deg,rgba(0, 3, 29, 100),rgba(0, 3, 28, 53) 50%,rgba(0, 3, 24, 0))",
-    "linear-gradient(90deg,rgba(0, 3, 29, 100),rgba(0, 3, 28, 53) 50%,rgba(0, 3, 24, 0))",
+    "linear-gradient(-90deg, #06082C, #211852)",
+    "linear-gradient(90deg, #06082C, #211852)",
     "linear-gradient(-90deg,#B3FFCB,#FFFFFF 50%)",
     "linear-gradient(90deg,#B3FFCB,#FFFFFF 50%)",
     "linear-gradient(45deg,#A665FF,#68FF92)",
