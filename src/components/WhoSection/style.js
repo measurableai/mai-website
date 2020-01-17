@@ -24,7 +24,6 @@ export const titleContainer = () => css`
 `
 export const imagesContainer = css`
   display: flex;
-  flex-direction: row-reverse;
   justify-content: flex-end;
 
   ${mq.mobile} {
@@ -40,41 +39,38 @@ export const image = css`
   }
 `
 export const image1 = css`
-  margin-right: 16rem;
+  margin-top: 17.3rem;
 
   ${mq.mobile} {
-    order: 2;
+    margin-top: 0;
+    align-self: flex-start;
+  }
+`
+export const image2 = css`
+  margin-top: 11.5rem;
+
+  ${mq.mobile} {
+    margin-top: 0;
     align-self: flex-end;
     margin-left: 1rem;
     top: -3rem;
   }
 `
-export const image2 = css`
+export const image3 = css`
   margin-top: 5.8rem;
 
   ${mq.mobile} {
-    order: 4;
-    margin-top: 0;
-    align-self: flex-end;
-    margin-left: 1rem;
-    top: -6rem;
-  }
-`
-export const image3 = css`
-  margin-top: 11.5rem;
-
-  ${mq.mobile} {
-    order: 3;
     margin-top: 0;
     top: -3rem;
   }
 `
 export const image4 = css`
-  margin-top: 17.3rem;
+  margin-right: 16rem;
 
   ${mq.mobile} {
-    order: 1;
     margin-top: 0;
-    align-self: flex-start;
+    align-self: flex-end;
+    margin-left: 1rem;
+    top: -6rem;
   }
 `

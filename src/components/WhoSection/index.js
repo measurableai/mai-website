@@ -36,37 +36,9 @@ const WhoSection = () => (
       />
     </Fade>
     <div css={imagesContainer}>
-      <Fade left refProp="innerRef">
+      <Fade refProp="innerRef" left>
         <Icon
           css={[image, image1]}
-          src={mediaIcon}
-          alt="Media"
-          header={<FormattedMessage id="media" defaultMessage="Media" />}
-        />
-      </Fade>
-      <Fade left delay={500} refProp="innerRef">
-        <Icon
-          css={[image, image2]}
-          src={researchersIcon}
-          alt="Researchers"
-          header={
-            <FormattedMessage id="researchers" defaultMessage="Researchers" />
-          }
-        />
-      </Fade>
-      <Fade left delay={1000} refProp="innerRef">
-        <Icon
-          css={[image, image3]}
-          src={merchantsIcon}
-          alt="Merchants"
-          header={
-            <FormattedMessage id="merchants" defaultMessage="Merchants" />
-          }
-        />
-      </Fade>
-      <Fade left delay={1500} refProp="innerRef">
-        <Icon
-          css={[image, image4]}
           src={financialInstitutionsIcon}
           alt="Financial Institutions"
           header={
@@ -75,6 +47,34 @@ const WhoSection = () => (
               defaultMessage="Financial Institutions"
             />
           }
+        />
+      </Fade>
+      <Fade refProp="innerRef" left delay={500}>
+        <Icon
+          css={[image, image2]}
+          src={merchantsIcon}
+          alt="Merchants"
+          header={
+            <FormattedMessage id="merchants" defaultMessage="Merchants" />
+          }
+        />
+      </Fade>
+      <Fade refProp="innerRef" left delay={1000}>
+        <Icon
+          css={[image, image3]}
+          src={researchersIcon}
+          alt="Researchers"
+          header={
+            <FormattedMessage id="researchers" defaultMessage="Researchers" />
+          }
+        />
+      </Fade>
+      <Fade refProp="innerRef" left delay={1500}>
+        <Icon
+          css={[image, image4]}
+          src={mediaIcon}
+          alt="Media"
+          header={<FormattedMessage id="media" defaultMessage="Media" />}
         />
       </Fade>
     </div>
