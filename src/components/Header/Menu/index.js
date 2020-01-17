@@ -17,7 +17,7 @@ const Menu = ({ lightModeOn }) => (
       </div>
     )}
     <div css={menuItem}>
-      <FreeTrialButton lightModeOn={lightModeOn} />
+      <FreeTrialButton />
     </div>
   </div>
 )

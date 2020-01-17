@@ -61,10 +61,7 @@ const Header = ({ headerMode }) => {
         </Link>
         {!isMobile && (
           <div css={buttonsContainter}>
-            <FreeTrialButton
-              lightModeOn={lightModeOn}
-              css={freeTrialButtinMargin}
-            />
+            <FreeTrialButton css={freeTrialButtinMargin} />
             <DataInsightButton
               lightModeOn={lightModeOn}
               css={textButtonMargin}
