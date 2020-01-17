@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
@@ -41,10 +41,10 @@ const OtherPages = props => (
   <p css={theme => [fontStyle(theme), otherPages]} {...props} />
 )
 
-const Page = ({ children, to, ...props }) => (
-  <OutboundLink css={pageAnchor} href={to} {...props}>
+const Page = ({ children, ...props }) => (
+  <Link css={pageAnchor} {...props}>
     {children}
-  </OutboundLink>
+  </Link>
 )
 
 const UpperFooter = () => {
