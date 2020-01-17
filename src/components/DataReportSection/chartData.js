@@ -258,7 +258,7 @@ export default (theme, isMobile) => [
             silent: true,
             symbol: "none",
             lineStyle: {
-              color: "#a95aff",
+              color: theme.colors.purples.chart,
             },
             label: {
               show: false,
@@ -398,7 +398,7 @@ export default (theme, isMobile) => [
               value: 213.24,
               symbolSize: 10,
               itemStyle: {
-                color: "#a95aff",
+                color: theme.colors.purples.chart,
               },
             },
             157.96,
@@ -407,7 +407,7 @@ export default (theme, isMobile) => [
               value: 501.55,
               symbolSize: 10,
               itemStyle: {
-                color: "#a95aff",
+                color: theme.colors.purples.chart,
               },
             },
             241.6,
@@ -422,7 +422,7 @@ export default (theme, isMobile) => [
             silent: true,
             symbol: "none",
             lineStyle: {
-              color: "#a95aff",
+              color: theme.colors.purples.chart,
             },
             label: {
               show: false,

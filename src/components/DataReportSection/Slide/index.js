@@ -120,6 +120,12 @@ const createChartOption = (theme, customData) => ({
       align: "left",
       fontSize: 12,
     },
+    axisPointer: {
+      lineStyle: {
+        type: "dashed",
+        color: theme.colors.purples.chart,
+      },
+    },
     trigger: "axis",
     ...customData.tooltip,
   },

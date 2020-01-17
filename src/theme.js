@@ -5,6 +5,7 @@ const theme = {
       "#221852",
       "rgba(34, 24, 82, 0.5)",
       "rgba(34, 24, 82, 0.3)",
+      "#a95aff",
     ],
     greens: ["#39D965", "#68FF92"],
     white: ["#FFFFFF"],
@@ -30,6 +31,7 @@ theme.colors.purples.dark = theme.colors.purples[0]
 theme.colors.purples.normal = theme.colors.purples[1]
 theme.colors.purples.light = theme.colors.purples[2]
 theme.colors.purples.superLight = theme.colors.purples[3]
+theme.colors.purples.chart = theme.colors.purples[4]
 theme.colors.greens.dark = theme.colors.greens[0]
 theme.colors.greens.light = theme.colors.greens[1]
 theme.colors.white = theme.colors.white[0]
