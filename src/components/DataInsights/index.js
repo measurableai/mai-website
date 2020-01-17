@@ -3,6 +3,7 @@ import { useTheme } from "emotion-theming"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
 import Fade from "react-reveal/Fade"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   container,
@@ -118,7 +119,7 @@ const DataInsights = () => {
                 />
               </DataInsightsTag>
             </div>
-            <a
+            <OutboundLink
               css={buttonContainer}
               href={endPoint}
               target="_blank"
@@ -129,7 +130,7 @@ const DataInsights = () => {
                 width={46}
                 height={67}
               />
-            </a>
+            </OutboundLink>
           </TagsAndButtonContainer>
         </Fade>
         <div css={blogsContainer}>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby-plugin-intl"
 import { useWindowScroll } from "react-use"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import FreeTrialButton from "@/components/FreeTrialButton"
 
@@ -51,14 +51,14 @@ const Header = ({ headerMode }) => {
       }
     >
       <div css={content}>
-        <Link to="/">
+        <OutboundLink href="/">
           <img
             width={logoWidth}
             height={logoHeight}
             src={lightModeOn ? logo_purple : logo_white}
             alt="Measurable AI"
           />
-        </Link>
+        </OutboundLink>
         {!isMobile && (
           <div css={buttonsContainter}>
             <FreeTrialButton css={freeTrialButtinMargin} />

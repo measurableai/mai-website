@@ -1,10 +1,11 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import TextButton from "@/components/TextButton"
 
 const LoginButton = props => (
-  <a
+  <OutboundLink
     href="https://beta.measurable.ai/login"
     target="_blank"
     rel="noopener noreferrer"
@@ -12,7 +13,7 @@ const LoginButton = props => (
     <TextButton {...props}>
       <FormattedMessage id="login" defaultMessage="Login" />
     </TextButton>
-  </a>
+  </OutboundLink>
 )
 
 export default LoginButton
