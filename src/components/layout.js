@@ -21,6 +21,7 @@ const global = theme => css`
 
   button {
     border: none;
+    background-color: transparent;
     cursor: pointer;
   }
 `
