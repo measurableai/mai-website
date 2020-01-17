@@ -1,17 +1,17 @@
-import React from "react"
+import React, { forwardRef } from "react"
 
 import { button } from "./style"
 
-const FreeTrialButton = props => (
+const FreeTrialButton = forwardRef(({ innerRef, ...props }, ref) => (
   <a
     href="https://beta.measurable.ai/register"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <button css={button} {...props}>
+    <button ref={ref || innerRef} css={button} {...props}>
       Start Free Trial
     </button>
   </a>
-)
+))
 
 export default FreeTrialButton

@@ -1,5 +1,6 @@
-import React from "react"
+import React, { forwardRef } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import Fade from "react-reveal/Fade"
 
 import {
   container,
@@ -16,9 +17,15 @@ import {
 } from "./style"
 import FreeTrialButton from "@/components/FreeTrialButton"
 
-const ConnectingTheDots = () => {
-  return (
-    <div css={container}>
+const Container = forwardRef(({ children, innerRef, ...props }, ref) => (
+  <div css={container} ref={ref || innerRef} {...props}>
+    {children}
+  </div>
+))
+
+const ConnectingTheDots = () => (
+  <Fade refProp="innerRef" bottom cascade delay={1000}>
+    <Container>
       <div css={titleContainer}>
         <p css={theme => [titleStyle(theme), title1(theme)]}>
           <FormattedMessage
@@ -52,8 +59,8 @@ const ConnectingTheDots = () => {
         </p>
       </div>
       <FreeTrialButton css={button} />
-    </div>
-  )
-}
+    </Container>
+  </Fade>
+)
 
 export default ConnectingTheDots

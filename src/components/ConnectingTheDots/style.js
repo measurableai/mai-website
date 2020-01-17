@@ -3,13 +3,13 @@ import { mq } from "@/theme"
 
 export const container = css`
   margin: 0 auto;
-  padding-top: 26.1rem;
+  margin-top: 26.1rem;
   padding-left: 13.3rem;
   padding-right: 13.3rem;
   text-align: center;
 
   ${mq.mobile} {
-    padding-top: 11.1rem;
+    margin-top: 11.1rem;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 3.7rem;
