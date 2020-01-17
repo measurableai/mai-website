@@ -1,5 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import Fade from "react-reveal/Fade"
 
 import {
   container,
@@ -45,54 +46,66 @@ const WhatSection = () => {
   ]
   return (
     <div css={container}>
-      <ThreeWHeader
-        header={<FormattedMessage id="what" defaultMessage="WHAT" />}
-        subHeader={
-          <FormattedMessage id="doWeCover" defaultMessage="do we cover" />
-        }
-        questionMark={<FormattedMessage id="questionMark" defaultMessage="?" />}
-      />
+      <Fade refProp="innerRef" left>
+        <ThreeWHeader
+          header={<FormattedMessage id="what" defaultMessage="WHAT" />}
+          subHeader={
+            <FormattedMessage id="doWeCover" defaultMessage="do we cover" />
+          }
+          questionMark={
+            <FormattedMessage id="questionMark" defaultMessage="?" />
+          }
+        />
+      </Fade>
       <div css={contentContainer}>
-        <Card
-          css={[whatSectionItemContainer, whatSectionItemContainer1]}
-          src={tmtIqIcon}
-          alt="TMT:IQ"
-          contentTitle={<FormattedMessage id="tmtIq" defaultMessage="TMT:IQ" />}
-          contents={contentArr1.map(content => (
-            <FormattedMessage
-              id={content.id}
-              defaultMessage={content.defaultMessage}
-            />
-          ))}
-        />
-        <Card
-          css={[whatSectionItemContainer, whatSectionItemContainer2]}
-          src={travelIcon}
-          alt="TRAVEL"
-          contentTitle={
-            <FormattedMessage id="travel" defaultMessage="TRAVEL" />
-          }
-          contents={contentArr2.map(content => (
-            <FormattedMessage
-              id={content.id}
-              defaultMessage={content.defaultMessage}
-            />
-          ))}
-        />
-        <Card
-          css={[whatSectionItemContainer, whatSectionItemContainer3]}
-          src={eCommerceIcon}
-          alt="E-COMMERCE"
-          contentTitle={
-            <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
-          }
-          contents={contentArr3.map(content => (
-            <FormattedMessage
-              id={content.id}
-              defaultMessage={content.defaultMessage}
-            />
-          ))}
-        />
+        <Fade refProp="innerRef" right>
+          <Card
+            css={[whatSectionItemContainer, whatSectionItemContainer1]}
+            src={tmtIqIcon}
+            alt="TMT:IQ"
+            contentTitle={
+              <FormattedMessage id="tmtIq" defaultMessage="TMT:IQ" />
+            }
+            contents={contentArr1.map(content => (
+              <FormattedMessage
+                id={content.id}
+                defaultMessage={content.defaultMessage}
+              />
+            ))}
+          />
+        </Fade>
+        <Fade refProp="innerRef" right delay={500}>
+          <Card
+            css={[whatSectionItemContainer, whatSectionItemContainer2]}
+            src={travelIcon}
+            alt="TRAVEL"
+            contentTitle={
+              <FormattedMessage id="travel" defaultMessage="TRAVEL" />
+            }
+            contents={contentArr2.map(content => (
+              <FormattedMessage
+                id={content.id}
+                defaultMessage={content.defaultMessage}
+              />
+            ))}
+          />
+        </Fade>
+        <Fade refProp="innerRef" right delay={1000}>
+          <Card
+            css={[whatSectionItemContainer, whatSectionItemContainer3]}
+            src={eCommerceIcon}
+            alt="E-COMMERCE"
+            contentTitle={
+              <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
+            }
+            contents={contentArr3.map(content => (
+              <FormattedMessage
+                id={content.id}
+                defaultMessage={content.defaultMessage}
+              />
+            ))}
+          />
+        </Fade>
       </div>
     </div>
   )

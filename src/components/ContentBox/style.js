@@ -14,5 +14,6 @@ export const content = css`
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
+    overflow: hidden; /* added to cater fade-in animation */
   }
 `

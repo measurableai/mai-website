@@ -1,6 +1,7 @@
-import React from "react"
+import React, { forwardRef } from "react"
 import { useTheme } from "emotion-theming"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import Fade from "react-reveal/Fade"
 
 import {
   container,
@@ -30,19 +31,27 @@ const PurpleRightArrow = () => {
   )
 }
 
-const GetStarted = () => (
-  <div css={container}>
-    <PurpleRightArrow />
-    <div css={titleContainer}>
-      <p css={theme => [fontStyle(theme), title]}>
-        <FormattedMessage id="readyTo" defaultMessage="Ready to" />
-      </p>
-      <p css={theme => [fontStyle(theme), subTitle]}>
-        <FormattedMessage id="getStarted" defaultMessage="Get STARTED ?" />
-      </p>
-    </div>
-    <PurpleRightArrow />
+const Container = forwardRef(({ children, innerRef, ...props }, ref) => (
+  <div css={container} ref={ref || innerRef} {...props}>
+    {children}
   </div>
+))
+
+const GetStarted = () => (
+  <Fade refProp="innerRef" bottom>
+    <Container>
+      <PurpleRightArrow />
+      <div css={titleContainer}>
+        <p css={theme => [fontStyle(theme), title]}>
+          <FormattedMessage id="readyTo" defaultMessage="Ready to" />
+        </p>
+        <p css={theme => [fontStyle(theme), subTitle]}>
+          <FormattedMessage id="getStarted" defaultMessage="Get STARTED ?" />
+        </p>
+      </div>
+      <PurpleRightArrow />
+    </Container>
+  </Fade>
 )
 
 export default GetStarted

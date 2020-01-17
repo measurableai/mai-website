@@ -1,4 +1,4 @@
-import React from "react"
+import React, { forwardRef } from "react"
 
 import {
   container,
@@ -10,9 +10,9 @@ import {
 } from "./style"
 import DotLine from "@/components/DotLine"
 
-const Card = ({ src, alt, height, width, title, subTitle, ...props }) => {
-  return (
-    <div css={container} {...props}>
+const Card = forwardRef(
+  ({ src, alt, height, width, title, subTitle, innerRef, ...props }, ref) => (
+    <div css={container} ref={ref || innerRef} {...props}>
       <img
         css={dotLineInvert}
         height={height}
@@ -32,6 +32,6 @@ const Card = ({ src, alt, height, width, title, subTitle, ...props }) => {
       </div>
     </div>
   )
-}
+)
 
 export default Card

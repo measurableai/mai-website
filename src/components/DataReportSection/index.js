@@ -1,9 +1,10 @@
-import React, { useState, useMemo, useRef } from "react"
+import React, { useState, useMemo, useRef, forwardRef } from "react"
 import { useTheme } from "emotion-theming"
 import ReactIdSwiperCustom from "react-id-swiper/lib/ReactIdSwiper.custom"
 import { Swiper, Autoplay } from "swiper/js/swiper.esm"
 import "swiper/css/swiper.css"
 import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import Fade from "react-reveal/Fade"
 
 import Tabs from "./Tabs"
 import Slide from "./Slide"
@@ -11,6 +12,12 @@ import { section, header, heading } from "./style"
 import createRawData from "./chartData"
 
 import useMedia from "@/hooks/useMedia"
+
+const Header = forwardRef(({ children, innerRef, ...props }, ref) => (
+  <div css={header} ref={ref || innerRef} {...props}>
+    {children}
+  </div>
+))
 
 const DataReportSection = () => {
   const intl = useIntl()
@@ -67,29 +74,35 @@ const DataReportSection = () => {
 
   return (
     <div css={section}>
-      <div css={header}>
-        <h2 css={heading}>
-          <FormattedMessage id="dataReport" defaultMessage="Data Report" />
-        </h2>
-        <Tabs
-          numberOfTabs={data.length}
-          selectedIndex={selectedIndex}
-          onChange={index => {
-            if (swiperRef.current) {
-              swiperRef.current.slideTo(index)
-            }
-          }}
-          disabled={isSliding}
-        />
-      </div>
-      <ReactIdSwiperCustom
-        {...params}
-        getSwiper={swiper => (swiperRef.current = swiper)}
-      >
-        {data.map((item, index) => (
-          <Slide key={index} customData={item} />
-        ))}
-      </ReactIdSwiperCustom>
+      <Fade refProp="innerRef" left>
+        <Header>
+          <h2 css={heading}>
+            <FormattedMessage id="dataReport" defaultMessage="Data Report" />
+          </h2>
+          <Tabs
+            numberOfTabs={data.length}
+            selectedIndex={selectedIndex}
+            onChange={index => {
+              if (swiperRef.current) {
+                swiperRef.current.slideTo(index)
+              }
+            }}
+            disabled={isSliding}
+          />
+        </Header>
+      </Fade>
+      <Fade right>
+        <div>
+          <ReactIdSwiperCustom
+            {...params}
+            getSwiper={swiper => (swiperRef.current = swiper)}
+          >
+            {data.map((item, index) => (
+              <Slide key={index} customData={item} />
+            ))}
+          </ReactIdSwiperCustom>
+        </div>
+      </Fade>
     </div>
   )
 }
