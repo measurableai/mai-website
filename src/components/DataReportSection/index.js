@@ -1,5 +1,6 @@
-import React, { useState, useMemo, useRef, forwardRef } from "react"
+import React, { useState, useMemo, useRef, useEffect, forwardRef } from "react"
 import { useTheme } from "emotion-theming"
+import { useIntersection } from "react-use"
 import ReactIdSwiperCustom from "react-id-swiper/lib/ReactIdSwiper.custom"
 import { Swiper, Autoplay } from "swiper/js/swiper.esm"
 import "swiper/css/swiper.css"
@@ -24,6 +25,22 @@ const DataReportSection = () => {
   const theme = useTheme()
   const isMobile = useMedia([true], false)
   const swiperRef = useRef(null)
+  const intersectionRef = React.useRef(null)
+  const intersection = useIntersection(intersectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  })
+  const isIntersecting = intersection && intersection.isIntersecting
+  useEffect(() => {
+    if (swiperRef.current) {
+      if (isIntersecting) {
+        swiperRef.current.autoplay.start()
+      } else {
+        swiperRef.current.autoplay.stop()
+      }
+    }
+  }, [isIntersecting])
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [isSliding, setIsSliding] = useState(false)
   const data = useMemo(
@@ -76,7 +93,7 @@ const DataReportSection = () => {
     <div css={section}>
       <Fade refProp="innerRef" left>
         <Header>
-          <h2 css={heading}>
+          <h2 ref={intersectionRef} css={heading}>
             <FormattedMessage id="dataReport" defaultMessage="Data Report" />
           </h2>
           <Tabs
@@ -95,7 +112,12 @@ const DataReportSection = () => {
         <div>
           <ReactIdSwiperCustom
             {...params}
-            getSwiper={swiper => (swiperRef.current = swiper)}
+            getSwiper={swiper => {
+              swiperRef.current = swiper
+              if (!isIntersecting) {
+                swiper.autoplay.stop()
+              }
+            }}
           >
             {data.map((item, index) => (
               <Slide key={index} customData={item} />
