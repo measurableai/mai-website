@@ -597,27 +597,12 @@ export default (theme, isMobile) => [
               position: "insideLeft",
               align: "left",
               padding: isMobile ? [17, 6, 17, 6] : [17, 25, 17, 25],
-              fontFamily: theme.fonts.heading,
+              fontSize: isMobile ? 14 : 18,
+              fontFamily: theme.fonts.body,
               fontWeight: 100,
+              lineHeight: 22,
               color: theme.colors.purples.light,
-              formatter:
-                "{a|TANTAN}\n{b|app\nremoved\nfrom\nAppStore\nin\nChina}",
-              rich: {
-                a: {
-                  fontSize: isMobile ? 14 : 18,
-                  fontFamily: theme.fonts.body,
-                  fontWeight: 100,
-                  lineHeight: 30,
-                  color: theme.colors.purples.light,
-                },
-                b: {
-                  fontSize: isMobile ? 14 : 18,
-                  fontFamily: theme.fonts.body,
-                  fontWeight: 100,
-                  lineHeight: 22,
-                  color: theme.colors.purples.light,
-                },
-              },
+              formatter: "TANTAN\napp\nremoved\nfrom\nAppStore\nin\nChina",
             },
             itemStyle: {
               color: "white",
