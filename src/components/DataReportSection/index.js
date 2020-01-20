@@ -90,7 +90,11 @@ const DataReportSection = () => {
   )
 
   return (
-    <div css={section}>
+    <div
+      css={section}
+      onMouseEnter={() => swiperRef.current.autoplay.stop()}
+      onMouseLeave={() => swiperRef.current.autoplay.start()}
+    >
       <Fade refProp="innerRef" left>
         <Header>
           <h2 ref={intersectionRef} css={heading}>
