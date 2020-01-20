@@ -23,11 +23,11 @@ export const arrowContainer = css`
   margin: 1rem 0;
 `
 
-export const fontStyle = theme => css`
+export const fontStyle = (theme, isHover) => css`
   margin: 0;
   font-weight: 500;
   font-family: ${theme.fonts.heading};
-  color: ${theme.colors.purples.normal};
+  color: ${isHover ? theme.colors.greens.light : theme.colors.purples.normal};
   line-height: 13.5rem;
 
   ${mq.mobile} {

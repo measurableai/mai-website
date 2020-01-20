@@ -16,7 +16,7 @@ import useMedia from "@/hooks/useMedia"
 
 import RightArrowIcon from "@/assets/right-arrow.svg"
 
-const PurpleRightArrow = () => {
+const PurpleRightArrow = ({ isHover }) => {
   const theme = useTheme()
   const width = useMedia([26], 39)
   const height = useMedia([39], 50)
@@ -24,7 +24,7 @@ const PurpleRightArrow = () => {
   return (
     <RightArrowIcon
       css={arrowContainer}
-      fill={theme.colors.purples.normal}
+      fill={!!isHover ? theme.colors.greens.light : theme.colors.purples.normal}
       width={width}
       height={height}
     />
@@ -37,19 +37,19 @@ const Container = forwardRef(({ children, innerRef, ...props }, ref) => (
   </div>
 ))
 
-const GetStarted = () => (
+const GetStarted = ({ isHover }) => (
   <Fade refProp="innerRef" bottom>
     <Container>
-      <PurpleRightArrow />
+      <PurpleRightArrow isHover={isHover} />
       <div css={titleContainer}>
-        <p css={theme => [fontStyle(theme), title]}>
+        <p css={theme => [fontStyle(theme, isHover), title]}>
           <FormattedMessage id="readyTo" defaultMessage="Ready to" />
         </p>
-        <p css={theme => [fontStyle(theme), subTitle]}>
+        <p css={theme => [fontStyle(theme, isHover), subTitle]}>
           <FormattedMessage id="getStarted" defaultMessage="Get STARTED ?" />
         </p>
       </div>
-      <PurpleRightArrow />
+      <PurpleRightArrow isHover={isHover} />
     </Container>
   </Fade>
 )
