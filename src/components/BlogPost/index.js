@@ -1,5 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   blogPostContainer,
@@ -53,18 +54,19 @@ const BlogPost = ({ children, postData, ...props }) => {
 
   return (
     <div css={blogPostContainer}>
-      <a
+      <OutboundLink
         css={anchor}
         href={postData.link}
         target="_blank"
         rel="noopener noreferrer"
       >
         &nbsp;
-      </a>
+      </OutboundLink>
       <div
         css={image}
         style={{
-          backgroundImage: `url("${postData.featured_media.localFile.childImageSharp.fluid.src}")`,
+          backgroundImage: `url("${postData.featured_media.localFile &&
+            postData.featured_media.localFile.childImageSharp.fluid.src}")`,
         }}
         alt="Wordpress Post"
       />

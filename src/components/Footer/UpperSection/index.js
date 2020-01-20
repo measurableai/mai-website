@@ -1,5 +1,6 @@
 import React from "react"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   upperFooterContainer,
@@ -31,9 +32,9 @@ import weiboIcon from "@/images/btn-weibo.svg"
 import useMedia from "@/hooks/useMedia"
 
 const SocialIcon = ({ last, src, alt, href }) => (
-  <a href={href} target="_blank" rel="noreferrer noopener">
+  <OutboundLink href={href} target="_blank" rel="noreferrer noopener">
     <img css={socialIcon(last)} src={src} alt={alt} />
-  </a>
+  </OutboundLink>
 )
 
 const OtherPages = props => (
@@ -58,13 +59,13 @@ const UpperFooter = () => {
               <p css={theme => [fontStyle(theme), poweredBy]}>
                 <FormattedMessage id="poweredBy" defaultMessage="Powered by" />
               </p>
-              <a
+              <OutboundLink
                 href="https://mdt.io/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 <img css={mdtImage} src={mdtLogo} alt="MDT" />
-              </a>
+              </OutboundLink>
             </div>
           </div>
           <div css={logosContainer}>

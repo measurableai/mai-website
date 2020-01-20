@@ -1,5 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   title,
@@ -45,7 +46,7 @@ const PressSection = props => (
         }}
       />
     </p>
-    <a
+    <OutboundLink
       href="https://mai-marektingsite.s3-us-west-2.amazonaws.com/MAI+Press+Kit.zip"
       download
     >
@@ -55,7 +56,7 @@ const PressSection = props => (
           defaultMessage="Download Press Kit"
         />
       </button>
-    </a>
+    </OutboundLink>
   </div>
 )
 

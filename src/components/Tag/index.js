@@ -1,9 +1,10 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { tag } from "./style"
 
 const Tag = ({ children, href, ...props }) => (
-  <a
+  <OutboundLink
     css={theme => tag(theme)}
     href={href}
     target="_blank"
@@ -11,7 +12,7 @@ const Tag = ({ children, href, ...props }) => (
     {...props}
   >
     {children}
-  </a>
+  </OutboundLink>
 )
 
 export default Tag
