@@ -1,25 +1,7 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
-export const container = theme => css`
-  height: 8rem;
-  width: 100%;
-  background-color: ${theme.colors.purples.normal};
-  display: flex;
-  justify-content: center;
-`
-
-export const content = css`
-  height: 100%;
-  width: 102.4rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`
-
-export const helpButton = theme => css`
+export const helpButton = (theme, opening, closing) => css`
   display: inline-flex;
   align-items: center;
   border-radius: 2.4rem;
@@ -31,9 +13,19 @@ export const helpButton = theme => css`
   text-align: center;
   color: ${theme.colors.purples.normal};
   padding: 1.5rem 2rem;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: ${theme.zIndices.content};
+  box-shadow: 0 0 1rem #000000;
+  outline: none;
+
+  ${opening && `transition: bottom .2s ease-out; bottom: -6rem;`}
+  ${closing &&
+    `transition: bottom .2s ease-out; transition-delay: .3s; bottom: 1.5rem;`}
 `
 
-export const helpSymbol = theme => css`
+export const helpSymbol = css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,24 +40,6 @@ export const helpSymbol = theme => css`
   font-size: 1.3rem;
 `
 
-export const popoverContainer = {
-  width: "34rem",
-  height: "55rem",
-  boxShadow: "none",
-  padding: 0,
-  borderTopLeftRadius: "1rem",
-  borderTopRightRadius: "1rem",
-  boxSizing: "border-box",
-  display: "flex",
-  flexDirection: "column",
-}
-
-export const popoverContainerMobile = {
-  ...popoverContainer,
-  width: "calc(100% - 2.4rem)",
-  height: "auto",
-}
-
 export const popoverHeader = theme => css`
   background-color: ${theme.colors.greens.light};
   font-size: 1.9rem;
@@ -79,7 +53,7 @@ export const popoverHeader = theme => css`
   border-top-right-radius: 1rem;
 `
 
-export const closeButton = theme => css`
+export const closeButton = css`
   position: absolute;
   right: 20px;
   background-color: transparent;
@@ -132,4 +106,30 @@ export const menuItem = theme => css`
 
 export const menuItemImage = css`
   margin-right: 1.6rem;
+`
+
+export const container = (theme, closing) => css`
+  position: fixed;
+  height: 55rem;
+  width: 34rem;
+  background-color: white;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 0 1rem #000000;
+  box-sizing: border-box;
+  z-index: ${theme.zIndices.content};
+  transition-property: transform, opacity;
+  transform: scale(1);
+  opacity: 1;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+
+  ${mq.mobile} {
+    width: calc(100% - 2.4rem);
+    max-width: 32rem;
+  }
+
+  ${closing && `transform:translate(40%, 40%) scale(0.001); opacity: 0`}
 `
