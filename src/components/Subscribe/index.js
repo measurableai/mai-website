@@ -25,8 +25,8 @@ const initialFormState = {
 
 const EmailSubscribe = () => {
   const intl = useIntl()
-  const buttonWidth = useMedia([15.8], 21)
-  const buttonHeight = useMedia([21.8], 29)
+  const buttonWidth = useMedia([16], 21)
+  const buttonHeight = useMedia([22], 29)
 
   const formOptions = useMemo(
     () => ({
