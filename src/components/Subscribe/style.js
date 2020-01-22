@@ -3,6 +3,9 @@ import { mq } from "@/theme"
 
 export const form = css`
   border-bottom: 1px solid #1f014f;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `
 
 export const errorMessage = theme => css`
@@ -37,11 +40,11 @@ export const subscribeTitle = css`
 `
 export const emailAddressContainer = css`
   text-align: left;
-  width: 38rem;
+  width: 36.5rem;
   margin-bottom: 8.61rem;
 
   ${mq.mobile} {
-    width: 98%;
+    width: 100%;
     margin-bottom: 5.6rem;
   }
 `
@@ -59,6 +62,10 @@ export const subscribe = theme => css`
 export const emailInput = theme => css`
   border: none;
   font-size: 3.2rem;
+  background-color: transparent;
+  border-radius: 0;
+  margin-right: 0.5rem;
+  max-width: calc(100% - 3rem);
   ::placeholder {
     color: ${theme.colors.greens.dark};
     opacity: 0.3;
@@ -66,11 +73,11 @@ export const emailInput = theme => css`
 
   ${mq.mobile} {
     font-size: 2.4rem;
+    width: 100%;
   }
 `
 
 export const arrowButton = css`
-  float: right;
   padding: 0;
 
   &[disabled] {
