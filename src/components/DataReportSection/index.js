@@ -92,8 +92,16 @@ const DataReportSection = () => {
   return (
     <div
       css={section}
-      onMouseEnter={() => swiperRef.current.autoplay.stop()}
-      onMouseLeave={() => swiperRef.current.autoplay.start()}
+      onMouseEnter={() => {
+        if (swiperRef.current) {
+          swiperRef.current.autoplay.stop()
+        }
+      }}
+      onMouseLeave={() => {
+        if (swiperRef.current) {
+          swiperRef.current.autoplay.start()
+        }
+      }}
     >
       <Fade refProp="innerRef" left>
         <Header>
