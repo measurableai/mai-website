@@ -24,6 +24,11 @@ const global = theme => css`
     background-color: transparent;
     cursor: pointer;
   }
+
+  input {
+    border-radius: 0;
+    background-color: transparent;
+  }
 `
 
 const Layout = ({ children, headerMode }) => {

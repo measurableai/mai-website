@@ -62,8 +62,6 @@ export const subscribe = theme => css`
 export const emailInput = theme => css`
   border: none;
   font-size: 3.2rem;
-  background-color: transparent;
-  border-radius: 0;
   margin-right: 0.5rem;
   max-width: calc(100% - 3rem);
   ::placeholder {
