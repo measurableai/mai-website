@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from "react"
 import { css } from "@emotion/core"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-import { useTheme } from "emotion-theming"
 
 import BackgroundWithNavigator from "@/components/BackgroundWithNavigator"
 
@@ -27,10 +26,9 @@ const SlopedSection = ({
       }),
     [children, isHover]
   )
-  const theme = useTheme()
   return (
     <BackgroundWithNavigator
-      css={css`
+      css={theme => css`
         ${background}
         &::before {
           ${slopedBackgroundImage &&
