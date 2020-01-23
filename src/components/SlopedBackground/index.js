@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react"
 import { css } from "@emotion/core"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { useTheme } from "emotion-theming"
 
 import BackgroundWithNavigator from "@/components/BackgroundWithNavigator"
 
@@ -12,6 +13,7 @@ const SlopedSection = ({
   slopedBackgroundImage,
   hoverBackgroundColor,
   href,
+  dotBackground,
   ...props
 }) => {
   const [isHover, setIsHover] = useState(false)
@@ -25,7 +27,7 @@ const SlopedSection = ({
       }),
     [children, isHover]
   )
-
+  const theme = useTheme()
   return (
     <BackgroundWithNavigator
       css={css`
@@ -38,6 +40,25 @@ const SlopedSection = ({
           ${isHover &&
             hoverBackgroundColor &&
             `background-color: ${hoverBackgroundColor};`}
+          z-index: ${
+            dotBackground
+              ? theme.zIndices.dotBackground
+              : theme.zIndices.background
+          }  
+        }
+        &::after {
+          ${dotBackground &&
+            `
+            content: "";
+            position: absolute;
+            top: -50%;
+            width: 100%;
+            height: 200%;
+            background-image: radial-gradient(#A564ff 4%, transparent 5%);
+            background-size: 21px 22px;
+            opacity: 0.5;
+            z-index: ${theme.zIndices.dotBackground};
+          `}
         }
       `}
       backgroundComponent={

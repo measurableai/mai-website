@@ -57,6 +57,7 @@ const IndexPage = () => {
         showNavigator
         slopedBackgroundImage={theme.linearGradients.purpleDarkToLight}
         slopedBackgroundColor={theme.colors.purples.dark}
+        dotBackground
       >
         <WhatSection />
       </SlopedSection>
