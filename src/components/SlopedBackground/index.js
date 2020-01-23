@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useMemo } from "react"
 import { css } from "@emotion/core"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import BackgroundWithNavigator from "@/components/BackgroundWithNavigator"
 
-import { background } from "./style"
+import { background, anchor } from "./style"
 
 const SlopedSection = ({
   children,
@@ -15,6 +16,16 @@ const SlopedSection = ({
 }) => {
   const [isHover, setIsHover] = useState(false)
 
+  const childWithProp = useMemo(
+    () =>
+      React.Children.map(children, child => {
+        return isHover
+          ? React.cloneElement(child, { isHover: isHover })
+          : children
+      }),
+    [children, isHover]
+  )
+
   return (
     <BackgroundWithNavigator
       css={css`
@@ -24,19 +35,26 @@ const SlopedSection = ({
             `background-image: ${slopedBackgroundImage};`}
           ${slopedBackgroundColor &&
             `background-color: ${slopedBackgroundColor};`}
-        }
-        &:hover::before {
-          ${hoverBackgroundColor &&
+          ${isHover &&
+            hoverBackgroundColor &&
             `background-color: ${hoverBackgroundColor};`}
         }
       `}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      isHover={isHover}
-      href={href}
+      backgroundComponent={
+        href ? (
+          <OutboundLink
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            css={anchor}
+          />
+        ) : null
+      }
       {...props}
     >
-      {children}
+      {childWithProp}
     </BackgroundWithNavigator>
   )
 }

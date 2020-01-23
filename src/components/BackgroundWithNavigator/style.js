@@ -28,15 +28,3 @@ export const cirlce = color => css`
   border: solid 0.05rem ${color};
   border-radius: 1rem;
 `
-
-export const anchor = css`
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-decoration: none;
-  z-index: 3;
-  transform: skewY(-21.5deg);
-`

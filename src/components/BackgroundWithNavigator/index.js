@@ -3,11 +3,10 @@ import { useWindowScroll } from "react-use"
 import ReactResizeDetector from "react-resize-detector"
 import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import ContentBox from "@/components/ContentBox"
 
-import { background, navigation, line, cirlce, anchor } from "./style"
+import { background, navigation, line, cirlce } from "./style"
 
 const interplolate = (from1, to1, from2, to2, x) => {
   if (x <= from1) {
@@ -85,8 +84,6 @@ const BackgroundWithNavigator = ({
   showNavigator,
   backgroundComponent,
   mode,
-  isHover,
-  href,
   ...props
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -126,22 +123,12 @@ const BackgroundWithNavigator = ({
     70,
     y
   )
-  const childWithProp = React.Children.map(children, child => {
-    return isHover ? React.cloneElement(child, { isHover: isHover }) : children
-  })
+
   return (
     <div ref={measuredRef} css={background} {...props}>
-      {href && (
-        <OutboundLink
-          css={anchor}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-      )}
       {showNavigator && <Navigator height={height} mode={mode} />}
       {backgroundComponent}
-      <ContentBox>{childWithProp}</ContentBox>
+      <ContentBox>{children}</ContentBox>
       <ReactResizeDetector handleHeight onResize={handleResize} />
     </div>
   )
