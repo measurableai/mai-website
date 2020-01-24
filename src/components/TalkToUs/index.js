@@ -90,7 +90,7 @@ const TalkToUs = () => {
     <div>
       <button
         onClick={() => setIsOpen(true)}
-        css={theme => helpButton(theme, isOpen, !isOpen)}
+        css={theme => helpButton(theme, isOpen)}
       >
         <span css={helpSymbol}>?</span>
         <FormattedMessage id="talkToUs" defaultMessage="TALK TO US" />

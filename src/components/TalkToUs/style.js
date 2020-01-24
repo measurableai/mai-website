@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 import { mq } from "@/theme"
 
-export const helpButton = (theme, opening, closing) => css`
+export const helpButton = (theme, opening) => css`
   display: inline-flex;
   align-items: center;
   border-radius: 2.4rem;
@@ -14,15 +14,13 @@ export const helpButton = (theme, opening, closing) => css`
   color: ${theme.colors.purples.normal};
   padding: 1.5rem 2rem;
   position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
+  right: 5rem;
   z-index: ${theme.zIndices.content};
-  box-shadow: 0 0 1rem #000000;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
   outline: none;
-
-  ${opening && `transition: bottom .2s ease-out; bottom: -6rem;`}
-  ${closing &&
-    `transition: bottom .2s ease-out; transition-delay: .3s; bottom: 1.5rem;`}
+  bottom: ${opening ? "-6rem;" : "6rem;"};
+  transition: bottom 0.2s ease-out;
+  ${!opening && `transition-delay: .3s;`}
 `
 
 export const helpSymbol = css`
@@ -113,23 +111,25 @@ export const container = (theme, closing) => css`
   height: 55rem;
   width: 34rem;
   background-color: white;
-  bottom: 1.6rem;
-  right: 1.6rem;
+  bottom: 3rem;
+  right: 3rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0 0 1rem #000000;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   z-index: ${theme.zIndices.content};
   transition-property: transform, opacity;
-  transform: scale(1);
-  opacity: 1;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 
   ${mq.mobile} {
     width: calc(100% - 2.4rem);
     max-width: 32rem;
   }
 
-  ${closing && `transform:translate(40%, 40%) scale(0.001); opacity: 0`}
+  transform: ${closing
+    ? "translate(40%, 40%) scale(0.001); opacity: 0;"
+    : "scale(1);"};
 `
