@@ -31,12 +31,16 @@ const global = theme => css`
   }
 `
 
+const main = css`
+  overflow-x: hidden; /* added to cater fade-in animation */
+`
+
 const Layout = ({ children, headerMode }) => {
   return (
     <>
       <Global styles={global} />
       <Header headerMode={headerMode} />
-      <main>{children}</main>
+      <main css={main}>{children}</main>
       <Footer />
     </>
   )
