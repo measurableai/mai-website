@@ -21,6 +21,11 @@ export const helpButton = (theme, opening) => css`
   bottom: ${opening ? "-6rem;" : "6rem;"};
   transition: bottom 0.2s ease-out;
   ${!opening && `transition-delay: .3s;`}
+
+  ${mq.mobile} {
+    bottom: ${opening ? "-6rem;" : "1.5rem;"};
+    right: 1.5rem;
+  }
 `
 
 export const helpSymbol = css`
@@ -100,6 +105,12 @@ export const menuItem = theme => css`
     top: -0.4rem;
     right: -0.2rem;
   }
+
+  ${mq.mobile} {
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+  }
 `
 
 export const menuItemImage = css`
@@ -123,10 +134,13 @@ export const container = (theme, closing) => css`
   transition-property: transform, opacity;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
+  z-index: ${theme.zIndices.popup};
 
   ${mq.mobile} {
-    width: calc(100% - 2.4rem);
-    max-width: 32rem;
+    width: 30rem;
+    height: auto;
+    bottom: 1rem;
+    right: 1rem;
   }
 
   transform: ${closing
