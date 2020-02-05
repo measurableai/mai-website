@@ -1,25 +1,7 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
-export const container = theme => css`
-  height: 8rem;
-  width: 100%;
-  background-color: ${theme.colors.purples.normal};
-  display: flex;
-  justify-content: center;
-`
-
-export const content = css`
-  height: 100%;
-  width: 102.4rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`
-
-export const helpButton = theme => css`
+export const helpButton = (theme, opening) => css`
   display: inline-flex;
   align-items: center;
   border-radius: 2.4rem;
@@ -31,9 +13,23 @@ export const helpButton = theme => css`
   text-align: center;
   color: ${theme.colors.purples.normal};
   padding: 1.5rem 2rem;
+  position: fixed;
+  right: 5rem;
+  z-index: ${theme.zIndices.content};
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  bottom: ${opening ? "-6rem;" : "6rem;"};
+  transition: bottom 0.2s ease-out;
+  ${!opening && `transition-delay: .3s;`}
+  z-index: ${theme.zIndices.popup};
+
+  ${mq.mobile} {
+    bottom: ${opening ? "-6rem;" : "1.5rem;"};
+    right: 1.5rem;
+  }
 `
 
-export const helpSymbol = theme => css`
+export const helpSymbol = css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,24 +44,6 @@ export const helpSymbol = theme => css`
   font-size: 1.3rem;
 `
 
-export const popoverContainer = {
-  width: "34rem",
-  height: "55rem",
-  boxShadow: "none",
-  padding: 0,
-  borderTopLeftRadius: "1rem",
-  borderTopRightRadius: "1rem",
-  boxSizing: "border-box",
-  display: "flex",
-  flexDirection: "column",
-}
-
-export const popoverContainerMobile = {
-  ...popoverContainer,
-  width: "calc(100% - 2.4rem)",
-  height: "auto",
-}
-
 export const popoverHeader = theme => css`
   background-color: ${theme.colors.greens.light};
   font-size: 1.9rem;
@@ -79,7 +57,7 @@ export const popoverHeader = theme => css`
   border-top-right-radius: 1rem;
 `
 
-export const closeButton = theme => css`
+export const closeButton = css`
   position: absolute;
   right: 20px;
   background-color: transparent;
@@ -128,8 +106,45 @@ export const menuItem = theme => css`
     top: -0.4rem;
     right: -0.2rem;
   }
+
+  ${mq.mobile} {
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+  }
 `
 
 export const menuItemImage = css`
   margin-right: 1.6rem;
+`
+
+export const container = (theme, closing) => css`
+  position: fixed;
+  height: 55rem;
+  width: 34rem;
+  background-color: white;
+  bottom: 3rem;
+  right: 3rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  z-index: ${theme.zIndices.content};
+  transition-property: transform, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  z-index: ${theme.zIndices.popup};
+
+  ${mq.mobile} {
+    width: 30rem;
+    height: auto;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  transform: ${closing
+    ? "translate(40%, 40%) scale(0.001); opacity: 0;"
+    : "scale(1);"};
 `

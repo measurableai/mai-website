@@ -7,6 +7,7 @@ import "@/fonts/barlow-condensed.css"
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import TalkToUs from "@/components/TalkToUs"
 
 const global = theme => css`
   html {
@@ -42,6 +43,7 @@ const Layout = ({ children, headerMode }) => {
       <Header headerMode={headerMode} />
       <main css={main}>{children}</main>
       <Footer />
+      <TalkToUs />
     </>
   )
 }

@@ -146,3 +146,11 @@ export const pageAnchor = css`
 export const separator = theme => css`
   color: ${theme.colors.purples.normal};
 `
+
+export const purpleBar = theme => css`
+  height: 8rem;
+  width: 100%;
+  background-color: ${theme.colors.purples.normal};
+  display: flex;
+  justify-content: center;
+`
