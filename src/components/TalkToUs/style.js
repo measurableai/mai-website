@@ -21,6 +21,7 @@ export const helpButton = (theme, opening) => css`
   bottom: ${opening ? "-6rem;" : "6rem;"};
   transition: bottom 0.2s ease-out;
   ${!opening && `transition-delay: .3s;`}
+  z-index: ${theme.zIndices.popup};
 
   ${mq.mobile} {
     bottom: ${opening ? "-6rem;" : "1.5rem;"};
