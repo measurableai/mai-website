@@ -12,3 +12,9 @@ import theme from "./src/theme"
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>
 )
+
+export const onClientEntry = async () => {
+  if (typeof IntersectionObserver === `undefined`) {
+    await import(`intersection-observer`)
+  }
+}
