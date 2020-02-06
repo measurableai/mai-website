@@ -5,7 +5,7 @@ export const container = css`
   margin-top: 13.1rem;
   margin-bottom: 3.2rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 9rem;
   }
 `
@@ -13,7 +13,7 @@ export const titleContainer = css`
   margin-top: 1rem;
   margin-bottom: 3rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 2.4rem;
     margin-bottom: 3.4rem;
   }
@@ -30,7 +30,7 @@ export const fontStyle = (theme, isHover) => css`
   color: ${isHover ? theme.colors.greens.light : theme.colors.purples.normal};
   line-height: 13.5rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     line-height: 1;
   }
 `
@@ -38,7 +38,7 @@ export const title = css`
   font-size: 9.6rem;
   letter-spacing: 2.06px;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 7.2rem;
   }
 `
@@ -46,7 +46,7 @@ export const subTitle = css`
   font-size: 13.2rem;
   letter-spacing: 1px;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 8.4rem;
   }
 `

@@ -29,12 +29,12 @@ const ContentContainer = forwardRef(({ children, innerRef, ...props }, ref) => (
 const WhySection = () => {
   const { y } = useWindowScroll()
   const [revealed, setRevealed] = useState(false)
-  const transactionWidth = useMedia([87], 116)
-  const transactionHeight = useMedia([93], 124)
-  const skuLevelWidth = useMedia([90.8], 121)
-  const skuLevelHeight = useMedia([100.5], 134)
-  const rareCoverageWidth = useMedia([94.5], 126)
-  const rareCoverageHeight = useMedia([73.5], 98)
+  const transactionWidth = useMedia([87, 87], 116)
+  const transactionHeight = useMedia([93, 93], 124)
+  const skuLevelWidth = useMedia([90.8, 90.8], 121)
+  const skuLevelHeight = useMedia([100.5, 100.5], 134)
+  const rareCoverageWidth = useMedia([94.5, 94.5], 126)
+  const rareCoverageHeight = useMedia([73.5, 73.5], 98)
 
   return (
     <div css={container}>

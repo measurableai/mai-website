@@ -22,7 +22,7 @@ export const container = (
     ? theme.colors.white
     : hexToRgba(theme.colors.purples.dark, 95)};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     height: auto;
     width: calc(100% - 4rem);
     padding: 2rem;
@@ -39,7 +39,7 @@ export const content = theme => css`
   width: 100rem;
   margin: auto;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: auto;
   }
 `

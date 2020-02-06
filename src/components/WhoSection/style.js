@@ -8,7 +8,7 @@ export const container = () => css`
   z-index: 1;
   margin: 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin: 2.8rem auto 0 auto;
     max-width: 37.5rem;
   }
@@ -18,7 +18,7 @@ export const titleContainer = () => css`
   text-align: right;
   width: 100%;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin: 0 0 1.9rem 0;
   }
 `
@@ -26,7 +26,7 @@ export const imagesContainer = css`
   display: flex;
   justify-content: flex-end;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     flex-direction: column;
   }
 `
@@ -34,14 +34,14 @@ export const image = css`
   display: inline-block;
   margin-right: 3rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-right: 0;
   }
 `
 export const image1 = css`
   margin-top: 17.3rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 0;
     align-self: flex-start;
   }
@@ -49,7 +49,7 @@ export const image1 = css`
 export const image2 = css`
   margin-top: 11.5rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 0;
     align-self: flex-end;
     margin-left: 1rem;
@@ -59,7 +59,7 @@ export const image2 = css`
 export const image3 = css`
   margin-top: 5.8rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 0;
     top: -3rem;
   }
@@ -67,7 +67,7 @@ export const image3 = css`
 export const image4 = css`
   margin-right: 16rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 0;
     align-self: flex-end;
     margin-left: 1rem;

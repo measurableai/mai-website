@@ -13,7 +13,7 @@ const background = theme => css`
   background-image: ${theme.linearGradients.greenDarkToLight};
   margin-bottom: 30.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-bottom: 23rem;
   }
 `
@@ -23,7 +23,7 @@ const privacyPolicyPadding = css`
   padding-left: 5.7rem;
   text-align: left;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     padding-top: 8.8rem;
     padding-left: 0;
   }

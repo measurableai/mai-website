@@ -13,7 +13,7 @@ export const background = theme => css`
   width: 100%;
   padding-bottom: 8rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     min-height: auto;
   }
 `

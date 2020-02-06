@@ -4,13 +4,13 @@ import { mq } from "@/theme"
 export const container = css`
   max-width: 20.4rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     max-width: 55%;
   }
 `
 export const dotLineInvert = css`
   padding-left: 0.73rem;
-  ${mq.mobile} {
+  ${mq.tablet} {
     padding-left: 0.6rem;
   }
 `
@@ -26,7 +26,7 @@ export const dotLineTitle = css`
   letter-spacing: 1.12px;
   line-height: 2.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.5rem;
   }
 `
@@ -36,7 +36,7 @@ export const dotLineSubTitle = css`
   letter-spacing: 1.14px;
   line-height: 2.4rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
   }
 `

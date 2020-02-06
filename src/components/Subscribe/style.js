@@ -22,7 +22,7 @@ export const fontStyle = theme => css`
 export const subscribeContainer = css`
   margin: 22.8rem 0 3.1rem 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin: 11.3rem 0 0 0;
   }
 `
@@ -32,7 +32,7 @@ export const subscribeTitle = css`
   text-align: left;
   margin-bottom: 3.1rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 4.4rem;
     letter-spacing: 0.4px;
     margin-bottom: 2.8rem;
@@ -43,7 +43,7 @@ export const emailAddressContainer = css`
   width: 36.5rem;
   margin-bottom: 8.61rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 100%;
     margin-bottom: 5.6rem;
   }
@@ -53,7 +53,7 @@ export const subscribe = theme => css`
   font-family: ${theme.fonts.heading};
   letter-spacing: 2.14px;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 5.4rem;
     letter-spacing: 1.61px;
     display: block;
@@ -69,7 +69,7 @@ export const emailInput = theme => css`
     opacity: 0.3;
   }
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 2.4rem;
     width: 100%;
   }

@@ -4,7 +4,7 @@ import { mq } from "@/theme"
 export const container = css`
   margin-bottom: 30.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-bottom: 12rem;
   }
 `
@@ -15,7 +15,7 @@ export const title = theme => css`
   letter-spacing: 0.5px;
   color: ${theme.colors.purples.normal};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 2.1rem;
   }
 `
@@ -27,7 +27,7 @@ export const header = theme => css`
   margin-top: 4.7rem;
   margin-bottom: 3.4rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 4.8rem;
     margin-bottom: 2.4rem;
   }
@@ -40,7 +40,7 @@ export const item = theme => css`
   line-height: 3.2rem;
   margin-left: 1rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
     line-height: 1.95rem;
     margin-bottom: 1.5rem;
@@ -50,7 +50,7 @@ export const item = theme => css`
 export const list = css`
   margin: 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     padding-left: 2rem;
   }
 `
@@ -60,7 +60,7 @@ export const targetAnchor = css`
   top: -4rem;
   text-decoration: none;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     top: -2rem;
   }
 `
@@ -71,7 +71,7 @@ export const greenLine = theme => css`
   width: 80rem;
   margin: 0 10rem 10rem 3.2rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 70%;
     margin: 0 15% 6rem 15%;
   }

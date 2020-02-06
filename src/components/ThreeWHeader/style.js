@@ -13,7 +13,7 @@ export const title = theme => css`
   line-height: 0.8;
   text-transform: uppercase;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 8.7rem;
     letter-spacing: 3px;
   }
@@ -23,7 +23,7 @@ export const subTitle = theme => css`
   color: ${theme.colors.white};
   letter-spacing: 1.2px;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 3.45rem;
     letter-spacing: 0.9px;
   }

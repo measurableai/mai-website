@@ -12,7 +12,7 @@ export const character = (theme, isActive) => css`
   color: ${isActive ? theme.colors.greens.dark : theme.colors.purples.normal};
   margin: 0 0.15rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 3.6rem;
     letter-spacing: 1.95px;
   }

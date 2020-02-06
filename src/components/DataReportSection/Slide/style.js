@@ -7,7 +7,7 @@ export const slideContainer = css`
   justify-content: space-between;
   width: 100%;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     flex-direction: column;
     align-items: center;
   }
@@ -19,7 +19,7 @@ export const textContainer = css`
   margin-right: 11rem;
   text-align: left;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin: 0 0 2.8rem 0;
   }
 `
@@ -27,7 +27,7 @@ export const textContainer = css`
 export const chart = css`
   width: 48.5rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 100%;
   }
 `
@@ -39,7 +39,7 @@ export const tag = css`
   letter-spacing: 0.79px;
   text-transform: uppercase;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.65rem;
     padding: 0.3rem 1rem;
   }
@@ -52,7 +52,7 @@ export const title = theme => css`
   margin-top: 1.5rem;
   margin-bottom: 1.9rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 2.85rem;
     margin-top: 1.1rem;
     margin-bottom: 1.1rem;
@@ -65,7 +65,7 @@ export const description = theme => css`
   color: ${theme.colors.purples.normal};
   margin: 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
   }
 `

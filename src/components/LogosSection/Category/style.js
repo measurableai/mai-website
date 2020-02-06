@@ -5,7 +5,7 @@ export const container = css`
   display: inline-block;
   position: relative;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     display: block;
     margin-bottom: 2.8rem;
   }
@@ -18,7 +18,7 @@ export const title = theme => css`
   letter-spacing: 0.6px;
   color: ${theme.colors.purples.light};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-bottom: 4rem;
     font-size: 2.4rem;
   }
@@ -41,7 +41,7 @@ export const image = css`
   min-width: 11.5rem;
   margin-bottom: 6.3rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     min-width: 11rem;
   }
 `

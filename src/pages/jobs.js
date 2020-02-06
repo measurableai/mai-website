@@ -22,7 +22,7 @@ const hiringPadding = css`
   padding-left: 5.7rem;
   text-align: left;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     padding-top: 8.8rem;
     padding-left: 0;
   }
@@ -35,7 +35,7 @@ const jobsSection = css`
   padding-right: 1.2rem;
   box-sizing: border-box;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;

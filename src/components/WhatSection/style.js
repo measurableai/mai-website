@@ -10,7 +10,7 @@ export const container = css`
   z-index: 1;
   margin: 14.3rem 0 0 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     flex-direction: column;
     margin-top: 2.8rem;
     margin: 2.8rem auto 0 auto;
@@ -23,7 +23,7 @@ export const contentContainer = css`
   text-align: left;
   z-index: 1;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     min-width: 12.8rem;
   }
 `
@@ -35,7 +35,7 @@ export const whatSectionItemContainer = css`
   margin-left: 7.6rem;
   vertical-align: top;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     display: block;
     margin: 0;
     min-width: calc(50% - 2.6rem);
@@ -46,7 +46,7 @@ export const whatSectionItemContainer1 = css`
   margin-bottom: 13.6rem;
   margin-left: 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 1.9rem;
     margin-left: auto;
   }
@@ -54,14 +54,14 @@ export const whatSectionItemContainer1 = css`
 export const whatSectionItemContainer2 = css`
   margin-top: 10.9rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     top: -12rem;
   }
 `
 export const whatSectionItemContainer3 = css`
   margin-top: 14.5rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-left: auto;
     top: -24rem;
   }

@@ -11,7 +11,7 @@ export const content = theme => css`
   min-height: inherit;
   z-index: ${theme.zIndices.content};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;

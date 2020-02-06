@@ -7,7 +7,7 @@ export const container = css`
   z-index: 1;
   padding: 4rem 1.2rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     flex-direction: column;
     padding: 2.8rem 0rem;
   }
@@ -16,7 +16,7 @@ export const container = css`
 export const achievementsContainer = css`
   margin-right: 9.9rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-right: 0;
   }
 `
@@ -24,7 +24,7 @@ export const backedByContainer = css`
   margin-top: 6.6rem;
   margin-right: 9.9rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 0;
     margin-right: 0;
   }
@@ -32,7 +32,7 @@ export const backedByContainer = css`
 export const trustedByContainer = css`
   margin-top: 13.1rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 0;
   }
 `

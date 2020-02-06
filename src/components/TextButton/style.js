@@ -13,7 +13,7 @@ export const button = (theme, lightModeOn) => css`
     color: ${theme.colors.greens.light};
   }
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.8rem;
   }
 `

@@ -15,8 +15,8 @@ import useMedia from "@/hooks/useMedia"
 
 const Card = forwardRef(
   ({ src, alt, contentTitle, contents, innerRef, ...props }, ref) => {
-    const width = useMedia([37.5], 50)
-    const height = useMedia([37.5], 50)
+    const width = useMedia([37.5, 37.5], 50)
+    const height = useMedia([37.5, 37.5], 50)
 
     return (
       <div css={container} ref={ref || innerRef} {...props}>

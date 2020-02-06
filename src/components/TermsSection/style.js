@@ -9,7 +9,7 @@ export const title = theme => css`
   letter-spacing: 0.01px;
   color: ${theme.colors.purples.normal};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 4.8rem;
   }
 `
@@ -23,7 +23,7 @@ export const content = css`
   font-size: 1.6rem;
   line-height: 3.2rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
   }
 `
