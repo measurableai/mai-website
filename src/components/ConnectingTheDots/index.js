@@ -24,7 +24,7 @@ const Container = forwardRef(({ children, innerRef, ...props }, ref) => (
 ))
 
 const ConnectingTheDots = () => (
-  <Fade refProp="innerRef" bottom cascade delay={1000}>
+  <Fade refProp="innerRef" bottom cascade delay={1000} ssrReveal>
     <Container>
       <div css={titleContainer}>
         <p css={theme => [titleStyle(theme), title1(theme)]}>

@@ -6,6 +6,7 @@
 
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
+import config from "react-reveal/globals"
 
 import theme from "./src/theme"
 
@@ -17,4 +18,6 @@ export const onClientEntry = async () => {
   if (typeof IntersectionObserver === `undefined`) {
     await import(`intersection-observer`)
   }
+
+  config({ ssrFadeout: true })
 }
