@@ -3,7 +3,7 @@ import { mq } from "@/theme"
 
 export const container = css`
   max-width: 20.4rem;
-  ${mq.mobile} {
+  ${mq.tablet} {
     max-width: 25.4%;
   }
 `
@@ -19,7 +19,7 @@ export const dotLineContentTitle = css`
   font-weight: bold;
   margin-bottom: 2.3rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.7rem;
     letter-spacing: 0.4px;
   }
@@ -29,7 +29,7 @@ export const dotLineContent = css`
   letter-spacing: 0.8px;
   margin-bottom: 1rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.4rem;
   }
 `
@@ -39,7 +39,7 @@ export const dotLineMore = css`
   margin-top: 3rem;
   letter-spacing: 0.6px;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 1.5rem;
   }
 `

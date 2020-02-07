@@ -12,7 +12,7 @@ export const blogPostContainer = theme => css`
   text-decoration: none;
   margin: 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     flex-direction: row;
     align-items: flex-start;
     min-width: auto;
@@ -27,7 +27,7 @@ export const image = css`
   background-size: cover;
   background-position: center;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 8.5rem;
     height: 8.5rem;
   }
@@ -36,7 +36,7 @@ export const postContainer = css`
   max-height: 18rem;
   margin: 1.2rem 0 0 1.1rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     flex: 1;
     margin: 0.7rem 0 0 0.5rem;
   }
@@ -48,7 +48,7 @@ export const tagAndDateContainer = css`
   align-items: baseline;
   margin-bottom: 0.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-bottom: 0.7rem;
   }
 `
@@ -60,7 +60,7 @@ export const date = theme => css`
   line-height: 1;
   margin: 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     text-align: left;
   }
 `
@@ -79,7 +79,7 @@ export const title = theme => css`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.5rem;
     line-height: normal;
     margin-bottom: 0.4rem;

@@ -24,7 +24,7 @@ const theme = {
     "linear-gradient(45deg,#A665FF,#68FF92)",
   ],
   zIndices: [200, 100, 2, 1, 0],
-  breakpoints: [1023],
+  breakpoints: [767, 1023],
 }
 // aliases
 theme.colors.purples.dark = theme.colors.purples[0]
@@ -50,5 +50,6 @@ theme.zIndices.dotBackground = theme.zIndices[4]
 // TODO: do not export mq. Expose it from theme only
 export const mq = theme.breakpoints.map(bp => `@media (max-width: ${bp}px)`)
 mq.mobile = mq[0]
+mq.tablet = mq[1]
 
 export default theme

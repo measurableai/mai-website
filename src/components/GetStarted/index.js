@@ -18,9 +18,8 @@ import RightArrowIcon from "@/assets/right-arrow.svg"
 
 const PurpleRightArrow = ({ isHover }) => {
   const theme = useTheme()
-  const width = useMedia([26], 39)
-  const height = useMedia([39], 50)
-
+  const width = useMedia([26, 26], 39)
+  const height = useMedia([39, 39], 50)
   return (
     <RightArrowIcon
       css={arrowContainer}

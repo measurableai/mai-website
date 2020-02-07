@@ -28,7 +28,7 @@ const subscribeSection = css`
   padding: 0 1.2rem;
   box-sizing: border-box;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 100%;
   }
 `

@@ -7,7 +7,7 @@ export const container = css`
   height: 18rem;
   text-align: center;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     width: 13.5rem;
     height: 13.6rem;
   }
@@ -27,7 +27,7 @@ export const title = theme => css`
   top: 11.8rem;
   max-width: 10rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.4rem;
     top: 9rem;
   }

@@ -166,7 +166,7 @@ const LogosSection = props => {
     }
   `)
 
-  const trustedByColumnCount = useMedia([2], 1)
+  const trustedByColumnCount = useMedia([2, 2], 1)
   const intl = useIntl()
   const englishVersion = intl.locale === "en-US"
   return (

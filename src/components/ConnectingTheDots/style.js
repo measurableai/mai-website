@@ -8,7 +8,7 @@ export const container = css`
   padding-right: 13.3rem;
   text-align: center;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 11.1rem;
     padding-left: 0;
     padding-right: 0;
@@ -21,7 +21,7 @@ export const titleStyle = theme => css`
   font-family: ${theme.fonts.heading};
   line-height: 7.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     line-height: 1;
   }
 `
@@ -30,7 +30,7 @@ export const title1 = theme => css`
   color: ${theme.colors.white};
   letter-spacing: 0.27rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 3.6rem;
     letter-spacing: 0.1rem;
   }
@@ -42,7 +42,7 @@ export const title2 = theme => css`
   letter-spacing: 0.4rem;
   text-transform: uppercase;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 4.8rem;
     letter-spacing: 0.31rem;
   }
@@ -51,7 +51,7 @@ export const subTitleStyle = css`
   margin: 0;
   line-height: 2.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     line-height: 1.38;
   }
 `
@@ -60,7 +60,7 @@ export const subTitle1 = theme => css`
   font-size: 1.7rem;
   letter-spacing: 0.398rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
     letter-spacing: 0.228rem;
   }
@@ -72,7 +72,7 @@ export const subTitle2 = theme => css`
   letter-spacing: 3.99px;
   text-transform: uppercase;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.4rem;
     letter-spacing: 0.235rem;
   }
@@ -81,14 +81,14 @@ export const subTitle2 = theme => css`
 export const titleContainer = css`
   margin-bottom: 2.2rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-bottom: 2.6rem;
   }
 `
 export const subTitleContainer = css`
   margin-bottom: 2.8rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-bottom: 2rem;
   }
 `
@@ -97,7 +97,7 @@ export const button = css`
   font-size: 2.81rem;
   padding: 1.5rem 1.88rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     height: auto;
     width: auto;
     padding: 1.1rem 1.3rem;
@@ -106,7 +106,7 @@ export const button = css`
 `
 
 export const wordBreak = css`
-  ${mq.mobile} {
+  ${mq.tablet} {
     display: block;
   }
 `

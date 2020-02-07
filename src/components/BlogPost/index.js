@@ -26,7 +26,7 @@ import useMedia from "@/hooks/useMedia"
 const BlogTag = props => <Tag css={blogTag} {...props} />
 
 const BlogPost = ({ children, postData, ...props }) => {
-  const isMobile = useMedia([true], false)
+  const isDesktop = useMedia([false, false], true)
 
   // Format Blog Date
   const dateStr = postData.date.toString()
@@ -73,23 +73,23 @@ const BlogPost = ({ children, postData, ...props }) => {
       <div css={postContainer}>
         <div css={tagAndDateContainer}>
           <BlogTag>#{postData.categories[0].name}</BlogTag>
-          {!isMobile && <p css={date}>{formattedDate}</p>}
+          {isDesktop && <p css={date}>{formattedDate}</p>}
         </div>
         <div css={title} {...props}>
           {postData.title}
           {children}
         </div>
-        {!isMobile && (
+        {isDesktop && (
           <div css={content}>
             {postData.content.replace(removeHtmlRegex, "")}
           </div>
         )}
-        {!isMobile && (
+        {isDesktop && (
           <p css={readMore}>
             <FormattedMessage id="readMore" defaultMessage="Read more..." />
           </p>
         )}
-        {isMobile && <p css={date}>{formattedDate}</p>}
+        {!isDesktop && <p css={date}>{formattedDate}</p>}
         {/* <div css={viewCountContainer}>
           <img css={viewCountImage} src={viewCountIcon} alt="View Count"/>
           <p css={viewCount}>320</p>

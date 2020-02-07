@@ -23,7 +23,7 @@ const Header = forwardRef(({ children, innerRef, ...props }, ref) => (
 const DataReportSection = () => {
   const intl = useIntl()
   const theme = useTheme()
-  const isMobile = useMedia([true], false)
+  const isDesktop = useMedia([false, false], true)
   const swiperRef = useRef(null)
   const intersectionRef = React.useRef(null)
   const intersection = useIntersection(intersectionRef, {
@@ -45,7 +45,7 @@ const DataReportSection = () => {
   const [isSliding, setIsSliding] = useState(false)
   const data = useMemo(
     () =>
-      createRawData(theme, isMobile).map(rawDataItem => {
+      createRawData(theme, !isDesktop).map(rawDataItem => {
         const dataItem = { slide: {}, chartOption: {} }
 
         Object.keys(rawDataItem).forEach(key => {
@@ -59,7 +59,7 @@ const DataReportSection = () => {
 
         return dataItem
       }),
-    [intl.locale, isMobile, theme]
+    [intl.locale, isDesktop, theme]
   )
 
   const params = useMemo(

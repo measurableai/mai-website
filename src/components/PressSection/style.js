@@ -9,7 +9,7 @@ export const title = theme => css`
   letter-spacing: 0.01px;
   color: ${theme.colors.purples.normal};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 4.8rem;
   }
 `
@@ -20,7 +20,7 @@ export const contentFontStyle = theme => css`
   font-size: 2rem;
   line-height: 3.6rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
     line-height: 2rem;
   }
@@ -29,7 +29,7 @@ export const contentFontStyle = theme => css`
 export const content1 = css`
   margin-top: 3.9rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 2.6rem;
   }
 `
@@ -38,7 +38,7 @@ export const content2 = css`
   margin-top: 5rem;
   margin-bottom: 5rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     margin-top: 2.6rem;
   }
 `
@@ -53,7 +53,7 @@ export const emailStyle = theme => css`
   font-size: 2.8rem;
   font-weight: bold;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 2.1rem;
     line-height: 3.6rem;
   }
@@ -65,7 +65,7 @@ export const button = theme => css`
   font-size: 2.4rem;
   font-weight: bold;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 2.1rem;
     padding: 0.9rem 1.95rem;
   }

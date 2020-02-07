@@ -49,7 +49,7 @@ const Page = ({ children, ...props }) => (
 )
 
 const Footer = () => {
-  const isMobile = useMedia([true], false)
+  const isDesktop = useMedia([false, false], true)
   return (
     <>
       <div css={upperFooterContainer}>
@@ -109,13 +109,13 @@ const Footer = () => {
                 <FormattedMessage id="jobs" defaultMessage="JOBS" />
               </OtherPages>
             </Page>
-            {isMobile ? <span css={separator}> | </span> : ""}
+            {!isDesktop ? <span css={separator}> | </span> : ""}
             <Page to="/press">
               <OtherPages>
                 <FormattedMessage id="press" defaultMessage="PRESS" />
               </OtherPages>
             </Page>
-            {isMobile ? <span css={separator}> | </span> : ""}
+            {!isDesktop ? <span css={separator}> | </span> : ""}
             <Page to="/privacyPolicy">
               <OtherPages>
                 <FormattedMessage
@@ -124,7 +124,7 @@ const Footer = () => {
                 />
               </OtherPages>
             </Page>
-            {isMobile ? <span css={separator}> | </span> : ""}
+            {!isDesktop ? <span css={separator}> | </span> : ""}
             <Page to="/termsOfUse">
               <OtherPages>
                 <FormattedMessage

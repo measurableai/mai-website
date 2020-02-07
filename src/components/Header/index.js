@@ -29,9 +29,9 @@ const Header = ({ headerMode }) => {
   const scrollDirection = useScrollDirection()
   const { y } = useWindowScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const isMobile = useMedia([true], false)
-  const logoWidth = useMedia([145], 218)
-  const logoHeight = useMedia([20], 30)
+  const isDesktop = useMedia([false, false], true)
+  const logoWidth = useMedia([145, 145], 218)
+  const logoHeight = useMedia([20, 20], 30)
   useEffect(() => {
     if (scrollDirection === SCROLL_DOWN) {
       setIsMenuOpen(false)
@@ -59,7 +59,7 @@ const Header = ({ headerMode }) => {
             alt="Measurable AI"
           />
         </Link>
-        {!isMobile && (
+        {isDesktop && (
           <div css={buttonsContainter}>
             <FreeTrialButton css={freeTrialButtinMargin} />
             <DataInsightButton
@@ -75,7 +75,7 @@ const Header = ({ headerMode }) => {
             <LoginButton lightModeOn={lightModeOn} css={textButtonMargin} />
           </div>
         )}
-        {isMobile && (
+        {!isDesktop && (
           <div
             css={theme => hamburger(theme, isMenuOpen)}
             onClick={() => setIsMenuOpen(_isMenuOpen => !_isMenuOpen)}
@@ -86,7 +86,7 @@ const Header = ({ headerMode }) => {
           </div>
         )}
       </div>
-      {isMenuOpen && isMobile && <Menu lightModeOn={lightModeOn} />}
+      {isMenuOpen && !isDesktop && <Menu lightModeOn={lightModeOn} />}
     </div>
   )
 }

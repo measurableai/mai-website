@@ -9,7 +9,7 @@ export const title = theme => css`
   letter-spacing: 0.01px;
   color: ${theme.colors.purples.normal};
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 4.8rem;
   }
 `
@@ -25,7 +25,7 @@ export const header = theme => css`
   letter-spacing: 0.5px;
   margin: 4rem 0;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 2.1rem;
   }
 `
@@ -34,7 +34,7 @@ export const content = css`
   font-size: 1.6rem;
   line-height: 3.2rem;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.3rem;
   }
 `
@@ -49,7 +49,7 @@ export const anchorStyle = theme => css`
   font-weight: bold;
   text-decoration: none;
 
-  ${mq.mobile} {
+  ${mq.tablet} {
     font-size: 1.4rem;
   }
 `
