@@ -36,7 +36,7 @@ const createChartOption = (theme, customData) => ({
       color: "#210051",
       width: "100%",
     },
-    top: 14,
+    bottom: 260,
   },
   legend: {
     top: "bottom",
