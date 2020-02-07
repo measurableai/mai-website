@@ -51,7 +51,8 @@ const Page = ({ children, ...props }) => (
 const Footer = () => {
   const isDesktop = useMedia([false, false], true)
   return (
-    <>
+    // TODO: check why fragement does not work here
+    <footer>
       <div css={upperFooterContainer}>
         <div css={contentContainer}>
           <div css={contentLeftContainer}>
@@ -146,7 +147,7 @@ const Footer = () => {
         </p>
       </div>
       <div css={purpleBar} />
-    </>
+    </footer>
   )
 }
 
