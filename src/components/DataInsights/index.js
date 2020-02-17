@@ -70,7 +70,12 @@ const DataInsights = () => {
               featured_media {
                 localFile {
                   childImageSharp {
-                    fluid(maxHeight: 190, maxWidth: 190, quality: 100) {
+                    fluid(
+                      maxHeight: 190
+                      maxWidth: 190
+                      quality: 100
+                      cropFocus: CENTER
+                    ) {
                       src
                     }
                   }
