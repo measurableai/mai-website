@@ -1,8 +1,23 @@
 import React, { Fragment } from "react"
 
-import { tabsContainer, character, number, underline } from "./style"
+import {
+  tabsContainer,
+  character,
+  number,
+  underline,
+  numberCharacter,
+} from "./style"
 
-const Tabs = ({ numberOfTabs, onChange, selectedIndex, disabled }) => (
+const Tabs = ({
+  numberOfTabs,
+  onChange,
+  selectedIndex,
+  disabled,
+  isHovered,
+  setIsHovered,
+  hoveredIndex,
+  setHoveredIndex,
+}) => (
   <div css={tabsContainer}>
     <span css={character}>#</span>
     {[...Array(numberOfTabs)].map((_v, index) => {
@@ -10,7 +25,7 @@ const Tabs = ({ numberOfTabs, onChange, selectedIndex, disabled }) => (
       return (
         <Fragment key={index}>
           <div
-            css={theme => [character(theme, isActive), number]}
+            css={theme => [character(theme, isActive, isHovered), number]}
             onClick={() => {
               if (
                 !disabled &&
@@ -20,9 +35,20 @@ const Tabs = ({ numberOfTabs, onChange, selectedIndex, disabled }) => (
                 onChange(index)
               }
             }}
+            onMouseEnter={() => {
+              setIsHovered(true)
+              setHoveredIndex(index)
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false)
+              setHoveredIndex(-1)
+            }}
           >
-            <div>{String(index + 1).padStart(2, "0")}</div>
-            {isActive && <div css={underline} />}
+            <div css={numberCharacter}>
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            {index === hoveredIndex && <div css={underline} />}
+            {isActive && !isHovered && <div css={underline} />}
           </div>
           {index !== numberOfTabs - 1 && <span css={character}>/</span>}
         </Fragment>
