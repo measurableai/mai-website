@@ -23,6 +23,28 @@ import Tag from "@/components/Tag"
 
 import useMedia from "@/hooks/useMedia"
 
+function unescapeHTML(str) {
+  // html tag regex
+  const removeHtmlRegex = /(<([^>]+)>|&nbsp;)/gi
+  str = str.replace(removeHtmlRegex, "")
+
+  const unicodeRegex = /&([^;]+);/g
+  var escapeChars = { lt: "<", gt: ">", quot: '"', apos: "'", amp: "&" }
+  return str.replace(unicodeRegex, function(entity, entityCode) {
+    var match
+
+    if (entityCode in escapeChars) {
+      return escapeChars[entityCode]
+    } else if ((match = entityCode.match(/^#x([\da-fA-F]+)$/))) {
+      return String.fromCharCode(parseInt(match[1], 16))
+    } else if ((match = entityCode.match(/^#(\d+)$/))) {
+      return String.fromCharCode(~~match[1])
+    } else {
+      return entity
+    }
+  })
+}
+
 const BlogTag = props => <Tag css={blogTag} {...props} />
 
 const BlogPost = ({ children, postData, ...props }) => {
@@ -48,28 +70,6 @@ const BlogPost = ({ children, postData, ...props }) => {
     "Dec",
   ]
   const formattedDate = monthArr[Month - 1] + " " + Day + ", " + Year
-
-  function unescapeHTML(str) {
-    // html tag regex
-    const removeHtmlRegex = /(<([^>]+)>|&nbsp;)/gi
-    str = str.replace(removeHtmlRegex, "")
-
-    const unicodeRegex = /&([^;]+);/g
-    var escapeChars = { lt: "<", gt: ">", quot: '"', apos: "'", amp: "&" }
-    return str.replace(unicodeRegex, function(entity, entityCode) {
-      var match
-
-      if (entityCode in escapeChars) {
-        return escapeChars[entityCode]
-      } else if ((match = entityCode.match(/^#x([\da-fA-F]+)$/))) {
-        return String.fromCharCode(parseInt(match[1], 16))
-      } else if ((match = entityCode.match(/^#(\d+)$/))) {
-        return String.fromCharCode(~~match[1])
-      } else {
-        return entity
-      }
-    })
-  }
 
   return (
     <div css={blogPostContainer}>
