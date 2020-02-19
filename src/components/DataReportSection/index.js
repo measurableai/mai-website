@@ -21,6 +21,8 @@ const Header = forwardRef(({ children, innerRef, ...props }, ref) => (
 ))
 
 const DataReportSection = () => {
+  const [isHovered, setIsHovered] = useState(false)
+  const [hoveredIndex, setHoveredIndex] = useState(-1)
   const intl = useIntl()
   const theme = useTheme()
   const isDesktop = useMedia([false, false], true)
@@ -32,6 +34,7 @@ const DataReportSection = () => {
     threshold: 1,
   })
   const isIntersecting = intersection && intersection.isIntersecting
+
   useEffect(() => {
     if (swiperRef.current) {
       if (isIntersecting) {
@@ -117,6 +120,10 @@ const DataReportSection = () => {
               }
             }}
             disabled={isSliding}
+            isHovered={isHovered}
+            setIsHovered={value => setIsHovered(value)}
+            hoveredIndex={hoveredIndex}
+            setHoveredIndex={index => setHoveredIndex(index)}
           />
         </Header>
       </Fade>
