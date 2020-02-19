@@ -23,6 +23,28 @@ import Tag from "@/components/Tag"
 
 import useMedia from "@/hooks/useMedia"
 
+function unescapeHTML(str) {
+  // html tag regex
+  const removeHtmlRegex = /(<([^>]+)>|&nbsp;)/gi
+  str = str.replace(removeHtmlRegex, "")
+
+  const unicodeRegex = /&([^;]+);/g
+  var escapeChars = { lt: "<", gt: ">", quot: '"', apos: "'", amp: "&" }
+  return str.replace(unicodeRegex, function(entity, entityCode) {
+    var match
+
+    if (entityCode in escapeChars) {
+      return escapeChars[entityCode]
+    } else if ((match = entityCode.match(/^#x([\da-fA-F]+)$/))) {
+      return String.fromCharCode(parseInt(match[1], 16))
+    } else if ((match = entityCode.match(/^#(\d+)$/))) {
+      return String.fromCharCode(~~match[1])
+    } else {
+      return entity
+    }
+  })
+}
+
 const BlogTag = props => <Tag css={blogTag} {...props} />
 
 const BlogPost = ({ children, postData, ...props }) => {
@@ -49,9 +71,6 @@ const BlogPost = ({ children, postData, ...props }) => {
   ]
   const formattedDate = monthArr[Month - 1] + " " + Day + ", " + Year
 
-  // html tag regex
-  const removeHtmlRegex = /(<([^>]+)>)/gi
-
   return (
     <div css={blogPostContainer}>
       <OutboundLink
@@ -76,14 +95,10 @@ const BlogPost = ({ children, postData, ...props }) => {
           {isDesktop && <p css={date}>{formattedDate}</p>}
         </div>
         <div css={title} {...props}>
-          {postData.title}
+          {unescapeHTML(postData.title)}
           {children}
         </div>
-        {isDesktop && (
-          <div css={content}>
-            {postData.content.replace(removeHtmlRegex, "")}
-          </div>
-        )}
+        {isDesktop && <div css={content}>{unescapeHTML(postData.content)}</div>}
         {isDesktop && (
           <p css={readMore}>
             <FormattedMessage id="readMore" defaultMessage="Read more..." />
