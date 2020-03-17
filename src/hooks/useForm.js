@@ -8,6 +8,7 @@ const FAILED = "failed"
 const initialState = {
   status: DRAFT,
   errorCode: 0,
+  isLoading: false,
 }
 const SET_FIELD = "setField"
 const SET_FORM_STATE = "setFormState"
@@ -26,6 +27,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         status: action.payload,
+        isLoading: action.payload === SUBMITTING ? true : false,
       }
     }
     case SET_ERROR_CODE: {
@@ -121,5 +123,6 @@ export default (
     handleSubmit,
     disabled,
     errorCode: state.errorCode,
+    isLoading: state.isLoading,
   }
 }
