@@ -39,7 +39,10 @@ const reducer = (state, action) => {
   }
 }
 
-export default (initialFormState, { uri, additionalFormBody = null } = {}) => {
+export default (
+  initialFormState,
+  { uri, additionalFormBody = null, optionalStates = [] } = {}
+) => {
   const [state, dispatch] = useReducer(reducer, {
     ...initialState,
     ...initialFormState,
@@ -68,9 +71,10 @@ export default (initialFormState, { uri, additionalFormBody = null } = {}) => {
 
   const disabled = useMemo(
     () =>
-      Object.keys(initialFormState).some(key => !state[key]) ||
-      ![DRAFT, FAILED].includes(state.status),
-    [initialFormState, state]
+      Object.keys(initialFormState)
+        .filter(key => !optionalStates.includes(key))
+        .some(key => !state[key]) || ![DRAFT, FAILED].includes(state.status),
+    [initialFormState, optionalStates, state]
   )
 
   const handleSubmit = useCallback(

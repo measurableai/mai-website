@@ -120,7 +120,7 @@ export const menuItemImage = css`
 
 export const container = (theme, closing) => css`
   position: fixed;
-  height: 55rem;
+  height: auto;
   width: 34rem;
   background-color: white;
   bottom: 3rem;
@@ -139,9 +139,10 @@ export const container = (theme, closing) => css`
 
   ${mq.mobile} {
     width: 30rem;
-    height: auto;
+    max-height: 95%;
     bottom: 1rem;
     right: 1rem;
+    overflow: scroll;
   }
 
   transform: ${closing

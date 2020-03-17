@@ -76,12 +76,13 @@
     "name": "Name",
     "companyName": "Company Name",
     "email": "Email",
-    "message": "Message"
+    "message": "Message",
+    "phone": "Phone Number"
   },
   "emailSubscribeForm": {
     "description": "You have already subscribed"
   },
-  "formSubmitSuccess": "Your request has been sent!",
+  "formSubmitSuccess": "Measurable representative will get in touch with you soon.",
   "formSubmitFailed": "We failed to send your request. Please try again later!",
   "talkToUs": "TALK TO US",
 
