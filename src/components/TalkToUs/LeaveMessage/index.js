@@ -25,6 +25,7 @@ const initialFormState = {
   company_name: "",
   email_address: "",
   message: "",
+  phone: "",
 }
 
 const Callback = () => {
@@ -94,6 +95,18 @@ const Callback = () => {
           onChange={event =>
             formFields.email_address.onChange(event.target.value)
           }
+        />
+        <LabelTextInput
+          label={
+            <FormattedMessage
+              id="leaveMessageForm.phone"
+              defaultMessage="Phone Number"
+            />
+          }
+          id="phone"
+          value={formFields.phone.value}
+          optional
+          onChange={event => formFields.phone.onChange(event.target.value)}
         />
         <LabelTextInput
           css={textarea}

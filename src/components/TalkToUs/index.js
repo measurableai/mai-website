@@ -1,7 +1,6 @@
-import React, { useState, useReducer, useCallback, forwardRef } from "react"
+import React, { useState, useReducer, useCallback } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-import Callback from "./Callback"
 import LeaveMessage from "./LeaveMessage"
 
 import {
@@ -11,40 +10,19 @@ import {
   closeButton,
   closeSymbol,
   popoverBody,
-  menuItem,
-  menuItemImage,
   container,
 } from "./style"
 
-import CallbackIconSrc from "@/images/ico-help-01.svg"
-import MessageIconSrc from "@/images/ico-help-02.svg"
-
-const MenuItem = forwardRef(({ src, text, alt, ...props }, ref) => (
-  <button css={menuItem} ref={ref} {...props}>
-    <img
-      css={menuItemImage}
-      src={CallbackIconSrc}
-      width={32}
-      height={32}
-      alt={alt}
-    />
-    {text}
-  </button>
-))
-
-const PAGE_CALLBACK = "callback"
 const PAGE_MESSAGE = "message"
 const initialState = {
   open: false,
   closeCount: 0,
   openCallback: false,
-  page: "",
+  page: PAGE_MESSAGE,
 }
 
 const OPEN = "open"
 const CLOSE = "close"
-const GO_TO_CALLBACK = "goToCallback"
-const GO_TO_MESSAGE = "goToMessage"
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -60,18 +38,6 @@ const reducer = (state, action) => {
         closeCount: state.closeCount + 1,
         open: false,
         page: "",
-      }
-    }
-    case GO_TO_CALLBACK: {
-      return {
-        ...state,
-        page: PAGE_CALLBACK,
-      }
-    }
-    case GO_TO_MESSAGE: {
-      return {
-        ...state,
-        page: PAGE_MESSAGE,
       }
     }
     default:
@@ -109,34 +75,7 @@ const TalkToUs = () => {
             <div css={closeSymbol} />
           </button>
         </div>
-        <div css={popoverBody}>
-          {state.page === PAGE_CALLBACK && <Callback />}
-          {state.page === PAGE_MESSAGE && <LeaveMessage />}
-          {!state.page && (
-            <>
-              <MenuItem
-                onClick={() => dispatch({ type: GO_TO_CALLBACK })}
-                src={CallbackIconSrc}
-                text={
-                  <FormattedMessage
-                    id="requestCallback"
-                    defaultMessage="Request a callback"
-                  />
-                }
-              />
-              <MenuItem
-                onClick={() => dispatch({ type: GO_TO_MESSAGE })}
-                src={MessageIconSrc}
-                text={
-                  <FormattedMessage
-                    id="leaveMessage"
-                    defaultMessage="Leave a message"
-                  />
-                }
-              />
-            </>
-          )}
-        </div>
+        <div css={popoverBody}>{state && <LeaveMessage />}</div>
       </div>
     </div>
   )

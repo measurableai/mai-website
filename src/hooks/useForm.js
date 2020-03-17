@@ -68,8 +68,9 @@ export default (initialFormState, { uri, additionalFormBody = null } = {}) => {
 
   const disabled = useMemo(
     () =>
-      Object.keys(initialFormState).some(key => !state[key]) ||
-      ![DRAFT, FAILED].includes(state.status),
+      Object.keys(initialFormState)
+        .filter(key => key !== "phone")
+        .some(key => !state[key]) || ![DRAFT, FAILED].includes(state.status),
     [initialFormState, state]
   )
 

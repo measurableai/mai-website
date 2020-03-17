@@ -5,8 +5,13 @@ import TextInput from "@/components/TextInput"
 
 import { inputContainer, textInput } from "./style"
 
-const LabelTextInput = ({ label, id, ...props }) => (
-  <InputBox css={inputContainer} label={label} labelFor={id}>
+const LabelTextInput = ({ label, id, optional, ...props }) => (
+  <InputBox
+    css={inputContainer}
+    label={label}
+    labelFor={id}
+    optional={optional}
+  >
     <TextInput css={textInput} id={id} {...props} />
   </InputBox>
 )
