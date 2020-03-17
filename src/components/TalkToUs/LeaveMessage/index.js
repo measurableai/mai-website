@@ -38,6 +38,7 @@ const Callback = () => {
         request_phone_callback: false,
         locale: String(intl.locale).toLowerCase(),
       },
+      optionalStates: ["phone"],
     }),
     [intl.locale]
   )
