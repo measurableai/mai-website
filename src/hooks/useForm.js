@@ -1,9 +1,9 @@
 import { useMemo, useReducer, useCallback } from "react"
 
-const DRAFT = "draft"
-const SUBMITTING = "submitting"
-const SUBMITTED = "submitted"
-const FAILED = "failed"
+export const DRAFT = "draft"
+export const SUBMITTING = "submitting"
+export const SUBMITTED = "submitted"
+export const FAILED = "failed"
 
 const initialState = {
   status: DRAFT,
@@ -27,7 +27,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         status: action.payload,
-        isLoading: action.payload === SUBMITTING ? true : false,
       }
     }
     case SET_ERROR_CODE: {
@@ -123,6 +122,5 @@ export default (
     handleSubmit,
     disabled,
     errorCode: state.errorCode,
-    isLoading: state.isLoading,
   }
 }

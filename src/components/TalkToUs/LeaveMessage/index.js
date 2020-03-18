@@ -1,6 +1,7 @@
 import React, { useMemo } from "react"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
+import { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
 
 import Button from "@/components/Button"
 import LabelTextInput from "../LabelTextInput"
@@ -18,9 +19,6 @@ import {
 
 import useForm from "@/hooks/useForm"
 import { CONTACT_US } from "@/api"
-
-const SUBMITTED = "submitted"
-const FAILED = "failed"
 
 const initialFormState = {
   customer_name: "",
@@ -46,7 +44,7 @@ const Callback = () => {
     [intl.locale]
   )
 
-  const { formFields, formStatus, handleSubmit, disabled, isLoading } = useForm(
+  const { formFields, formStatus, handleSubmit, disabled } = useForm(
     initialFormState,
     formOptions
   )
@@ -144,12 +142,11 @@ const Callback = () => {
           </p>
         ) : null}
         <Button type="submit" css={submitButton} disabled={disabled}>
-          SUBMIT{" "}
-          <ClipLoader
-            size={14}
-            color={theme.colors.purples.normal}
-            loading={isLoading}
-          />
+          {formStatus === SUBMITTING ? (
+            <ClipLoader size={14} color={theme.colors.purples.normal} />
+          ) : (
+            "SUBMIT"
+          )}
         </Button>
       </div>
     </form>
