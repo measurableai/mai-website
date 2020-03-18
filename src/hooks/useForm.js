@@ -8,7 +8,6 @@ export const FAILED = "failed"
 const initialState = {
   status: DRAFT,
   errorCode: 0,
-  isLoading: false,
 }
 const SET_FIELD = "setField"
 const SET_FORM_STATE = "setFormState"

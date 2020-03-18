@@ -1,7 +1,6 @@
 import React, { useMemo } from "react"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
-import { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
 
 import Button from "@/components/Button"
 import LabelTextInput from "../LabelTextInput"
@@ -17,7 +16,7 @@ import {
   submitButton,
 } from "./style"
 
-import useForm from "@/hooks/useForm"
+import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
 import { CONTACT_US } from "@/api"
 
 const initialFormState = {
