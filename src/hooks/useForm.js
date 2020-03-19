@@ -1,9 +1,9 @@
 import { useMemo, useReducer, useCallback } from "react"
 
-const DRAFT = "draft"
-const SUBMITTING = "submitting"
-const SUBMITTED = "submitted"
-const FAILED = "failed"
+export const DRAFT = "draft"
+export const SUBMITTING = "submitting"
+export const SUBMITTED = "submitted"
+export const FAILED = "failed"
 
 const initialState = {
   status: DRAFT,

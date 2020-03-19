@@ -1,8 +1,10 @@
 import React, { useMemo } from "react"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useTheme } from "emotion-theming"
 
 import Button from "@/components/Button"
 import LabelTextInput from "../LabelTextInput"
+import ClipLoader from "react-spinners/ClipLoader"
 
 import {
   form,
@@ -14,11 +16,8 @@ import {
   submitButton,
 } from "./style"
 
-import useForm from "@/hooks/useForm"
+import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
 import { CONTACT_US } from "@/api"
-
-const SUBMITTED = "submitted"
-const FAILED = "failed"
 
 const initialFormState = {
   customer_name: "",
@@ -29,6 +28,7 @@ const initialFormState = {
 }
 
 const Callback = () => {
+  const theme = useTheme()
   const intl = useIntl()
 
   const formOptions = useMemo(
@@ -141,7 +141,11 @@ const Callback = () => {
           </p>
         ) : null}
         <Button type="submit" css={submitButton} disabled={disabled}>
-          SUBMIT
+          {formStatus === SUBMITTING ? (
+            <ClipLoader size={14} color={theme.colors.purples.normal} />
+          ) : (
+            "SUBMIT"
+          )}
         </Button>
       </div>
     </form>
