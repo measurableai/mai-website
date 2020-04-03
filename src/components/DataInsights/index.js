@@ -75,6 +75,7 @@ const DataInsights = () => {
                       maxWidth: 190
                       quality: 100
                       cropFocus: CENTER
+                      fit: INSIDE
                     ) {
                       src
                     }
