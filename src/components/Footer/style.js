@@ -154,3 +154,18 @@ export const purpleBar = theme => css`
   display: flex;
   justify-content: center;
 `
+
+export const address = theme => css`
+  font-size: 1.1rem;
+  color: ${theme.colors.greens.dark};
+  width: 102.4rem;
+  box-sizing: border-box;
+  margin: auto 0;
+  padding-left: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.5px;
+
+  ${mq.mobile} {
+    margin-right: 55%;
+  }
+`

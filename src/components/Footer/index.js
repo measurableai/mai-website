@@ -19,6 +19,7 @@ import {
   pageAnchor,
   separator,
   purpleBar,
+  address,
 } from "./style"
 
 import mailogo from "@/images/mai-logo-2.svg"
@@ -146,7 +147,14 @@ const Footer = () => {
           />
         </p>
       </div>
-      <div css={purpleBar} />
+      <div css={purpleBar}>
+        <p css={address}>
+          <FormattedMessage
+            id="address"
+            defaultMessage="9/F, 118 Wai Yip St, Kwun Tong, Kowloon, Hong Kong"
+          />
+        </p>
+      </div>
     </footer>
   )
 }
