@@ -162,7 +162,7 @@ export const address = theme => css`
   box-sizing: border-box;
   margin: auto 0;
   padding-left: 1.2rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
   letter-spacing: 0.5px;
 
   ${mq.mobile} {
