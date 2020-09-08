@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Measurable AI`,
-    description: `Actionable CONSUMER INSIGHTS based on BILLIONS of TRANSACTIONAL EMAILS for emerging markets`,
+    description: `[Alternative Data for Emerging Markets] Measurable AI generates actionable consumer insights based on billions of transactional data for the emerging markets.`,
     author: `Measurable AI`,
   },
   plugins: [
@@ -70,6 +70,7 @@ module.exports = {
           : [`en-US`],
         defaultLanguage: `en-US`,
         redirect: true,
+        redirectComponent: `${__dirname}/src/components/seo.js`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
