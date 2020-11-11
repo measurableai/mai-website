@@ -26,10 +26,10 @@ import mailogo from "@/images/mai-logo-2.svg"
 import mdtLogo from "@/images/mdt-logo.svg"
 import facebookIcon from "@/images/btn-facebook.svg"
 import linkedinIcon from "@/images/btn-linkedin.svg"
-import mediumIcon from "@/images/btn-medium.svg"
+// import mediumIcon from "@/images/btn-medium.svg"
 import twitterIcon from "@/images/btn-twitter.svg"
 // import wechatIcon from "@/images/btn-wechat.svg"
-import weiboIcon from "@/images/btn-weibo.svg"
+// import weiboIcon from "@/images/btn-weibo.svg"
 
 import useMedia from "@/hooks/useMedia"
 
@@ -81,11 +81,11 @@ const Footer = () => {
                 alt="linkedin"
                 href="https://linkedin.com/company/measurable-ai"
               />
-              <SocialIcon
+              {/* <SocialIcon
                 src={mediumIcon}
                 alt="medium"
                 href="https://medium.com/measurable-ai"
-              />
+              /> */}
               <SocialIcon
                 src={twitterIcon}
                 alt="twitter"
@@ -97,12 +97,12 @@ const Footer = () => {
                 href="https://fb.me/measurableai"
               />
               {/* <SocialIcon src={wechatIcon} alt="wechat" /> */}
-              <SocialIcon
+              {/* <SocialIcon
                 src={weiboIcon}
                 alt="weibo"
                 href="https://weibo.com/measurableai"
                 last={true}
-              />
+              /> */}
             </div>
           </div>
           <div css={contentRightContainer}>
