@@ -23,7 +23,8 @@ import BlogPost from "@/components/BlogPost"
 import Tag from "@/components/Tag"
 import RightArrowIcon from "@/assets/right-arrow.svg"
 
-const endPoint = "https://blog.measurable.ai/category/industries/"
+const endPoint = "https://blog.measurable.ai/"
+const industriesEndPoint = `${endPoint}category/industries/`
 const DELAY = 300
 
 const Title = forwardRef(({ children, innerRef, ...props }, ref) => (
@@ -100,25 +101,25 @@ const DataInsights = () => {
         <Fade refProp="innerRef" right>
           <TagsAndButtonContainer>
             <div css={tagsContainer}>
-              <DataInsightsTag href={endPoint + "e-commerce/"}>
+              <DataInsightsTag href={industriesEndPoint + "e-commerce/"}>
                 <FormattedMessage
                   id="eCommerce-tag"
                   defaultMessage="#E-COMMERCE"
                 />
               </DataInsightsTag>
-              <DataInsightsTag href={endPoint + "games/"}>
+              <DataInsightsTag href={industriesEndPoint + "games/"}>
                 <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
               </DataInsightsTag>
-              <DataInsightsTag href={endPoint + "ride-sharing/"}>
+              <DataInsightsTag href={industriesEndPoint + "ride-sharing/"}>
                 <FormattedMessage
                   id="rideSharing-tag"
                   defaultMessage="#RIDE SHARING"
                 />
               </DataInsightsTag>
-              <DataInsightsTag href={endPoint + "dating/"}>
+              <DataInsightsTag href={industriesEndPoint + "dating/"}>
                 <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
               </DataInsightsTag>
-              <DataInsightsTag href={endPoint + "entertainment/"}>
+              <DataInsightsTag href={industriesEndPoint + "entertainment/"}>
                 <FormattedMessage
                   id="entertainment-tag"
                   defaultMessage="#ENTERTAINMENT"
