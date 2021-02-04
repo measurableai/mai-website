@@ -196,9 +196,9 @@ const LogosSection = props => {
             images.backedby01.childImageSharp.fluid,
             images.backedby02.childImageSharp.fluid,
             images.backedby03.childImageSharp.fluid,
-            englishVersion
-              ? images.backedby04.childImageSharp.fluid
-              : images.backedby04_cn.childImageSharp.fluid,
+            // englishVersion
+            //   ? images.backedby04.childImageSharp.fluid
+            //   : images.backedby04_cn.childImageSharp.fluid,
             images.backedby05.childImageSharp.fluid,
             englishVersion
               ? images.backedby06.childImageSharp.fluid
