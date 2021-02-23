@@ -49,7 +49,7 @@ export const image = css`
 export const inlineContainer = css`
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
+  margin: 0 5rem;
 
   & > div:last-child {
     margin-bottom: 0;
