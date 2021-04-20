@@ -64,8 +64,6 @@ export const maiImage = css`
 `
 
 export const socialIcon = last => css`
-  width: 4.2rem;
-  height: 4.2rem;
   background-size: cover;
   background-position: center;
   margin-right: ${last ? "0" : "2.2rem"};
