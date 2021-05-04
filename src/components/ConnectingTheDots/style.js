@@ -95,7 +95,7 @@ export const subTitleContainer = css`
 
 export const button = css`
   font-size: 2.81rem;
-  padding: 1.5rem 1.88rem;
+  padding: 1.5rem 6rem;
 
   ${mq.tablet} {
     height: auto;

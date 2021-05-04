@@ -5,6 +5,7 @@ import "normalize.css"
 import "@/fonts/roboto.css"
 import "@/fonts/barlow-condensed.css"
 
+import { TalkToUsProvider } from "@/context/talkToUs"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import TalkToUs from "@/components/TalkToUs"
@@ -38,13 +39,13 @@ const main = css`
 
 const Layout = ({ children, headerMode }) => {
   return (
-    <>
+    <TalkToUsProvider>
       <Global styles={global} />
       <Header headerMode={headerMode} />
       <main css={main}>{children}</main>
       <Footer />
       <TalkToUs />
-    </>
+    </TalkToUsProvider>
   )
 }
 
