@@ -95,12 +95,12 @@ export const subTitleContainer = css`
 
 export const button = css`
   font-size: 2.81rem;
-  padding: 1.5rem 1.88rem;
+  padding: 1.5rem 6rem;
 
   ${mq.tablet} {
     height: auto;
     width: auto;
-    padding: 1.1rem 1.3rem;
+    padding: 1.1rem 3rem;
     font-size: 1.86rem;
   }
 `

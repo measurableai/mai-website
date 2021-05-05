@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { Link } from "gatsby-plugin-intl"
 import { useWindowScroll } from "react-use"
 
-import FreeTrialButton from "@/components/FreeTrialButton"
+import TalkToUsButton from "@/components/TalkToUsButton"
 
 import LanguageDropdown from "./LanguageDropdown"
 import LoginButton from "./LoginButton"
@@ -14,6 +14,7 @@ import logo_purple from "@/images/mai-logo-2.svg"
 
 import useMedia from "@/hooks/useMedia"
 import useScrollDirection, { SCROLL_DOWN } from "@/hooks/useScrollDirection"
+import { TalkToUsContext } from "@/context/talkToUs"
 
 import {
   container,
@@ -26,6 +27,7 @@ import {
 } from "./style"
 
 const Header = ({ headerMode }) => {
+  const { open } = useContext(TalkToUsContext)
   const scrollDirection = useScrollDirection()
   const { y } = useWindowScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -61,7 +63,10 @@ const Header = ({ headerMode }) => {
         </Link>
         {isDesktop && (
           <div css={buttonsContainter}>
-            <FreeTrialButton css={freeTrialButtinMargin} />
+            <TalkToUsButton
+              css={freeTrialButtinMargin}
+              onClick={() => open()}
+            />
             <DataInsightButton
               lightModeOn={lightModeOn}
               css={textButtonMargin}

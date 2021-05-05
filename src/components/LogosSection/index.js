@@ -5,12 +5,7 @@ import Fade from "react-reveal/Fade"
 
 import Category from "./Category"
 
-import {
-  container,
-  achievementsContainer,
-  backedByContainer,
-  trustedByContainer,
-} from "./style"
+import { container, achievementsContainer, trustedByContainer } from "./style"
 
 import useMedia from "@/hooks/useMedia"
 
@@ -163,6 +158,27 @@ const LogosSection = props => {
           }
         }
       }
+      aws: file(relativePath: { eq: "aws_logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bloomberg: file(relativePath: { eq: "bloomberg_logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      deloitte: file(relativePath: { eq: "deloitte_logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -172,6 +188,18 @@ const LogosSection = props => {
   return (
     <Fade refProp="innerRef" bottom>
       <Container {...props}>
+        <Category
+          css={trustedByContainer}
+          title={
+            <FormattedMessage id="availableOn" defaultMessage="AVAILABLE ON" />
+          }
+          columnCount={trustedByColumnCount}
+          images={[
+            images.aws.childImageSharp.fluid,
+            images.bloomberg.childImageSharp.fluid,
+            images.deloitte.childImageSharp.fluid,
+          ]}
+        />
         <Category
           css={achievementsContainer}
           title={
@@ -189,9 +217,8 @@ const LogosSection = props => {
           ]}
         />
         <Category
-          css={backedByContainer}
           title={<FormattedMessage id="backedBy" defaultMessage="BACKED BY" />}
-          columnCount={2}
+          columnCount={1}
           images={[
             images.backedby01.childImageSharp.fluid,
             images.backedby02.childImageSharp.fluid,
@@ -206,19 +233,6 @@ const LogosSection = props => {
             englishVersion
               ? images.backedby07.childImageSharp.fluid
               : images.backedby07_cn.childImageSharp.fluid,
-          ]}
-        />
-        <Category
-          css={trustedByContainer}
-          title={
-            <FormattedMessage id="trustedBy" defaultMessage="TRUSTED BY" />
-          }
-          columnCount={trustedByColumnCount}
-          images={[
-            images.trustedby01.childImageSharp.fluid,
-            englishVersion
-              ? images.trustedby02.childImageSharp.fluid
-              : images.trustedby02_cn.childImageSharp.fluid,
           ]}
         />
       </Container>

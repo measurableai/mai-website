@@ -14,25 +14,21 @@ export const container = css`
 `
 
 export const achievementsContainer = css`
-  margin-right: 9.9rem;
-
-  ${mq.tablet} {
-    margin-right: 0;
-  }
-`
-export const backedByContainer = css`
   margin-top: 6.6rem;
-  margin-right: 9.9rem;
+  margin-right: 13rem;
 
   ${mq.tablet} {
     margin-top: 0;
     margin-right: 0;
   }
 `
+
 export const trustedByContainer = css`
-  margin-top: 13.1rem;
+  margin-top: 16rem;
+  margin-right: 13rem;
 
   ${mq.tablet} {
     margin-top: 0;
+    margin-right: 0;
   }
 `

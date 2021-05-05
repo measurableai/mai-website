@@ -10,33 +10,36 @@ export const container = css`
 export const dotLineStyle = theme => css`
   margin: 0;
   color: ${theme.colors.white};
-  line-height: 1.5rem;
-  letter-spacing: 1.12px;
 `
 export const dotLineContentTitle = css`
-  font-size: 2rem;
+  font-size: 2.4rem;
   letter-spacing: 1px;
+  line-height: 1.9rem;
   font-weight: bold;
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.6rem;
+  text-transform: uppercase;
 
   ${mq.tablet} {
-    font-size: 1.7rem;
+    font-size: 2rem;
     letter-spacing: 0.4px;
   }
 `
 export const dotLineContent = css`
-  font-size: 1.6rem;
-  letter-spacing: 0.8px;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 20px;
 
   ${mq.tablet} {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    margin-bottom: 3px;
+    line-height: 12px;
+    letter-spacing: 1px;
   }
 `
 export const dotLineMore = css`
   font-size: 1.2rem;
   font-style: italic;
-  margin-top: 3rem;
+  margin-top: 5rem;
   letter-spacing: 0.6px;
 
   ${mq.tablet} {
@@ -45,4 +48,16 @@ export const dotLineMore = css`
 `
 export const dotLineContainer = css`
   margin: 2.3rem 0;
+`
+
+export const stockSymbol = theme => css`
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.55px;
+  color: ${theme.colors.greens.light};
+  margin-bottom: 1.3rem;
+
+  ${mq.tablet} {
+    letter-spacing: 1px;
+  }
 `

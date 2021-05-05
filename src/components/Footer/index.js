@@ -24,7 +24,6 @@ import {
 
 import mailogo from "@/images/mai-logo-2.svg"
 import mdtLogo from "@/images/mdt-logo.svg"
-import facebookIcon from "@/images/btn-facebook.svg"
 import linkedinIcon from "@/images/btn-linkedin.svg"
 import twitterIcon from "@/images/btn-twitter.svg"
 
@@ -82,12 +81,6 @@ const Footer = () => {
                 src={twitterIcon}
                 alt="twitter"
                 href="https://twitter.com/MeasurableAI"
-              />
-              <SocialIcon
-                src={facebookIcon}
-                alt="facebook"
-                href="https://fb.me/measurableai"
-                last={true}
               />
             </div>
           </div>
