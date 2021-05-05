@@ -13,39 +13,66 @@ import {
 import Card from "./Card"
 
 import ThreeWHeader from "@/components/ThreeWHeader"
-import tmtIqIcon from "@/images/what-tmtIq.svg"
-import travelIcon from "@/images/what-travel.svg"
+import what01Icon from "@/images/what-01.svg"
+import what02Icon from "@/images/what-02.svg"
 import eCommerceIcon from "@/images/what-eCommerce.svg"
+import useMedia from "@/hooks/useMedia"
 
 const DELAY = 300
 
+const contentArr1 = [
+  {
+    id: "uberEats",
+    defaultMessage: "UberEats",
+    stockMsgId: "uberEatsStockSymbol",
+  },
+  {
+    id: "foodpanda",
+    defaultMessage: "Foodpanda",
+    stockMsgId: "foodpandaStockSymbol",
+  },
+  { id: "deliveroo", defaultMessage: "Deliveroo" },
+  { id: "grabFood", defaultMessage: "GrabFood" },
+  { id: "iFood", defaultMessage: "iFood" },
+  { id: "rappi", defaultMessage: "Rappi" },
+  { id: "glovo", defaultMessage: "Glovo" },
+]
+
+const contentArr2 = [
+  { id: "uber", defaultMessage: "Uber", stockMsgId: "uberStockSymbol" },
+  { id: "grab", defaultMessage: "Grab" },
+  { id: "gojek", defaultMessage: "Gojek" },
+  { id: "lyft", defaultMessage: "Lyft", stockMsgId: "lyftStockSymbol" },
+  { id: "beat", defaultMessage: "Beat" },
+  { id: "99", defaultMessage: "99" },
+  { id: "ola", defaultMessage: "Ola" },
+]
+
+const contentArr3 = [
+  { id: "amazon", defaultMessage: "Amazon", stockMsgId: "amazonStockSymbol" },
+  { id: "shopee", defaultMessage: "Shopee", stockMsgId: "shopeeStockSymbol" },
+  { id: "lazada", defaultMessage: "Lazada", stockMsgId: "lazadaStockSymbol" },
+  { id: "tokopedia", defaultMessage: "Tokopedia" },
+  {
+    id: "flipkart",
+    defaultMessage: "Flipkart",
+    stockMsgId: "flipkartStockSymbol",
+  },
+  {
+    id: "mercadoLibra",
+    defaultMessage: "Mercado Libra",
+    stockMsgId: "mercadoLibraStockSymbol",
+  },
+  {
+    id: "magazineLuiza",
+    defaultMessage: "Magazine Luiza",
+    stockMsgId: "magazineLuizaStockSymbol",
+  },
+]
+
 const WhatSection = () => {
-  const contentArr1 = [
-    { id: "tme", defaultMessage: "TME" },
-    { id: "nflx", defaultMessage: "NFLX" },
-    { id: "yy", defaultMessage: "YY" },
-    { id: "momo", defaultMessage: "MOMO" },
-    { id: "spot", defaultMessage: "SPOT" },
-    { id: "mtch", defaultMessage: "MTCH" },
-  ]
+  const isDesktop = useMedia([false, false], true)
 
-  const contentArr2 = [
-    { id: "mar", defaultMessage: "MAR" },
-    { id: "htht", defaultMessage: "HTHT" },
-    { id: "qtrp", defaultMessage: "QTRP" },
-    { id: "uber", defaultMessage: "UBER" },
-    { id: "lyft", defaultMessage: "LYFT" },
-    { id: "bkng", defaultMessage: "BKNG" },
-  ]
-
-  const contentArr3 = [
-    { id: "ebay", defaultMessage: "EBAY" },
-    { id: "appl", defaultMessage: "APPL" },
-    { id: "baba", defaultMessage: "BABA" },
-    { id: "htht", defaultMessage: "HTHT" },
-    { id: "jd", defaultMessage: "JD" },
-    { id: "pdd", defaultMessage: "PDD" },
-  ]
   return (
     <div css={container}>
       <Fade refProp="innerRef" left>
@@ -63,51 +90,80 @@ const WhatSection = () => {
         <Fade refProp="innerRef" right>
           <Card
             css={[whatSectionItemContainer, whatSectionItemContainer1]}
-            src={tmtIqIcon}
-            alt="TMT:IQ"
+            src={what01Icon}
+            alt="Food Delivery"
             contentTitle={
-              <FormattedMessage id="tmtIq" defaultMessage="TMT:IQ" />
-            }
-            contents={contentArr1.map(content => (
               <FormattedMessage
-                id={content.id}
-                defaultMessage={content.defaultMessage}
+                id="foodDelivery"
+                defaultMessage="Food Delivery"
               />
-            ))}
+            }
+            contents={contentArr1}
           />
         </Fade>
-        <Fade refProp="innerRef" right delay={DELAY}>
-          <Card
-            css={[whatSectionItemContainer, whatSectionItemContainer2]}
-            src={travelIcon}
-            alt="TRAVEL"
-            contentTitle={
-              <FormattedMessage id="travel" defaultMessage="TRAVEL" />
-            }
-            contents={contentArr2.map(content => (
-              <FormattedMessage
-                id={content.id}
-                defaultMessage={content.defaultMessage}
+        {isDesktop ? (
+          <>
+            <Fade refProp="innerRef" right delay={DELAY}>
+              <Card
+                css={[whatSectionItemContainer, whatSectionItemContainer2]}
+                src={what02Icon}
+                alt="RIDE-HAILING"
+                contentTitle={
+                  <FormattedMessage
+                    id="rideHailing"
+                    defaultMessage="RIDE-HAILING"
+                  />
+                }
+                contents={contentArr2}
               />
-            ))}
-          />
-        </Fade>
-        <Fade refProp="innerRef" right delay={DELAY * 2}>
-          <Card
-            css={[whatSectionItemContainer, whatSectionItemContainer3]}
-            src={eCommerceIcon}
-            alt="E-COMMERCE"
-            contentTitle={
-              <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
-            }
-            contents={contentArr3.map(content => (
-              <FormattedMessage
-                id={content.id}
-                defaultMessage={content.defaultMessage}
+            </Fade>
+            <Fade refProp="innerRef" right delay={DELAY * 2}>
+              <Card
+                css={[whatSectionItemContainer, whatSectionItemContainer3]}
+                src={eCommerceIcon}
+                alt="E-COMMERCE"
+                contentTitle={
+                  <FormattedMessage
+                    id="eCommerce"
+                    defaultMessage="E-COMMERCE"
+                  />
+                }
+                contents={contentArr3}
               />
-            ))}
-          />
-        </Fade>
+            </Fade>
+          </>
+        ) : (
+          <>
+            <Fade refProp="innerRef" right delay={DELAY}>
+              <Card
+                css={[whatSectionItemContainer, whatSectionItemContainer3]}
+                src={eCommerceIcon}
+                alt="E-COMMERCE"
+                contentTitle={
+                  <FormattedMessage
+                    id="eCommerce"
+                    defaultMessage="E-COMMERCE"
+                  />
+                }
+                contents={contentArr3}
+              />
+            </Fade>
+            <Fade refProp="innerRef" right delay={DELAY * 2}>
+              <Card
+                css={[whatSectionItemContainer, whatSectionItemContainer2]}
+                src={what02Icon}
+                alt="RIDE-HAILING"
+                contentTitle={
+                  <FormattedMessage
+                    id="rideHailing"
+                    defaultMessage="RIDE-HAILING"
+                  />
+                }
+                contents={contentArr2}
+              />
+            </Fade>
+          </>
+        )}
       </div>
     </div>
   )

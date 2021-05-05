@@ -100,7 +100,7 @@ export const button = css`
   ${mq.tablet} {
     height: auto;
     width: auto;
-    padding: 1.1rem 1.3rem;
+    padding: 1.1rem 3rem;
     font-size: 1.86rem;
   }
 `

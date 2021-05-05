@@ -56,7 +56,6 @@ export const TalkToUsProvider = ({ children }) => {
     }),
     [state, isOpen, onClose]
   )
-  console.log("state", state)
 
   return (
     <TalkToUsContext.Provider value={talkToUsContext}>

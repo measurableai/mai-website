@@ -8,6 +8,7 @@ import {
   dotLineContentTitle,
   dotLineMore,
   dotLineContainer,
+  stockSymbol,
 } from "./style"
 import DotLine from "@/components/DotLine"
 
@@ -22,19 +23,31 @@ const Card = forwardRef(
       <div css={container} ref={ref || innerRef} {...props}>
         <img width={width} height={height} src={src} alt={alt} />
         <DotLine css={dotLineContainer} invert={true} />
-        <div>
-          <p css={theme => [dotLineStyle(theme), dotLineContentTitle]}>
-            {contentTitle}
-          </p>
-          {contents.map((content, index) => (
-            <p css={theme => [dotLineStyle(theme), dotLineContent]} key={index}>
-              {content}
+        <p css={theme => [dotLineStyle(theme), dotLineContentTitle]}>
+          {contentTitle}
+        </p>
+        {contents.map(({ id, defaultMessage, stockMsgId }, index) => (
+          <>
+            {id && (
+              <p
+                css={theme => [dotLineStyle(theme), dotLineContent]}
+                key={index}
+              >
+                <FormattedMessage id={id} defaultMessage={defaultMessage} />
+              </p>
+            )}
+            <p css={theme => [stockSymbol(theme)]}>
+              {stockMsgId ? (
+                <FormattedMessage id={stockMsgId} defaultMessage="" />
+              ) : (
+                " "
+              )}
             </p>
-          ))}
-          <p css={theme => [dotLineStyle(theme), dotLineMore]}>
-            <FormattedMessage id="more" defaultMessage="more ..." />
-          </p>
-        </div>
+          </>
+        ))}
+        <p css={theme => [dotLineStyle(theme), dotLineMore]}>
+          <FormattedMessage id="more" defaultMessage="more ..." />
+        </p>
       </div>
     )
   }
