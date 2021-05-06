@@ -5,7 +5,7 @@ import { useWindowScroll } from "react-use"
 import TalkToUsButton from "@/components/TalkToUsButton"
 
 import LanguageDropdown from "./LanguageDropdown"
-import LoginButton from "./LoginButton"
+// import LoginButton from "./LoginButton"
 import DataInsightButton from "./DataInsightButton"
 import Menu from "./Menu"
 
@@ -77,7 +77,7 @@ const Header = ({ headerMode }) => {
                 css={textButtonMargin}
               />
             )}
-            <LoginButton lightModeOn={lightModeOn} css={textButtonMargin} />
+            {/* <LoginButton lightModeOn={lightModeOn} css={textButtonMargin} /> */}
           </div>
         )}
         {!isDesktop && (
