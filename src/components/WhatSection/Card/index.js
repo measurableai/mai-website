@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react"
+import React, { forwardRef, Fragment } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 import {
@@ -27,7 +27,7 @@ const Card = forwardRef(
           {contentTitle}
         </p>
         {contents.map(({ id, defaultMessage, stockMsgId }, index) => (
-          <>
+          <Fragment key={id}>
             {id && (
               <p
                 css={theme => [dotLineStyle(theme), dotLineContent]}
@@ -43,7 +43,7 @@ const Card = forwardRef(
                 " "
               )}
             </p>
-          </>
+          </Fragment>
         ))}
         <p css={theme => [dotLineStyle(theme), dotLineMore]}>
           <FormattedMessage id="more" defaultMessage="more ..." />
