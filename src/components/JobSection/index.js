@@ -27,33 +27,50 @@ const Job = ({ jobDetails, ...props }) => (
         &nbsp;
       </a>
       <h2 css={title}>{jobDetails.jobTitle}</h2>
-      <Header css={header}>
-        <FormattedMessage
-          id="jobDescriptions"
-          defaultMessage="Job Descriptions:"
-        />
-      </Header>
-      <List>
-        {jobDetails.jobDescriptions.map((jobDescription, index) => (
-          <Item key={index}>{jobDescription}</Item>
-        ))}
-      </List>
-      <Header css={header}>
-        <FormattedMessage id="jobRequirement" defaultMessage="Requirement:" />
-      </Header>
-      <List>
-        {jobDetails.jobRequirements.map((jobRequirement, index) => (
-          <Item key={index}>{jobRequirement}</Item>
-        ))}
-      </List>
-      <Header css={header}>
-        <FormattedMessage id="jobPlus" defaultMessage="**Plus**" />
-      </Header>
-      <List>
-        {jobDetails.jobPluses.map((jobPlus, index) => (
-          <Item key={index}>{jobPlus}</Item>
-        ))}
-      </List>
+      {jobDetails.jobDescriptions.length > 0 && (
+        <>
+          <Header css={header}>
+            <FormattedMessage
+              id="jobDescriptions"
+              defaultMessage="Job Descriptions:"
+            />
+          </Header>
+          <List>
+            {jobDetails.jobDescriptions.map((jobDescription, index) => (
+              <Item key={index}>{jobDescription}</Item>
+            ))}
+          </List>
+        </>
+      )}
+
+      {jobDetails.jobRequirements.length > 0 && (
+        <>
+          <Header css={header}>
+            <FormattedMessage
+              id="jobRequirement"
+              defaultMessage="Requirement:"
+            />
+          </Header>
+          <List>
+            {jobDetails.jobRequirements.map((jobRequirement, index) => (
+              <Item key={index}>{jobRequirement}</Item>
+            ))}
+          </List>
+        </>
+      )}
+
+      {jobDetails.jobPluses.length > 0 && (
+        <>
+          <Header css={header}>
+            <FormattedMessage id="jobPlus" defaultMessage="**Plus**" />
+          </Header>
+          <List>
+            {jobDetails.jobPluses.map((jobPlus, index) => (
+              <Item key={index}>{jobPlus}</Item>
+            ))}
+          </List>
+        </>
+      )}
     </div>
   </>
 )

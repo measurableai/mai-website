@@ -15,7 +15,7 @@ export const container = css`
     margin-top: 2.8rem;
     margin: 2.8rem auto 0 auto;
     max-width: 37.5rem;
-    height: 90rem;
+    height: 82rem;
     overflow: visible;
   }
 `
@@ -57,16 +57,15 @@ export const whatSectionItemContainer2 = css`
   margin-top: 10.9rem;
 
   ${mq.tablet} {
-    margin-left: auto;
-    top: -55rem;
-    overflow: visible;
+    top: -32rem;
   }
 `
 export const whatSectionItemContainer3 = css`
   margin-top: 14.5rem;
 
   ${mq.tablet} {
-    top: -32rem;
+    margin-left: auto;
+    top: -50rem;
   }
 `
 

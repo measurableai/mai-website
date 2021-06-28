@@ -86,85 +86,93 @@ const WhatSection = () => {
           }
         />
       </Fade>
-      <div css={contentContainer}>
-        <Fade refProp="innerRef" right>
-          <Card
-            css={[whatSectionItemContainer, whatSectionItemContainer1]}
-            src={what01Icon}
-            alt="Food Delivery"
-            contentTitle={
-              <FormattedMessage
-                id="foodDelivery"
-                defaultMessage="Food Delivery"
-              />
-            }
-            contents={contentArr1}
-          />
-        </Fade>
-        {isDesktop ? (
-          <>
-            <Fade refProp="innerRef" right delay={DELAY}>
-              <Card
-                css={[whatSectionItemContainer, whatSectionItemContainer2]}
-                src={what02Icon}
-                alt="RIDE-HAILING"
-                contentTitle={
-                  <FormattedMessage
-                    id="rideHailing"
-                    defaultMessage="RIDE-HAILING"
-                  />
-                }
-                contents={contentArr2}
-              />
-            </Fade>
-            <Fade refProp="innerRef" right delay={DELAY * 2}>
-              <Card
-                css={[whatSectionItemContainer, whatSectionItemContainer3]}
-                src={eCommerceIcon}
-                alt="E-COMMERCE"
-                contentTitle={
-                  <FormattedMessage
-                    id="eCommerce"
-                    defaultMessage="E-COMMERCE"
-                  />
-                }
-                contents={contentArr3}
-              />
-            </Fade>
-          </>
-        ) : (
-          <>
-            <Fade refProp="innerRef" right delay={DELAY}>
-              <Card
-                css={[whatSectionItemContainer, whatSectionItemContainer3]}
-                src={eCommerceIcon}
-                alt="E-COMMERCE"
-                contentTitle={
-                  <FormattedMessage
-                    id="eCommerce"
-                    defaultMessage="E-COMMERCE"
-                  />
-                }
-                contents={contentArr3}
-              />
-            </Fade>
-            <Fade refProp="innerRef" right delay={DELAY * 2}>
-              <Card
-                css={[whatSectionItemContainer, whatSectionItemContainer2]}
-                src={what02Icon}
-                alt="RIDE-HAILING"
-                contentTitle={
-                  <FormattedMessage
-                    id="rideHailing"
-                    defaultMessage="RIDE-HAILING"
-                  />
-                }
-                contents={contentArr2}
-              />
-            </Fade>
-          </>
-        )}
-      </div>
+      {isDesktop && (
+        <div css={contentContainer}>
+          <Fade refProp="innerRef" right>
+            <Card
+              css={[whatSectionItemContainer, whatSectionItemContainer1]}
+              src={what01Icon}
+              alt="Food Delivery"
+              contentTitle={
+                <FormattedMessage
+                  id="foodDelivery"
+                  defaultMessage="Food Delivery"
+                />
+              }
+              contents={contentArr1}
+            />
+          </Fade>
+          <Fade refProp="innerRef" right delay={DELAY}>
+            <Card
+              css={[whatSectionItemContainer, whatSectionItemContainer2]}
+              src={what02Icon}
+              alt="RIDE-HAILING"
+              contentTitle={
+                <FormattedMessage
+                  id="rideHailing"
+                  defaultMessage="RIDE-HAILING"
+                />
+              }
+              contents={contentArr2}
+            />
+          </Fade>
+          <Fade refProp="innerRef" right delay={DELAY * 2}>
+            <Card
+              css={[whatSectionItemContainer, whatSectionItemContainer3]}
+              src={eCommerceIcon}
+              alt="E-COMMERCE"
+              contentTitle={
+                <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
+              }
+              contents={contentArr3}
+            />
+          </Fade>
+        </div>
+      )}
+
+      {!isDesktop && (
+        <div css={contentContainer}>
+          <Fade refProp="innerRef" right>
+            <Card
+              css={[whatSectionItemContainer, whatSectionItemContainer1]}
+              src={what01Icon}
+              alt="Food Delivery"
+              contentTitle={
+                <FormattedMessage
+                  id="foodDelivery"
+                  defaultMessage="Food Delivery"
+                />
+              }
+              contents={contentArr1}
+            />
+          </Fade>
+          <Fade refProp="innerRef" right delay={DELAY}>
+            <Card
+              css={[whatSectionItemContainer, whatSectionItemContainer2]}
+              src={eCommerceIcon}
+              alt="E-COMMERCE"
+              contentTitle={
+                <FormattedMessage id="eCommerce" defaultMessage="E-COMMERCE" />
+              }
+              contents={contentArr3}
+            />
+          </Fade>
+          <Fade refProp="innerRef" right delay={DELAY * 2}>
+            <Card
+              css={[whatSectionItemContainer, whatSectionItemContainer3]}
+              src={what02Icon}
+              alt="RIDE-HAILING"
+              contentTitle={
+                <FormattedMessage
+                  id="rideHailing"
+                  defaultMessage="RIDE-HAILING"
+                />
+              }
+              contents={contentArr2}
+            />
+          </Fade>
+        </div>
+      )}
     </div>
   )
 }

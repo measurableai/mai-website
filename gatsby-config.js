@@ -6,6 +6,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-linkedin-insight`,
+      options: {
+        partnerId: "3309668",
+
+        // Include LinkedIn Insight in development.
+        // Defaults to false meaning LinkedIn Insight will only be loaded in production.
+        includeInDevelopment: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it

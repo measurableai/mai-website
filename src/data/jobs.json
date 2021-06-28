@@ -184,5 +184,185 @@
         "zh-CN": "Server side shell scripting experience."
       }
     ]
+  },
+  {
+    "jobTitle": {
+      "en-US": "SOFTWARE ENGINEER",
+      "zh-HK": "SOFTWARE ENGINEER",
+      "zh-CN": "SOFTWARE ENGINEER"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Design and implement RESTful API for both external and internal users.",
+        "zh-HK": "Design and implement RESTful API for both external and internal users.",
+        "zh-CN": "Design and implement RESTful API for both external and internal users."
+      },
+      {
+        "en-US": "Have the ability to balance high response, stable and efficient code with attractive and functional aesthetics.",
+        "zh-HK": "Have the ability to balance high response, stable and efficient code with attractive and functional aesthetics.",
+        "zh-CN": "Have the ability to balance high response, stable and efficient code with attractive and functional aesthetics."
+      },
+      {
+        "en-US": "Work together with cross-functional teams to define, design, and ship new features.",
+        "zh-HK": "Work together with cross-functional teams to define, design, and ship new features.",
+        "zh-CN": "Work together with cross-functional teams to define, design, and ship new features."
+      },
+      {
+        "en-US": "Create and execute unit tests on your code, to ensure its robustness, including edge cases, usability, and general reliability.",
+        "zh-HK": "Create and execute unit tests on your code, to ensure its robustness, including edge cases, usability, and general reliability.",
+        "zh-CN": "Create and execute unit tests on your code, to ensure its robustness, including edge cases, usability, and general reliability."
+      },
+      {
+        "en-US": "Troubleshoot issues, fix bugs, and improve application performance.",
+        "zh-HK": "Troubleshoot issues, fix bugs, and improve application performance.",
+        "zh-CN": "Troubleshoot issues, fix bugs, and improve application performance."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "0-3+ years software development experience",
+        "zh-HK": "0-3+ years software development experience",
+        "zh-CN": "0-3+ years software development experience"
+      },
+      {
+        "en-US": "Solid knowledge of Golang/Python/Java",
+        "zh-HK": "Solid knowledge of Golang/Python/Java",
+        "zh-CN": "Solid knowledge of Golang/Python/Java"
+      },
+      {
+        "en-US": "Solid knowledge of MySQL or MongoDB",
+        "zh-HK": "Solid knowledge of MySQL or MongoDB",
+        "zh-CN": "Solid knowledge of MySQL or MongoDB"
+      },
+      {
+        "en-US": "Bachelor’s/Master’s degree in computer science, engineering or equivalent industry experience",
+        "zh-HK": "Bachelor’s/Master’s degree in computer science, engineering or equivalent industry experience",
+        "zh-CN": "Bachelor’s/Master’s degree in computer science, engineering or equivalent industry experience"
+      },
+      {
+        "en-US": "Good communication skills",
+        "zh-HK": "Good communication skills",
+        "zh-CN": "Good communication skills"
+      }
+    ],
+    "jobPluses": [
+      {
+        "en-US": "Experience with iOS/Android development.",
+        "zh-HK": "Experience with iOS/Android development.",
+        "zh-CN": "Experience with iOS/Android development."
+      },
+      {
+        "en-US": "Experience developing scalable systems on AWS, Azure or other cloud platforms.",
+        "zh-HK": "Experience developing scalable systems on AWS, Azure or other cloud platforms.",
+        "zh-CN": "Experience developing scalable systems on AWS, Azure or other cloud platforms."
+      },
+      {
+        "en-US": "Experience with CI/CD, containerization, telemetry, monitoring and alerting.",
+        "zh-HK": "Experience with CI/CD, containerization, telemetry, monitoring and alerting.",
+        "zh-CN": "Experience with CI/CD, containerization, telemetry, monitoring and alerting."
+      }
+    ]
+  },
+  {
+    "jobTitle": {
+      "en-US": "UI/UX GRAPHIC DESIGNER",
+      "zh-HK": "UI/UX GRAPHIC DESIGNER",
+      "zh-CN": "UI/UX GRAPHIC DESIGNER"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Create and update concepts, designs and sample layouts for company’s series of consumer apps' User Interface (UI), including a set of icons and navigational menus based on theoretical knowledge of layout principles and esthetic design concepts.",
+        "zh-HK": "Create and update concepts, designs and sample layouts for company’s series of consumer apps' User Interface (UI), including a set of icons and navigational menus based on theoretical knowledge of layout principles and esthetic design concepts.",
+        "zh-CN": "Create and update concepts, designs and sample layouts for company’s series of consumer apps' User Interface (UI), including a set of icons and navigational menus based on theoretical knowledge of layout principles and esthetic design concepts."
+      },
+      {
+        "en-US": "Prepare variants of digital design illustrations for submission to the Director of Design, discuss illustrative concepts and designs with the Director to ensure UI resonates a distinct Visual Identity (VI) theme; thereafter implement updated UI design for consumer apps as approved by the Director.",
+        "zh-HK": "Prepare variants of digital design illustrations for submission to the Director of Design, discuss illustrative concepts and designs with the Director to ensure UI resonates a distinct Visual Identity (VI) theme; thereafter implement updated UI design for consumer apps as approved by the Director.",
+        "zh-CN": "Prepare variants of digital design illustrations for submission to the Director of Design, discuss illustrative concepts and designs with the Director to ensure UI resonates a distinct Visual Identity (VI) theme; thereafter implement updated UI design for consumer apps as approved by the Director."
+      },
+      {
+        "en-US": "Track analytics based on user ratings from TestFlight and other user-feedback platform to determine overall effectiveness of product features vis-a- vis graphic design/layout and ease of navigation/ usage from User Experience (UX) perspective.",
+        "zh-HK": "Track analytics based on user ratings from TestFlight and other user-feedback platform to determine overall effectiveness of product features vis-a- vis graphic design/layout and ease of navigation/ usage from User Experience (UX) perspective.",
+        "zh-CN": "Track analytics based on user ratings from TestFlight and other user-feedback platform to determine overall effectiveness of product features vis-a- vis graphic design/layout and ease of navigation/ usage from User Experience (UX) perspective."
+      },
+      {
+        "en-US": "Make necessary changes in font style, size, color scheme, graphics, page layout and flows, as well as arrangements for other illustrative materials to match the design and features of MailTime App.",
+        "zh-HK": "Make necessary changes in font style, size, color scheme, graphics, page layout and flows, as well as arrangements for other illustrative materials to match the design and features of MailTime App.",
+        "zh-CN": "Make necessary changes in font style, size, color scheme, graphics, page layout and flows, as well as arrangements for other illustrative materials to match the design and features of MailTime App."
+      },
+      {
+        "en-US": "Design, develop, and improve company's interactive website at https://measurable.ai and other consumer apps by utilizing various computer software and programming languages.",
+        "zh-HK": "Design, develop, and improve company's interactive website at https://measurable.ai and other consumer apps by utilizing various computer software and programming languages.",
+        "zh-CN": "Design, develop, and improve company's interactive website at https://measurable.ai and other consumer apps by utilizing various computer software and programming languages."
+      },
+      {
+        "en-US": "Refine the Visual Identity (VI) of company image including company logo, banners, posters, T-Shirts, advertisement mediums, and product.",
+        "zh-HK": "Refine the Visual Identity (VI) of company image including company logo, banners, posters, T-Shirts, advertisement mediums, and product.",
+        "zh-CN": "Refine the Visual Identity (VI) of company image including company logo, banners, posters, T-Shirts, advertisement mediums, and product."
+      },
+      {
+        "en-US": "Maintain archive of images, photos, or previous work products.",
+        "zh-HK": "Maintain archive of images, photos, or previous work products.",
+        "zh-CN": "Maintain archive of images, photos, or previous work products."
+      },
+      {
+        "en-US": "Prepare notes and instructions for coworkers who assemble and prepare final layouts for printing.",
+        "zh-HK": "Prepare notes and instructions for coworkers who assemble and prepare final layouts for printing.",
+        "zh-CN": "Prepare notes and instructions for coworkers who assemble and prepare final layouts for printing."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "Minimum of a Bachelor’s degree in graphic design, multimedia design, digital design, digital arts, computer science, art management, or other closely related fields",
+        "zh-HK": "Minimum of a Bachelor’s degree in graphic design, multimedia design, digital design, digital arts, computer science, art management, or other closely related fields",
+        "zh-CN": "Minimum of a Bachelor’s degree in graphic design, multimedia design, digital design, digital arts, computer science, art management, or other closely related fields"
+      },
+      {
+        "en-US": "Additional MS Degree in one of the foregoing fields of study strongly preferred",
+        "zh-HK": "Additional MS Degree in one of the foregoing fields of study strongly preferred",
+        "zh-CN": "Additional MS Degree in one of the foregoing fields of study strongly preferred"
+      },
+      {
+        "en-US": "At least one (1) year of UI / UX, graphic, and visual design in a corporate or agency context preferred but not required",
+        "zh-HK": "At least one (1) year of UI / UX, graphic, and visual design in a corporate or agency context preferred but not required",
+        "zh-CN": "At least one (1) year of UI / UX, graphic, and visual design in a corporate or agency context preferred but not required"
+      },
+      {
+        "en-US": "Able to take feedback constructively and iterate on designs and ideas from managers or investors with differing opinions",
+        "zh-HK": "Able to take feedback constructively and iterate on designs and ideas from managers or investors with differing opinions",
+        "zh-CN": "Able to take feedback constructively and iterate on designs and ideas from managers or investors with differing opinions"
+      },
+      {
+        "en-US": "Understanding and experience in user-centered design process",
+        "zh-HK": "Understanding and experience in user-centered design process",
+        "zh-CN": "Understanding and experience in user-centered design process"
+      },
+      {
+        "en-US": "Creative thinker who can effectively innovate big ideas and also work out all the details",
+        "zh-HK": "Creative thinker who can effectively innovate big ideas and also work out all the details",
+        "zh-CN": "Creative thinker who can effectively innovate big ideas and also work out all the details"
+      },
+      {
+        "en-US": "Excellent interaction design skills",
+        "zh-HK": "Excellent interaction design skills",
+        "zh-CN": "Excellent interaction design skills"
+      },
+      {
+        "en-US": "Knowledge of HTML, CSS, and Javascript",
+        "zh-HK": "Knowledge of HTML, CSS, and Javascript",
+        "zh-CN": "Knowledge of HTML, CSS, and Javascript"
+      },
+      {
+        "en-US": "Ability to communicate effectively with all stakeholders; i.e. technical developers, business leaders, and users",
+        "zh-HK": "Ability to communicate effectively with all stakeholders; i.e. technical developers, business leaders, and users",
+        "zh-CN": "Ability to communicate effectively with all stakeholders; i.e. technical developers, business leaders, and users"
+      },
+      {
+        "en-US": "Portfolio showing your UX skills is required",
+        "zh-HK": "Portfolio showing your UX skills is required",
+        "zh-CN": "Portfolio showing your UX skills is required"
+      }
+    ],
+    "jobPluses": []
   }
 ]
