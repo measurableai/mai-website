@@ -68,14 +68,14 @@ const WhySection = () => {
             height={transactionHeight}
             title={
               <FormattedMessage
-                id="transactionalEmails"
-                defaultMessage="TRANSACTIONAL EMAILS"
+                id="whySectionTitle1"
+                defaultMessage="TRANSACTIONAL DATA"
               />
             }
             subTitle={
               <FormattedMessage
-                id="fromMillionsOfUsers"
-                defaultMessage="from millions of users"
+                id="whySectionSubTitle1"
+                defaultMessage="Access SKU level high definition data or anonymized and aggregated datasets updated on a weekly basis"
               />
             }
           />
@@ -86,12 +86,15 @@ const WhySection = () => {
             width={skuLevelWidth}
             height={skuLevelHeight}
             title={
-              <FormattedMessage id="skuLevel" defaultMessage="SKU LEVEL" />
+              <FormattedMessage
+                id="whySectionTitle2"
+                defaultMessage="CONSUMER PANEL"
+              />
             }
             subTitle={
               <FormattedMessage
-                id="highDefinitionData"
-                defaultMessage="High Definition Data"
+                id="whySectionSubTitle2"
+                defaultMessage="We develop and own the data source, and make sure it’s 100% compliant."
               />
             }
           />
@@ -103,14 +106,14 @@ const WhySection = () => {
             height={rareCoverageHeight}
             title={
               <FormattedMessage
-                id="rareCoverage"
+                id="whySectionTitle3"
                 defaultMessage="RARE COVERAGE"
               />
             }
             subTitle={
               <FormattedMessage
-                id="overTenEmergingMarkets"
-                defaultMessage="Over 10 Emerging markets"
+                id="whySectionSubTitle3"
+                defaultMessage="Biggest alternative data provider for emerging markets including South-East Asia, Latin America, Middle East, and more."
               />
             }
           />
