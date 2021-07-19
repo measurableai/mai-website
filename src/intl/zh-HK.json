@@ -103,19 +103,21 @@
     "companyName": "Company Name"
   },
   "leaveMessageForm": {
-    "description": "Leave us a message and we’ll get back to you asap.",
+    "description": "Unlock the power of transactional e-mail data to discover new, actionable insights.",
     "name": "Name",
     "companyName": "Company Name",
     "email": "Email",
     "message": "Message",
-    "phone": "Phone Number"
+    "phone": "Phone Number",
+    "termsOfUse": "I agree to the <span1>Terms of Service</span1> and to the processing of my contact details in accordance with the <span2>Privacy Policy</span2>.",
+    "receiveUpdates": "I would like to receive updates about Measurable AI. You can unsubscribe any time."
   },
   "emailSubscribeForm": {
     "description": "You have already subscribed"
   },
   "formSubmitSuccess": "Measurable AI representative will get in touch with you soon.",
   "formSubmitFailed": "We failed to send your request. Please try again later!",
-  "talkToUs": "TALK TO US",
+  "requestADemo": "REQUEST A DEMO",
 
   "weAreHiring": "We’re HIRING!",
   "joinUs": "Join us in our quest to make communication friendly and efficient! We're looking for full-stack developers to our team in Hong Kong, and we're offering generous equity alongside competitive pay. Not to mention free meals, snacks and drinks, gym room and table tennis, and happy hours!",

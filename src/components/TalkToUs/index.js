@@ -21,11 +21,11 @@ const TalkToUs = () => {
     <div>
       <button onClick={() => open()} css={theme => helpButton(theme, isOpen)}>
         <span css={helpSymbol}>?</span>
-        <FormattedMessage id="talkToUs" defaultMessage="TALK TO US" />
+        <FormattedMessage id="requestADemo" defaultMessage="REQUEST A DEMO" />
       </button>
       <div css={theme => container(theme, !isOpen)}>
         <div css={popoverHeader}>
-          <FormattedMessage id="talkToUs" defaultMessage="TALK TO US" />
+          <FormattedMessage id="requestADemo" defaultMessage="REQUEST A DEMO" />
           <button
             css={closeButton}
             onClick={() => {

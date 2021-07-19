@@ -1,9 +1,10 @@
-import React, { useMemo } from "react"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import React, { useMemo, useState } from "react"
+import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 
 import Button from "@/components/Button"
 import LabelTextInput from "../LabelTextInput"
+import CheckBox from "../CheckBox"
 import ClipLoader from "react-spinners/ClipLoader"
 
 import {
@@ -30,6 +31,9 @@ const initialFormState = {
 const Callback = () => {
   const theme = useTheme()
   const intl = useIntl()
+  const [checkedTermsOfUse, setCheckedTermsOfUse] = useState(false)
+  const [checkedReceiveUpdates, setReceiveUpdates] = useState(false)
+  // should these two states include in the form?
 
   const formOptions = useMemo(
     () => ({
@@ -37,10 +41,11 @@ const Callback = () => {
       additionalFormBody: {
         request_phone_callback: false,
         locale: String(intl.locale).toLowerCase(),
+        should_subscribe: checkedReceiveUpdates,
       },
       optionalStates: ["phone"],
     }),
-    [intl.locale]
+    [intl.locale, checkedReceiveUpdates]
   )
 
   const { formFields, formStatus, handleSubmit, disabled } = useForm(
@@ -55,7 +60,7 @@ const Callback = () => {
         <p css={message}>
           <FormattedMessage
             id="leaveMessageForm.description"
-            defaultMessage="Leave us a message and we’ll get back to you asap."
+            defaultMessage="Unlock the power of transactional e-mail data to discover new, actionable insights."
           />
         </p>
         <LabelTextInput
@@ -123,6 +128,30 @@ const Callback = () => {
           value={formFields.message.value}
           onChange={event => formFields.message.onChange(event.target.value)}
         />
+        <CheckBox
+          checked={checkedTermsOfUse}
+          onClick={() => setCheckedTermsOfUse(checked => !checked)}
+          detail={
+            <FormattedMessage
+              id="leaveMessageForm.termsOfUse"
+              defaultMessage="I agree to the <span1>Terms of Service</span1> and to the processing of my contact details in accordance with the <span2>Privacy Policy</span2>."
+              values={{
+                span1: str => <Link to="/termsOfUse">{str}</Link>,
+                span2: str => <Link to="/privacyPolicy">{str}</Link>,
+              }}
+            />
+          }
+        />
+        <CheckBox
+          checked={checkedReceiveUpdates}
+          onClick={() => setReceiveUpdates(checked => !checked)}
+          detail={
+            <FormattedMessage
+              id="leaveMessageForm.receiveUpdates"
+              defaultMessage="I would like to receive updates about Measurable AI. You can unsubscribe any time."
+            />
+          }
+        />
       </div>
       <div css={footer}>
         {formStatus === SUBMITTED ? (
@@ -140,7 +169,11 @@ const Callback = () => {
             />
           </p>
         ) : null}
-        <Button type="submit" css={submitButton} disabled={disabled}>
+        <Button
+          type="submit"
+          css={submitButton}
+          disabled={disabled || !checkedTermsOfUse}
+        >
           {formStatus === SUBMITTING ? (
             <ClipLoader size={14} color={theme.colors.purples.normal} />
           ) : (
