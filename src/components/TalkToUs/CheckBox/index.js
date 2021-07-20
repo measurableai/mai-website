@@ -11,6 +11,9 @@ const CheckBox = ({ checked, detail, onClick, ...props }) => {
           {
             backgroundColor: checked
               ? theme.colors.purples.normal
+              : theme.colors.white,
+            borderColor: checked
+              ? theme.colors.purples.normal
               : theme.colors.greens.light,
           },
         ]}
