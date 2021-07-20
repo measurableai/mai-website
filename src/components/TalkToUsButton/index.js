@@ -5,7 +5,7 @@ import { button } from "./style"
 
 const TalkToUsButton = forwardRef(({ innerRef, ...props }, ref) => (
   <button ref={ref || innerRef} css={button} {...props}>
-    <FormattedMessage id="talkToUs" defaultMessage="TALK TO US" />
+    <FormattedMessage id="requestADemo" defaultMessage="REQUEST A DEMO" />
   </button>
 ))
 
