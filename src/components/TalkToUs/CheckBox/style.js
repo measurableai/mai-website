@@ -2,9 +2,11 @@ import { css } from "@emotion/core"
 
 export const checkBox = css`
   display: inline-block;
-  height: 14px;
-  width: 14px;
-  margin-right: 8px;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-right: 1.2rem;
+  border-width: 1px;
+  border-style: solid;
 `
 
 export const message = theme => css`
