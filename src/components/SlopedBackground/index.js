@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from "react"
+import React, { useState, useMemo, useContext } from "react"
 import { css } from "@emotion/core"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import BackgroundWithNavigator from "@/components/BackgroundWithNavigator"
+import { TalkToUsContext } from "@/context/talkToUs"
 
 import { background, anchor } from "./style"
 
@@ -11,11 +11,12 @@ const SlopedSection = ({
   slopedBackgroundColor,
   slopedBackgroundImage,
   hoverBackgroundColor,
-  href,
+  requestADemo,
   dotBackground,
   ...props
 }) => {
   const [isHover, setIsHover] = useState(false)
+  const { open } = useContext(TalkToUsContext)
 
   const childWithProp = useMemo(
     () =>
@@ -60,16 +61,14 @@ const SlopedSection = ({
         }
       `}
       backgroundComponent={
-        href ? (
-          <OutboundLink
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
+        requestADemo && (
+          <div
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
             css={anchor}
+            onClick={open}
           />
-        ) : null
+        )
       }
       {...props}
     >

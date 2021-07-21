@@ -28,4 +28,5 @@ export const anchor = css`
   transform: skewY(-21.5deg);
   width: 100%;
   z-index: 3;
+  cursor: pointer;
 `
