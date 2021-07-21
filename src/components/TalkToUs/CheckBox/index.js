@@ -7,14 +7,14 @@ const CheckBox = ({ checked, detail, onClick, ...props }) => {
     <div css={container} {...props}>
       <div
         css={theme => [
-          checkBox,
+          checkBox(theme),
           {
             backgroundColor: checked
               ? theme.colors.purples.normal
               : theme.colors.white,
             borderColor: checked
               ? theme.colors.purples.normal
-              : theme.colors.greens.light,
+              : theme.colors.greens.dark,
           },
         ]}
         onClick={onClick}

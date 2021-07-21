@@ -1,12 +1,16 @@
 import { css } from "@emotion/core"
 
-export const checkBox = css`
+export const checkBox = theme => css`
   display: inline-block;
   height: 1.6rem;
   width: 1.6rem;
   margin-right: 1.2rem;
   border-width: 1px;
   border-style: solid;
+
+  &:hover {
+    box-shadow: 0 0 0 1px ${theme.colors.greens.dark};
+  }
 `
 
 export const message = theme => css`
