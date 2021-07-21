@@ -96,7 +96,7 @@ const IndexPage = () => {
         showNavigator
         slopedBackgroundColor={theme.colors.greens.light}
         hoverBackgroundColor={theme.colors.purples.normal}
-        href="https://beta.measurable.ai/register"
+        requestADemo
       >
         <GetStarted />
       </SlopedSection>
