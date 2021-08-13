@@ -37,6 +37,7 @@ export const errorMessage = theme => css`
 
 export const submitButton = css`
   align-self: flex-end;
+  text-transform: uppercase;
   width: 12rem;
   height: 4rem;
 `
