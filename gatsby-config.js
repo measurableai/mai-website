@@ -79,6 +79,7 @@ module.exports = {
         background_color: `#221852`,
         theme_color: `#221852`,
         display: `standalone`,
+        gcm_sender_id: "539876079581",
         icon: `src/images/manifest-icon.png`,
       },
     },

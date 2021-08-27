@@ -21,3 +21,5 @@ export const onClientEntry = async () => {
 
   config({ ssrFadeout: true })
 }
+
+export const registerServiceWorker = () => true
