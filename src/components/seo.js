@@ -69,7 +69,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="text/javascript">
+        {`(function(d, t) {
+          var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+          g.src = "https://cdn.pushalert.co/integrate_5d4e08b70ed6937a0f214e7a6ef22c0d.js";
+          s.parentNode.insertBefore(g, s);
+        }(document, "script"));`}
+      </script>
+    </Helmet>
   )
 }
 
