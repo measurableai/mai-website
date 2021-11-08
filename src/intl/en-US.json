@@ -118,6 +118,8 @@
   "formSubmitSuccess": "Measurable AI representative will get in touch with you soon.",
   "formSubmitFailed": "We failed to send your request. Please try again later!",
   "requestADemo": "REQUEST A DEMO",
+  "submit": "Submit",
+  "done": "Done",
 
   "weAreHiring": "We’re HIRING!",
   "joinUs": "Join us in our quest to connect the dots with data! We're looking for full-stack developers and data scientists to our team in Hong Kong, and we're offering generous equity alongside competitive pay. Not to mention free meals, snacks and drinks, gym room and table tennis, and happy hours!",
@@ -131,5 +133,5 @@
   "letUsknowYourPublication": "Let us know your publication, story and companies you are looking at, and we'll help !",
   "emailToPress": "Please contact <span>press@measurable.ai</span>",
   "downloadPressKit": "Download Press Kit",
-  "address": "9/F, 118 Wai Yip St, Kwun Tong, Kowloon, Hong Kong"
+  "address": "66 Shanghai St, Yau Ma Tei, Kowloon, Hong Kong"
 }

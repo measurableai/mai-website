@@ -130,7 +130,7 @@ const Footer = () => {
         <p css={address}>
           <FormattedMessage
             id="address"
-            defaultMessage="9/F, 118 Wai Yip St, Kwun Tong, Kowloon, Hong Kong"
+            defaultMessage="66 Shanghai St, Yau Ma Tei, Kowloon, Hong Kong"
           />
         </p>
       </div>

@@ -154,8 +154,10 @@ const Callback = () => {
         <Button type="submit" css={submitButton} disabled={disabled}>
           {formStatus === SUBMITTING ? (
             <ClipLoader size={14} color={theme.colors.purples.normal} />
+          ) : formStatus === SUBMITTED ? (
+            <FormattedMessage id="done" defaultMessage="Done" />
           ) : (
-            "SUBMIT"
+            <FormattedMessage id="submit" defaultMessage="Submit" />
           )}
         </Button>
       </div>
