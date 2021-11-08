@@ -1,10 +1,44 @@
+const siteUrl = "https://www.measurable.ai"
+
 module.exports = {
   siteMetadata: {
     title: `Measurable AI`,
     description: `[Alternative Data for Emerging Markets] Measurable AI generates actionable consumer insights based on billions of transactional data for the emerging markets.`,
     author: `Measurable AI`,
+    siteUrl: siteUrl,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          allWordpressPost {
+            edges {
+              node {
+                link
+                modified
+              }
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+      },
+    },
     {
       resolve: `gatsby-plugin-linkedin-insight`,
       options: {
