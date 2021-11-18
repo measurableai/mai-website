@@ -61,3 +61,7 @@ export const stockSymbol = theme => css`
     letter-spacing: 1px;
   }
 `
+
+export const moreAnchor = css`
+  text-decoration: none;
+`

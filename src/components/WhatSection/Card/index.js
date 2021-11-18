@@ -9,8 +9,10 @@ import {
   dotLineMore,
   dotLineContainer,
   stockSymbol,
+  moreAnchor,
 } from "./style"
 import DotLine from "@/components/DotLine"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import useMedia from "@/hooks/useMedia"
 
@@ -45,9 +47,14 @@ const Card = forwardRef(
             </p>
           </Fragment>
         ))}
-        <p css={theme => [dotLineStyle(theme), dotLineMore]}>
-          <FormattedMessage id="more" defaultMessage="more ..." />
-        </p>
+        <OutboundLink
+          css={moreAnchor}
+          href="https://file.measurable.ai/coverage.pdf"
+        >
+          <p css={theme => [dotLineStyle(theme), dotLineMore]}>
+            <FormattedMessage id="more" defaultMessage="more ..." />
+          </p>
+        </OutboundLink>
       </div>
     )
   }
