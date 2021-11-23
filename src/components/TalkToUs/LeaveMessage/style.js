@@ -41,3 +41,9 @@ export const submitButton = css`
   width: 12rem;
   height: 4rem;
 `
+
+export const buttonOutbound = css`
+  margin-top: 1.8rem;
+  text-decoration: none;
+  align-self: center;
+`

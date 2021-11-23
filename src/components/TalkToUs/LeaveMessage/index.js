@@ -1,10 +1,11 @@
-import React, { useMemo } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 
 import Button from "@/components/Button"
 import LabelTextInput from "../LabelTextInput"
 import ClipLoader from "react-spinners/ClipLoader"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   form,
@@ -14,6 +15,7 @@ import {
   submittedMessage,
   errorMessage,
   submitButton,
+  buttonOutbound,
 } from "./style"
 
 import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
@@ -27,7 +29,7 @@ const initialFormState = {
   phone: "",
 }
 
-const Callback = () => {
+const Callback = ({ onFormStateChange }) => {
   const theme = useTheme()
   const intl = useIntl()
 
@@ -49,100 +51,112 @@ const Callback = () => {
     formOptions
   )
 
+  useEffect(() => onFormStateChange(formStatus), [formStatus])
+
   return (
     // TODO: merge component with Callback
     <form css={form} onSubmit={handleSubmit}>
-      <div>
-        <p css={message}>
-          <FormattedMessage
-            id="leaveMessageForm.description"
-            defaultMessage="Unlock the power of transactional e-mail data to discover new, actionable insights."
-          />
-        </p>
-        <LabelTextInput
-          label={
+      {formStatus !== SUBMITTED && (
+        <div>
+          <p css={message}>
             <FormattedMessage
-              id="leaveMessageForm.name"
-              defaultMessage="Name"
-            />
-          }
-          id="name"
-          value={formFields.customer_name.value}
-          onChange={event =>
-            formFields.customer_name.onChange(event.target.value)
-          }
-        />
-        <LabelTextInput
-          label={
-            <FormattedMessage
-              id="leaveMessageForm.companyName"
-              defaultMessage="Company Name"
-            />
-          }
-          id="companyName"
-          value={formFields.company_name.value}
-          onChange={event =>
-            formFields.company_name.onChange(event.target.value)
-          }
-        />
-        <LabelTextInput
-          label={
-            <FormattedMessage
-              id="leaveMessageForm.email"
-              defaultMessage="Email"
-            />
-          }
-          id="email"
-          value={formFields.email_address.value}
-          onChange={event =>
-            formFields.email_address.onChange(event.target.value)
-          }
-        />
-        <LabelTextInput
-          label={
-            <FormattedMessage
-              id="leaveMessageForm.phone"
-              defaultMessage="Phone Number"
-            />
-          }
-          id="phone"
-          value={formFields.phone.value}
-          optional
-          onChange={event => formFields.phone.onChange(event.target.value)}
-        />
-        <LabelTextInput
-          css={textarea}
-          label={
-            <FormattedMessage
-              id="leaveMessageForm.message"
-              defaultMessage="Message"
-            />
-          }
-          as="textarea"
-          rows={3}
-          id="message"
-          value={formFields.message.value}
-          onChange={event => formFields.message.onChange(event.target.value)}
-        />
-        <p css={message}>
-          <FormattedMessage
-            id="leaveMessageForm.receiveUpdates"
-            defaultMessage="By submitting the form, you agree to the <span1>privacy policy</span1>, <span2>terms of service</span2> and to receive updates about Measurable AI"
-            values={{
-              span1: str => <Link to="/privacyPolicy">{str}</Link>,
-              span2: str => <Link to="/termsOfUse">{str}</Link>,
-            }}
-          />
-        </p>
-      </div>
-      <div css={footer}>
-        {formStatus === SUBMITTED ? (
-          <p css={submittedMessage}>
-            <FormattedMessage
-              id="formSubmitSuccess"
-              defaultMessage="Your request has been sent!"
+              id="leaveMessageForm.description"
+              defaultMessage="Unlock the power of transactional e-mail data to discover new, actionable insights."
             />
           </p>
+          <LabelTextInput
+            label={
+              <FormattedMessage
+                id="leaveMessageForm.name"
+                defaultMessage="Name"
+              />
+            }
+            id="name"
+            value={formFields.customer_name.value}
+            onChange={event =>
+              formFields.customer_name.onChange(event.target.value)
+            }
+          />
+          <LabelTextInput
+            label={
+              <FormattedMessage
+                id="leaveMessageForm.companyName"
+                defaultMessage="Company Name"
+              />
+            }
+            id="companyName"
+            value={formFields.company_name.value}
+            onChange={event =>
+              formFields.company_name.onChange(event.target.value)
+            }
+          />
+          <LabelTextInput
+            label={
+              <FormattedMessage
+                id="leaveMessageForm.email"
+                defaultMessage="Email"
+              />
+            }
+            id="email"
+            value={formFields.email_address.value}
+            onChange={event =>
+              formFields.email_address.onChange(event.target.value)
+            }
+          />
+          <LabelTextInput
+            label={
+              <FormattedMessage
+                id="leaveMessageForm.phone"
+                defaultMessage="Phone Number"
+              />
+            }
+            id="phone"
+            value={formFields.phone.value}
+            optional
+            onChange={event => formFields.phone.onChange(event.target.value)}
+          />
+          <LabelTextInput
+            css={textarea}
+            label={
+              <FormattedMessage
+                id="leaveMessageForm.message"
+                defaultMessage="Message"
+              />
+            }
+            as="textarea"
+            rows={3}
+            id="message"
+            value={formFields.message.value}
+            onChange={event => formFields.message.onChange(event.target.value)}
+          />
+          <p css={message}>
+            <FormattedMessage
+              id="leaveMessageForm.receiveUpdates"
+              defaultMessage="By submitting the form, you agree to the <span1>privacy policy</span1>, <span2>terms of service</span2> and to receive updates about Measurable AI"
+              values={{
+                span1: str => <Link to="/privacyPolicy">{str}</Link>,
+                span2: str => <Link to="/termsOfUse">{str}</Link>,
+              }}
+            />
+          </p>
+        </div>
+      )}
+      <div css={footer}>
+        {formStatus === SUBMITTED ? (
+          <>
+            <p css={submittedMessage}>
+              <FormattedMessage
+                id="formSubmitSuccess"
+                defaultMessage="Thanks for getting in touch! You’ll be hearing from us soon."
+              />
+            </p>
+            <p css={submittedMessage}>
+              <FormattedMessage
+                id="readLatestInsights"
+                defaultMessage="In the meantime, read our latest insights here."
+              />
+            </p>
+          </>
         ) : formStatus === FAILED ? (
           <p css={theme => [submittedMessage, errorMessage(theme)]}>
             <FormattedMessage
@@ -151,15 +165,27 @@ const Callback = () => {
             />
           </p>
         ) : null}
-        <Button type="submit" css={submitButton} disabled={disabled}>
-          {formStatus === SUBMITTING ? (
-            <ClipLoader size={14} color={theme.colors.purples.normal} />
-          ) : formStatus === SUBMITTED ? (
-            <FormattedMessage id="done" defaultMessage="Done" />
-          ) : (
-            <FormattedMessage id="submit" defaultMessage="Submit" />
-          )}
-        </Button>
+
+        {formStatus === SUBMITTED ? (
+          <OutboundLink
+            css={buttonOutbound}
+            href="https://blog.measurable.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button type="button">
+              <FormattedMessage id="maiBlog" defaultMessage="MAI Blog" />
+            </Button>
+          </OutboundLink>
+        ) : (
+          <Button type="submit" css={submitButton} disabled={disabled}>
+            {formStatus === SUBMITTING ? (
+              <ClipLoader size={14} color={theme.colors.purples.normal} />
+            ) : (
+              <FormattedMessage id="submit" defaultMessage="Submit" />
+            )}
+          </Button>
+        )}
       </div>
     </form>
   )
