@@ -147,3 +147,7 @@ export const dataInsightsTag = css`
     padding: 0.25rem 1rem;
   }
 `
+
+export const titleOutbound = css`
+  text-decoration: none;
+`

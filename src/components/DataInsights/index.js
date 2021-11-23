@@ -18,6 +18,7 @@ import {
   blogContainer2,
   blogContainer3,
   dataInsightsTag,
+  titleOutbound,
 } from "./style"
 import BlogPost from "@/components/BlogPost"
 import Tag from "@/components/Tag"
@@ -28,9 +29,16 @@ const industriesEndPoint = `${endPoint}category/industries/`
 const DELAY = 300
 
 const Title = forwardRef(({ children, innerRef, ...props }, ref) => (
-  <p css={title} ref={ref || innerRef} {...props}>
-    {children}
-  </p>
+  <OutboundLink
+    css={titleOutbound}
+    href="https://blog.measurable.ai/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <p css={title} ref={ref || innerRef} {...props}>
+      {children}
+    </p>
+  </OutboundLink>
 ))
 
 const TagsAndButtonContainer = forwardRef(

@@ -50,6 +50,8 @@ const Card = forwardRef(
         <OutboundLink
           css={moreAnchor}
           href="https://file.measurable.ai/coverage.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <p css={theme => [dotLineStyle(theme), dotLineMore]}>
             <FormattedMessage id="more" defaultMessage="more ..." />
