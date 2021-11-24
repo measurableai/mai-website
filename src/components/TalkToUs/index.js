@@ -19,7 +19,7 @@ const TalkToUs = () => {
   const { state, isOpen, open, close, onClose } = useContext(TalkToUsContext)
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
-  const handleFormStateChange = useCallback(_formState => {
+  const handleFormStatusChange = useCallback(_formState => {
     setIsFormSubmitted(_formState === SUBMITTED)
   }, [])
 
@@ -53,7 +53,9 @@ const TalkToUs = () => {
           </button>
         </div>
         <div css={popoverBody}>
-          {state && <LeaveMessage onFormStateChange={handleFormStateChange} />}
+          {state && (
+            <LeaveMessage onFormStatusChange={handleFormStatusChange} />
+          )}
         </div>
       </div>
     </div>

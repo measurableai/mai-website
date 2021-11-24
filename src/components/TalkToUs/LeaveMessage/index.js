@@ -29,7 +29,7 @@ const initialFormState = {
   phone: "",
 }
 
-const Callback = ({ onFormStateChange }) => {
+const Callback = ({ onFormStatusChange }) => {
   const theme = useTheme()
   const intl = useIntl()
 
@@ -51,7 +51,7 @@ const Callback = ({ onFormStateChange }) => {
     formOptions
   )
 
-  useEffect(() => onFormStateChange(formStatus), [formStatus])
+  useEffect(() => onFormStatusChange(formStatus), [formStatus])
 
   return (
     // TODO: merge component with Callback
