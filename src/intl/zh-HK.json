@@ -115,14 +115,15 @@
   "emailSubscribeForm": {
     "description": "You have already subscribed"
   },
-  "formSubmitSuccess": "Measurable AI representative will get in touch with you soon.",
+  "formSubmitSuccess": "Thanks for getting in touch! You’ll be hearing from us soon.",
   "formSubmitFailed": "We failed to send your request. Please try again later!",
+  "readLatestInsights": "In the meantime, read our latest insights here.",
   "requestADemo": "REQUEST A DEMO",
   "submit": "Submit",
   "done": "Done",
 
   "weAreHiring": "We’re HIRING!",
-  "joinUs": "Join us in our quest to make communication friendly and efficient! We're looking for full-stack developers to our team in Hong Kong, and we're offering generous equity alongside competitive pay. Not to mention free meals, snacks and drinks, gym room and table tennis, and happy hours!",
+  "joinUs": "Join us in our quest to connect the dots with data! We’re looking for full-stack developers, software engineers, and data scientists to our team in Hong Kong!",
   "emailToApply": "Email <span>jobs@measurable.ai</span> to apply.",
   "currentOpenings": "Current openings:",
   "jobDescriptions": "Job Descriptions:",
@@ -133,5 +134,7 @@
   "letUsknowYourPublication": "Let us know your publication, story and companies you are looking at, and we'll help !",
   "emailToPress": "Please contact <span>press@measurable.ai</span>",
   "downloadPressKit": "Download Press Kit",
-  "address": "66 Shanghai St, Yau Ma Tei, Kowloon, Hong Kong"
+  "address": "66 Shanghai St, Yau Ma Tei, Kowloon, Hong Kong",
+  "maiBlog": "MAI Blog",
+  "weWillBeInTouch": "WE WILL BE IN TOUCH"
 }

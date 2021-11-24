@@ -21,7 +21,7 @@ const HiringSection = ({ openingJobs, ...props }) => (
     <p css={theme => [contentFontStyle(theme), content]}>
       <FormattedMessage
         id="joinUs"
-        defaultMessage="Join us in our quest to make communication friendly and efficient! We're looking for full-stack developers to our team in Hong Kong, and we're offering generous equity alongside competitive pay. Not to mention free meals, snacks and drinks, gym room and table tennis, and happy hours!"
+        defaultMessage="Join us in our quest to connect the dots with data! We’re looking for full-stack developers, software engineers, and data scientists to our team in Hong Kong!"
       />
     </p>
     <p css={theme => [contentFontStyle(theme), emailMargin]}>

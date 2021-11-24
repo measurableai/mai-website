@@ -41,7 +41,8 @@ const reducer = (state, action) => {
 
 export default (
   initialFormState,
-  { uri, additionalFormBody = null, optionalStates = [] } = {}
+  { uri, additionalFormBody = null, optionalStates = [] } = {},
+  onSubmit = () => {}
 ) => {
   const [state, dispatch] = useReducer(reducer, {
     ...initialState,
@@ -107,6 +108,7 @@ export default (
           throw new Error("HTTP error, status = " + response.status)
         }
 
+        onSubmit()
         dispatch({ type: SET_FORM_STATE, payload: SUBMITTED })
       } catch (error) {
         dispatch({ type: SET_FORM_STATE, payload: FAILED })

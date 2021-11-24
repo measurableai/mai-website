@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useCallback, useContext, useState } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import { TalkToUsContext } from "@/context/talkToUs"
 
@@ -16,6 +16,11 @@ import {
 
 const TalkToUs = () => {
   const { state, isOpen, open, close, onClose } = useContext(TalkToUsContext)
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+
+  const handleSubmit = useCallback(() => {
+    setIsFormSubmitted(true)
+  }, [])
 
   return (
     <div>
@@ -25,7 +30,17 @@ const TalkToUs = () => {
       </button>
       <div css={theme => container(theme, !isOpen)}>
         <div css={popoverHeader}>
-          <FormattedMessage id="requestADemo" defaultMessage="REQUEST A DEMO" />
+          {isFormSubmitted ? (
+            <FormattedMessage
+              id="weWillBeInTouch"
+              defaultMessage="WE WILL BE IN TOUCH"
+            />
+          ) : (
+            <FormattedMessage
+              id="requestADemo"
+              defaultMessage="REQUEST A DEMO"
+            />
+          )}
           <button
             css={closeButton}
             onClick={() => {
@@ -36,7 +51,9 @@ const TalkToUs = () => {
             <div css={closeSymbol} />
           </button>
         </div>
-        <div css={popoverBody}>{state && <LeaveMessage />}</div>
+        <div css={popoverBody}>
+          {state && <LeaveMessage onSubmit={handleSubmit} />}
+        </div>
       </div>
     </div>
   )

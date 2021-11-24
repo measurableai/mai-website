@@ -68,7 +68,7 @@ const EmailSubscribe = () => {
         <p>
           <FormattedMessage
             id="formSubmitSuccess"
-            defaultMessage="Your request has been sent!"
+            defaultMessage="Thanks for getting in touch! You’ll be hearing from us soon."
           />
         </p>
       ) : formStatus === "failed" ? (
