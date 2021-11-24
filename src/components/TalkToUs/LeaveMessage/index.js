@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useMemo, useState } from "react"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 
@@ -29,7 +29,7 @@ const initialFormState = {
   phone: "",
 }
 
-const Callback = ({ onFormStatusChange }) => {
+const Callback = ({ onSubmit }) => {
   const theme = useTheme()
   const intl = useIntl()
 
@@ -48,10 +48,9 @@ const Callback = ({ onFormStatusChange }) => {
 
   const { formFields, formStatus, handleSubmit, disabled } = useForm(
     initialFormState,
-    formOptions
+    formOptions,
+    onSubmit
   )
-
-  useEffect(() => onFormStatusChange(formStatus), [formStatus])
 
   return (
     // TODO: merge component with Callback
