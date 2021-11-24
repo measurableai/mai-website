@@ -42,7 +42,7 @@ const reducer = (state, action) => {
 export default (
   initialFormState,
   { uri, additionalFormBody = null, optionalStates = [] } = {},
-  onSubmit = {}
+  onSubmit = () => {}
 ) => {
   const [state, dispatch] = useReducer(reducer, {
     ...initialState,
