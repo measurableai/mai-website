@@ -364,5 +364,52 @@
       }
     ],
     "jobPluses": []
+  },
+  {
+    "jobTitle": {
+      "en-US": "MARKETING MANAGER",
+      "zh-HK": "MARKETING MANAGER",
+      "zh-CN": "MARKETING MANAGER"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Data-Driven Content Marketing: We are a big data company! So the way we do content is a bit different than traditional content marketing. We will be publishing data-driven reports, whitepapers, and sometimes industry researches. You will learn how to tell stories with data.",
+        "zh-HK": "Data-Driven Content Marketing: We are a big data company! So the way we do content is a bit different than traditional content marketing. We will be publishing data-driven reports, whitepapers, and sometimes industry researches. You will learn how to tell stories with data.",
+        "zh-CN": "Data-Driven Content Marketing: We are a big data company! So the way we do content is a bit different than traditional content marketing. We will be publishing data-driven reports, whitepapers, and sometimes industry researches. You will learn how to tell stories with data."
+      },
+      {
+        "en-US": "2C & 2B Experience: We own both consumer-facing and business-oriented services, so for both products, we need different marketing strategies. You will need to launch and execute various marketing campaigns/ads strategies to promote both products. Our new consumer app: RewardMe (https://reward.me)",
+        "zh-HK": "2C & 2B Experience: We own both consumer-facing and business-oriented services, so for both products, we need different marketing strategies. You will need to launch and execute various marketing campaigns/ads strategies to promote both products. Our new consumer app: RewardMe (https://reward.me)",
+        "zh-CN": "2C & 2B Experience: We own both consumer-facing and business-oriented services, so for both products, we need different marketing strategies. You will need to launch and execute various marketing campaigns/ads strategies to promote both products. Our new consumer app: RewardMe (https://reward.me)"
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "Major in Marketing, English, Multimedia or related areas",
+        "zh-HK": "Major in Marketing, English, Multimedia or related areas",
+        "zh-CN": "Major in Marketing, English, Multimedia or related areas"
+      },
+      {
+        "en-US": "Min. 1-year work experience in a related field (tech, digital media, or advertising)",
+        "zh-HK": "Min. 1-year work experience in a related field (tech, digital media, or advertising)",
+        "zh-CN": "Min. 1-year work experience in a related field (tech, digital media, or advertising)"
+      },
+      {
+        "en-US": "Passion for content creating, and technology",
+        "zh-HK": "Passion for content creating, and technology",
+        "zh-CN": "Passion for content creating, and technology"
+      },
+      {
+        "en-US": "Highly motivated fast self-learner",
+        "zh-HK": "Highly motivated fast self-learner",
+        "zh-CN": "Highly motivated fast self-learner"
+      },
+      {
+        "en-US": "Excellent writing skills in English",
+        "zh-HK": "Excellent writing skills in English",
+        "zh-CN": "Excellent writing skills in English"
+      }
+    ],
+    "jobPluses": []
   }
 ]
