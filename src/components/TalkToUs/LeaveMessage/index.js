@@ -97,6 +97,8 @@ const Callback = ({ onSubmit }) => {
               />
             }
             id="email"
+            type="email"
+            name="email"
             value={formFields.email_address.value}
             onChange={event =>
               formFields.email_address.onChange(event.target.value)
