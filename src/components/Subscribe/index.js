@@ -96,8 +96,8 @@ const Subscribe = ({ ...props }) => {
       <div css={subscribeContainer}>
         <p css={theme => [fontStyle(theme), subscribeTitle]}>
           <FormattedMessage
-            id="subscribeToOurNewsLetter"
-            defaultMessage={`<span>SUBSCRIBE</span> to our newsletter`}
+            id="accessLatestDataInsights"
+            defaultMessage={`<span>ACCESS</span> the latest data insights`}
             values={{
               span: str => <span css={subscribe}>{str}</span>,
             }}
