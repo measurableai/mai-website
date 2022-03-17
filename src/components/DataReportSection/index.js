@@ -49,9 +49,15 @@ const DataReportSection = () => {
   const data = useMemo(
     () =>
       createRawData(theme, !isDesktop).map(rawDataItem => {
-        const dataItem = { slide: {}, chartOption: {} }
+        const dataItem = {
+          slide: {},
+          chartOption: {},
+          image: rawDataItem.image || "",
+        }
 
         Object.keys(rawDataItem).forEach(key => {
+          if (key === "image") return
+
           dataItem[key] = {}
 
           Object.keys(rawDataItem[key]).forEach(subKey => {

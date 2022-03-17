@@ -3,25 +3,29 @@ import cnyFlagSrc from "@/images/chart-cny.svg"
 import hblFlagSrc from "@/images/chart-hbl.svg"
 import bestbuyDataPointIconSrc from "@/images/chart-bestbuy.svg"
 import targetDataPointIconSrc from "@/images/chart-target.svg"
+import MAI_DataReports_01 from "@/images/MAI_DataReports_01.gif"
+import MAI_DataReports_02 from "@/images/MAI_DataReports_02.png"
+import MAI_DataReports_03 from "@/images/MAI_DataReports_03.png"
 
 export default (theme, isMobile) => [
   {
     slide: {
-      tag: "Media Streaming",
+      tag: "MarketShare",
       title: {
-        "en-US": "Netflix’s Brazilian users VS US users",
-        "zh-HK": "Netflix’s Brazilian users VS US users",
-        "zh-CN": "Netflix’s Brazilian users VS US users",
+        "en-US": "Food delivery market share change in Asia",
+        "zh-HK": "Food delivery market share change in Asia",
+        "zh-CN": "Food delivery market share change in Asia",
       },
       description: {
         "en-US":
-          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, the long-term retention rate is lower than that of the Brazilian ones.",
+          "Measurable AI continues to monitor the market share change across different markets in the heated food delivery industry. Check the latest landscape in Asia Pacific across Hong Kong, Taiwan, Singapore and Malaysia in 2021 (based on monthly total sales in USD). ",
         "zh-HK":
-          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, the long-term retention rate is lower than that of the Brazilian ones.",
+          "Measurable AI continues to monitor the market share change across different markets in the heated food delivery industry. Check the latest landscape in Asia Pacific across Hong Kong, Taiwan, Singapore and Malaysia in 2021 (based on monthly total sales in USD). ",
         "zh-CN":
-          "Netflix’s customer retention in Brazil over the past 36 months showed that users in Brazil are extremely loyal. Over 60% of Brazilian users still subscribe to the service 2 years after joining. For US users, the long-term retention rate is lower than that of the Brazilian ones.",
+          "Measurable AI continues to monitor the market share change across different markets in the heated food delivery industry. Check the latest landscape in Asia Pacific across Hong Kong, Taiwan, Singapore and Malaysia in 2021 (based on monthly total sales in USD). ",
       },
     },
+    image: MAI_DataReports_01,
     chartOption: {
       title: {
         "en-US":
@@ -157,21 +161,22 @@ export default (theme, isMobile) => [
   },
   {
     slide: {
-      tag: "Ecommerce",
+      tag: "FoodDelivery",
       title: {
-        "en-US": "Target and Best Buy are Transforming Online",
-        "zh-HK": "Target and Best Buy are Transforming Online",
-        "zh-CN": "Target and Best Buy are Transforming Online",
+        "en-US": "DoorDash: Beat consensus with weekly fresh data",
+        "zh-HK": "DoorDash: Beat consensus with weekly fresh data",
+        "zh-CN": "DoorDash: Beat consensus with weekly fresh data",
       },
       description: {
         "en-US":
-          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most traditional retailers. Online sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years. The average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+          "Measurable AI's aggregated order volume is highly correlated with  Doordash(NYSE:DASH)'s reported total orders by quarterly throughout the past few years (2019 -2021).",
         "zh-HK":
-          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most traditional retailers. Online sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years. The average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+          "Measurable AI's aggregated order volume is highly correlated with  Doordash(NYSE:DASH)'s reported total orders by quarterly throughout the past few years (2019 -2021).",
         "zh-CN":
-          "The uptrend of sales for both companies from 2018 to 2019 is obvious amid the downturn for most traditional retailers. Online sales of Target and Best Buy have both seen peaks during the holiday season throughout the past two years. The average monthly online sales of Best Buy during holiday has risen dramatically by almost 50% this year.",
+          "Measurable AI's aggregated order volume is highly correlated with  Doordash(NYSE:DASH)'s reported total orders by quarterly throughout the past few years (2019 -2021).",
       },
     },
+    image: MAI_DataReports_02,
     chartOption: {
       title: {
         "en-US": "Total Spending Index",
@@ -341,19 +346,19 @@ export default (theme, isMobile) => [
   },
   {
     slide: {
-      tag: "GAMES",
+      tag: "India",
       title: {
-        "en-US": "Chinese Players’ red envelope money goes to Honor of Kings",
-        "zh-HK": "Chinese Players’ red envelope money goes to Honor of Kings",
-        "zh-CN": "Chinese Players’ red envelope money goes to Honor of Kings",
+        "en-US": "Zomato: Keep up with the new stars",
+        "zh-HK": "Zomato: Keep up with the new stars",
+        "zh-CN": "Zomato: Keep up with the new stars",
       },
       description: {
         "en-US":
-          "Tencent’s top grossing game Honor of Kings launched its biggest update with a new feature “Honor Badge” right before the Chinese New Year. It helped the game's revenues peak again in China. In-app-purchase sales in the first week of the holiday month grew by around 150%.",
+          "With the full granularity of e-receipts data, Measurable AI helps clients monitor a variety of metrics from revenues to specific GMV or customer-level behaviour. Our quarterly aggregated order volume for Zomato(NSE: ZOMATO) continues to show a high correlation with Zomato’s reported GOV(Gross Order Value). \n*Zomato's financial year 2021 starts July 2020 and ends April 2021",
         "zh-HK":
-          "Tencent’s top grossing game Honor of Kings launched its biggest update with a new feature “Honor Badge” right before the Chinese New Year. It helped the game's revenues peak again in China. In-app-purchase sales in the first week of the holiday month grew by around 150%.",
+          "With the full granularity of e-receipts data, Measurable AI helps clients monitor a variety of metrics from revenues to specific GMV or customer-level behaviour. Our quarterly aggregated order volume for Zomato(NSE: ZOMATO) continues to show a high correlation with Zomato’s reported GOV(Gross Order Value). \n*Zomato's financial year 2021 starts July 2020 and ends April 2021",
         "zh-CN":
-          "Tencent’s top grossing game Honor of Kings launched its biggest update with a new feature “Honor Badge” right before the Chinese New Year. It helped the game's revenues peak again in China. In-app-purchase sales in the first week of the holiday month grew by around 150%.",
+          "With the full granularity of e-receipts data, Measurable AI helps clients monitor a variety of metrics from revenues to specific GMV or customer-level behaviour. Our quarterly aggregated order volume for Zomato(NSE: ZOMATO) continues to show a high correlation with Zomato’s reported GOV(Gross Order Value). \n*Zomato's financial year 2021 starts July 2020 and ends April 2021",
       },
     },
     chartOption: {
@@ -457,169 +462,6 @@ export default (theme, isMobile) => [
         },
       ],
     },
-  },
-  {
-    slide: {
-      tag: "Apps",
-      title: {
-        "en-US": "MOMO beats estimates amid authority pressure",
-        "zh-HK": "MOMO beats estimates amid authority pressure",
-        "zh-CN": "MOMO beats estimates amid authority pressure",
-      },
-      description: {
-        "en-US":
-          "From April to July, MOMO's successful dating app Tantan(China’s Tinder) was removed from app stores in China. The app’s revenue was close to zero for over two months. However, on the first week it went live again, the number of paying users of Tantan soon went up by 50% compared to where it was 2 months ago.",
-        "zh-HK":
-          "From April to July, MOMO's successful dating app Tantan(China’s Tinder) was removed from app stores in China. The app’s revenue was close to zero for over two months. However, on the first week it went live again, the number of paying users of Tantan soon went up by 50% compared to where it was 2 months ago.",
-        "zh-CN":
-          "From April to July, MOMO's successful dating app Tantan(China’s Tinder) was removed from app stores in China. The app’s revenue was close to zero for over two months. However, on the first week it went live again, the number of paying users of Tantan soon went up by 50% compared to where it was 2 months ago.",
-      },
-    },
-    chartOption: {
-      title: {
-        "en-US": "Paying Users Trend Index",
-        "zh-HK": "用戶變化趨勢指數",
-        "zh-CN": "用户变化趋势指数",
-      },
-      legend: {
-        "en-US": ["Tantan - Genuine Dating"],
-        "zh-HK": ["Tantan - Genuine Dating"],
-        "zh-CN": ["Tantan - Genuine Dating"],
-      },
-      xAxis: {
-        axisLabelInterval: 1,
-        data: [
-          "w1\n2019",
-          "w2\n2019",
-          "w3\n2019",
-          "w4\n2019",
-          "w5\n2019",
-          "w6\n2019",
-          "w7\n2019",
-          "w8\n2019",
-          "w9\n2019",
-          "w10\n2019",
-          "w11\n2019",
-          "w12\n2019",
-          "w13\n2019",
-          "w14\n2019",
-          "w15\n2019",
-          "w16\n2019",
-          "w17\n2019",
-          "w18\n2019",
-          "w19\n2019",
-          "w20\n2019",
-          "w21\n2019",
-          "w22\n2019",
-          "w23\n2019",
-          "w24\n2019",
-          "w25\n2019",
-          "w26\n2019",
-          "w27\n2019",
-          "w28\n2019",
-          "w29\n2019",
-        ],
-      },
-      yAxis: {
-        // eslint-disable-next-line
-        axisLabelFormatter: "{value}",
-      },
-      series: [
-        {
-          data: [
-            1.39,
-            1.72,
-            1.95,
-            1.71,
-            1.63,
-            1.93,
-            2.03,
-            2.09,
-            2.24,
-            1.96,
-            1.63,
-            1.98,
-            1.48,
-            1.64,
-            1.87,
-            1.74,
-            1.52,
-            0.74,
-            0.05,
-            0.05,
-            0.06,
-            0.03,
-            0.04,
-            0.04,
-            0.05,
-            0.04,
-            0.08,
-            0.63,
-            2.88,
-          ],
-          markLine: {
-            silent: true,
-            symbol: "none",
-            lineStyle: {
-              type: "dashed",
-              color: theme.colors.purples.light,
-            },
-            label: {
-              show: false,
-            },
-            data: [
-              [
-                {
-                  xAxis: "w19\n2019",
-                  yAxis: 0,
-                },
-                {
-                  xAxis: "w19\n2019",
-                  yAxis: 3,
-                },
-              ],
-              [
-                {
-                  xAxis: "w27\n2019",
-                  yAxis: 0,
-                },
-                {
-                  xAxis: "w27\n2019",
-                  yAxis: 3,
-                },
-              ],
-            ],
-          },
-          markArea: {
-            silent: true,
-            label: {
-              show: true,
-              position: "insideLeft",
-              align: "left",
-              padding: isMobile ? [17, 6, 17, 6] : [17, 25, 17, 25],
-              fontSize: isMobile ? 14 : 18,
-              fontFamily: theme.fonts.body,
-              fontWeight: 100,
-              lineHeight: 22,
-              color: theme.colors.purples.light,
-              formatter: "TANTAN\napp\nremoved\nfrom\nAppStore\nin\nChina",
-            },
-            itemStyle: {
-              color: "white",
-            },
-            data: [
-              [
-                {
-                  xAxis: "w19\n2019",
-                },
-                {
-                  xAxis: "w27\n2019",
-                },
-              ],
-            ],
-          },
-        },
-      ],
-    },
+    image: MAI_DataReports_03,
   },
 ]
