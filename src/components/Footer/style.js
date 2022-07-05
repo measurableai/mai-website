@@ -75,11 +75,6 @@ export const socialIcon = last => css`
   }
 `
 
-export const poweredByContainer = css`
-  display: flex;
-  margin-top: 0.8rem;
-`
-
 export const otherPages = css`
   font-size: 1.4rem;
   letter-spacing: 0.51px;
@@ -88,29 +83,6 @@ export const otherPages = css`
   ${mq.tablet} {
     display: inline;
     font-size: 1.2rem;
-  }
-`
-
-export const poweredBy = css`
-  display: inline-block;
-  font-size: 1.1rem;
-  margin: auto 0.8rem auto 0;
-
-  ${mq.tablet} {
-    font-size: 8.2px;
-  }
-`
-
-export const mdtImage = css`
-  display: inline-block;
-  width: 15.8rem;
-  height: 2.7rem;
-  background-size: cover;
-  background-position: center;
-
-  ${mq.tablet} {
-    width: 11.9rem;
-    height: 2rem;
   }
 `
 

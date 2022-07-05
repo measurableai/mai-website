@@ -55,7 +55,7 @@ const Footer = () => {
           <div css={contentLeftContainer}>
             <div>
               <img css={maiImage} src={mailogo} alt="MAI" />
-              <div css={poweredByContainer}>
+              {/* <div css={poweredByContainer}>
                 <p css={theme => [fontStyle(theme), poweredBy]}>
                   <FormattedMessage
                     id="poweredBy"
@@ -69,7 +69,7 @@ const Footer = () => {
                 >
                   <img css={mdtImage} src={mdtLogo} alt="MDT" />
                 </OutboundLink>
-              </div>
+              </div> */}
             </div>
             <div css={logosContainer}>
               <SocialIcon

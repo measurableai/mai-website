@@ -21,35 +21,42 @@ import useMedia from "@/hooks/useMedia"
 const DELAY = 300
 
 const contentArr1 = [
+  { id: "grabFood", defaultMessage: "GrabFood", stockMsgId: "grabStockSymbol" },
+  { id: "gojek", defaultMessage: "Gojek" },
+  {
+    id: "foodpanda",
+    defaultMessage: "Foodpanda",
+    stockMsgId: "foodpandaStockSymbol",
+  },
   {
     id: "uberEats",
     defaultMessage: "UberEats",
     stockMsgId: "uberEatsStockSymbol",
   },
   {
-    id: "foodpanda",
-    defaultMessage: "Foodpanda",
-    stockMsgId: "foodpandaStockSymbol",
+    id: "deliveroo",
+    defaultMessage: "Deliveroo",
+    stockMsgId: "deliverooStockSymbol",
   },
-  { id: "deliveroo", defaultMessage: "Deliveroo" },
-  { id: "grabFood", defaultMessage: "GrabFood" },
-  { id: "iFood", defaultMessage: "iFood" },
-  { id: "rappi", defaultMessage: "Rappi" },
-  { id: "glovo", defaultMessage: "Glovo" },
+  { id: "swiggy", defaultMessage: "Swiggy" },
+  { id: "zomato", defaultMessage: "Zomato" },
+  { id: "talabat", defaultMessage: "Talabat" },
+  { id: "careemNow", defaultMessage: "Careem Now" },
 ]
 
 const contentArr2 = [
-  { id: "uber", defaultMessage: "Uber", stockMsgId: "uberStockSymbol" },
   { id: "grab", defaultMessage: "Grab" },
   { id: "gojek", defaultMessage: "Gojek" },
+  { id: "bolt", defaultMessage: "Bolt" },
   { id: "lyft", defaultMessage: "Lyft", stockMsgId: "lyftStockSymbol" },
+  { id: "uber", defaultMessage: "Uber", stockMsgId: "uberStockSymbol" },
   { id: "beat", defaultMessage: "Beat" },
-  { id: "99", defaultMessage: "99" },
+  { id: "99", defaultMessage: "99 / Didi", stockMsgId: "99StockSymbol" },
   { id: "ola", defaultMessage: "Ola" },
+  { id: "freeNow", defaultMessage: "Free Now" },
 ]
 
 const contentArr3 = [
-  { id: "amazon", defaultMessage: "Amazon", stockMsgId: "amazonStockSymbol" },
   { id: "shopee", defaultMessage: "Shopee", stockMsgId: "shopeeStockSymbol" },
   { id: "lazada", defaultMessage: "Lazada", stockMsgId: "lazadaStockSymbol" },
   { id: "tokopedia", defaultMessage: "Tokopedia" },
@@ -67,6 +74,15 @@ const contentArr3 = [
     id: "magazineLuiza",
     defaultMessage: "Magazine Luiza",
     stockMsgId: "magazineLuizaStockSymbol",
+  },
+  {
+    id: "bukalapak",
+    defaultMessage: "Bukalapak",
+  },
+  {
+    id: "hktvmall",
+    defaultMessage: "HKTVMall",
+    stockMsgId: "hktvmallStockSymbol",
   },
 ]
 
