@@ -27,12 +27,13 @@ export const dotLineContentTitle = css`
 export const dotLineContent = css`
   font-size: 2rem;
   letter-spacing: 1px;
-  line-height: 20px;
-
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+  
   ${mq.tablet} {
     font-size: 1.8rem;
-    margin-bottom: 3px;
-    line-height: 12px;
+    margin-bottom: 1.2rem;
+    line-height: 1.4rem;
     letter-spacing: 1px;
   }
 `

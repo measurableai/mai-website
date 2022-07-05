@@ -38,13 +38,13 @@ const Card = forwardRef(
                 <FormattedMessage id={id} defaultMessage={defaultMessage} />
               </p>
             )}
-            <p css={theme => [stockSymbol(theme)]}>
+            {/* <p css={theme => [stockSymbol(theme)]}>
               {stockMsgId ? (
                 <FormattedMessage id={stockMsgId} defaultMessage="" />
               ) : (
                 " "
               )}
-            </p>
+            </p> */}
           </Fragment>
         ))}
         <OutboundLink
