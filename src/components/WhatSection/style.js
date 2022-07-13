@@ -48,7 +48,7 @@ export const whatSectionItemContainer1 = css`
   margin-left: 0;
 
   ${mq.tablet} {
-    top: -10rem;
+    top: -12rem;
     margin-top: 1.9rem;
     margin-left: auto;
   }
@@ -65,7 +65,7 @@ export const whatSectionItemContainer3 = css`
 
   ${mq.tablet} {
     margin-left: auto;
-    top: -50rem;
+    top: -48rem;
   }
 `
 
