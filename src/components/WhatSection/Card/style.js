@@ -29,10 +29,10 @@ export const dotLineContent = css`
   letter-spacing: 1px;
   line-height: 2.4rem;
   margin-bottom: 1.6rem;
-  
+
   ${mq.tablet} {
     font-size: 1.8rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.1rem;
     line-height: 1.4rem;
     letter-spacing: 1px;
   }

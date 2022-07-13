@@ -109,14 +109,11 @@ const DataInsights = () => {
         <Fade refProp="innerRef" right>
           <TagsAndButtonContainer>
             <div css={tagsContainer}>
-              <DataInsightsTag href={industriesEndPoint + "e-commerce/"}>
+              <DataInsightsTag href={industriesEndPoint + "food-delivery/"}>
                 <FormattedMessage
-                  id="eCommerce-tag"
-                  defaultMessage="#E-COMMERCE"
+                  id="foodDeliveryTag"
+                  defaultMessage="#FOOD DELIVERY"
                 />
-              </DataInsightsTag>
-              <DataInsightsTag href={industriesEndPoint + "games/"}>
-                <FormattedMessage id="games-tag" defaultMessage="#GAMES" />
               </DataInsightsTag>
               <DataInsightsTag href={industriesEndPoint + "ride-sharing/"}>
                 <FormattedMessage
@@ -124,13 +121,10 @@ const DataInsights = () => {
                   defaultMessage="#RIDE SHARING"
                 />
               </DataInsightsTag>
-              <DataInsightsTag href={industriesEndPoint + "dating/"}>
-                <FormattedMessage id="dating-tag" defaultMessage="#DATING" />
-              </DataInsightsTag>
-              <DataInsightsTag href={industriesEndPoint + "entertainment/"}>
+              <DataInsightsTag href={industriesEndPoint + "e-commerce/"}>
                 <FormattedMessage
-                  id="entertainment-tag"
-                  defaultMessage="#ENTERTAINMENT"
+                  id="eCommerce-tag"
+                  defaultMessage="#E-COMMERCE"
                 />
               </DataInsightsTag>
             </div>
