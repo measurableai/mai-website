@@ -32,7 +32,7 @@ const ConnectingTheDots = () => {
         <div css={titleContainer}>
           <p css={theme => [titleStyle(theme), title1(theme)]}>
             <FormattedMessage
-              id="connectingTheDotsWithAlternativeData1"
+              id="connectingTheDotsWithAlternativeData"
               defaultMessage="<span>TRANSACTIONAL DATA</span><nextline> </nextline> for the Digital Economy"
               values={{
                 nextline: () => <span css={wordBreak} />,
@@ -48,7 +48,7 @@ const ConnectingTheDots = () => {
         <div css={subTitleContainer}>
           <p css={theme => [subTitleStyle, subTitle1(theme)]}>
             <FormattedMessage
-              id="providesActionableConsumer1"
+              id="providesActionableConsumer"
               defaultMessage="Accurate consumer insights for emerging markets <nextline> </nextline> based on <span>E-RECEIPT DATA.<span/>"
               values={{
                 nextline: () => <span css={wordBreak} />,
