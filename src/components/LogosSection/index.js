@@ -216,25 +216,6 @@ const LogosSection = props => {
             images.achievements07.childImageSharp.fluid,
           ]}
         />
-        <Category
-          title={<FormattedMessage id="backedBy" defaultMessage="BACKED BY" />}
-          columnCount={1}
-          images={[
-            images.backedby01.childImageSharp.fluid,
-            images.backedby02.childImageSharp.fluid,
-            images.backedby03.childImageSharp.fluid,
-            // englishVersion
-            //   ? images.backedby04.childImageSharp.fluid
-            //   : images.backedby04_cn.childImageSharp.fluid,
-            images.backedby05.childImageSharp.fluid,
-            englishVersion
-              ? images.backedby06.childImageSharp.fluid
-              : images.backedby06_cn.childImageSharp.fluid,
-            englishVersion
-              ? images.backedby07.childImageSharp.fluid
-              : images.backedby07_cn.childImageSharp.fluid,
-          ]}
-        />
       </Container>
     </Fade>
   )
