@@ -45,7 +45,7 @@ export const title2 = theme => css`
   text-transform: uppercase;
 
   ${mq.tablet} {
-    font-size: 6.4rem;
+    font-size: 5.4rem;
     letter-spacing: 0.31rem;
   }
 `

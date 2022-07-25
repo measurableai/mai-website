@@ -69,13 +69,13 @@ const WhySection = () => {
             title={
               <FormattedMessage
                 id="whySectionTitle1"
-                defaultMessage="TRANSACTIONAL DATA"
+                defaultMessage="REAL PURCHASE DATA"
               />
             }
             subTitle={
               <FormattedMessage
                 id="whySectionSubTitle1"
-                defaultMessage="Access SKU level high definition data or anonymized and aggregated datasets updated on a weekly basis"
+                defaultMessage="Access anonymized, SKU-level high definition data or aggregated datasets on a weekly basis."
               />
             }
           />
@@ -94,26 +94,26 @@ const WhySection = () => {
             subTitle={
               <FormattedMessage
                 id="whySectionSubTitle2"
-                defaultMessage="We develop and own the data source, and make sure it’s 100% compliant."
+                defaultMessage="We develop and own the data source. We take personal privacy seriously and are GDPR and CCPA compliant."
               />
             }
           />
           <Card
             css={[whySectionItemContainer, whySectionItemContainer3]}
             src={fullConverageIcon}
-            alt="RARE COVERAGE"
+            alt="RARE AND TIMELY  COVERAGE"
             width={rareCoverageWidth}
             height={rareCoverageHeight}
             title={
               <FormattedMessage
                 id="whySectionTitle3"
-                defaultMessage="RARE COVERAGE"
+                defaultMessage="RARE AND TIMELY  COVERAGE"
               />
             }
             subTitle={
               <FormattedMessage
                 id="whySectionSubTitle3"
-                defaultMessage="Biggest alternative data provider for emerging markets including South-East Asia, Latin America, Middle East, and more."
+                defaultMessage="Largest alternative data provider for emerging markets including South-east Asia, Middle East, Latin America, India and more."
               />
             }
           />
