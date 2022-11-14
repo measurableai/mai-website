@@ -119,7 +119,7 @@ const Footer = () => {
         <p css={theme => [fontStyle(theme), allRightsReserved]}>
           <FormattedMessage
             id="AllRightsReserved"
-            defaultMessage="ALL RIGHTS RESERVED © {year} Measurable AI"
+            defaultMessage="ALL RIGHTS RESERVED © {year} Measurable AI, Alternative Data Limited"
             values={{
               year: new Date().getFullYear(),
             }}
