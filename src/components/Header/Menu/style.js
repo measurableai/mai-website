@@ -8,7 +8,7 @@ export const menu = css`
 `
 
 export const menuItem = css`
-  width: 100%;
+  width: auto;
   text-align: left;
   padding: 2rem 0;
   border-bottom: solid 1px white;

@@ -7,6 +7,7 @@ import LanguageItemList from "../LanguageItemList"
 import { TalkToUsContext } from "@/context/talkToUs"
 
 import { menu, menuItem } from "./style"
+import DownloadAnnualReportButton from "@/components/DownloadAnnualReportButton"
 
 const Menu = ({ lightModeOn }) => {
   const { open } = useContext(TalkToUsContext)
@@ -19,6 +20,9 @@ const Menu = ({ lightModeOn }) => {
           <LanguageItemList />
         </div>
       )}
+      <div css={menuItem}>
+        <DownloadAnnualReportButton />
+      </div>
       <div css={menuItem}>
         <TalkToUsButton onClick={() => open()} />
       </div>

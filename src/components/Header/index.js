@@ -3,6 +3,7 @@ import { Link } from "gatsby-plugin-intl"
 import { useWindowScroll } from "react-use"
 
 import TalkToUsButton from "@/components/TalkToUsButton"
+import DownloadAnnualReportButton from "@/components/DownloadAnnualReportButton"
 
 import LanguageDropdown from "./LanguageDropdown"
 // import LoginButton from "./LoginButton"
@@ -63,6 +64,7 @@ const Header = ({ headerMode }) => {
         </Link>
         {isDesktop && (
           <div css={buttonsContainter}>
+            <DownloadAnnualReportButton css={freeTrialButtinMargin} />
             <TalkToUsButton
               css={freeTrialButtinMargin}
               onClick={() => open()}
