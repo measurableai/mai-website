@@ -22,7 +22,7 @@ export const formSection = theme => css`
 export const formWrapper = theme => css`
   width: 80%;
   margin: 0 auto;
-  padding: 2rem 4rem 4rem 4rem;
+  padding: 2rem 4rem;
   background: #fff;
   border: 1px solid #a75eff;
   border-radius: 8px;
@@ -32,80 +32,14 @@ export const formWrapper = theme => css`
   }
 `
 
-export const title = theme => css`
-  margin: 0;
-  font-family: ${theme.fonts.heading};
-  font-size: 8.4rem;
-  font-weight: 500;
-  letter-spacing: 0.01px;
-  color: ${theme.colors.purples.normal};
-
-  ${mq.tablet} {
-    font-size: 4.8rem;
-  }
-`
-
-export const contentFontStyle = theme => css`
-  margin: 0;
-  color: ${theme.colors.purples.normal};
-  font-size: 2rem;
-  line-height: 3.6rem;
-
-  ${mq.tablet} {
-    font-size: 1.3rem;
-    line-height: 2rem;
-  }
-`
-
-export const content1 = css`
-  margin-top: 3.9rem;
-
-  ${mq.tablet} {
-    margin-top: 2.6rem;
-  }
-`
-
-export const content2 = css`
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-
-  ${mq.tablet} {
-    margin-top: 2.6rem;
-  }
-`
-
-export const emailMargin = css`
-  margin-bottom: 5rem;
-`
-
-export const emailStyle = theme => css`
-  margin: 0;
-  color: ${theme.colors.greens.dark};
-  font-size: 2.8rem;
-  font-weight: bold;
-
-  ${mq.tablet} {
-    font-size: 2.1rem;
-    line-height: 3.6rem;
-  }
-`
-export const button = theme => css`
-  background: ${theme.colors.purples.normal};
-  color: ${theme.colors.greens.light};
-  padding: 1.1rem 2.6rem;
-  font-size: 2.4rem;
-  font-weight: bold;
-
-  ${mq.tablet} {
-    font-size: 2.1rem;
-    padding: 0.9rem 1.95rem;
-  }
-`
-
 export const checkboxLabel = theme => css`
   font-size: 1.6rem;
   display: grid;
   grid-template-columns: 1.6rem auto;
   gap: 0.8rem;
   margin: 2.4rem 0;
+`
+
+export const centeredText = theme => css`
+  text-align: center;
 `
