@@ -1,15 +1,18 @@
+import React from "react"
 import Layout from "@/components/layout"
 import SEO from "@/components/seo"
 import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
 import { mq } from "@/theme"
 import SlopedSection from "@/components/SlopedBackground"
-import AnnualReportSection from "@/components/AnnualReportSection"
+import AnnualReportDetailSection from "@/components/AnnualReport/DetailSection/index.js"
+import AnnualReportForm from "@/components/AnnualReport/Form"
+import AnnualReportHero from "@/components/AnnualReport/Hero"
 
 const background = theme => css`
   padding: 0;
   background-image: ${theme.linearGradients.greenDarkToLight};
-  margin-bottom: 30.6rem;
+  margin-bottom: 0rem;
 
   ${mq.tablet} {
     margin-bottom: 23rem;
@@ -17,8 +20,7 @@ const background = theme => css`
 `
 
 const shoutOutPadding = css`
-  padding-top: 26.3rem;
-  padding-left: 5.7rem;
+  padding-top: 16rem;
   text-align: left;
 
   ${mq.tablet} {
@@ -37,8 +39,10 @@ const AnnualReportRequestPage = () => {
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
       >
-        <AnnualReportSection css={shoutOutPadding} />
+        <AnnualReportHero css={shoutOutPadding} />
       </SlopedSection>
+      <AnnualReportDetailSection />
+      <AnnualReportForm />
     </Layout>
   )
 }
