@@ -65,10 +65,10 @@ const Header = ({ headerMode }) => {
         {isDesktop && (
           <div css={buttonsContainter}>
             <DownloadAnnualReportButton css={freeTrialButtinMargin} />
-            <TalkToUsButton
+            {/* <TalkToUsButton
               css={freeTrialButtinMargin}
               onClick={() => open()}
-            />
+            /> */}
             <DataInsightButton
               lightModeOn={lightModeOn}
               css={textButtonMargin}

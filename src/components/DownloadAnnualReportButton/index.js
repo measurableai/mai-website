@@ -10,7 +10,7 @@ const DownloadAnnualReportButton = forwardRef(({ innerRef, ...props }, ref) => (
     css={button}
     {...props}
   >
-    GET 2022 ANNUAL REPORT
+    Download 2019-2022 Asia Food Delivery Report
   </Link>
 ))
 

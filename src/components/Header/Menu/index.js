@@ -23,9 +23,9 @@ const Menu = ({ lightModeOn }) => {
       <div css={menuItem}>
         <DownloadAnnualReportButton />
       </div>
-      <div css={menuItem}>
+      {/* <div css={menuItem}>
         <TalkToUsButton onClick={() => open()} />
-      </div>
+      </div> */}
     </div>
   )
 }

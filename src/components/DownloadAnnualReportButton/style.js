@@ -1,21 +1,23 @@
 import { css } from "@emotion/core"
 
 export const button = theme => css`
-  background: ${theme.linearGradients.purpleToGreen};
-  color: ${theme.colors.purples.dark};
+  box-sizing: border-box;
+  background: #200050;
+  color: ${theme.colors.greens.light};
+
+  box-shadow: inset 0 0 0 2px ${theme.colors.greens.light};
   text-transform: uppercase;
-  padding: 0.8rem 2.5rem;
+  padding: 0.8rem 1.2rem;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
   display: inline-block;
+  transition: all 0.4s ease;
 
   &:hover {
-    background: linear-gradient(
-      ${theme.colors.greens.light},
-      ${theme.colors.greens.light}
-    );
+    box-shadow: inset 0 0 0 100px ${theme.colors.greens.light};
+    color: #200050;
     background-position: 0px;
   }
 `
