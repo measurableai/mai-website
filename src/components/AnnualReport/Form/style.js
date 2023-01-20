@@ -4,6 +4,11 @@ import { mq } from "@/theme"
 export const formSection = theme => css`
   width: 70%;
   margin: 8rem auto;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   h3 {
     font-family: "Barlow";
@@ -17,6 +22,12 @@ export const formSection = theme => css`
     color: #231155;
     margin-bottom: 2rem;
   }
+
+  ${mq.tablet} {
+    width: 100%;
+    margin: 8rem 0;
+    padding: 0 1.5rem;
+  }
 `
 
 export const formWrapper = theme => css`
@@ -29,6 +40,11 @@ export const formWrapper = theme => css`
 
   p {
     line-height: 2;
+  }
+
+  ${mq.tablet} {
+    margin: 0;
+    width: 100%;
   }
 `
 

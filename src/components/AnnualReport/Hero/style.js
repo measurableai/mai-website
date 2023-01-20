@@ -11,6 +11,7 @@ export const hero = theme => css`
   z-index: 1;
 
   ${mq.tablet} {
+    width: 100%;
   }
 
   ::after {
@@ -30,6 +31,13 @@ export const hero = theme => css`
 `
 
 export const svg = theme => css`
+  width: 50%;
+  aspect-ratio: 525 / 210;
+
+  ${mq.tablet} {
+    width: 100%;
+  }
+
   circle {
     mix-blend-mode: multiply;
   }
@@ -45,6 +53,10 @@ export const title = theme => css`
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #a75eff;
+
+  ${mq.tablet} {
+    font-size: 4.6rem;
+  }
 
   span {
     color: transparent;

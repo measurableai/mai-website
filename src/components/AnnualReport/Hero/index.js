@@ -7,8 +7,6 @@ const AnnualReportHero = props => {
     <section css={hero} {...props}>
       <svg
         css={svg}
-        width="525"
-        height="210"
         viewBox="0 0 525 210"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

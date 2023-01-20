@@ -9,6 +9,7 @@ export const detailSection = theme => css`
   z-index: 2;
 
   ${mq.tablet} {
+    width: 100%;
   }
 
   h2 {
@@ -29,12 +30,18 @@ export const detailSection = theme => css`
     padding: 0.4rem 1rem;
     background-blend-mode: multiply;
   }
+  ${mq.tablet} {
+    h2 {
+      width: 100%;
+      font-size: 2.1rem;
+    }
+  }
 
   h3 {
     font-family: "Barlow";
     font-style: normal;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 3.6rem;
     line-height: 100%;
     text-align: center;
     letter-spacing: 0.2em;
@@ -43,6 +50,11 @@ export const detailSection = theme => css`
     margin-bottom: 2rem;
     positive: relative;
     z-index: 2;
+  }
+  ${mq.tablet} {
+    h3 {
+      font-size: 2.2rem;
+    }
   }
 
   h3 span {
@@ -100,12 +112,30 @@ export const regionsWrapper = theme => css`
     text-transform: uppercase;
     color: #00de58;
   }
+  ${mq.tablet} {
+    div {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      items-align: center;
+    }
+    > div span {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+    > div span:nth-child(2n) {
+      font-size: 1.2rem;
+    }
+  }
 `
 
 export const metricsWrapper = theme => css`
   margin: 8rem 0;
   ul {
     list-style-type: none;
+    padding: 0;
+    width: 100%;
   }
   li {
     font-family: "Barlow";
@@ -118,14 +148,36 @@ export const metricsWrapper = theme => css`
     text-transform: uppercase;
     color: #231155;
     display: flex;
+    flex-direction: row;
     align-items: center;
     width: max-content;
     margin: 1rem auto;
+    padding: 0;
+    box-sizing: border-box;
   }
   li img {
     width: 4rem;
     height: 4rem;
     margin-left: 1rem;
+  }
+
+  ${mq.tablet} {
+    li {
+      width: 100%;
+      padding: 0 2rem;
+      font-size: 1.6rem;
+      flex-direction: column-reverse;
+      margin: 4rem 0;
+    }
+    li span {
+      word-wrap: break-word;
+    }
+    li img {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
   }
 `
 
@@ -137,6 +189,7 @@ export const sneakpeekWrapper = theme => css`
     width: 640px;
     aspect-ratio: 640 / 360;
     background: url(${sneakpeekGif});
+    background-size: cover;
     display: block;
     margin: 0 auto;
     border: 1px solid #a75eff;
@@ -171,5 +224,19 @@ export const sneakpeekWrapper = theme => css`
     right: 0;
     z-index: -1;
     user-select: none;
+  }
+  ${mq.tablet} {
+    div {
+      width: 90%;
+    }
+    :before {
+      font-size: 8rem;
+      top: -15%;
+      left: 0;
+    }
+    :after {
+      font-size: 8rem;
+      bottom: -10%;
+    }
   }
 `
