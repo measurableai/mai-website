@@ -8,6 +8,7 @@ import SlopedSection from "@/components/SlopedBackground"
 import AnnualReportDetailSection from "@/components/AnnualReport/DetailSection/index.js"
 import AnnualReportForm from "@/components/AnnualReport/Form"
 import AnnualReportHero from "@/components/AnnualReport/Hero"
+import "@/fonts/barlow.css"
 
 const background = theme => css`
   padding: 0;
@@ -34,7 +35,7 @@ const AnnualReportRequestPage = () => {
 
   return (
     <Layout headerMode="light">
-      <SEO title="2022 Annual Report" />
+      <SEO title="Asia Food Delivery Annual Report 2019-2022" />
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
@@ -42,7 +43,7 @@ const AnnualReportRequestPage = () => {
         <AnnualReportHero css={shoutOutPadding} />
       </SlopedSection>
       <AnnualReportDetailSection />
-      <AnnualReportForm />
+      {/* <AnnualReportForm /> */}
     </Layout>
   )
 }
