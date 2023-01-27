@@ -5,22 +5,22 @@ import {
   metricsWrapper,
   sneakpeekWrapper,
 } from "./style"
-import sneakpeekGif from "@/images/annual-report/sneakpeek.gif"
 import demandTrendPng from "@/images/annual-report/demand-trend.png"
 import marketSharePng from "@/images/annual-report/market-share.png"
 import userConsumptionPng from "@/images/annual-report/user-consumption.png"
 import userLoyaltyPng from "@/images/annual-report/user-loyalty.png"
+import newsletterPng from "@/images/annual-report/newsletter-hero.png"
 
 const AnnualReportDetailSection = () => {
   const availableRegions = [
     "🇸🇬Singapore",
     "🇲🇾Malaysia",
     "🇹🇭Thailand",
-    "🇵🇭Philippines",
-    "🇮🇳India",
     "🇭🇰Hong Kong",
     "🇹🇼Taiwan",
     "🇮🇩Indonesia",
+    "🇵🇭Philippines",
+    "🇮🇳India",
     "🇯🇵Japan",
   ]
 
@@ -35,8 +35,8 @@ const AnnualReportDetailSection = () => {
     <section css={detailSection}>
       <h2>
         <span>
-          Four Years of Tracking the Ins and Outs of the Food Delivery Market in
-          Asia
+          Four Years of Tracking the Ins and Outs of the Online Delivery Market
+          in Asia
         </span>
       </h2>
       <div css={regionsWrapper}>
@@ -67,6 +67,7 @@ const AnnualReportDetailSection = () => {
       </div>
       <div css={sneakpeekWrapper}>
         <div></div>
+        <img src={newsletterPng} />
       </div>
     </section>
   )

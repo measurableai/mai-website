@@ -35,7 +35,7 @@ const AnnualReportRequestPage = () => {
 
   return (
     <Layout headerMode="light">
-      <SEO title="Asia Food Delivery Annual Report 2019-2022" />
+      <SEO title="Asia Online Delivery Annual Report 2019-2022" />
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}

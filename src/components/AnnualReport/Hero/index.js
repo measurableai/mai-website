@@ -76,7 +76,7 @@ const AnnualReportHero = props => {
         </g>
       </svg>
       <h1 css={title}>
-        Asia <br /> Food Delivery <br /> <span>Report</span>
+        Asia <br /> Online Delivery <br /> <span>Report</span>
       </h1>
       <div css={logoWrapper}>
         <span>By</span>

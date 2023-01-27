@@ -239,4 +239,8 @@ export const sneakpeekWrapper = theme => css`
       bottom: -10%;
     }
   }
+
+  img {
+    display: none;
+  }
 `

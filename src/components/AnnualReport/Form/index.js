@@ -26,6 +26,7 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
       additionalFormBody: {
         locale: String(intl.locale).toLowerCase(),
         request_demo: isDemoRequested,
+        should_subscribe: true,
       },
     }),
     [intl.locale, isDemoRequested]
@@ -44,9 +45,11 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
         {formStatus !== SUBMITTED && (
           <>
             <p>
-              Download the Measurable AI 2019-2022 Asia Food Delivery Report to
+              Download the{" "}
+              <i>Measurable AI 2019-2022 Asia Online Delivery Report</i> to
               understand the market share dynamics and drivers underpinning the
-              major players in the heated food delivery sector across Asia.
+              major players in the heated online food and grocery delivery
+              sector across Asia.
             </p>
             <form onSubmit={handleSubmit}>
               <LabelTextInput
@@ -97,9 +100,8 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
               </label>
 
               <p>
-                By submitting the form, you agree to the{" "}
-                <Link to="/privacyPolicy">privacy policy</Link>,{" "}
-                <Link to="/termsOfUse">terms of service</Link> of Measurable AI
+                By submitting the form, you agree to the privacy policy and to
+                learn more about offers and promotions from Measurable AI.
               </p>
 
               <Button type="submit" disabled={disabled}>
