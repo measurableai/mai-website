@@ -1,6 +1,6 @@
 const fs = require("fs")
 const { buildClientSchema } = require("graphql")
-const config = require("gatsby/dist/utils/eslint-config")
+const config = require("gatsby/dist/utils/eslint-config").eslintConfig
 
 let json = null
 if (fs.existsSync("./schema.json")) {
