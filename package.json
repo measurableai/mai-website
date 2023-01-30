@@ -91,5 +91,8 @@
       "eslint --max-warnings=0 --ignore-pattern '!.eslintrc.js' --fix",
       "git add"
     ]
+  },
+  "engines": {
+    "node": "^12"
   }
 }
