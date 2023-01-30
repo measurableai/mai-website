@@ -103,7 +103,7 @@ export const regionsWrapper = theme => css`
     color: #231155;
     margin: 0 0 0 1.5rem;
   }
-  > div span:nth-child(2n) {
+  > div span:nth-of-type(2n) {
     font-family: "Barlow";
     font-style: normal;
     font-weight: 700;
@@ -126,7 +126,7 @@ export const regionsWrapper = theme => css`
       font-size: 1.6rem;
       margin: 0;
     }
-    > div span:nth-child(2n) {
+    > div span:nth-of-type(2n) {
       font-size: 1.2rem;
     }
   }

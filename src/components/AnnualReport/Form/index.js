@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react"
-import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
 import Button from "@/components/Button"
@@ -88,13 +88,13 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
                   formFields.company_name.onChange(event.target.value)
                 }
               />
-              <label for="demo" css={checkboxLabel}>
+              <label htmlFor="demo" css={checkboxLabel}>
                 <input
                   type="checkbox"
                   id="demo"
                   name="demo"
                   checked={isDemoRequested}
-                  onClick={() => setIsDemoRequested(!isDemoRequested)}
+                  onChange={e => setIsDemoRequested(e.target.checked)}
                 />
                 <span>I would like a demo of Measurable AI.</span>
               </label>

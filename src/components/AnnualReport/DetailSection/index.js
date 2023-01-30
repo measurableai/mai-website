@@ -45,10 +45,10 @@ const AnnualReportDetailSection = () => {
         </h3>
         <div>
           {availableRegions.map((region, index) => (
-            <>
+            <React.Fragment key={index}>
               <span>{region}</span>
               {index !== availableRegions.length - 1 && <span>···</span>}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -57,8 +57,8 @@ const AnnualReportDetailSection = () => {
           INTO <span>4</span> Key Metrics
         </h3>
         <ul>
-          {metrics.map(metric => (
-            <li>
+          {metrics.map((metric, index) => (
+            <li key={index}>
               <span>{metric.text}</span>
               <img src={metric.icon} alt={metric.text} />
             </li>
@@ -67,7 +67,7 @@ const AnnualReportDetailSection = () => {
       </div>
       <div css={sneakpeekWrapper}>
         <div></div>
-        <img src={newsletterPng} />
+        <img src={newsletterPng} alt="" />
       </div>
     </section>
   )
