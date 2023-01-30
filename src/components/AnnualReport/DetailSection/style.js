@@ -88,6 +88,8 @@ export const regionsWrapper = theme => css`
     flex-wrap: wrap;
     justify-content: center;
     items-align: center;
+    max-width: 800px;
+    margin: 0 auto;
   }
   > div span {
     font-family: "Barlow";
