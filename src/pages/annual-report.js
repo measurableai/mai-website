@@ -43,7 +43,7 @@ const AnnualReportRequestPage = () => {
         <AnnualReportHero css={shoutOutPadding} />
       </SlopedSection>
       <AnnualReportDetailSection />
-      {/* <AnnualReportForm /> */}
+      <AnnualReportForm />
     </Layout>
   )
 }
