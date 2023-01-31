@@ -5,7 +5,7 @@ import { button } from "./style"
 
 const DownloadAnnualReportButton = forwardRef(({ innerRef, ...props }, ref) => (
   <Link to="/annual-report" ref={ref || innerRef} css={button} {...props}>
-    Asia Online Delivery Report 2019-2022
+    Asia Food Delivery Report 2019-2022
   </Link>
 ))
 
