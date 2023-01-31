@@ -125,6 +125,11 @@
     "termsOfUse": "I agree to the <span1>Terms of Service</span1> and to the processing of my contact details in accordance with the <span2>Privacy Policy</span2>.",
     "receiveUpdates": "By submitting the form, you agree to the <span1>privacy policy</span1>, <span2>terms of service</span2> and to receive updates about Measurable AI"
   },
+  "annualReportForm": {
+    "name": "Name",
+    "company": "Company",
+    "companyEmail": "Company Email"
+  },
   "emailSubscribeForm": {
     "description": "You have already subscribed"
   },

@@ -68,8 +68,8 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
               <LabelTextInput
                 label={
                   <FormattedMessage
-                    id="leaveMessageForm.email"
-                    defaultMessage="Email"
+                    id="annualReportForm.companyEmail"
+                    defaultMessage="Company Email"
                   />
                 }
                 id="email"
@@ -81,7 +81,12 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
                 }
               />
               <LabelTextInput
-                label={"Organization"}
+                label={
+                  <FormattedMessage
+                    id="annualReportForm.company"
+                    defaultMessage="Company"
+                  />
+                }
                 id="companyName"
                 value={formFields.company_name.value}
                 onChange={event =>
