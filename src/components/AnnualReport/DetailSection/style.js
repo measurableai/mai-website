@@ -88,6 +88,8 @@ export const regionsWrapper = theme => css`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
   }
   > div > div {
     display: inline-flex;
@@ -99,6 +101,8 @@ export const regionsWrapper = theme => css`
   > div > div > img {
     width: 2.1rem;
     height: 2.1rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
   > div > div > span {
     font-family: "Barlow";
@@ -112,7 +116,7 @@ export const regionsWrapper = theme => css`
     color: #231155;
     margin: 0 0 0 1rem;
   }
-  > div > span {
+  > div span:nth-child(2n) {
     font-family: "Barlow";
     font-style: normal;
     font-weight: 700;
@@ -140,7 +144,7 @@ export const regionsWrapper = theme => css`
       font-size: 1.8rem;
       margin: 0 0 0 0.5rem;
     }
-    > div > span {
+    > div span:nth-child(2n) {
       font-size: 1.2rem;
     }
   }
