@@ -10,18 +10,27 @@ import marketSharePng from "@/images/annual-report/market-share.png"
 import userConsumptionPng from "@/images/annual-report/user-consumption.png"
 import userLoyaltyPng from "@/images/annual-report/user-loyalty.png"
 import newsletterPng from "@/images/annual-report/newsletter-hero.png"
+import singaporePng from "@/images/annual-report/singapore.png"
+import malaysiaPng from "@/images/annual-report/malaysia.png"
+import thailandPng from "@/images/annual-report/thailand.png"
+import hongKongPng from "@/images/annual-report/hong-kong.png"
+import taiwanPng from "@/images/annual-report/taiwan.png"
+import indonesiaPng from "@/images/annual-report/indonesia.png"
+import philippinesPng from "@/images/annual-report/philippines.png"
+import indiaPng from "@/images/annual-report/india.png"
+import japanPng from "@/images/annual-report/japan.png"
 
 const AnnualReportDetailSection = () => {
   const availableRegions = [
-    "🇸🇬Singapore",
-    "🇲🇾Malaysia",
-    "🇹🇭Thailand",
-    "🇭🇰Hong Kong",
-    "🇹🇼Taiwan",
-    "🇮🇩Indonesia",
-    "🇵🇭Philippines",
-    "🇮🇳India",
-    "🇯🇵Japan",
+    { name: "Singapore", img: singaporePng },
+    { name: "Malaysia", img: malaysiaPng },
+    { name: "Thailand", img: thailandPng },
+    { name: "Hong Kong", img: hongKongPng },
+    { name: "Taiwan", img: taiwanPng },
+    { name: "Indonesia", img: indonesiaPng },
+    { name: "Philippines", img: philippinesPng },
+    { name: "India", img: indiaPng },
+    { name: "Japan", img: japanPng },
   ]
 
   const metrics = [
@@ -46,7 +55,10 @@ const AnnualReportDetailSection = () => {
         <div>
           {availableRegions.map((region, index) => (
             <>
-              <span>{region}</span>
+              <div>
+                <img src={region.img} alt={`The flag of ${region.name}`} />
+                <span>{region.name}</span>
+              </div>
               {index !== availableRegions.length - 1 && <span>···</span>}
             </>
           ))}

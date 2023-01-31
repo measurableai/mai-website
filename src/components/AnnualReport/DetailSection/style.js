@@ -87,9 +87,20 @@ export const regionsWrapper = theme => css`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    items-align: center;
+    align-items: center;
   }
-  > div span {
+  > div > div {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+  }
+  > div > div > img {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  > div > div > span {
     font-family: "Barlow";
     font-style: normal;
     font-weight: 700;
@@ -99,9 +110,9 @@ export const regionsWrapper = theme => css`
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #231155;
-    margin: 0 0 0 1.5rem;
+    margin: 0 0 0 1rem;
   }
-  > div span:nth-child(2n) {
+  > div > span {
     font-family: "Barlow";
     font-style: normal;
     font-weight: 700;
@@ -120,11 +131,16 @@ export const regionsWrapper = theme => css`
       justify-content: center;
       items-align: center;
     }
-    > div span {
-      font-size: 1.6rem;
-      margin: 0;
+
+    > div > div > img {
+      width: 1.8rem;
+      height: 1.8rem;
     }
-    > div span:nth-child(2n) {
+    > div > div > span {
+      font-size: 1.8rem;
+      margin: 0 0 0 0.5rem;
+    }
+    > div > span {
       font-size: 1.2rem;
     }
   }
