@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react"
-import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
 import Button from "@/components/Button"
@@ -66,12 +66,7 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
                 }
               />
               <LabelTextInput
-                label={
-                  <FormattedMessage
-                    id="leaveMessageForm.email"
-                    defaultMessage="Email"
-                  />
-                }
+                label="Work Email"
                 id="email"
                 type="email"
                 name="email"
@@ -81,7 +76,7 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
                 }
               />
               <LabelTextInput
-                label={"Organization"}
+                label="Organization"
                 id="companyName"
                 value={formFields.company_name.value}
                 onChange={event =>
