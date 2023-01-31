@@ -10,6 +10,8 @@ import AnnualReportForm from "@/components/AnnualReport/Form"
 import AnnualReportHero from "@/components/AnnualReport/Hero"
 import "@/fonts/barlow.css"
 
+import newsletterPng from "@/images/annual-report/newsletter-hero.png"
+
 const background = theme => css`
   padding: 0;
   background-image: ${theme.linearGradients.greenDarkToLight};
@@ -35,7 +37,16 @@ const AnnualReportRequestPage = () => {
 
   return (
     <Layout headerMode="light">
-      <SEO title="Asia Food Delivery Annual Report 2019-2022" />
+      <SEO
+        title="Asia Food Delivery Annual Report 2019-2022"
+        description="Check out Measurable AI's latest Asia Online Food and Grocery Delivery Overview Report capturing key insights across 9 markets from 2019 to 2022."
+        meta={[
+          {
+            property: `og:image`,
+            content: `https://www.measurable.ai${newsletterPng}`,
+          },
+        ]}
+      />
       <SlopedSection
         css={background}
         slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
