@@ -1,11 +1,11 @@
-import React, { useMemo, useState } from "react"
+import React, { useMemo } from "react"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 
 import Button from "@/components/Button"
 import LabelTextInput from "../LabelTextInput"
 import ClipLoader from "react-spinners/ClipLoader"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import {
   form,

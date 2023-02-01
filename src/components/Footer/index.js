@@ -1,6 +1,6 @@
 import React from "react"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import {
   upperFooterContainer,
@@ -10,10 +10,7 @@ import {
   contentRightContainer,
   maiImage,
   socialIcon,
-  poweredByContainer,
-  poweredBy,
   otherPages,
-  mdtImage,
   logosContainer,
   allRightsReserved,
   pageAnchor,
@@ -23,7 +20,6 @@ import {
 } from "./style"
 
 import mailogo from "@/images/mai-logo-2.svg"
-import mdtLogo from "@/images/mdt-logo.svg"
 import linkedinIcon from "@/images/btn-linkedin.svg"
 import twitterIcon from "@/images/btn-twitter.svg"
 
