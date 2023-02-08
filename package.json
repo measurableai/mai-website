@@ -19,7 +19,6 @@
     "gatsby-plugin-linkedin-insight": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-offline": "^3.0.24",
-    "gatsby-plugin-open-graph-images": "^0.1.8",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-robots-txt": "^1.6.8",
