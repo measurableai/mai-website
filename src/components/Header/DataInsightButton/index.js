@@ -4,16 +4,47 @@ import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import TextButton from "@/components/TextButton"
 
-const LoginButton = props => (
-  <OutboundLink
-    href="https://blog.measurable.ai/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <TextButton {...props}>
-      <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
-    </TextButton>
-  </OutboundLink>
-)
+const gtag_report_conversion = url => {
+  const callback = function() {
+    if (typeof url != "undefined") {
+      window.location = url
+    }
+  }
+
+  // window.gtag is undefined in development & do not track is true
+  if (typeof window.gtag !== "undefined") {
+    console.log("Send Gtag Event.")
+    window.gtag("event", "conversion", {
+      send_to: "AW-11082494271/DdFtCIv3z4wYEL_ixaQp",
+      event_callback: callback,
+    })
+  }
+
+  return false
+}
+
+const LoginButton = ({ location, ...props }) => {
+  let isReportPage = false
+  const pathname = typeof window !== "undefined" ? window.location.pathname : ""
+
+  if (pathname.includes("asia-food-delivery-report")) {
+    isReportPage = true
+  } else {
+    isReportPage = false
+  }
+
+  return (
+    <OutboundLink
+      href="https://blog.measurable.ai/"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={isReportPage ? () => gtag_report_conversion() : null}
+    >
+      <TextButton {...props}>
+        <FormattedMessage id="dataInsights" defaultMessage="Data Insights" />
+      </TextButton>
+    </OutboundLink>
+  )
+}
 
 export default LoginButton
