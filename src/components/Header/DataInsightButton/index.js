@@ -5,18 +5,11 @@ import { OutboundLink } from "gatsby-plugin-google-gtag"
 import TextButton from "@/components/TextButton"
 
 const gtag_report_conversion = url => {
-  const callback = function() {
-    if (typeof url != "undefined") {
-      window.location = url
-    }
-  }
-
   // window.gtag is undefined in development & do not track is true
   if (typeof window.gtag !== "undefined") {
     console.log("Send Gtag Event.")
     window.gtag("event", "conversion", {
       send_to: "AW-11082494271/DdFtCIv3z4wYEL_ixaQp",
-      event_callback: callback,
     })
   }
 
