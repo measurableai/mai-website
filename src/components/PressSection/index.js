@@ -1,6 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import {
   title,

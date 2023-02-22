@@ -8,11 +8,10 @@ import {
   dotLineContentTitle,
   dotLineMore,
   dotLineContainer,
-  stockSymbol,
   moreAnchor,
 } from "./style"
 import DotLine from "@/components/DotLine"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import useMedia from "@/hooks/useMedia"
 

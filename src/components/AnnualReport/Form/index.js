@@ -14,7 +14,7 @@ const initialFormState = {
   company_name: "",
 }
 
-const AnnualReportForm = ({ onSubmit, ...props }) => {
+const AnnualReportForm = () => {
   const theme = useTheme()
   const intl = useIntl()
 
@@ -35,7 +35,13 @@ const AnnualReportForm = ({ onSubmit, ...props }) => {
   const { formFields, formStatus, handleSubmit, disabled } = useForm(
     initialFormState,
     formOptions,
-    onSubmit
+    () => {
+      if (typeof window.gtag !== "undefined") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-11082494271/jsEsCNb0uYwYEL_ixaQp",
+        })
+      }
+    }
   )
 
   return (
