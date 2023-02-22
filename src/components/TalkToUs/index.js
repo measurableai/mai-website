@@ -22,9 +22,27 @@ const TalkToUs = () => {
     setIsFormSubmitted(true)
   }, [])
 
+  const open_and_gtag = useCallback(() => {
+    const pathname =
+      typeof window !== "undefined" ? window.location.pathname : ""
+
+    if (pathname.includes("asia-food-delivery-report")) {
+      if (typeof window.gtag !== "undefined" && !isOpen) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-11082494271/KdnGCLL6z4wYEL_ixaQp",
+        })
+      }
+    }
+
+    open()
+  }, [isOpen, open])
+
   return (
     <div>
-      <button onClick={() => open()} css={theme => helpButton(theme, isOpen)}>
+      <button
+        onClick={() => open_and_gtag()}
+        css={theme => helpButton(theme, isOpen)}
+      >
         <span css={helpSymbol}>?</span>
         <FormattedMessage id="requestADemo" defaultMessage="REQUEST A DEMO" />
       </button>
