@@ -10,7 +10,7 @@ import AnnualReportForm from "@/components/AnnualReport/Form"
 import AnnualReportHero from "@/components/AnnualReport/Hero"
 import "@/fonts/barlow.css"
 
-import newsletterPng from "@/images/annual-report/newsletter-hero.png"
+import ogImageJpg from "@/images/annual-report/og-image.jpg"
 
 const background = theme => css`
   padding: 0;
@@ -43,7 +43,7 @@ const AnnualReportRequestPage = () => {
         meta={[
           {
             property: `og:image`,
-            content: `https://www.measurable.ai${newsletterPng}`,
+            content: `https://www.measurable.ai${ogImageJpg}`,
           },
         ]}
       />
