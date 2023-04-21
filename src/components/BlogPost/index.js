@@ -84,7 +84,7 @@ const BlogPost = ({ children, postData, ...props }) => {
       <div
         css={image}
         style={{
-          backgroundImage: `url("${postData.featured_media.localFile &&
+          backgroundImage: `url("${postData?.featured_media?.localFile &&
             postData.featured_media.localFile.childImageSharp.fluid.src}")`,
         }}
         alt="Wordpress Post"
