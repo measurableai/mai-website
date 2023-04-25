@@ -23,6 +23,11 @@ jobs:
       - run:
           name: Install LFTP
           command: |
+            # workaround https://unix.stackexchange.com/questions/743839/apt-get-update-failed-to-fetch-debian-amd64-packages-while-building-dockerfile-f
+            # https://askubuntu.com/questions/185268/permission-denied-etc-apt-sources-list
+            sudo echo "deb http://archive.debian.org/debian stretch main" | sudo tee /etc/apt/sources.list;
+            sudo echo "deb http://archive.debian.org/debian stretch-backports main" | sudo tee /etc/apt/sources.list.d/stretch-backports.list;
+
             sudo apt-get update;
             sudo apt-get install lftp;
 
