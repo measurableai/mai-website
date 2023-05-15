@@ -82,4 +82,6 @@ export const checkboxLabel = theme => css`
 
 export const centeredText = theme => css`
   text-align: center;
+  color: #fff;
+  background-color: #ff3159;
 `

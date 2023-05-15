@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useMemo, useState, useEffect, useRef } from "react"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
@@ -34,7 +34,7 @@ const AnnualReportForm = () => {
     [intl.locale, isDemoRequested]
   )
 
-  const { formFields, formStatus, handleSubmit, disabled } = useForm(
+  const { formFields, formStatus, handleSubmit, disabled, errorCode } = useForm(
     initialFormState,
     formOptions,
     () => {
@@ -46,6 +46,23 @@ const AnnualReportForm = () => {
       // }
     }
   )
+
+  let errorMessage = useRef(
+    "Oops! Something went wrong. Please try again later. If the issue persists, please contact us for further assistance."
+  )
+  useEffect(() => {
+    if (errorCode === 102) {
+      errorMessage.current =
+        "The request body is invalid. Please contact us for further assistance."
+    }
+    if (errorCode === 200) {
+      errorMessage.current =
+        "The request form is temporarily closed. Please get in touch with us for assistance."
+    }
+    if (errorCode === 201) {
+      errorMessage.current = "You have already signed up to request the report."
+    }
+  }, [errorCode])
 
   return (
     <section css={formSection}>
@@ -163,10 +180,9 @@ const AnnualReportForm = () => {
             email inbox.
           </p>
         )}
+
         {formStatus !== SUBMITTED && formStatus === FAILED && (
-          <p css={centeredText}>
-            Something went wrong. Please try again later.{" "}
-          </p>
+          <p css={centeredText}>{errorMessage.current}</p>
         )}
       </div>
     </section>
