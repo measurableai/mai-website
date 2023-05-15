@@ -5,7 +5,7 @@ import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
 import Button from "@/components/Button"
 import ClipLoader from "react-spinners/ClipLoader"
 import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
-import { REQUEST_ANNUAL_REPORT } from "@/api"
+import { REQUEST_FOOD_DELIVERY_REPORT } from "@/api"
 import { formSection, formWrapper, checkboxLabel, centeredText } from "./style"
 
 const initialFormState = {
@@ -22,7 +22,7 @@ const AnnualReportForm = () => {
 
   const formOptions = useMemo(
     () => ({
-      uri: REQUEST_ANNUAL_REPORT,
+      uri: REQUEST_FOOD_DELIVERY_REPORT,
       additionalFormBody: {
         locale: String(intl.locale).toLowerCase(),
         request_demo: isDemoRequested,
