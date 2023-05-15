@@ -45,6 +45,7 @@ export const formWrapper = theme => css`
 
   input {
     border: 1px solid #ff3159;
+    color: #221852;
   }
   input:active {
     box-shadow: 0 0 0 1px #ff3159;
