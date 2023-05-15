@@ -6,7 +6,13 @@ import Button from "@/components/Button"
 import ClipLoader from "react-spinners/ClipLoader"
 import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
 import { REQUEST_RIDE_HAILING_REPORT } from "@/api"
-import { formSection, formWrapper, checkboxLabel, centeredText } from "./style"
+import {
+  formSection,
+  formWrapper,
+  checkboxLabel,
+  centeredText,
+  errorText,
+} from "./style"
 
 const initialFormState = {
   customer_name: "",
@@ -182,7 +188,7 @@ const AnnualReportForm = () => {
         )}
 
         {formStatus !== SUBMITTED && formStatus === FAILED && (
-          <p css={centeredText}>{errorMessage.current}</p>
+          <p css={errorText}>{errorMessage.current}</p>
         )}
       </div>
     </section>
