@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useMemo } from "react"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
@@ -12,24 +12,22 @@ const initialFormState = {
   customer_name: "",
   email_address: "",
   company_name: "",
+  request_demo: true,
 }
 
 const AnnualReportForm = () => {
   const theme = useTheme()
   const intl = useIntl()
 
-  const [isDemoRequested, setIsDemoRequested] = useState(true)
-
   const formOptions = useMemo(
     () => ({
       uri: REQUEST_FOOD_DELIVERY_REPORT,
       additionalFormBody: {
         locale: String(intl.locale).toLowerCase(),
-        request_demo: isDemoRequested,
         should_subscribe: true,
       },
     }),
-    [intl.locale, isDemoRequested]
+    [intl.locale]
   )
 
   const { formFields, formStatus, handleSubmit, disabled } = useForm(
@@ -104,8 +102,10 @@ const AnnualReportForm = () => {
                   type="checkbox"
                   id="demo"
                   name="demo"
-                  checked={isDemoRequested}
-                  onChange={e => setIsDemoRequested(e.target.checked)}
+                  checked={formFields.request_demo.value}
+                  onChange={e =>
+                    formFields.request_demo.onChange(e.target.checked)
+                  }
                 />
                 <span>I would like a demo of Measurable AI.</span>
               </label>
