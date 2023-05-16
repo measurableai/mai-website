@@ -2,25 +2,13 @@ import React from "react"
 import Layout from "@/components/layout"
 import SEO from "@/components/seo"
 import { css } from "@emotion/core"
-import { useTheme } from "emotion-theming"
 import { mq } from "@/theme"
-import SlopedSection from "@/components/SlopedBackground"
 import AnnualReportDetailSection from "@/components/AsiaAmericasRideHailingReport/DetailSection/index.js"
 import AnnualReportForm from "@/components/AsiaAmericasRideHailingReport/Form"
 import AnnualReportHero from "@/components/AsiaAmericasRideHailingReport/Hero"
 import "@/fonts/barlow.css"
 
 import ogImageJpg from "@/images/annual-report/og-image.jpg"
-
-const background = theme => css`
-  padding: 0;
-  background-image: ${theme.linearGradients.greenDarkToLight};
-  margin-bottom: 0rem;
-
-  ${mq.tablet} {
-    margin-bottom: 23rem;
-  }
-`
 
 const shoutOutPadding = css`
   padding-top: 16rem;
@@ -33,8 +21,6 @@ const shoutOutPadding = css`
 `
 
 const AsiaAmericasRideHailingReportPage = () => {
-  const theme = useTheme()
-
   return (
     <Layout headerMode="light">
       <SEO
@@ -47,12 +33,7 @@ const AsiaAmericasRideHailingReportPage = () => {
           },
         ]}
       />
-      <SlopedSection
-        css={background}
-        slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
-      >
-        <AnnualReportHero css={shoutOutPadding} />
-      </SlopedSection>
+      <AnnualReportHero css={shoutOutPadding} />
       <AnnualReportDetailSection />
       <AnnualReportForm />
     </Layout>

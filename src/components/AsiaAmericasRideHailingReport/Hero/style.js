@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { mq } from "@/theme"
-import backgroundImage from "@/images/annual-report/east-southern-asia.png"
+import backgroundImage from "@/images/annual-report/asia-americas-ride-hailing/hero-background.png"
 
 export const hero = theme => css`
   margin: 0 auto;
@@ -14,11 +14,42 @@ export const hero = theme => css`
     width: 100%;
   }
 
+  ::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 58vw;
+    background-image: linear-gradient(
+      235.15deg,
+      rgba(255, 49, 89, 0) 58.18%,
+      rgba(255, 49, 89, 0.21) 119.35%
+    );
+    clip-path: polygon(0% 0%, 0% 100%, 100% 32.5%, 100% 0%);
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ${mq.tablet} {
+    ::before {
+      width: 100vw;
+      height: 140vw;
+      background-image: linear-gradient(
+        235.15deg,
+        rgba(255, 49, 89, 0) 58.18%,
+        rgba(255, 49, 89, 0.21) 119.35%
+      );
+      clip-path: polygon(0% 0%, 0% 100%, 100% 71.51%, 100% 0%);
+    }
+  }
+
   ::after {
     content: "";
     display: block;
-    width: 80vw;
-    padding-top: calc(70vw * 0.9232);
+    width: 100vw;
+    padding-top: calc(100vw * 0.5658);
     background-image: url(${backgroundImage});
     background-size: contain;
     background-repeat: no-repeat;
@@ -60,7 +91,8 @@ export const title = theme => css`
   color: #3c008c;
 
   ${mq.tablet} {
-    font-size: 4.6rem;
+    font-size: calc(100vw / 12);
+    white-space: normal;
   }
 
   .outline {
