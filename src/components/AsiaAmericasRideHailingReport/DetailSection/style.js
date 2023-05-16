@@ -27,8 +27,9 @@ export const detailSection = theme => css`
   }
   ${mq.tablet} {
     h2 {
-      width: 100%;
+      width: unset;
       font-size: 2.1rem;
+      padding: 0 2rem;
     }
   }
 
