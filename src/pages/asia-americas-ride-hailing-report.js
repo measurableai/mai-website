@@ -8,7 +8,7 @@ import AnnualReportForm from "@/components/AsiaAmericasRideHailingReport/Form"
 import AnnualReportHero from "@/components/AsiaAmericasRideHailingReport/Hero"
 import "@/fonts/barlow.css"
 
-import ogImageJpg from "@/images/annual-report/og-image.jpg"
+import ogImageJpg from "@/images/annual-report/asia-americas-ride-hailing/og-image.jpg"
 
 const shoutOutPadding = css`
   padding-top: 16rem;
