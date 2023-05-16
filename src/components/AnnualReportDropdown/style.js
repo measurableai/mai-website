@@ -77,4 +77,14 @@ export const listItem = () => css`
     background: #ff3159;
     color: #3c008c;
   }
+
+  & > span {
+    background: #fff;
+    color: #ff3159;
+    padding: 0.1rem 0.4rem;
+    border-radius: 1000px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+  }
 `
