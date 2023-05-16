@@ -62,7 +62,7 @@ export const hero = theme => css`
 `
 
 export const svg = theme => css`
-  width: 60%;
+  width: min(45vw, 55.8rem);
   aspect-ratio: 558 / 204;
 
   ${mq.tablet} {
@@ -78,13 +78,19 @@ export const svg = theme => css`
   }
 `
 
+export const contentWrap = () => css`
+  ${mq.tablet} {
+    padding: 0 1.8rem;
+  }
+`
+
 export const title = theme => css`
-  margin-top: -4.5rem;
+  margin-top: -2.7rem;
   margin-bottom: 2.4rem;
   font-family: "Barlow";
   font-style: normal;
   font-weight: 800;
-  font-size: 6.4rem;
+  font-size: calc(min(80vw, 100rem) / 19);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   white-space: nowrap;
@@ -109,7 +115,7 @@ export const logoWrapper = theme => css`
   font-family: "Barlow";
   font-style: normal;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 100%;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -120,5 +126,9 @@ export const logoWrapper = theme => css`
 `
 
 export const logo = theme => css`
-  width: 50%;
+  width: min(30vw, 40rem);
+
+  ${mq.tablet} {
+    width: 50vw;
+  }
 `
