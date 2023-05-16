@@ -84,9 +84,9 @@ const Header = ({ headerMode }) => {
             css={theme => hamburger(theme, isMenuOpen)}
             onClick={() => setIsMenuOpen(_isMenuOpen => !_isMenuOpen)}
           >
-            <span css={hamburgerLayer}></span>
-            <span css={hamburgerLayer}></span>
-            <span css={hamburgerLayer}></span>
+            <span css={theme => hamburgerLayer(theme, lightModeOn)}></span>
+            <span css={theme => hamburgerLayer(theme, lightModeOn)}></span>
+            <span css={theme => hamburgerLayer(theme, lightModeOn)}></span>
           </button>
         )}
       </div>

@@ -77,13 +77,13 @@ export const hamburger = (theme, isMenuOpen) => css`
   }
 `
 
-export const hamburgerLayer = (theme, on) => css`
+export const hamburgerLayer = (theme, lightModeOn) => css`
   display: block;
   width: 15px;
   height: 2px;
   margin: 4px 0;
   position: relative;
-  background: #ffffff;
+  background: ${lightModeOn ? theme.colors.purples.normal : "#ffffff"};
   border-radius: 3px;
   z-index: 1;
   transform-origin: 0px 1px;
