@@ -1,23 +1,26 @@
 import { css } from "@emotion/core"
 
 export const button = theme => css`
-  box-sizing: border-box;
-  background: #200050;
-  color: ${theme.colors.greens.light};
-
-  box-shadow: inset 0 0 0 2px ${theme.colors.greens.light};
-  text-transform: uppercase;
-  padding: 0.8rem 1.2rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: normal;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
   text-decoration: none;
-  display: inline-block;
+
+  display: block;
+  padding: 1.3rem;
+  margin: 0.2rem -1.3rem;
+
+  color: #fe8199;
+  background: #3c008c;
+
   transition: all 0.4s ease;
 
   &:hover {
-    box-shadow: inset 0 0 0 100px ${theme.colors.greens.light};
-    color: #200050;
-    background-position: 0px;
+    background: #ff3159;
+    color: #3c008c;
   }
 `
