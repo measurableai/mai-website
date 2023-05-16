@@ -19,7 +19,6 @@ const initialFormState = {
   email_address: "",
   title: "",
   company_name: "",
-  linkedin: "",
 }
 
 const AnnualReportForm = () => {
@@ -140,7 +139,7 @@ const AnnualReportForm = () => {
                   formFields.company_name.onChange(event.target.value)
                 }
               />
-              <LabelTextInput
+              {/* <LabelTextInput
                 label={
                   <FormattedMessage
                     id="annualReportForm.linkedin"
@@ -152,7 +151,7 @@ const AnnualReportForm = () => {
                 onChange={event =>
                   formFields.linkedin.onChange(event.target.value)
                 }
-              />
+              /> */}
               <label htmlFor="demo" css={checkboxLabel}>
                 <input
                   type="checkbox"
