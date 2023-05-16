@@ -53,13 +53,13 @@ export const detailSection = theme => css`
     }
   }
 
-  h3 span {
+  h3 span.circle {
     color: #fff;
     position: relative;
     z-index: 4;
     mix-blend-mode: multiply;
   }
-  h3 span::after {
+  h3 span.circle::after {
     content: "";
     width: 8rem;
     height: 8rem;
@@ -247,16 +247,70 @@ export const sneakpeekWrapper = theme => css`
     }
     :before {
       font-size: 8rem;
-      top: -15%;
+      top: -26%;
       left: 0;
     }
     :after {
       font-size: 8rem;
-      bottom: -10%;
+      bottom: -23%;
     }
   }
 
   img {
     display: none;
+  }
+`
+export const ctaMessage = () => css`
+  & > h3 {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 6rem;
+    line-height: 6.4rem;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #3c008c;
+    margin-bottom: 0.5rem;
+    & > br {
+      display: none;
+    }
+
+    & .red {
+      color: #ff3159;
+    }
+
+    & .uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  & > h4 {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #3c008c;
+    margin: 0 0 2.8rem;
+  }
+
+  ${mq.tablet} {
+    & > h3 {
+      font-size: 3rem;
+      line-height: 3.2rem;
+      & > br {
+        display: unset;
+      }
+    }
+
+    & > h4 {
+      font-size: 1.7rem;
+      line-height: 3.1rem;
+      margin: 0 0 0.5rem;
+    }
   }
 `
