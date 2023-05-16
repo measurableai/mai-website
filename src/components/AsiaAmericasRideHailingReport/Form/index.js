@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect, useRef } from "react"
+import React, { useMemo, useEffect, useRef } from "react"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
@@ -19,24 +19,24 @@ const initialFormState = {
   email_address: "",
   title: "",
   company_name: "",
+  linkedin: "",
+  request_demo: true,
 }
 
 const AnnualReportForm = () => {
   const theme = useTheme()
   const intl = useIntl()
 
-  const [isDemoRequested, setIsDemoRequested] = useState(true)
-
   const formOptions = useMemo(
     () => ({
       uri: REQUEST_RIDE_HAILING_REPORT,
       additionalFormBody: {
         locale: String(intl.locale).toLowerCase(),
-        request_demo: isDemoRequested,
         should_subscribe: true,
       },
+      optionalStates: ["linkedin"],
     }),
-    [intl.locale, isDemoRequested]
+    [intl.locale]
   )
 
   const { formFields, formStatus, handleSubmit, disabled, errorCode } = useForm(
@@ -139,7 +139,7 @@ const AnnualReportForm = () => {
                   formFields.company_name.onChange(event.target.value)
                 }
               />
-              {/* <LabelTextInput
+              <LabelTextInput
                 label={
                   <FormattedMessage
                     id="annualReportForm.linkedin"
@@ -151,14 +151,17 @@ const AnnualReportForm = () => {
                 onChange={event =>
                   formFields.linkedin.onChange(event.target.value)
                 }
-              /> */}
+                optional
+              />
               <label htmlFor="demo" css={checkboxLabel}>
                 <input
                   type="checkbox"
                   id="demo"
                   name="demo"
-                  checked={isDemoRequested}
-                  onChange={e => setIsDemoRequested(e.target.checked)}
+                  checked={formFields.request_demo.value}
+                  onChange={e =>
+                    formFields.request_demo.onChange(e.target.checked)
+                  }
                 />
                 <span>I would like a demo of Measurable AI.</span>
               </label>

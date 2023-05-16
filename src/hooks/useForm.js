@@ -114,7 +114,7 @@ export default (
         dispatch({ type: SET_FORM_STATE, payload: FAILED })
       }
     },
-    [additionalFormBody, initialFormState, state, uri]
+    [additionalFormBody, initialFormState, state, uri, onSubmit]
   )
 
   return {
