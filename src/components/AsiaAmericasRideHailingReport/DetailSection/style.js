@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { mq } from "@/theme"
-import sneakpeekGif from "@/images/annual-report/sneakpeek.gif"
+import sneakpeekGif from "@/images/annual-report/asia-americas-ride-hailing/sneakpeek.gif"
 
 export const detailSection = theme => css`
   width: 70%;
