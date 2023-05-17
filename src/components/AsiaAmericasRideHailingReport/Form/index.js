@@ -34,7 +34,7 @@ const AnnualReportForm = () => {
         locale: String(intl.locale).toLowerCase(),
         should_subscribe: true,
       },
-      optionalStates: ["linkedin"],
+      optionalStates: ["linkedin", "request_demo"],
     }),
     [intl.locale]
   )

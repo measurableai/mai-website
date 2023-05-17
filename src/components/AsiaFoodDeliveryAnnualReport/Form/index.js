@@ -26,6 +26,7 @@ const AnnualReportForm = () => {
         locale: String(intl.locale).toLowerCase(),
         should_subscribe: true,
       },
+      optionalStates: ["request_demo"],
     }),
     [intl.locale]
   )
