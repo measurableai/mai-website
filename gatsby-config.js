@@ -37,6 +37,7 @@ module.exports = {
         }
       `,
         resolveSiteUrl: () => siteUrl,
+        exclude: ["/en-US", "/en-US/**", "/termsOfUse", "/privacyPolicy"],
       },
     },
     {
