@@ -4,7 +4,6 @@ import {
   regionsWrapper,
   metricsWrapper,
   sneakpeekWrapper,
-  ctaMessage,
 } from "./style"
 import metrics01Png from "@/images/annual-report/asia-americas-ride-hailing/metrics01.png"
 import metrics02Png from "@/images/annual-report/asia-americas-ride-hailing/metrics02.png"
@@ -84,13 +83,6 @@ const AnnualReportDetailSection = () => {
       <div css={sneakpeekWrapper}>
         <div></div>
         <img src={newsletterPng} alt="" />
-      </div>
-      <div css={ctaMessage}>
-        <h3>
-          <span className="red uppercase">Sign Up</span> for
-          <br /> Early Access <span className="uppercase">Now</span> -
-        </h3>
-        <h4>Part I : Americas on the Move!</h4>
       </div>
     </section>
   )
