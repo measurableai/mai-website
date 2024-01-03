@@ -139,6 +139,7 @@ export const regionsWrapper = theme => css`
       flex-wrap: wrap;
       justify-content: center;
       items-align: center;
+      margin-top: 6rem;
     }
 
     > div > div > img {
@@ -151,6 +152,9 @@ export const regionsWrapper = theme => css`
     }
     > div > span {
       font-size: 1.2rem;
+    }
+    > div > span {
+      margin: 0.5rem 0;
     }
   }
 `
@@ -210,19 +214,21 @@ export const metricsWrapper = theme => css`
   }
 
   ${mq.tablet} {
-    div div {
+    > div > div {
       width: 100%;
       padding: 0 2rem;
       font-size: 1.6rem;
       flex-direction: column-reverse;
-      margin: 4rem 0;
+      margin: 2rem 0;
     }
-    div div span {
+    > div > div > span {
       word-wrap: break-word;
     }
-    div div img {
-      width: 4.5rem;
-      height: 4.5rem;
+    > div > div > img {
+      width: 8vw;
+      max-width: 5.6rem;
+      min-width: 4.5rem;
+      height: auto;
       margin-left: 0;
       margin-bottom: 1rem;
     }
@@ -284,19 +290,21 @@ export const industriesWrapper = theme => css`
   }
 
   ${mq.tablet} {
-    div div {
+    > div > div {
       width: 100%;
       padding: 0 2rem;
       font-size: 1.6rem;
       flex-direction: column-reverse;
-      margin: 4rem 0;
+      margin: 2rem 0;
     }
-    div div span {
+    > div > div > span {
       word-wrap: break-word;
     }
-    div div img {
-      width: 4.5rem;
-      height: 4.5rem;
+    div > div > img {
+      width: 8vw;
+      max-width: 5.6rem;
+      min-width: 4.5rem;
+      height: auto;
       margin-left: 0;
       margin-bottom: 1rem;
     }
