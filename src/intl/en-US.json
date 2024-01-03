@@ -128,7 +128,9 @@
   "annualReportForm": {
     "name": "Name",
     "company": "Company",
-    "companyEmail": "Company Email"
+    "companyEmail": "Company Email",
+    "title": "Title",
+    "linkedin": "LinkedIn"
   },
   "emailSubscribeForm": {
     "description": "You have already subscribed"
