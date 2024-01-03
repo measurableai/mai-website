@@ -363,12 +363,14 @@ export const sneakpeekWrapper = theme => css`
     }
     :before {
       font-size: 8rem;
-      top: -26%;
+      top: auto;
+      bottom: calc(100% - 4rem);
       left: 0;
     }
     :after {
       font-size: 8rem;
-      bottom: -23%;
+      top: calc(100% - 4rem);
+      bottom: auto;
     }
   }
 
