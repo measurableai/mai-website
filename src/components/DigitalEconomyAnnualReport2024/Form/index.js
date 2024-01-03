@@ -5,7 +5,7 @@ import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
 import Button from "@/components/Button"
 import ClipLoader from "react-spinners/ClipLoader"
 import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
-import { REQUEST_RIDE_HAILING_REPORT } from "@/api"
+import { REQUEST_DIGITAL_ECONOMY_REPORT_2024 } from "@/api"
 import {
   formSection,
   formWrapper,
@@ -30,7 +30,7 @@ const AnnualReportForm = () => {
 
   const formOptions = useMemo(
     () => ({
-      uri: REQUEST_RIDE_HAILING_REPORT,
+      uri: REQUEST_DIGITAL_ECONOMY_REPORT_2024,
       additionalFormBody: {
         locale: String(intl.locale).toLowerCase(),
         should_subscribe: true,
