@@ -21,6 +21,7 @@ export const formSection = theme => css`
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #0a0a80;
+    margin-top: 10.8rem;
     margin-bottom: 2rem;
   }
 
@@ -28,6 +29,11 @@ export const formSection = theme => css`
     width: 100%;
     margin: 8rem 0;
     padding: 0 1.5rem;
+
+    h3 {
+      margin-top: 8rem;
+      margin-bottom: 3.5rem;
+    }
   }
 `
 
@@ -56,11 +62,21 @@ export const signUpIntroContent = theme => css`
     color: #0a0a80;
     text-align: center;
     font-family: Barlow;
-    font-size: 21px;
+    font-size: 2.1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0.42px;
+  }
+
+  ${mq.tablet} {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
   }
 `
 
