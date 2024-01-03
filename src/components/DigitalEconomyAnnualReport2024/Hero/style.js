@@ -23,6 +23,17 @@ const titleSvgFadeInSlideUp = keyframes`
   }
 `
 
+const maiLogoFadeInSlideUp = keyframes`
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
+
 export const hero = theme => css`
   margin: 0 auto;
   width: 100rem;
@@ -83,6 +94,15 @@ export const hero = theme => css`
     animation: 800ms cubic-bezier(0.29, 0.88, 0.5, 1) 1200ms 1 both
       ${fadeInSlideDown};
   }
+
+  ${mq.tablet} {
+    ::after {
+      width: 163vw;
+      padding-top: calc(163vw * 1.0271);
+      top: -10%;
+      left: 40%;
+    }
+  }
 `
 
 export const svg = theme => css`
@@ -102,38 +122,39 @@ export const svg = theme => css`
   }
 `
 
-export const titleSvg = theme => css`
+export const titleSvgDesktop = theme => css`
+  width: 100%;
   animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 1500ms 1 both
     ${titleSvgFadeInSlideUp};
+
+  ${mq.tablet} {
+    display: none;
+  }
+`
+
+export const titleSvgMobile = theme => css`
+  display: none;
+
+  ${mq.tablet} {
+    display: inline;
+    width: 100%;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 1500ms 1 both
+      ${titleSvgFadeInSlideUp};
+  }
 `
 
 export const contentWrap = () => css`
+  position: relative;
+
   ${mq.tablet} {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     padding: 0 1.8rem;
-  }
-`
 
-export const title = theme => css`
-  margin-top: -2.7rem;
-  margin-bottom: 2.4rem;
-  font-family: "Barlow";
-  font-style: normal;
-  font-weight: 800;
-  font-size: calc(min(80vw, 100rem) / 12);
-  text-transform: uppercase;
-  text-align: right;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  color: #0a0a80;
-
-  ${mq.tablet} {
-    font-size: calc(100vw / 12);
-    white-space: normal;
-  }
-
-  .cyan-text {
-    color: #00d2c8;
-    font-weight: 200;
+    > img {
+      margin-bottom: 2.4rem;
+    }
   }
 `
 
@@ -149,6 +170,15 @@ export const logoWrapper = theme => css`
   display: flex;
   align-items: center;
   justify-content: left;
+  margin-bottom: -4.8rem;
+  animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 2000ms 1 both
+    ${maiLogoFadeInSlideUp};
+
+  ${mq.tablet} {
+    font-size: 1.8rem;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
 `
 
 export const logo = theme => css`
