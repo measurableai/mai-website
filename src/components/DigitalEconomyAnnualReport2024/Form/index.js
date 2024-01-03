@@ -196,8 +196,8 @@ const AnnualReportForm = () => {
         )}
         {formStatus === SUBMITTED && (
           <p css={centeredText}>
-            Thanks for your interest in Measurable AI's latest annual report,
-            we'll send you the report very soon.
+            Thank you for pre-registering! You will receive a copy of the report
+            when it’s released in Febrauey 2024.
           </p>
         )}
 
