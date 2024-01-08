@@ -25,7 +25,7 @@ const DigitalEconomyAnnualReport2024Page = () => {
     <Layout headerMode="light">
       <SEO
         title="Digital Economy Annual Report 2024"
-        description="Check out Measurable AI's latest Digital Economy Annual Report capturing key insights across 11 emerging markets in 2024."
+        description="Check out Measurable AI’s latest Digital Economy Annual Report capturing key insights across 16 emerging markets in 2024: covering food delivery, ride-hailing, e-commerce."
         meta={[
           {
             property: `og:image`,

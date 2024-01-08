@@ -21,14 +21,24 @@ import indiaPng from "@/images/annual-report/india.png"
 import vietnamPng from "@/images/annual-report/vietnam.png"
 import brazilPng from "@/images/annual-report/brazil.png"
 import mexicoPng from "@/images/annual-report/mexico.png"
-import usPng from "@/images/annual-report/us.png"
 import argentinaPng from "@/images/annual-report/argentina.png"
 import chilePng from "@/images/annual-report/chile.png"
 import colombiaPng from "@/images/annual-report/colombia.png"
+import japanPng from "@/images/annual-report/japan.png"
+import hongKongPng from "@/images/annual-report/hong-kong.png"
+import philippinesPng from "@/images/annual-report/philippines.png"
+import malaysiaPng from "@/images/annual-report/malaysia.png"
+import taiwanPng from "@/images/annual-report/taiwan.png"
+import turkeyPng from "@/images/annual-report/turkey.png"
 
 const AnnualReportDetailSection = () => {
   const availableRegions = [
     { name: "Singapore", img: singaporePng },
+    { name: "Japan", img: japanPng },
+    { name: "Hong Kong", img: hongKongPng },
+    { name: "Taiwan", img: taiwanPng },
+    { name: "Philippines", img: philippinesPng },
+    { name: "Malaysia", img: malaysiaPng },
     { name: "Thailand", img: thailandPng },
     { name: "Indonesia", img: indonesiaPng },
     { name: "Vietnam", img: vietnamPng },
@@ -38,7 +48,7 @@ const AnnualReportDetailSection = () => {
     { name: "Argentina", img: argentinaPng },
     { name: "Chile", img: chilePng },
     { name: "Colombia", img: colombiaPng },
-    { name: "US", img: usPng },
+    { name: "Turkey", img: turkeyPng },
   ]
 
   const industries = [
