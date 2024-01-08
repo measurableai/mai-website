@@ -80,22 +80,13 @@ const AnnualReportForm = () => {
         <p>
           Sign Up for the 2024 Digital Economy Annual Report: Emerging Markets
           to understand the market share dynamics and drivers underpinning the
-          major players in food delivery, Ride-hailing and E-commerce.
+          major players in Food Delivery, Ride-hailing and E-commerce.
         </p>
       </div>
       <h3>Download Free Report</h3>
       <div css={formWrapper}>
         {formStatus !== SUBMITTED && (
           <>
-            <p>
-              Sign Up for the{" "}
-              <i>
-                Measurable AI 2019-2023 Asia and Americas Ride-hailing Annual
-                Report
-              </i>{" "}
-              to understand the market share dynamics and drivers underpinning
-              the major players in the ride-hailing industry.
-            </p>
             <form onSubmit={handleSubmit}>
               <LabelTextInput
                 label={
