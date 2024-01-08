@@ -14,19 +14,19 @@ export const button = theme => css`
   padding: 1.3rem;
   margin: 0.2rem -1.3rem;
 
-  color: #fe8199;
-  background: #3c008c;
+  color: #0a0a80;
+  background: #00f9d8;
 
   transition: all 0.4s ease;
 
   &:hover {
-    background: #ff3159;
-    color: #3c008c;
+    background: #0a0a80;
+    color: #00f9d8;
   }
 
   & > span {
-    background: #fff;
-    color: #ff3159;
+    background: #ff3159;
+    color: #fff;
     padding: 0.1rem 0.4rem;
     border-radius: 1000px;
     text-transform: uppercase;

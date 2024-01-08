@@ -28,9 +28,9 @@ export const annualReportMenuItem = theme => css`
     line-height: 1;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    background: #3c008c;
-    color: #fe8199;
-    box-shadow: inset 0 0 0 2px #ff3159;
+    background: #0a0a80;
+    color: #00f9d8;
+    box-shadow: inset 0 0 0 2px #00f9d8;
     padding: 0.8rem 1.3rem;
     margin: 0 -1.3rem 0.2rem;
     display: block;

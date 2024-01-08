@@ -9,7 +9,7 @@ export const dropdown = () => css`
     flex-direction: row;
     align-items: flex-start;
     padding: 8px 13px;
-    background: #3c008c;
+    background: #0a0a80;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 900;
@@ -17,8 +17,8 @@ export const dropdown = () => css`
     line-height: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #fe8199;
-    box-shadow: inset 0 0 0 2px #ff3159;
+    color: #00f9d8;
+    box-shadow: inset 0 0 0 2px #00f9d8;
     text-transform: uppercase;
     padding: 0.8rem 1.2rem;
     font-size: 1.5rem;
@@ -31,13 +31,13 @@ export const dropdown = () => css`
 
   & > button:hover,
   &:hover > button {
-    box-shadow: inset 0 0 0 100px #ff3159;
-    color: #200050;
+    box-shadow: inset 0 0 0 100px #00f9d8;
+    color: #0a0a80;
     background-position: 0px;
   }
 
   & > button + div {
-    background: #3c008c;
+    background: #0a0a80;
     width: max-content;
     position: absolute;
     top: 100%;
@@ -60,8 +60,8 @@ export const dropdown = () => css`
 
 export const listItem = () => css`
   display: block;
-  background: #3c008c;
-  color: #fe8199;
+  background: #00f9d8;
+  color: #0a0a80;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -74,13 +74,13 @@ export const listItem = () => css`
   transition: background 100ms ease-in-out, color 100ms ease-in-out;
 
   &:hover {
-    background: #ff3159;
-    color: #3c008c;
+    background: #0a0a80;
+    color: #00f9d8;
   }
 
   & > span {
-    background: #fff;
-    color: #ff3159;
+    background: #ff3159;
+    color: #fff;
     padding: 0.1rem 0.4rem;
     border-radius: 1000px;
     text-transform: uppercase;
