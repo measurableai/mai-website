@@ -188,7 +188,7 @@ const AnnualReportForm = () => {
         {formStatus === SUBMITTED && (
           <p css={centeredText}>
             Thank you for pre-registering! You will receive a copy of the report
-            when it’s released in Febrauey 2024.
+            when it’s released in February 2024.
           </p>
         )}
 
