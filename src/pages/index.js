@@ -15,7 +15,7 @@ import DataReportSection from "@/components/DataReportSection"
 import GetStarted from "@/components/GetStarted"
 import Subscribe from "@/components/Subscribe"
 import ConnectingTheDots from "@/components/ConnectingTheDots"
-import LogosSection from "@/components/LogosSection"
+// import LogosSection from "@/components/LogosSection"
 
 const background = theme => css`
   background-image: ${theme.linearGradients.purpleDarkToLight};
@@ -85,13 +85,13 @@ const IndexPage = () => {
       >
         <DataInsights />
       </SlopedSection>
-      <SlopedSection
+      {/* <SlopedSection
         showNavigator
         mode="dark"
         slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "30%")}
       >
         <LogosSection />
-      </SlopedSection>
+      </SlopedSection> */}
       <SlopedSection
         showNavigator
         slopedBackgroundColor={theme.colors.greens.light}
