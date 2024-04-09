@@ -6,6 +6,7 @@ import { mq } from "@/theme"
 import AnnualReportDetailSection from "@/components/DigitalEconomyAnnualReport2024/DetailSection/index.js"
 import AnnualReportForm from "@/components/DigitalEconomyAnnualReport2024/Form"
 import AnnualReportHero from "@/components/DigitalEconomyAnnualReport2024/Hero"
+import AnnualReportDashboardIframe from "@/components/DigitalEconomyAnnualReport2024/Dashboard"
 import "@/fonts/barlow.css"
 
 import ogImageJpg from "@/images/annual-report/asia-americas-ride-hailing/og-image.jpg"
@@ -34,6 +35,7 @@ const DigitalEconomyAnnualReport2024Page = () => {
         ]}
       />
       <AnnualReportHero css={shoutOutPadding} />
+      <AnnualReportDashboardIframe />
       <AnnualReportDetailSection />
       <AnnualReportForm />
     </Layout>
