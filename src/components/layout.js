@@ -13,12 +13,14 @@ import TalkToUs from "@/components/TalkToUs"
 const global = theme => css`
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   body {
     font-size: 1.6rem;
     font-family: ${theme.fonts.body};
     font-weight: 300;
+    scroll-behavior: smooth;
   }
 
   button {
