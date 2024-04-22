@@ -71,3 +71,15 @@ export const UnlockBtn = theme => css`
     }
   }
 `
+
+export const Disclaimer = theme => css`
+  width: 90%;
+  margin: 0 auto 2.4rem;
+  font-size: 1.2rem;
+  color: #999;
+  line-height: 1.5;
+
+  ${mq.tablet} {
+    margin: 1.6rem auto 2.4rem;
+  }
+`
