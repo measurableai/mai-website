@@ -71,11 +71,11 @@ const AnnualReportForm = () => {
   }, [errorCode])
 
   return (
-    <section css={formSection}>
+    <section css={formSection} id="signup-form">
       <div css={signUpIntroContent}>
         <h2>
-          <span className="cyan-text uppercase">Sign Up</span> for Early Access{" "}
-          <span className="uppercase">NOW</span> -
+          <span className="cyan-text uppercase">Sign Up</span> to{" "}
+          <span className="uppercase">RECEIVE REPORT NOW</span>
         </h2>
         <p>
           Sign Up for the 2024 Digital Economy Annual Report: Emerging Markets
