@@ -16,8 +16,9 @@ export const Dashboard = theme => css`
   border: 2px solid #0a0a80;
   border-radius: 16px;
   transition: all 200ms ease;
-  height: 40vw;
   transform: scale(0.95);
+  height: 800px;
+  overflow: hidden;
 
   :hover {
     border-radius: 8px;
@@ -28,7 +29,7 @@ export const Dashboard = theme => css`
     transform: scale(1);
     border-radius: 8px;
     transition: none;
-    height: 80vh;
+    height: 850px;
   }
 `
 
