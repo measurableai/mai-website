@@ -9,7 +9,7 @@ import AnnualReportHero from "@/components/DigitalEconomyAnnualReport2024/Hero"
 
 import "@/fonts/barlow.css"
 
-import ogImageJpg from "@/images/annual-report/asia-americas-ride-hailing/og-image.jpg"
+import ogImageJpg from "@/images/annual-report/digital-economy-annual-report-2024/og-image.jpg"
 
 const shoutOutPadding = css`
   padding-top: 16rem;
