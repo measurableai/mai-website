@@ -27,13 +27,6 @@ const NewLogosSection = props => {
           }
         }
       }
-      hk01: file(relativePath: { eq: "logos/hk01.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       hket: file(relativePath: { eq: "logos/hket.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 100) {
@@ -51,13 +44,6 @@ const NewLogosSection = props => {
         }
       }
       yahooHkFinance: file(relativePath: { eq: "logos/yahoo-hk-finance.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      singtao: file(relativePath: { eq: "logos/singtao.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -247,11 +233,9 @@ const NewLogosSection = props => {
         { name: "cnbc", width: 38 },
         { name: "bloomberg", width: 75 },
         { name: "scmp", width: 41 },
-        { name: "hk01", width: 41 },
         { name: "hket", width: 43 },
         { name: "marketingInteractive", width: 70 },
         { name: "yahooHkFinance", width: 75 },
-        { name: "singtao", width: 52 },
       ],
     },
     {
@@ -318,13 +302,6 @@ const NewLogosSection = props => {
             </div>
           </div>
         ))}
-
-        <div>
-          <h2>Data Used in Research Report</h2>
-        </div>
-        <div>
-          <h2>Data Used in Academic Research</h2>
-        </div>
       </div>
     </section>
   )
