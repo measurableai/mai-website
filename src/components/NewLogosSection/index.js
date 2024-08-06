@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { layoutContainer, logosLayout } from "./style"
+import { layoutContainer, logosLayout, logosTitle } from "./style"
 import Img from "gatsby-image"
 
 const NewLogosSection = props => {
@@ -231,44 +231,44 @@ const NewLogosSection = props => {
       title: "Measurable AI in the News",
       logos: [
         { name: "cnbc", width: 38 },
-        { name: "bloomberg", width: 75 },
+        { name: "bloomberg", width: 82 },
         { name: "scmp", width: 41 },
         { name: "hket", width: 43 },
         { name: "marketingInteractive", width: 70 },
-        { name: "yahooHkFinance", width: 75 },
+        { name: "yahooHkFinance", width: 65 },
       ],
     },
     {
       title: "Data Used in Research Report",
       logos: [
-        { name: "statista", width: 38 },
-        { name: "bloombergIntelligence", width: 75 },
-        { name: "ubs", width: 41 },
-        { name: "barclays", width: 41 },
-        { name: "gfSecurities", width: 43 },
-        { name: "maybank", width: 70 },
-        { name: "htsc", width: 75 },
-        { name: "miraeAssetSecurities", width: 52 },
-        { name: "bahanaSekuritas", width: 52 },
-        { name: "chinaRenaissance", width: 52 },
-        { name: "bocom", width: 52 },
-        { name: "samuelSekuritas", width: 52 },
-        { name: "cubeAsia", width: 52 },
-        { name: "antenna", width: 52 },
-        { name: "momentumAsia", width: 52 },
+        { name: "statista", width: 68 },
+        { name: "bloombergIntelligence", width: 90 },
+        { name: "ubs", width: 60 },
+        { name: "barclays", width: 90 },
+        { name: "gfSecurities", width: 60 },
+        { name: "maybank", width: 90 },
+        { name: "htsc", width: 68 },
+        { name: "miraeAssetSecurities", width: 90 },
+        { name: "bahanaSekuritas", width: 90 },
+        { name: "chinaRenaissance", width: 78 },
+        { name: "bocom", width: 78 },
+        { name: "samuelSekuritas", width: 65 },
+        { name: "cubeAsia", width: 62 },
+        { name: "antenna", width: 60 },
+        { name: "momentumAsia", width: 65 },
       ],
     },
     {
       title: "Data Used in Academic Research",
       logos: [
-        { name: "cuhk", width: 38 },
-        { name: "polyu", width: 75 },
-        { name: "columbiaUniversity", width: 41 },
-        { name: "mit", width: 41 },
-        { name: "hkust", width: 43 },
-        { name: "rutgers", width: 70 },
-        { name: "texas", width: 75 },
-        { name: "usc", width: 52 },
+        { name: "cuhk", width: 90 },
+        { name: "polyu", width: 90 },
+        { name: "columbiaUniversity", width: 100 },
+        { name: "mit", width: 70 },
+        { name: "hkust", width: 72 },
+        { name: "rutgers", width: 55 },
+        { name: "texas", width: 65 },
+        { name: "usc", width: 82 },
       ],
     },
   ]
@@ -278,7 +278,7 @@ const NewLogosSection = props => {
       <div css={layoutContainer}>
         {logoList.map((cat, cid) => (
           <div key={cat.title}>
-            <h2>{cat.title}</h2>
+            <h2 css={logosTitle}>{cat.title}</h2>
             <div css={logosLayout}>
               {cat.logos.map((logo, lid) => (
                 <div key={`${cid}${lid}`}>
