@@ -228,7 +228,7 @@ const NewLogosSection = props => {
 
   const logoList = [
     {
-      title: "Measurable AI in the News",
+      title: "Measurable AI<br/>in the News",
       logos: [
         { name: "cnbc", width: 38 },
         { name: "bloomberg", width: 82 },
@@ -239,7 +239,7 @@ const NewLogosSection = props => {
       ],
     },
     {
-      title: "Data Used in Research Report",
+      title: "Data Used in<br/>Research Report",
       logos: [
         { name: "statista", width: 68 },
         { name: "bloombergIntelligence", width: 90 },
@@ -259,7 +259,7 @@ const NewLogosSection = props => {
       ],
     },
     {
-      title: "Data Used in Academic Research",
+      title: "Data Used in<br/>Academic Research",
       logos: [
         { name: "cuhk", width: 90 },
         { name: "polyu", width: 90 },
@@ -278,7 +278,10 @@ const NewLogosSection = props => {
       <div css={layoutContainer}>
         {logoList.map((cat, cid) => (
           <div key={cat.title}>
-            <h2 css={logosTitle}>{cat.title}</h2>
+            <h2
+              css={logosTitle}
+              dangerouslySetInnerHTML={{ __html: cat.title }}
+            ></h2>
             <div css={logosLayout}>
               {cat.logos.map((logo, lid) => (
                 <div key={`${cid}${lid}`}>
