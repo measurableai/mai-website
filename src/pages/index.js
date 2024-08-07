@@ -15,8 +15,8 @@ import DataReportSection from "@/components/DataReportSection"
 import GetStarted from "@/components/GetStarted"
 import Subscribe from "@/components/Subscribe"
 import ConnectingTheDots from "@/components/ConnectingTheDots"
-import LogosSection from "@/components/LogosSection"
 import TestimonialSection from "@/components/TestimonialSection"
+import NewLogosSection from "@/components/NewLogosSection"
 // import LogosSection from "@/components/LogosSection"
 
 const background = theme => css`
@@ -93,7 +93,7 @@ const IndexPage = () => {
         slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "70%")}
         mode="dark"
       >
-        <LogosSection />
+        <NewLogosSection />
       </SlopedSection>
       <SlopedSection
         showNavigator
