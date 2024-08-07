@@ -11,6 +11,12 @@ export const heading = theme => css`
   text-transform: uppercase;
   text-align: right;
   margin-bottom: 10rem;
+
+  ${mq.tablet} {
+    font-size: 5.4rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
 `
 
 export const flexContainer = theme => css`
@@ -28,14 +34,19 @@ export const flexContainer = theme => css`
   }
 
   > div:nth-of-type(3) {
-    margin-top: 0rem;
-    padding-bottom: 4rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
   }
 
   ${mq.tablet} {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
     grid-template-columns: 1fr;
+    gap: 8rem;
     font-size: 2.4rem;
+
+    > div {
+      margin: 0 !important;
+    }
   }
 `
 
@@ -62,6 +73,19 @@ export const testimonialContent = theme => css`
     font-family: ${theme.fonts.heading};
     color: ${theme.colors.purples.normal};
   }
+
+  ${mq.tablet} {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.02rem;
+
+    ::before {
+      font-size: 4rem;
+      top: -1.7ch;
+      left: -0.6ch;
+    }
+  }
 `
 
 export const authorName = theme => css`
@@ -74,6 +98,10 @@ export const authorName = theme => css`
   text-align: left;
   margin: 0;
   margin-bottom: 0.8rem;
+
+  ${mq.tablet} {
+    font-size: 2.4rem;
+  }
 `
 
 export const authorOrganisation = theme => css`
@@ -86,19 +114,35 @@ export const authorOrganisation = theme => css`
   text-align: left;
   margin: 0;
   margin-bottom: 2.4rem;
+
+  ${mq.tablet} {
+    font-size: 1.8rem;
+  }
 `
 
 export const cubeAsiaImg = theme => css`
   max-width: 13rem;
   width: 30%;
+
+  ${mq.tablet} {
+    width: 25%;
+  }
 `
 
 export const columbiaImg = theme => css`
   max-width: 35rem;
   width: 68%;
+
+  ${mq.tablet} {
+    width: 50%;
+  }
 `
 
 export const cuhkImg = theme => css`
   max-width: 35rem;
   width: 60%;
+
+  ${mq.tablet} {
+    width: 50%;
+  }
 `
