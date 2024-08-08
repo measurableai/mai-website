@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { layoutContainer, logosLayout, logosTitle } from "./style"
 import Img from "gatsby-image"
+import Fade from "react-reveal/Fade"
 
 const NewLogosSection = props => {
   const images = useStaticQuery(graphql`
@@ -278,31 +279,36 @@ const NewLogosSection = props => {
       <div css={layoutContainer}>
         {logoList.map((cat, cid) => (
           <div key={cat.title}>
-            <h2
-              css={logosTitle}
-              dangerouslySetInnerHTML={{ __html: cat.title }}
-            ></h2>
-            <div css={logosLayout}>
-              {cat.logos.map((logo, lid) => (
-                <div key={`${cid}${lid}`}>
-                  <Img
-                    fluid={images[logo.name].childImageSharp.fluid}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      position: "relative",
-                    }}
-                    imgStyle={{
-                      objectFit: "contain",
-                      width: logo.width + "%",
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
+            <Fade left delay={150 * cid}>
+              <h2
+                css={logosTitle}
+                dangerouslySetInnerHTML={{ __html: cat.title }}
+              ></h2>
+            </Fade>
+
+            <Fade left delay={150 * cid}>
+              <div css={logosLayout}>
+                {cat.logos.map((logo, lid) => (
+                  <div key={`${cid}${lid}`}>
+                    <Img
+                      fluid={images[logo.name].childImageSharp.fluid}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        position: "relative",
+                      }}
+                      imgStyle={{
+                        objectFit: "contain",
+                        width: logo.width + "%",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </Fade>
           </div>
         ))}
       </div>

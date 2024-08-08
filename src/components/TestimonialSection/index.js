@@ -11,6 +11,7 @@ import {
 } from "./style"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import Fade from "react-reveal/Fade"
 
 const TestimonialSection = props => {
   const images = useStaticQuery(graphql`
@@ -68,22 +69,26 @@ const TestimonialSection = props => {
 
   return (
     <section style={{ marginBottom: "8rem" }}>
-      <h2 css={heading}>Testimonials</h2>
+      <Fade right>
+        <h2 css={heading}>Testimonials</h2>
+      </Fade>
 
       <div css={flexContainer}>
-        {testimonials.map(testimonial => (
-          <div key={testimonial.text}>
-            <p css={testimonialContent}>{testimonial.text + "”"}</p>
-            {testimonial.name && <h5 css={authorName}>{testimonial.name}</h5>}
-            {testimonial.org && (
-              <h6 css={authorOrganisation}>{testimonial.org}</h6>
-            )}
-            <Img
-              fluid={testimonial.img}
-              css={testimonial.imgStyle}
-              imgStyle={{ objectFit: "contain" }}
-            />
-          </div>
+        {testimonials.map((testimonial, index) => (
+          <Fade right delay={150 * (testimonials.length - index)}>
+            <div key={testimonial.text}>
+              <p css={testimonialContent}>{testimonial.text + "”"}</p>
+              {testimonial.name && <h5 css={authorName}>{testimonial.name}</h5>}
+              {testimonial.org && (
+                <h6 css={authorOrganisation}>{testimonial.org}</h6>
+              )}
+              <Img
+                fluid={testimonial.img}
+                css={testimonial.imgStyle}
+                imgStyle={{ objectFit: "contain" }}
+              />
+            </div>
+          </Fade>
         ))}
       </div>
     </section>
