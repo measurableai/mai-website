@@ -16,16 +16,14 @@ import Fade from "react-reveal/Fade"
 const TestimonialSection = props => {
   const images = useStaticQuery(graphql`
     query {
-      cubeAsia: file(relativePath: { eq: "testimonial/cube-asia.png" }) {
+      cubeAsia: file(relativePath: { eq: "logos/cube-asia.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      columbia: file(
-        relativePath: { eq: "testimonial/columbia-university.png" }
-      ) {
+      columbia: file(relativePath: { eq: "logos/columbia-university.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid

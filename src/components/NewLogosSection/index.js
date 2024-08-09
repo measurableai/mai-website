@@ -262,12 +262,12 @@ const NewLogosSection = props => {
     {
       title: "Data Used in<br/>Academic Research",
       logos: [
-        { name: "cuhk", width: 90 },
-        { name: "polyu", width: 90 },
+        { name: "cuhk", width: 75 },
+        { name: "polyu", width: 75 },
         { name: "columbiaUniversity", width: 100 },
-        { name: "mit", width: 70 },
+        { name: "mit", width: 80 },
         { name: "hkust", width: 72 },
-        { name: "rutgers", width: 55 },
+        { name: "rutgers", width: 70 },
         { name: "texas", width: 65 },
         { name: "usc", width: 82 },
       ],

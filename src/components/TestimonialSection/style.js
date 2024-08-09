@@ -125,13 +125,13 @@ export const cubeAsiaImg = theme => css`
   width: 30%;
 
   ${mq.tablet} {
-    width: 25%;
+    width: 40%;
   }
 `
 
 export const columbiaImg = theme => css`
-  max-width: 35rem;
-  width: 68%;
+  max-width: 20rem;
+  width: 50%;
 
   ${mq.tablet} {
     width: 50%;
@@ -139,8 +139,8 @@ export const columbiaImg = theme => css`
 `
 
 export const cuhkImg = theme => css`
-  max-width: 35rem;
-  width: 60%;
+  max-width: 20rem;
+  width: 40%;
 
   ${mq.tablet} {
     width: 50%;
