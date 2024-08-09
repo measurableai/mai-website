@@ -26,11 +26,11 @@ export const flexContainer = theme => css`
   gap: 4rem;
 
   > div:nth-of-type(1) {
-    margin-top: 16rem;
+    margin-top: 14rem;
   }
 
   > div:nth-of-type(2) {
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
 
   > div:nth-of-type(3) {

@@ -53,13 +53,15 @@ const TestimonialSection = props => {
     },
     {
       text:
-        "Measurable AI's data has been very valuable for my research! The transaction data has allowed me to analyze the effects of extreme weather on food delivery spending. Detailed information on the time and location of orders and delivery fees has allowed me to explore many interesting questions about the topic that I would not have been able to answer without the granular transaction data provided by Measurable AI.",
+        "Measurable AI's data has been very valuable for my research! The transaction data has allowed me to analyze the effects of extreme weather on food delivery spending. Detailed information on the time and location of orders and delivery fees has allowed me to explore many interesting questions about the topic that I would not have been able to answer without the granular transaction data by Measurable AI.",
+      name: "Anna Papp",
+      org: "PhD Student",
       img: images.columbia.childImageSharp.fluid,
       imgStyle: columbiaImg,
     },
     {
       text:
-        "Measurable AI's data represents the most comprehensive dataset currently available for analyzing the food delivery industry in Southeast Asian cities. The granular-level information on orders from various platforms provide a robust foundation for understanding market structure and assessing the impact of policies on the industry. My research has been significantly enhanced through access to this data, and I am deeply appreciative of the company's enthusiasm and commitment to academic research.",
+        "Measurable AI's data represents the most comprehensive dataset currently available for analyzing the food delivery industry in Southeast Asian cities. The granular-level information on orders from various platforms provide a robust foundation for understanding market structure and assessing the impact of policies on the industry. My research has been significantly enhanced through access to this data.",
       name: "Prof. Mandy Hu",
       org: "Director, Centre for Consumer Insights",
       img: images.cuhk.childImageSharp.fluid,
