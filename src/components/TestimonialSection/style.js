@@ -90,7 +90,7 @@ export const testimonialContent = theme => css`
 
 export const authorName = theme => css`
   font-family: ${theme.fonts.heading};
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
@@ -100,13 +100,13 @@ export const authorName = theme => css`
   margin-bottom: 0.8rem;
 
   ${mq.tablet} {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `
 
 export const authorOrganisation = theme => css`
   font-family: ${theme.fonts.heading};
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
@@ -116,7 +116,7 @@ export const authorOrganisation = theme => css`
   margin-bottom: 2.4rem;
 
   ${mq.tablet} {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `
 
@@ -125,7 +125,7 @@ export const cubeAsiaImg = theme => css`
   width: 30%;
 
   ${mq.tablet} {
-    width: 40%;
+    width: 25%;
   }
 `
 
@@ -134,7 +134,7 @@ export const columbiaImg = theme => css`
   width: 50%;
 
   ${mq.tablet} {
-    width: 50%;
+    width: 40%;
   }
 `
 
@@ -143,6 +143,6 @@ export const cuhkImg = theme => css`
   width: 40%;
 
   ${mq.tablet} {
-    width: 50%;
+    width: 32%;
   }
 `

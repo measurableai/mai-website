@@ -53,7 +53,7 @@ const TestimonialSection = props => {
       text:
         "Measurable AI's data has been very valuable for my research! The transaction data has allowed me to analyze the effects of extreme weather on food delivery spending. Detailed information on the time and location of orders and delivery fees has allowed me to explore many interesting questions about the topic that I would not have been able to answer without the granular transaction data by Measurable AI.",
       name: "Anna Papp",
-      org: "PhD Student",
+      org: "Researcher",
       img: images.columbia.childImageSharp.fluid,
       imgStyle: columbiaImg,
     },
