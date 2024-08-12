@@ -15,6 +15,8 @@ import DataReportSection from "@/components/DataReportSection"
 import GetStarted from "@/components/GetStarted"
 import Subscribe from "@/components/Subscribe"
 import ConnectingTheDots from "@/components/ConnectingTheDots"
+import TestimonialSection from "@/components/TestimonialSection"
+import NewLogosSection from "@/components/NewLogosSection"
 // import LogosSection from "@/components/LogosSection"
 
 const background = theme => css`
@@ -84,6 +86,24 @@ const IndexPage = () => {
         )}
       >
         <DataInsights />
+      </SlopedSection>
+      {/* Media Section */}
+      <SlopedSection
+        showNavigator
+        slopedBackgroundImage={createGreenWhiteLinearGradient("68.5deg", "70%")}
+        mode="dark"
+      >
+        <NewLogosSection />
+      </SlopedSection>
+      <SlopedSection
+        showNavigator
+        mode="dark"
+        slopedBackgroundImage={createGreenWhiteLinearGradient(
+          "-111.5deg",
+          "50%"
+        )}
+      >
+        <TestimonialSection />
       </SlopedSection>
       {/* <SlopedSection
         showNavigator
