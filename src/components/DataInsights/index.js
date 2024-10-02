@@ -98,6 +98,19 @@ const DataInsights = () => {
     `
   )
 
+  const latest3PostEdgesInEn = []
+  for (const edge of allWordpressPost.edges || []) {
+    if (edge.node?.path?.startsWith("/zh")) {
+      continue
+    }
+
+    if (latest3PostEdgesInEn.length >= 3) {
+      break
+    }
+
+    latest3PostEdgesInEn.push(edge)
+  }
+
   return (
     <div css={container}>
       <Fade refProp="innerRef" right>
@@ -143,21 +156,27 @@ const DataInsights = () => {
           </TagsAndButtonContainer>
         </Fade>
         <div css={blogsContainer}>
-          <Fade refProp="innerRef" left>
-            <BlogContainer css={blogContainer1}>
-              <BlogPost postData={allWordpressPost.edges[0].node} />
-            </BlogContainer>
-          </Fade>
-          <Fade refProp="innerRef" left delay={DELAY}>
-            <BlogContainer css={blogContainer2}>
-              <BlogPost postData={allWordpressPost.edges[1].node} />
-            </BlogContainer>
-          </Fade>
-          <Fade refProp="innerRef" left delay={DELAY * 2}>
-            <BlogContainer css={blogContainer3}>
-              <BlogPost postData={allWordpressPost.edges[2].node} />
-            </BlogContainer>
-          </Fade>
+          {latest3PostEdgesInEn[0] && (
+            <Fade refProp="innerRef" left>
+              <BlogContainer css={blogContainer1}>
+                <BlogPost postData={latest3PostEdgesInEn[0].node} />
+              </BlogContainer>
+            </Fade>
+          )}
+          {latest3PostEdgesInEn[1] && (
+            <Fade refProp="innerRef" left delay={DELAY}>
+              <BlogContainer css={blogContainer2}>
+                <BlogPost postData={latest3PostEdgesInEn[1].node} />
+              </BlogContainer>
+            </Fade>
+          )}
+          {latest3PostEdgesInEn[2] && (
+            <Fade refProp="innerRef" left delay={DELAY * 2}>
+              <BlogContainer css={blogContainer3}>
+                <BlogPost postData={latest3PostEdgesInEn[2].node} />
+              </BlogContainer>
+            </Fade>
+          )}
         </div>
       </div>
     </div>
