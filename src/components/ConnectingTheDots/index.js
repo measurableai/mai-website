@@ -32,7 +32,7 @@ const ConnectingTheDots = () => {
         <div css={titleContainer}>
           <p css={theme => [titleStyle(theme), title1(theme)]}>
             <FormattedMessage
-              id="connectingTheDotsWithAlternativeData1"
+              id="connectingTheDotsWithAlternativeData"
               defaultMessage="<span>TRANSACTIONAL DATA</span><nextline> </nextline> for the Digital Economy"
               values={{
                 nextline: () => <span css={wordBreak} />,

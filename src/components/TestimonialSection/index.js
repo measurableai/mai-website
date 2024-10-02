@@ -75,7 +75,11 @@ const TestimonialSection = props => {
 
       <div css={flexContainer}>
         {testimonials.map((testimonial, index) => (
-          <Fade right delay={150 * (testimonials.length - index)}>
+          <Fade
+            key={String(index)}
+            right
+            delay={150 * (testimonials.length - index)}
+          >
             <div key={testimonial.text}>
               <p css={testimonialContent}>{testimonial.text + "”"}</p>
               {testimonial.name && <h5 css={authorName}>{testimonial.name}</h5>}
