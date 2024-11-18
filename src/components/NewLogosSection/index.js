@@ -1,6 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { layoutContainer, logosLayout, logosTitle } from "./style"
+import {
+  layoutContainer,
+  logosTable,
+  header,
+  headerTitle,
+  logoWrapper,
+  logoDescription,
+} from "./style"
 import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
 
@@ -292,8 +299,37 @@ const NewLogosSection = props => {
         { name: "yahooHkFinance", width: 65 },
       ],
     },
+
+    {
+      title: "Data Used in<br/>Academic Research",
+      width: "5/15",
+      gridTemplateColumns: {
+        desktop: 1,
+        tablet: 3,
+        mobile: 3,
+      },
+      logoWrapperSize: [136, 50],
+      logos: [
+        { name: "cmu", width: 53 },
+        { name: "columbiaUniversity", width: 100 },
+        { name: "mit", width: 80 },
+        { name: "cuhk", width: 75 },
+        { name: "polyu", width: 75 },
+        { name: "hkust", width: 72 },
+        { name: "rutgers", width: 70 },
+        { name: "texas", width: 65 },
+        { name: "usc", width: 62 },
+      ],
+    },
     {
       title: "Data Used in<br/>Research Report",
+      width: "3/15",
+      gridTemplateColumns: {
+        desktop: 2,
+        tablet: 3,
+        mobile: 3,
+      },
+      logoWrapperSize: [136, 50],
       logos: [
         { name: "statista", width: 68 },
         { name: "bloombergIntelligence", width: 90 },
@@ -312,20 +348,6 @@ const NewLogosSection = props => {
         { name: "samuelSekuritas", width: 65 },
       ],
     },
-    {
-      title: "Data Used in<br/>Academic Research",
-      logos: [
-        { name: "columbiaUniversity", width: 100 },
-        { name: "mit", width: 80 },
-        { name: "cuhk", width: 75 },
-        { name: "polyu", width: 75 },
-
-        { name: "hkust", width: 72 },
-        { name: "rutgers", width: 70 },
-        { name: "texas", width: 65 },
-        { name: "usc", width: 62 },
-      ],
-    },
   ]
 
   return (
@@ -334,31 +356,44 @@ const NewLogosSection = props => {
         {logoList.map((cat, cid) => (
           <div key={cat.title}>
             <Fade left delay={150 * cid}>
-              <h2
-                css={logosTitle}
-                dangerouslySetInnerHTML={{ __html: cat.title }}
-              ></h2>
+              <div css={header}>
+                <h2
+                  css={headerTitle}
+                  dangerouslySetInnerHTML={{ __html: cat.title }}
+                ></h2>
+              </div>
             </Fade>
 
             <Fade left delay={150 * cid}>
-              <div css={logosLayout}>
+              <div css={logosTable(cat["gridTemplateColumns"])}>
                 {cat.logos.map((logo, lid) => (
-                  <div key={`${cid}${lid}`}>
-                    <Img
-                      fluid={images[logo.name].childImageSharp.fluid}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        position: "relative",
-                      }}
-                      imgStyle={{
-                        objectFit: "contain",
-                        width: logo.width + "%",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                      }}
-                    />
+                  <div>
+                    <div
+                      key={`${cid}${lid}`}
+                      css={logoWrapper(cat.logoWrapperSize)}
+                    >
+                      <Img
+                        fluid={images[logo.name].childImageSharp.fluid}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          position: "relative",
+                        }}
+                        imgStyle={{
+                          objectFit: "contain",
+                          width: logo.width + "%",
+                          top: "50%",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                        }}
+                      />
+                    </div>
+                    {logo.description && (
+                      <div
+                        css={logoDescription}
+                        dangerouslySetInnerHTML={{ __html: logo.description }}
+                      ></div>
+                    )}
                   </div>
                 ))}
               </div>
