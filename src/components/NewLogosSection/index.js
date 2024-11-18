@@ -224,12 +224,65 @@ const NewLogosSection = props => {
           }
         }
       }
+      cmu: file(relativePath: { eq: "logos/cmu.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      dalaAward: file(relativePath: { eq: "logos/dala-award-2024.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      retailInnovationAward: file(
+        relativePath: { eq: "logos/retail-innovation-award-2019.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   const logoList = [
     {
-      title: "Measurable AI<br/>in the News",
+      title: "Achievements",
+      width: "4/15",
+      gridTemplateColumns: {
+        desktop: 1,
+        tablet: 2,
+        mobile: 1,
+      },
+      logoWrapperSize: [148, 56],
+      logos: [
+        {
+          name: "dalaAward",
+          width: 88,
+          description:
+            "<p>Best Data Monetization Award</p><p>Best Data Tech Startup Award</p>",
+        },
+        {
+          name: "retailInnovationAward",
+          width: 70,
+          description: "<p>Retailer Choice Award</p>",
+        },
+      ],
+    },
+    {
+      title: "News Coverage",
+      width: "3/15",
+      gridTemplateColumns: {
+        desktop: 1,
+        tablet: 3,
+        mobile: 3,
+      },
+      logoWrapperSize: [136, 50],
       logos: [
         { name: "cnbc", width: 38 },
         { name: "bloomberg", width: 82 },
