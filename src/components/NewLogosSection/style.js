@@ -81,7 +81,6 @@ export const header = theme => css`
   position: relative;
   border-bottom: 2px solid ${theme.colors.purples.normal};
   margin-bottom: 2.4rem;
-
   ${mq.tablet} {
     width: max-content;
     padding-right: 4rem;
@@ -94,8 +93,8 @@ export const header = theme => css`
     width: 1rem;
     height: 1rem;
     position: absolute;
-    bottom: -0.47rem;
-    right: 0;
+    bottom: -6px;
+    right: -5px;
     border-radius: 10000px;
   }
 `
