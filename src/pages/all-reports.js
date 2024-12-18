@@ -3,24 +3,24 @@ import Layout from "@/components/layout"
 import SEO from "@/components/seo"
 import { css } from "@emotion/core"
 import { mq } from "@/theme"
-import { useTheme } from "emotion-theming"
 import AnnualReportForm from "@/components/AllReports/Form"
 import SlopedSection from "@/components/SlopedBackground"
 
 import "@/fonts/barlow.css"
 
 import ogImageJpg from "@/images/annual-report/digital-economy-annual-report-2024/og-image.jpg"
+import IntroSection from "@/components/AllReports/IntroSection"
 
 const layout = css`
   width: 100rem;
   margin: 0 auto;
   padding-top: 12rem;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas: "main main main main main main main main aside aside aside aside";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "main main aside";
   gap: 4rem;
 
-  & > main {
+  & > div {
     grid-area: main;
     text-align: left;
   }
@@ -40,7 +40,8 @@ const background = theme => css`
 `
 
 const AllReportsPage = () => {
-  const theme = useTheme()
+  const createGreenWhiteLinearGradient = (deg, percentage) =>
+    `linear-gradient(${deg},#B3FFCB,#FFFFFF ${percentage})`
 
   return (
     <Layout headerMode="light">
@@ -56,10 +57,15 @@ const AllReportsPage = () => {
       />
       <SlopedSection
         css={background}
-        slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
+        slopedBackgroundImage={createGreenWhiteLinearGradient(
+          "-111.5deg",
+          "50%"
+        )}
       >
         <div css={layout}>
-          <main>This is main content</main>
+          <div>
+            <IntroSection />
+          </div>
           <aside>
             <AnnualReportForm />
           </aside>
