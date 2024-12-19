@@ -28,7 +28,7 @@ export const FontWeight400 = css`
   font-weight: 400;
 `
 
-export const MarketSection = css`
+export const CoverageSection = css`
   margin: 8rem 0;
   h4 {
     font-size: 3.6rem;
@@ -53,12 +53,34 @@ export const MarketSection = css`
     border-radius: 1000px;
     z-index: -10;
   }
+  > div {
+    margin: 10rem 0;
+  }
 `
 
-export const MarketListText = css`
+export const MarketListItem = css`
   font-size: 2.1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1ch;
   line-height: 3rem;
+`
+
+export const MetricListItem = css`
+  font-size: 2.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  line-height: 3rem;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.6rem 0;
+
+    span {
+      margin-left: 1.6rem;
+    }
+  }
 `
