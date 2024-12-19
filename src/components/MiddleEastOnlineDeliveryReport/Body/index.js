@@ -1,10 +1,12 @@
 import React from "react"
 import {
+  BodyLayout,
   Header,
   FontWeight400,
   CoverageSection,
   MarketListItem,
   MetricListItem,
+  ReportScreenshot,
 } from "./style"
 
 const ReportBody = () => {
@@ -72,7 +74,7 @@ const ReportBody = () => {
   ]
 
   return (
-    <>
+    <div css={BodyLayout}>
       <section css={Header}>
         <h2 css={FontWeight400}>Free Report</h2>
         <h1>
@@ -87,6 +89,8 @@ const ReportBody = () => {
 
         <h3>Five Years Rising over the Golden Dune</h3>
       </section>
+
+      <div css={ReportScreenshot}></div>
 
       <section css={CoverageSection}>
         <div>
@@ -114,7 +118,7 @@ const ReportBody = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

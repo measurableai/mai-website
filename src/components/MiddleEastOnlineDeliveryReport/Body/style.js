@@ -1,5 +1,9 @@
 import { css } from "@emotion/core"
 
+export const BodyLayout = css`
+  position: relative;
+`
+
 export const Header = theme => css`
   font-family: "Barlow";
 
@@ -54,7 +58,7 @@ export const CoverageSection = css`
     z-index: -10;
   }
   > div {
-    margin: 10rem 0;
+    margin: 4rem 0;
   }
 `
 
@@ -83,4 +87,21 @@ export const MetricListItem = css`
       margin-left: 1.6rem;
     }
   }
+`
+
+export const ReportScreenshot = css`
+  --width: 80%;
+  position: relative;
+  margin: 8rem 0;
+  width: var(--width);
+  height: 0;
+  padding-top: calc(var(--width) * 0.5625);
+  border: 2px solid #0a0a80;
+  border-radius: 0.8rem;
+  background: rgb(244, 242, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(244, 242, 246, 1) 0%,
+    rgba(230, 222, 238, 1) 100%
+  );
 `
