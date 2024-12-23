@@ -2,24 +2,15 @@ import { css } from "@emotion/core"
 import { mq } from "@/theme"
 
 export const formSection = theme => css`
+  --primary-color: #0a0a80;
+
   width: 100%;
   box-sizing: border-box;
-  color: #3c008c;
+  color: var(--primary-color);
+  font-family: "Barlow";
 
   * {
     box-sizing: border-box;
-  }
-
-  h3 {
-    font-family: "Barlow";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #3c008c;
-    margin-bottom: 2rem;
   }
 
   ${mq.tablet} {
@@ -31,44 +22,89 @@ export const formSection = theme => css`
 
 export const formWrapper = theme => css`
   width: 100%;
-  height: calc(100vh - 12rem);
+  height: max-content;
   overflow-y: auto;
   margin: 0 auto;
-  padding: 2rem 4rem;
+  padding: 2.4rem;
   background: #fff;
-  border: 2px solid #3c008c;
+  border: 2px solid var(--primary-color);
   border-radius: 8px;
 
-  p {
-    line-height: 2;
+  label {
+    color: #0a0a80;
+    transition: all 0.3s;
+  }
+  label:has(~ input:focus) {
+    color: #5900ff;
+  }
+  input {
+    color: #0a0a80;
+    background: #f4f2f6;
+    font-weight: 500;
+    border-radius: 4px 4px 0 0;
+    border: none;
   }
 
-  input {
-    border: 1px solid #ff3159;
-    color: #221852;
-  }
-  input:active {
-    box-shadow: 0 0 0 1px #ff3159;
-  }
+  input:active,
   input:hover {
-    box-shadow: 0 0 0 1px #ff3159;
+    background: #f2ebff;
+    box-shadow: none;
+  }
+
+  input:focus {
+    color: #5900ff;
+    -webkit-box-shadow: inset 0px -2px 0px 0px #5900ff;
+    -moz-box-shadow: inset 0px -2px 0px 0px #5900ff;
+    box-shadow: inset 0px -2px 0px 0px #5900ff;
+  }
+
+  input[type="checkbox"] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
   button {
-    background-color: #ff3159;
+    display: block;
+    width: 100%;
+    background-color: #5900ff;
+    color: #fff !important;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #c822ff !important;
     color: #fff;
   }
   button:disabled {
+    background-color: #0a0a80;
     opacity: 0.4;
-  }
-  button:hover {
-    background-color: #3c008c;
-    color: #ff3159;
   }
 
   ${mq.tablet} {
     margin: 0;
     width: 100%;
+  }
+`
+
+export const formIntro = css`
+  h3 {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: 0.05ch;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    color: #444;
+    font-weight: normal;
+    line-height: 1.4;
+    letter-spacing: 0.06ch;
+    margin-bottom: 2.4rem;
   }
 `
 
@@ -88,4 +124,13 @@ export const errorText = theme => css`
   text-align: center;
   color: #fff;
   background-color: #ff3159;
+`
+
+export const consent = css`
+  appearance: reset;
+  font-size: 1.2rem;
+  color: #a1a1a1;
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin-bottom: 0;
 `

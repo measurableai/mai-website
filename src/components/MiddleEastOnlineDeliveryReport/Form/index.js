@@ -12,6 +12,8 @@ import {
   checkboxLabel,
   centeredText,
   errorText,
+  consent,
+  formIntro,
 } from "./style"
 
 const initialFormState = {
@@ -74,11 +76,14 @@ const AnnualReportForm = () => {
       <div css={formWrapper}>
         {formStatus !== SUBMITTED && (
           <>
-            <h3>Sign Up to Download</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Vestibulum pellentesque
-              nulla interdum nulla vivamus quis.
-            </p>
+            <div css={formIntro}>
+              <h3>Sign Up to Download</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Vestibulum pellentesque
+                nulla interdum nulla vivamus quis.
+              </p>
+            </div>
+
             <form onSubmit={handleSubmit}>
               <LabelTextInput
                 label={
@@ -161,19 +166,22 @@ const AnnualReportForm = () => {
                 <span>I would like a demo of Measurable AI.</span>
               </label>
 
-              <p>
-                By submitting your information, you agree to the privacy policy
-                and to learn more about offers and promotions from Measurable
-                AI.
-              </p>
-
               <Button type="submit" disabled={disabled}>
                 {formStatus === SUBMITTING ? (
                   <ClipLoader size={14} color={theme.colors.white} />
                 ) : (
-                  <FormattedMessage id="submit" defaultMessage="Submit" />
+                  <FormattedMessage
+                    id="Download Report"
+                    defaultMessage="Download Report"
+                  />
                 )}
               </Button>
+
+              <p css={consent}>
+                By submitting your information, you agree to the privacy policy
+                and to learn more about offers and promotions from Measurable
+                AI.
+              </p>
             </form>
           </>
         )}
