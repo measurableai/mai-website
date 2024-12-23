@@ -68,6 +68,24 @@ export const MarketListItem = css`
   text-transform: uppercase;
   letter-spacing: 0.1ch;
   line-height: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  div {
+    display: flex;
+    margin: 1.6rem 0;
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    span {
+      display: block;
+      margin-left: 0.8rem;
+    }
+  }
+  svg {
+    margin: 1.2rem;
+  }
 `
 
 export const MetricListItem = css`
@@ -94,14 +112,6 @@ export const ReportScreenshot = css`
   position: relative;
   margin: 8rem 0;
   width: var(--width);
-  height: 0;
-  padding-top: calc(var(--width) * 0.5625);
   border: 2px solid #0a0a80;
   border-radius: 0.8rem;
-  background: rgb(244, 242, 246);
-  background: linear-gradient(
-    180deg,
-    rgba(244, 242, 246, 1) 0%,
-    rgba(230, 222, 238, 1) 100%
-  );
 `

@@ -1,4 +1,11 @@
 import React from "react"
+import saudiArabiaPng from "@/images/annual-report/saudi-arabia.png"
+import uaePng from "@/images/annual-report/united-arab-emirates.png"
+import qatarPng from "@/images/annual-report/qatar.png"
+import turkeyPng from "@/images/annual-report/turkey.png"
+import egyptPng from "@/images/annual-report/egypt.png"
+import kuwaitPng from "@/images/annual-report/kuwait.png"
+import previewGif from "@/images/annual-report/middle-east-online-delivery/MAI_AnnualReport_2024_MiddleEast_Preview.gif"
 import {
   BodyLayout,
   Header,
@@ -11,12 +18,12 @@ import {
 
 const ReportBody = () => {
   const markets = [
-    "🇸🇦 Saudi Arabia",
-    "🇦🇪 United Arab Emirates",
-    "🇶🇦 Qatar",
-    "🇹🇷 Türkiye",
-    "🇪🇬 Egypt",
-    "🇰🇼 Kuwait",
+    { img: saudiArabiaPng, countryName: "Saudi Arabia" },
+    { img: uaePng, countryName: "United Arab Emirates" },
+    { img: qatarPng, countryName: "Qatar" },
+    { img: turkeyPng, countryName: "Türkiye" },
+    { img: egyptPng, countryName: "Egypt" },
+    { img: kuwaitPng, countryName: "Kuwait" },
   ]
 
   const metrics = [
@@ -90,7 +97,13 @@ const ReportBody = () => {
         <h3>Five Years Rising over the Golden Dune</h3>
       </section>
 
-      <div css={ReportScreenshot}></div>
+      <div>
+        <img
+          css={ReportScreenshot}
+          src={previewGif}
+          alt="The preview of the middle east online delivery annual report"
+        />
+      </div>
 
       <section css={CoverageSection}>
         <div>
@@ -98,8 +111,27 @@ const ReportBody = () => {
             Across <span>6</span> Markets
           </h4>
           <div css={MarketListItem}>
-            {markets.map(market => (
-              <div>{market}</div>
+            {markets.map((market, index) => (
+              <React.Fragment key={market.name}>
+                <div>
+                  <img
+                    src={market.img}
+                    alt={`The flag of ${market.countryName}`}
+                  />
+                  <span>{market.countryName}</span>
+                </div>
+                {index !== markets.length - 1 && (
+                  <svg
+                    width="8"
+                    height="9"
+                    viewBox="0 0 8 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="4" cy="4.5" r="4" fill="#0A0A80" />
+                  </svg>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
