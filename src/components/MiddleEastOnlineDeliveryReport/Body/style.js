@@ -75,6 +75,7 @@ export const MarketListItem = css`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  color: #0a0a80;
   div {
     display: flex;
     margin: 1.6rem 0;
@@ -114,6 +115,7 @@ export const MetricListItem = css`
   text-transform: uppercase;
   letter-spacing: 0.1ch;
   line-height: 3rem;
+  color: #0a0a80;
 
   > div {
     display: flex;
