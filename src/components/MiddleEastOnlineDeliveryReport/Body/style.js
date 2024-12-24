@@ -11,7 +11,7 @@ export const Header = theme => css`
     font-size: 5.2rem;
     color: #0a0a80;
     span {
-      color: #39d965;
+      color: #00d2c8;
     }
   }
 
@@ -40,22 +40,26 @@ export const CoverageSection = css`
     text-transform: uppercase;
     letter-spacing: 0.1ch;
     margin: 2.4rem 0;
+    color: #0a0a80;
   }
   h4 span {
     position: relative;
+    color: #fff;
   }
   h4 span::after {
     content: "";
+    width: 0;
+    height: 0;
+    border-top: 6rem solid #00d2c8;
+    border-left: 4rem solid transparent;
+    border-right: 4rem solid transparent;
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #eee;
-    width: 8rem;
-    height: 8rem;
+    top: 62%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    border-radius: 1000px;
     z-index: -10;
+    mix-blend-mode: multiply;
   }
   > div {
     margin: 4rem 0;
@@ -83,8 +87,24 @@ export const MarketListItem = css`
       margin-left: 0.8rem;
     }
   }
-  svg {
+  > span {
+    position: relative;
     margin: 1.2rem;
+  }
+  > span::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid #00d2c8;
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    position: absolute;
+    display: block;
+    top: 70%;
+    left: calc(50% - 0.1em);
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    mix-blend-mode: multiply;
   }
 `
 
