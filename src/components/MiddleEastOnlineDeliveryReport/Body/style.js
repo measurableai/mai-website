@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const BodyLayout = css`
   position: relative;
@@ -25,6 +26,10 @@ export const Header = theme => css`
     line-height: 1.4;
     text-transform: uppercase;
     letter-spacing: 0.2ch;
+    color: #0a0a80;
+    span {
+      color: #00d2c8;
+    }
   }
 `
 
@@ -63,6 +68,18 @@ export const CoverageSection = css`
   }
   > div {
     margin: 4rem 0;
+  }
+
+  ${mq.tablet} {
+    h4 {
+      text-align: center;
+    }
+    > div {
+      margin: 6rem 0;
+      :last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 `
 
@@ -107,6 +124,10 @@ export const MarketListItem = css`
     z-index: -10;
     mix-blend-mode: multiply;
   }
+
+  ${mq.tablet} {
+    justify-content: center;
+  }
 `
 
 export const MetricListItem = css`
@@ -127,6 +148,16 @@ export const MetricListItem = css`
       margin-left: 1.6rem;
     }
   }
+
+  ${mq.tablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > div {
+      margin: 0.8rem auto;
+    }
+  }
 `
 
 export const ReportScreenshot = css`
@@ -136,4 +167,9 @@ export const ReportScreenshot = css`
   width: var(--width);
   border: 2px solid #0a0a80;
   border-radius: 0.8rem;
+
+  ${mq.tablet} {
+    margin: 8rem auto;
+    display: block;
+  }
 `

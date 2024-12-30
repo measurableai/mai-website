@@ -148,7 +148,9 @@ const ReportBody = () => {
           <span css={FontWeight400}>FOOD + GROCERY</span>
         </h1>
 
-        <h3>Five Years Rising over the Golden Dune</h3>
+        <h3>
+          <span>Five Years Rising </span>over the Golden Dune
+        </h3>
       </section>
 
       <div>

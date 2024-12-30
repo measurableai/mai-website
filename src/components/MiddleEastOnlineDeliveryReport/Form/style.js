@@ -15,7 +15,7 @@ export const formSection = theme => css`
 
   ${mq.tablet} {
     width: 100%;
-    margin: 8rem 0;
+    margin: 0 0 8rem;
     padding: 0 1.5rem;
   }
 `
