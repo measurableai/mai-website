@@ -1,5 +1,26 @@
-import { css } from "@emotion/core"
+import { css, keyframes } from "@emotion/core"
 import { mq } from "@/theme"
+
+const fadeInSlideDown = keyframes`
+  0% {
+    top: -40%;
+    opacity: 0;
+  }
+  100% {
+    top: -20%;
+    opacity: 0.4;
+  }
+`
+const titleSvgFadeInSlideUp = keyframes`
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
 
 export const BodyLayout = css`
   position: relative;
@@ -13,6 +34,8 @@ export const Header = theme => css`
     color: #0a0a80;
     text-transform: uppercase;
     margin: 0;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 400ms 1 both
+      ${titleSvgFadeInSlideUp};
   }
 
   h2 {
@@ -20,6 +43,8 @@ export const Header = theme => css`
     color: #00d2c8;
     text-transform: uppercase;
     margin: 0;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 600ms 1 both
+      ${titleSvgFadeInSlideUp};
   }
 
   h3 {
@@ -30,6 +55,8 @@ export const Header = theme => css`
     text-transform: uppercase;
     letter-spacing: 0.2ch;
     color: #6c6cb3;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 800ms 1 both
+      ${titleSvgFadeInSlideUp};
   }
 
   div {
@@ -41,6 +68,8 @@ export const Header = theme => css`
       left: -20%;
       z-index: -1;
       opacity: 0.4;
+      animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 900ms 1 both
+        ${fadeInSlideDown};
 
       ${mq.tablet} {
         width: 120%;
@@ -195,6 +224,8 @@ export const ReportScreenshot = css`
   width: var(--width);
   border: 2px solid #0a0a80;
   border-radius: 0.8rem;
+  animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 1000ms 1 both
+    ${titleSvgFadeInSlideUp};
 
   ${mq.tablet} {
     margin: 8rem auto;
