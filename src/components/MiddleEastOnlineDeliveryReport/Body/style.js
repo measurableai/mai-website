@@ -1,5 +1,26 @@
-import { css } from "@emotion/core"
+import { css, keyframes } from "@emotion/core"
 import { mq } from "@/theme"
+
+const fadeInSlideDown = keyframes`
+  0% {
+    top: -40%;
+    opacity: 0;
+  }
+  100% {
+    top: -20%;
+    opacity: 0.4;
+  }
+`
+const titleSvgFadeInSlideUp = keyframes`
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
 
 export const BodyLayout = css`
   position: relative;
@@ -11,25 +32,61 @@ export const Header = theme => css`
   h1 {
     font-size: 5.2rem;
     color: #0a0a80;
-    span {
-      color: #00d2c8;
-    }
+    text-transform: uppercase;
+    margin: 0;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 400ms 1 both
+      ${titleSvgFadeInSlideUp};
   }
 
   h2 {
-    font-size: 3.2rem;
-    color: rgba(0, 0, 0, 0.5);
+    font-size: 5.2rem;
+    color: #00d2c8;
+    text-transform: uppercase;
+    margin: 0;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 600ms 1 both
+      ${titleSvgFadeInSlideUp};
   }
 
   h3 {
     font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
     line-height: 1.4;
     text-transform: uppercase;
     letter-spacing: 0.2ch;
-    color: #0a0a80;
-    span {
-      color: #00d2c8;
+    color: #6c6cb3;
+    animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 800ms 1 both
+      ${titleSvgFadeInSlideUp};
+  }
+
+  div {
+    position: relative;
+    > img {
+      position: absolute;
+      width: 160%;
+      top: -20%;
+      left: -20%;
+      z-index: -1;
+      opacity: 0.4;
+      animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 900ms 1 both
+        ${fadeInSlideDown};
+
+      ${mq.tablet} {
+        width: 120%;
+        top: 0%;
+        left: 0%;
+      }
     }
+  }
+`
+
+export const YearStyling = css`
+  font-family: "Barlow Condensed";
+  font-weight: 300;
+  font-size: 200%;
+  > span {
+    -webkit-text-stroke: 2px #0a0a80;
+    color: transparent;
   }
 `
 
@@ -167,6 +224,8 @@ export const ReportScreenshot = css`
   width: var(--width);
   border: 2px solid #0a0a80;
   border-radius: 0.8rem;
+  animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 1000ms 1 both
+    ${titleSvgFadeInSlideUp};
 
   ${mq.tablet} {
     margin: 8rem auto;

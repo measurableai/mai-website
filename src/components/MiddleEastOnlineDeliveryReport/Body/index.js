@@ -6,6 +6,7 @@ import turkeyPng from "@/images/annual-report/turkey.png"
 import egyptPng from "@/images/annual-report/egypt.png"
 import kuwaitPng from "@/images/annual-report/kuwait.png"
 import previewGif from "@/images/annual-report/middle-east-online-delivery/MAI_AnnualReport_2024_MiddleEast_Preview.gif"
+import mapWebp from "@/images/annual-report/middle-east-online-delivery/middle-east-map.webp"
 import {
   BodyLayout,
   Header,
@@ -14,6 +15,7 @@ import {
   MarketListItem,
   MetricListItem,
   ReportScreenshot,
+  YearStyling,
 } from "./style"
 
 const ReportBody = () => {
@@ -137,16 +139,19 @@ const ReportBody = () => {
   return (
     <div css={BodyLayout}>
       <section css={Header}>
-        <h2 css={FontWeight400}>Free Report</h2>
-        <h1>
-          2020-2024
-          <br />
-          MIDDLE EAST
-          <br />
-          ONLINE DELIVERY REPORT:
-          <br />
-          <span css={FontWeight400}>FOOD + GROCERY</span>
-        </h1>
+        <div>
+          <h1>
+            <span css={YearStyling}>
+              <span>20</span>20-<span>20</span>24
+            </span>
+            <br />
+            Middle East
+            <br />
+            Online Delivery Report:
+          </h1>
+          <h2 css={FontWeight400}>Food + Grocery</h2>
+          <img src={mapWebp} alt="" />
+        </div>
 
         <h3>
           <span>Five Years Rising </span>over the Golden Dune
