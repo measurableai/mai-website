@@ -38,11 +38,11 @@ export const dropdown = () => css`
 
   & > button + div {
     background: #0a0a80;
+    max-width: 40ch;
     width: max-content;
     position: absolute;
     top: 100%;
     left: 0;
-
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 200ms ease-in-out;
@@ -62,11 +62,11 @@ export const listItem = () => css`
   display: block;
   background: #00f9d8;
   color: #0a0a80;
-  font-family: "Roboto";
+  font-family: "Barlow";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.3rem;
-  line-height: 1.4rem;
+  line-height: 1.4;
   padding: 1.3rem;
   letter-spacing: 0.5px;
   text-transform: capitalize;
