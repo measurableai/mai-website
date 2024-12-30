@@ -11,23 +11,42 @@ export const Header = theme => css`
   h1 {
     font-size: 5.2rem;
     color: #0a0a80;
+    text-transform: uppercase;
     margin: 0;
   }
 
   h2 {
     font-size: 5.2rem;
     color: #00d2c8;
+    text-transform: uppercase;
     margin: 0;
   }
 
   h3 {
     font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
     line-height: 1.4;
     text-transform: uppercase;
     letter-spacing: 0.2ch;
-    color: #0a0a80;
-    span {
-      color: #00d2c8;
+    color: #6c6cb3;
+  }
+
+  div {
+    position: relative;
+    > img {
+      position: absolute;
+      width: 160%;
+      top: -20%;
+      left: -20%;
+      z-index: -1;
+      opacity: 0.4;
+
+      ${mq.tablet} {
+        width: 120%;
+        top: 0%;
+        left: 0%;
+      }
     }
   }
 `
