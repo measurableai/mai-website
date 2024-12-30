@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 
 export const BodyLayout = css`
   position: relative;
@@ -11,7 +12,7 @@ export const Header = theme => css`
     font-size: 5.2rem;
     color: #0a0a80;
     span {
-      color: #39d965;
+      color: #00d2c8;
     }
   }
 
@@ -25,6 +26,10 @@ export const Header = theme => css`
     line-height: 1.4;
     text-transform: uppercase;
     letter-spacing: 0.2ch;
+    color: #0a0a80;
+    span {
+      color: #00d2c8;
+    }
   }
 `
 
@@ -40,25 +45,41 @@ export const CoverageSection = css`
     text-transform: uppercase;
     letter-spacing: 0.1ch;
     margin: 2.4rem 0;
+    color: #0a0a80;
   }
   h4 span {
     position: relative;
+    color: #fff;
   }
   h4 span::after {
     content: "";
+    width: 0;
+    height: 0;
+    border-top: 6rem solid #00d2c8;
+    border-left: 4rem solid transparent;
+    border-right: 4rem solid transparent;
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #eee;
-    width: 8rem;
-    height: 8rem;
+    top: 62%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    border-radius: 1000px;
     z-index: -10;
+    mix-blend-mode: multiply;
   }
   > div {
     margin: 4rem 0;
+  }
+
+  ${mq.tablet} {
+    h4 {
+      text-align: center;
+    }
+    > div {
+      margin: 6rem 0;
+      :last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 `
 
@@ -71,6 +92,7 @@ export const MarketListItem = css`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  color: #0a0a80;
   div {
     display: flex;
     margin: 1.6rem 0;
@@ -83,8 +105,28 @@ export const MarketListItem = css`
       margin-left: 0.8rem;
     }
   }
-  svg {
+  > span {
+    position: relative;
     margin: 1.2rem;
+  }
+  > span::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid #00d2c8;
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    position: absolute;
+    display: block;
+    top: 70%;
+    left: calc(50% - 0.1em);
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    mix-blend-mode: multiply;
+  }
+
+  ${mq.tablet} {
+    justify-content: center;
   }
 `
 
@@ -94,6 +136,7 @@ export const MetricListItem = css`
   text-transform: uppercase;
   letter-spacing: 0.1ch;
   line-height: 3rem;
+  color: #0a0a80;
 
   > div {
     display: flex;
@@ -105,6 +148,16 @@ export const MetricListItem = css`
       margin-left: 1.6rem;
     }
   }
+
+  ${mq.tablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > div {
+      margin: 0.8rem auto;
+    }
+  }
 `
 
 export const ReportScreenshot = css`
@@ -114,4 +167,9 @@ export const ReportScreenshot = css`
   width: var(--width);
   border: 2px solid #0a0a80;
   border-radius: 0.8rem;
+
+  ${mq.tablet} {
+    margin: 8rem auto;
+    display: block;
+  }
 `

@@ -5,7 +5,7 @@ import LabelTextInput from "@/components/TalkToUs/LabelTextInput/index.js"
 import Button from "@/components/Button"
 import ClipLoader from "react-spinners/ClipLoader"
 import useForm, { SUBMITTED, SUBMITTING, FAILED } from "@/hooks/useForm"
-import { REQUEST_RIDE_HAILING_REPORT } from "@/api"
+import { REQUEST_MIDDLE_EAST_ONLINE_DELIVERY_REPORT } from "@/api"
 import {
   formSection,
   formWrapper,
@@ -31,12 +31,12 @@ const AnnualReportForm = () => {
 
   const formOptions = useMemo(
     () => ({
-      uri: REQUEST_RIDE_HAILING_REPORT,
+      uri: REQUEST_MIDDLE_EAST_ONLINE_DELIVERY_REPORT,
       additionalFormBody: {
         locale: String(intl.locale).toLowerCase(),
         should_subscribe: true,
       },
-      optionalStates: ["linkedin", "request_demo"],
+      optionalStates: ["request_demo"],
     }),
     [intl.locale]
   )
@@ -74,16 +74,15 @@ const AnnualReportForm = () => {
   return (
     <section css={formSection}>
       <div css={formWrapper}>
+        <div css={formIntro}>
+          <h3>Sign Up to Download</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Vestibulum pellentesque
+            nulla interdum nulla vivamus quis.
+          </p>
+        </div>
         {formStatus !== SUBMITTED && (
           <>
-            <div css={formIntro}>
-              <h3>Sign Up to Download</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Vestibulum pellentesque
-                nulla interdum nulla vivamus quis.
-              </p>
-            </div>
-
             <form onSubmit={handleSubmit}>
               <LabelTextInput
                 label={
@@ -151,7 +150,6 @@ const AnnualReportForm = () => {
                 onChange={event =>
                   formFields.linkedin.onChange(event.target.value)
                 }
-                optional
               />
               <label htmlFor="demo" css={checkboxLabel}>
                 <input
@@ -166,22 +164,26 @@ const AnnualReportForm = () => {
                 <span>I would like a demo of Measurable AI.</span>
               </label>
 
-              <Button type="submit" disabled={disabled}>
-                {formStatus === SUBMITTING ? (
-                  <ClipLoader size={14} color={theme.colors.white} />
-                ) : (
-                  <FormattedMessage
-                    id="Download Report"
-                    defaultMessage="Download Report"
-                  />
-                )}
-              </Button>
+              {formStatus !== SUBMITTED && (
+                <>
+                  <Button type="submit" disabled={disabled}>
+                    {formStatus === SUBMITTING ? (
+                      <ClipLoader size={14} color={theme.colors.white} />
+                    ) : (
+                      <FormattedMessage
+                        id="Download Report"
+                        defaultMessage="Download Report"
+                      />
+                    )}
+                  </Button>
 
-              <p css={consent}>
-                By submitting your information, you agree to the privacy policy
-                and to learn more about offers and promotions from Measurable
-                AI.
-              </p>
+                  <p css={consent}>
+                    By submitting your information, you agree to the privacy
+                    policy and to learn more about offers and promotions from
+                    Measurable AI.
+                  </p>
+                </>
+              )}
             </form>
           </>
         )}
@@ -191,7 +193,6 @@ const AnnualReportForm = () => {
             we'll send you the report very soon.
           </p>
         )}
-
         {formStatus !== SUBMITTED && formStatus === FAILED && (
           <p css={errorText}>{errorMessage.current}</p>
         )}

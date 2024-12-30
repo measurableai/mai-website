@@ -15,7 +15,7 @@ export const formSection = theme => css`
 
   ${mq.tablet} {
     width: 100%;
-    margin: 8rem 0;
+    margin: 0 0 8rem;
     padding: 0 1.5rem;
   }
 `
@@ -118,12 +118,22 @@ export const checkboxLabel = theme => css`
 
 export const centeredText = theme => css`
   text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #5900ff;
 `
 
 export const errorText = theme => css`
   text-align: center;
   color: #fff;
   background-color: #ff3159;
+  padding: 0.4rem 0.6rem;
+  margin: 0.8rem 0 0;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
 `
 
 export const consent = css`

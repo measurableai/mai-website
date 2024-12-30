@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "@/components/layout"
 import SEO from "@/components/seo"
 import { css } from "@emotion/core"
+import { mq } from "@/theme"
 import AnnualReportForm from "@/components/MiddleEastOnlineDeliveryReport/Form"
 
 import "@/fonts/barlow.css"
@@ -17,6 +18,15 @@ const layout = css`
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "main main aside";
   gap: 4rem;
+
+  ${mq.tablet} {
+    width: 100%;
+    padding: 6.4rem 2.4rem 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 0;
+  }
 
   & > div {
     grid-area: main;
