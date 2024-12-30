@@ -64,6 +64,7 @@ export const Header = theme => css`
     > img {
       position: absolute;
       width: 160%;
+      min-width: 600px;
       top: -20%;
       left: -20%;
       z-index: -1;
