@@ -7,7 +7,7 @@ import AnnualReportForm from "@/components/MiddleEastOnlineDeliveryReport/Form"
 
 import "@/fonts/barlow.css"
 
-import ogImageJpg from "@/images/annual-report/digital-economy-annual-report-2024/og-image.jpg"
+import ogImageJpg from "@/images/annual-report/middle-east-online-delivery/og-image.jpg"
 import ReportBody from "@/components/MiddleEastOnlineDeliveryReport/Body"
 
 const layout = css`
