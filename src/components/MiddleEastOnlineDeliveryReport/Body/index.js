@@ -14,6 +14,7 @@ import {
   MarketListItem,
   MetricListItem,
   ReportScreenshot,
+  YearStyling,
 } from "./style"
 
 const ReportBody = () => {
@@ -137,16 +138,16 @@ const ReportBody = () => {
   return (
     <div css={BodyLayout}>
       <section css={Header}>
-        <h2 css={FontWeight400}>Free Report</h2>
         <h1>
-          2020-2024
+          <span css={YearStyling}>
+            <span>20</span>20-<span>20</span>24
+          </span>
           <br />
           MIDDLE EAST
           <br />
           ONLINE DELIVERY REPORT:
-          <br />
-          <span css={FontWeight400}>FOOD + GROCERY</span>
         </h1>
+        <h2 css={FontWeight400}>FOOD + GROCERY</h2>
 
         <h3>
           <span>Five Years Rising </span>over the Golden Dune

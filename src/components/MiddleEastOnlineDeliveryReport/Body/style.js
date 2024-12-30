@@ -11,14 +11,13 @@ export const Header = theme => css`
   h1 {
     font-size: 5.2rem;
     color: #0a0a80;
-    span {
-      color: #00d2c8;
-    }
+    margin: 0;
   }
 
   h2 {
-    font-size: 3.2rem;
-    color: rgba(0, 0, 0, 0.5);
+    font-size: 5.2rem;
+    color: #00d2c8;
+    margin: 0;
   }
 
   h3 {
@@ -30,6 +29,16 @@ export const Header = theme => css`
     span {
       color: #00d2c8;
     }
+  }
+`
+
+export const YearStyling = css`
+  font-family: "Barlow Condensed";
+  font-weight: 300;
+  font-size: 200%;
+  > span {
+    -webkit-text-stroke: 2px #0a0a80;
+    color: transparent;
   }
 `
 
