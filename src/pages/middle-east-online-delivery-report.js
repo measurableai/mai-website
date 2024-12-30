@@ -50,8 +50,8 @@ const MiddleEastOnlineDeliveryReportPage = () => {
   return (
     <Layout headerMode="light">
       <SEO
-        title="Get Free Reports"
-        description="Check out Measurable AI’s reports capturing key insights covering food delivery, ride-hailing and e-commerce."
+        title="Middle East Online Delivery Report 2020 - 2024: Food + Grocery"
+        description="Check out Measurable AI’s latest Online Delivery Annual Report capturing key insights across 6 markets in 2020-2024."
         meta={[
           {
             property: `og:image`,
