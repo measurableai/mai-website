@@ -6,7 +6,7 @@ import turkeyPng from "@/images/annual-report/turkey.png"
 import egyptPng from "@/images/annual-report/egypt.png"
 import kuwaitPng from "@/images/annual-report/kuwait.png"
 import previewGif from "@/images/annual-report/middle-east-online-delivery/MAI_AnnualReport_2024_MiddleEast_Preview.gif"
-import mapWebp from "@/images/annual-report/middle-east-online-delivery/middle-east-map.webp"
+import mapWebp from "@/images/annual-report/middle-east-online-delivery/middle-east-map.png"
 import {
   BodyLayout,
   Header,

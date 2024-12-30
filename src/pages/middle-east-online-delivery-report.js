@@ -38,11 +38,19 @@ const layout = css`
 `
 
 const background = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58vw;
+  min-height: 600px;
+  max-height: 1000px;
+  overflow: hidden;
+
   svg {
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
+    min-width: 1027px;
+    height: auto:
   }
 `
 
@@ -51,7 +59,7 @@ const MiddleEastOnlineDeliveryReportPage = () => {
     <Layout headerMode="light">
       <SEO
         title="Middle East Online Delivery Report 2020 - 2024: Food + Grocery"
-        description="Check out Measurable AI’s latest Online Delivery Annual Report capturing key insights across 6 markets in 2020-2024."
+        description="Measurable AI’s latest report on middle east online delivery industry 2020-2024 across Saudi Arabia, United Arab Emirates, Qatar, Turkey, Egypt, Kuwait."
         meta={[
           {
             property: `og:image`,
@@ -61,8 +69,6 @@ const MiddleEastOnlineDeliveryReportPage = () => {
       />
       <div css={background}>
         <svg
-          width="1920"
-          height="1121"
           viewBox="0 0 1920 1121"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
