@@ -4,6 +4,8 @@ import { mq } from "@/theme"
 export const formSection = theme => css`
   --primary-color: #0a0a80;
 
+  position: relative;
+  z-index: 100;
   width: 100%;
   box-sizing: border-box;
   color: var(--primary-color);
