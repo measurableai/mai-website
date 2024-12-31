@@ -36,6 +36,10 @@ export const Header = theme => css`
     margin: 0;
     animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 400ms 1 both
       ${titleSvgFadeInSlideUp};
+
+    ${mq.tablet} {
+      font-size: 3.6rem;
+    }
   }
 
   h2 {
@@ -45,6 +49,10 @@ export const Header = theme => css`
     margin: 0;
     animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 600ms 1 both
       ${titleSvgFadeInSlideUp};
+
+    ${mq.tablet} {
+      font-size: 3.6rem;
+    }
   }
 
   h3 {
@@ -57,6 +65,11 @@ export const Header = theme => css`
     color: #6c6cb3;
     animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 800ms 1 both
       ${titleSvgFadeInSlideUp};
+
+    ${mq.tablet} {
+      font-size: 2rem;
+      letter-spacing: 0.15ch;
+    }
   }
 
   div {
@@ -97,6 +110,9 @@ export const FontWeight400 = css`
 
 export const CoverageSection = css`
   margin: 8rem 0;
+  animation: 1000ms cubic-bezier(0.29, 0.88, 0.5, 1) 1200ms 1 both
+    ${titleSvgFadeInSlideUp};
+
   h4 {
     font-size: 3.6rem;
     font-weight: 800;
@@ -104,6 +120,11 @@ export const CoverageSection = css`
     letter-spacing: 0.1ch;
     margin: 2.4rem 0;
     color: #0a0a80;
+
+    ${mq.tablet} {
+      font-size: 2.4rem;
+      text-align: center;
+    }
   }
   h4 span {
     position: relative;
@@ -126,13 +147,8 @@ export const CoverageSection = css`
   }
   > div {
     margin: 4rem 0;
-  }
 
-  ${mq.tablet} {
-    h4 {
-      text-align: center;
-    }
-    > div {
+    ${mq.tablet} {
       margin: 6rem 0;
       :last-of-type {
         margin-bottom: 0;
@@ -151,9 +167,21 @@ export const MarketListItem = css`
   flex-wrap: wrap;
   align-items: center;
   color: #0a0a80;
+
+  ${mq.tablet} {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
   div {
     display: flex;
+    align-items: center;
     margin: 1.6rem 0;
+
+    ${mq.tablet} {
+      margin: 0.8rem 0;
+    }
+
     img {
       width: 2.4rem;
       height: 2.4rem;
@@ -196,24 +224,33 @@ export const MetricListItem = css`
   line-height: 3rem;
   color: #0a0a80;
 
+  ${mq.tablet} {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   > div {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 1.6rem 0;
 
+    ${mq.tablet} {
+      margin: 0.8rem 0;
+    }
+
+    > div svg {
+      ${mq.tablet} {
+        width: 3.6rem;
+        height: auto;
+      }
+    }
+
     span {
       margin-left: 1.6rem;
-    }
-  }
-
-  ${mq.tablet} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    > div {
-      margin: 0.8rem auto;
     }
   }
 `
@@ -229,7 +266,8 @@ export const ReportScreenshot = css`
     ${titleSvgFadeInSlideUp};
 
   ${mq.tablet} {
-    margin: 8rem auto;
+    --width: 100%;
+    margin: 6rem auto;
     display: block;
   }
 `
