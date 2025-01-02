@@ -5,7 +5,7 @@ export const formSection = theme => css`
   --primary-color: #0a0a80;
 
   position: relative;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
   box-sizing: border-box;
   color: var(--primary-color);
