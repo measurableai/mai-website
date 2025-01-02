@@ -94,16 +94,6 @@ export const Header = theme => css`
   }
 `
 
-export const YearStyling = css`
-  font-family: "Barlow Condensed";
-  font-weight: 300;
-  font-size: 200%;
-  > span {
-    -webkit-text-stroke: 2px #0a0a80;
-    color: transparent;
-  }
-`
-
 export const FontWeight400 = css`
   font-weight: 400;
 `

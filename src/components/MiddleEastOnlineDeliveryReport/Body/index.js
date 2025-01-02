@@ -15,8 +15,8 @@ import {
   MarketListItem,
   MetricListItem,
   ReportScreenshot,
-  YearStyling,
 } from "./style"
+import YearAnimation from "../YearAnimation"
 
 const ReportBody = () => {
   const markets = [
@@ -141,10 +141,7 @@ const ReportBody = () => {
       <section css={Header}>
         <div>
           <h1>
-            <span css={YearStyling}>
-              <span>20</span>20-<span>20</span>24
-            </span>
-            <br />
+            <YearAnimation />
             Middle East
             <br />
             Online Delivery Report:

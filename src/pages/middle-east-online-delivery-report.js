@@ -48,9 +48,12 @@ const background = css`
   overflow: hidden;
 
   svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
     min-width: 1027px;
-    height: auto:
+    height: auto;
   }
 `
 
