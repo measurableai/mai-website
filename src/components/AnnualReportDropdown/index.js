@@ -14,8 +14,12 @@ const AnnualReportDropdown = () => {
       <button>Get Annual Report</button>
       <div>
         <div>
+          <ListItem to="/middle-east-online-delivery-report">
+            Middle East Online Delivery Report 2020-2024: FOOD + GROCERY
+            <span>New</span>
+          </ListItem>
           <ListItem to="/digital-economy-annual-report-2024">
-            The 2024 Digital Economy Annual Report <span>New</span>
+            The 2024 Digital Economy Annual Report
           </ListItem>
           <ListItem to="/asia-americas-ride-hailing-report">
             Asia & Americas Ride-Hailing 2019-2023

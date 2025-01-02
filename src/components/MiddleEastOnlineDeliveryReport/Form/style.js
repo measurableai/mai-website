@@ -4,6 +4,8 @@ import { mq } from "@/theme"
 export const formSection = theme => css`
   --primary-color: #0a0a80;
 
+  position: relative;
+  z-index: 100;
   width: 100%;
   box-sizing: border-box;
   color: var(--primary-color);
@@ -75,8 +77,9 @@ export const formWrapper = theme => css`
     background-color: #c822ff !important;
     color: #fff;
   }
-  button:disabled {
-    background-color: #0a0a80;
+  button:disabled,
+  button:disabled:hover {
+    background-color: #0a0a80 !important;
     opacity: 0.4;
   }
 
@@ -87,6 +90,8 @@ export const formWrapper = theme => css`
 `
 
 export const formIntro = css`
+  margin-bottom: 2.4rem;
+
   h3 {
     font-family: "Barlow";
     font-style: normal;
@@ -96,7 +101,6 @@ export const formIntro = css`
     letter-spacing: 0.05ch;
     color: var(--primary-color);
     margin-top: 0;
-    margin-bottom: 0.8rem;
   }
 
   p {
@@ -104,7 +108,6 @@ export const formIntro = css`
     font-weight: normal;
     line-height: 1.4;
     letter-spacing: 0.06ch;
-    margin-bottom: 2.4rem;
   }
 `
 

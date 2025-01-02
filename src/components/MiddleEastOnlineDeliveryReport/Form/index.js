@@ -76,10 +76,6 @@ const AnnualReportForm = () => {
       <div css={formWrapper}>
         <div css={formIntro}>
           <h3>Sign Up to Download</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Vestibulum pellentesque
-            nulla interdum nulla vivamus quis.
-          </p>
         </div>
         {formStatus !== SUBMITTED && (
           <>
