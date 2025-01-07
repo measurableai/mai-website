@@ -65,8 +65,21 @@ const MiddleEastOnlineDeliveryReportPage = () => {
         description="Measurable AI’s latest report on middle east online delivery industry 2020-2024 across Saudi Arabia, United Arab Emirates, Qatar, Turkey, Egypt, Kuwait."
         meta={[
           {
-            property: `og:image`,
+            name: "image",
+            property: "og:image",
             content: `https://www.measurable.ai${ogImageJpg}`,
+          },
+          {
+            property: "og:image:type",
+            content: "image/jpg",
+          },
+          {
+            property: "og:image:width",
+            content: "842",
+          },
+          {
+            property: "og:image:height",
+            content: "442",
           },
         ]}
       />
