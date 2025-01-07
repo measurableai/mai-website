@@ -185,8 +185,8 @@ const AnnualReportForm = () => {
         )}
         {formStatus === SUBMITTED && (
           <p css={centeredText}>
-            Thanks for your interest in Measurable AI's latest annual report,
-            we'll send you the report very soon.
+            Thank you for your interest. We will be sending you the report
+            shortly.
           </p>
         )}
         {formStatus !== SUBMITTED && formStatus === FAILED && (
