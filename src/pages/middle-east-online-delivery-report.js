@@ -75,11 +75,11 @@ const MiddleEastOnlineDeliveryReportPage = () => {
           },
           {
             property: "og:image:width",
-            content: "842",
+            content: "1200",
           },
           {
             property: "og:image:height",
-            content: "442",
+            content: "630",
           },
         ]}
       />
