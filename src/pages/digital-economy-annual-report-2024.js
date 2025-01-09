@@ -23,7 +23,7 @@ const shoutOutPadding = css`
 
 const DigitalEconomyAnnualReport2024Page = () => {
   return (
-    <Layout headerMode="light">
+    <>
       <SEO
         title="Digital Economy Annual Report 2024"
         description="Check out Measurable AI’s latest Digital Economy Annual Report capturing key insights across 16 emerging markets in 2024: covering food delivery, ride-hailing, e-commerce."
@@ -32,12 +32,22 @@ const DigitalEconomyAnnualReport2024Page = () => {
             property: `og:image`,
             content: `https://www.measurable.ai${ogImageJpg}`,
           },
+          {
+            property: "og:image:width",
+            content: "1200",
+          },
+          {
+            property: "og:image:height",
+            content: "630",
+          },
         ]}
       />
-      <AnnualReportHero css={shoutOutPadding} />
-      <AnnualReportDetailSection />
-      <AnnualReportForm />
-    </Layout>
+      <Layout headerMode="light">
+        <AnnualReportHero css={shoutOutPadding} />
+        <AnnualReportDetailSection />
+        <AnnualReportForm />
+      </Layout>
+    </>
   )
 }
 
