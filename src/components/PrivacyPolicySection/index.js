@@ -1041,38 +1041,6 @@ const PrivacyPolicySection = props => (
           </Anchor>
         </strong>
       </Content>
-      <Content>
-        <strong>Designated representative and contact information</strong>
-      </Content>
-      <Content>
-        <strong>DP-Dock GmbH </strong>
-      </Content>
-      <Content>
-        <strong>Ballindamm 39 </strong>
-      </Content>
-      <Content>
-        <strong>20095 Hamburg </strong>
-      </Content>
-      <Content>
-        <strong>Tel.: +49 (0) 40 99999 – 3430 </strong>
-      </Content>
-      <Content>
-        <strong>Mob.: +49 (0) 172 918 22 22 </strong>
-      </Content>
-      <Content>
-        <strong>E-Mail: mailtime@gdpr-rep.com</strong>
-      </Content>
-      <Content>
-        <strong>Data Protection Officer and contact information</strong>
-      </Content>
-      <Content>
-        <strong>
-          Carson Ip,{" "}
-          <Anchor href="mailto:business@measurable.ai">
-            business@measurable.ai
-          </Anchor>
-        </strong>
-      </Content>
       <Content>&nbsp;</Content>
     </div>
   </div>
