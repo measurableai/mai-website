@@ -1,6 +1,64 @@
 [
   {
     "jobTitle": {
+      "en-US": "DATA ANALYST (AFRICA MARKET)",
+      "zh-HK": "DATA ANALYST (AFRICA MARKET)",
+      "zh-CN": "DATA ANALYST (AFRICA MARKET)"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "We’re seeking a Data Analyst with a deep interest in Africa’s internet ecosystem to transform raw data into actionable insights. You’ll analyze user behavior, market trends, and product performance across diverse African markets, directly influencing strategies that connect millions of users to transformative digital services across key African markets (e.g., Nigeria, Kenya, Egypt, South Africa).",
+        "zh-HK": "We’re seeking a Data Analyst with a deep interest in Africa’s internet ecosystem to transform raw data into actionable insights. You’ll analyze user behavior, market trends, and product performance across diverse African markets, directly influencing strategies that connect millions of users to transformative digital services across key African markets (e.g., Nigeria, Kenya, Egypt, South Africa).",
+        "zh-CN": "We’re seeking a Data Analyst with a deep interest in Africa’s internet ecosystem to transform raw data into actionable insights. You’ll analyze user behavior, market trends, and product performance across diverse African markets, directly influencing strategies that connect millions of users to transformative digital services across key African markets (e.g., Nigeria, Kenya, Egypt, South Africa)."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "Experience working on, and deploying, large scale systems",
+        "zh-HK": "Experience working on, and deploying, large scale systems",
+        "zh-CN": "Experience working on, and deploying, large scale systems"
+      },
+      {
+        "en-US": "Experience working with and managing varied forms of distributed data systems such as Kafka, HDFS, Storm or Spark.",
+        "zh-HK": "Experience working with and managing varied forms of distributed data systems such as Kafka, HDFS, Storm or Spark.",
+        "zh-CN": "Experience working with and managing varied forms of distributed data systems such as Kafka, HDFS, Storm or Spark."
+      },
+      {
+        "en-US": "Experience working with popular cloud solutions such as AWS, Azure or GCP.",
+        "zh-HK": "Experience working with popular cloud solutions such as AWS, Azure or GCP.",
+        "zh-CN": "Experience working with popular cloud solutions such as AWS, Azure or GCP."
+      },
+      {
+        "en-US": "Knowledge of Docker and Kubernetes.",
+        "zh-HK": "Knowledge of Docker and Kubernetes.",
+        "zh-CN": "Knowledge of Docker and Kubernetes."
+      },
+      {
+        "en-US": "Python/R for data analysis",
+        "zh-HK": "Python/R for data analysis",
+        "zh-CN": "Python/R for data analysis"
+      }
+    ],
+    "jobPluses": [
+      {
+        "en-US": "Highly Desirable - fluency in French, Arabic, or other major African languages.",
+        "zh-HK": "Highly Desirable - fluency in French, Arabic, or other major African languages.",
+        "zh-CN": "Highly Desirable - fluency in French, Arabic, or other major African languages."
+      },
+      {
+        "en-US": "Experience with telecom, fintech, e-commerce, or content platforms in Africa.",
+        "zh-HK": "Experience with telecom, fintech, e-commerce, or content platforms in Africa.",
+        "zh-CN": "Experience with telecom, fintech, e-commerce, or content platforms in Africa."
+      },
+      {
+        "en-US": "MS/PhD in Computer Science, Data Science, Statistics, Economics, Computer Science, or related field.",
+        "zh-HK": "MS/PhD in Computer Science, Data Science, Statistics, Economics, Computer Science, or related field.",
+        "zh-CN": "MS/PhD in Computer Science, Data Science, Statistics, Economics, Computer Science, or related field."
+      }
+    ]
+  },
+  {
+    "jobTitle": {
       "en-US": "WEB FRONTEND ENGINEER",
       "zh-HK": "WEB FRONTEND ENGINEER",
       "zh-CN": "WEB FRONTEND ENGINEER"
