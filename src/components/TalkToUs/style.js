@@ -79,6 +79,9 @@ export const popoverBody = css`
   display: flex;
   flex-direction: column;
   flex: 1;
+`
+
+export const popoverPadding = css`
   padding: 3.5rem 2.8rem;
 `
 
@@ -118,10 +121,12 @@ export const menuItemImage = css`
   margin-right: 1.6rem;
 `
 
-export const container = (theme, closing) => css`
+export const container = (theme, closing, newForm) => css`
   position: fixed;
-  height: auto;
-  width: 34rem;
+  ${!newForm && `height: auto;`}
+  ${newForm && `max-height: 80%;`}
+  width: ${newForm ? `48rem` : `34rem`};
+  ${newForm && `overflow: scroll;`}
   background-color: white;
   bottom: 3rem;
   right: 3rem;
@@ -145,7 +150,7 @@ export const container = (theme, closing) => css`
     overflow: scroll;
   }
 
-  transform: ${closing
-    ? "translate(40%, 40%) scale(0.001); opacity: 0;"
-    : "scale(1);"};
+  transform: ${
+    closing ? "translate(40%, 40%) scale(0.001); opacity: 0;" : "scale(1);"
+  };
 `
