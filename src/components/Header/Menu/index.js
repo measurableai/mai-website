@@ -18,8 +18,12 @@ const Menu = ({ lightModeOn }) => {
       )}
       <div css={theme => annualReportMenuItem(theme)}>
         <div className="label">Get Annual Report</div>
+        <DownloadAnnualReportButton to="/middle-east-online-delivery-report">
+          Middle East Online Delivery Report 2020-2024: FOOD + GROCERY
+          <span>New</span>
+        </DownloadAnnualReportButton>
         <DownloadAnnualReportButton to="/digital-economy-annual-report-2024">
-          The 2024 Digital Economy Annual Report <span>New</span>
+          The 2024 Digital Economy Annual Report
         </DownloadAnnualReportButton>
         <DownloadAnnualReportButton to="/asia-americas-ride-hailing-report">
           Asia & Americas Ride-Hailing 2019-2023

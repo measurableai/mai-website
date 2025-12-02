@@ -20,6 +20,13 @@ export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
       src="//js.hs-scripts.com/20168923.js"
     />
   )
+
+  setPostBodyComponents(
+    <script
+      src="https://js-na2.hsforms.net/forms/embed/20168923.js"
+      defer
+    ></script>
+  )
 }
 
 export const wrapRootElement = ({ element }) => (

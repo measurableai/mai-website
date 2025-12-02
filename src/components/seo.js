@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import ogImageJpg from "@/images/og-image.jpg"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -30,6 +31,7 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
+      defer={false}
       htmlAttributes={{
         lang,
       }}
@@ -51,6 +53,18 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://www.measurable.ai${ogImageJpg}`,
+        },
+        {
+          property: "og:image:width",
+          content: "1200",
+        },
+        {
+          property: "og:image:height",
+          content: "630",
         },
         {
           name: `twitter:card`,

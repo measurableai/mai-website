@@ -36,7 +36,7 @@ const AnnualReportRequestPage = () => {
   const theme = useTheme()
 
   return (
-    <Layout headerMode="light">
+    <>
       <SEO
         title="Asia Food Delivery Annual Report 2019-2022"
         description="Check out Measurable AI's latest Asia Online Food and Grocery Delivery Overview Report capturing key insights across 9 markets from 2019 to 2022."
@@ -45,17 +45,27 @@ const AnnualReportRequestPage = () => {
             property: `og:image`,
             content: `https://www.measurable.ai${ogImageJpg}`,
           },
+          {
+            property: "og:image:width",
+            content: "1200",
+          },
+          {
+            property: "og:image:height",
+            content: "630",
+          },
         ]}
       />
-      <SlopedSection
-        css={background}
-        slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
-      >
-        <AnnualReportHero css={shoutOutPadding} />
-      </SlopedSection>
-      <AnnualReportDetailSection />
-      <AnnualReportForm />
-    </Layout>
+      <Layout headerMode="light">
+        <SlopedSection
+          css={background}
+          slopedBackgroundImage={theme.linearGradients.greenDarkToLight}
+        >
+          <AnnualReportHero css={shoutOutPadding} />
+        </SlopedSection>
+        <AnnualReportDetailSection />
+        <AnnualReportForm />
+      </Layout>
+    </>
   )
 }
 

@@ -33,6 +33,12 @@ const Callback = ({ onSubmit }) => {
   const theme = useTheme()
   const intl = useIntl()
 
+  let newForm = true
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search)
+    newForm = params.get("form") !== "n"
+  }
+
   const formOptions = useMemo(
     () => ({
       uri: CONTACT_US,
@@ -51,6 +57,17 @@ const Callback = ({ onSubmit }) => {
     formOptions,
     onSubmit
   )
+
+  if (newForm) {
+    return (
+      <div
+        class="hs-form-frame"
+        data-region="na2"
+        data-form-id="1c7c4ef7-bd37-4cfa-8e88-a0f62f51a895"
+        data-portal-id="20168923"
+      ></div>
+    )
+  }
 
   return (
     // TODO: merge component with Callback
