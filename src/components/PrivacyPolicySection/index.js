@@ -46,7 +46,7 @@ const PrivacyPolicySection = props => (
       </Content>
       <Content>&nbsp;</Content>
       <Content>
-        <strong>Effective date: Nov 11, 2022</strong>
+        <strong>Effective date: Dec 2, 2025</strong>
       </Content>
       <Content>
         <strong>
@@ -1030,7 +1030,7 @@ const PrivacyPolicySection = props => (
       </Content>
       <Content>
         <strong>
-          Physical address: 66 Shanghai St, Yau Ma Tei, Kowloon, Hong Kong{" "}
+          Physical address: 28 Wellington Street, Central, Hong Kong{" "}
         </strong>
       </Content>
       <Content>
