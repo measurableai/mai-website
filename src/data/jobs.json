@@ -1,6 +1,212 @@
 [
   {
     "jobTitle": {
+      "en-US": "PROJECT MANAGER",
+      "zh-HK": "PROJECT MANAGER",
+      "zh-CN": "PROJECT MANAGER"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Own the lifecycle of our data products, from strategy to execution and delivery.",
+        "zh-HK": "Own the lifecycle of our data products, from strategy to execution and delivery.",
+        "zh-CN": "Own the lifecycle of our data products, from strategy to execution and delivery."
+      },
+      {
+        "en-US": "Identify product issues and opportunities by analyzing product usage, client feedback, and data insights.",
+        "zh-HK": "Identify product issues and opportunities by analyzing product usage, client feedback, and data insights.",
+        "zh-CN": "Identify product issues and opportunities by analyzing product usage, client feedback, and data insights."
+      },
+      {
+        "en-US": "Collaborate with clients and internal teams to troubleshoot client challenges and propose effective product solutions.",
+        "zh-HK": "Collaborate with clients and internal teams to troubleshoot client challenges and propose effective product solutions.",
+        "zh-CN": "Collaborate with clients and internal teams to troubleshoot client challenges and propose effective product solutions."
+      },
+      {
+        "en-US": "Work closely with engineering, data scientists, and business team to define product requirements and deliver new product features.",
+        "zh-HK": "Work closely with engineering, data scientists, and business team to define product requirements and deliver new product features.",
+        "zh-CN": "Work closely with engineering, data scientists, and business team to define product requirements and deliver new product features."
+      },
+      {
+        "en-US": "Translate business needs into technical specifications and prioritize product roadmaps.",
+        "zh-HK": "Translate business needs into technical specifications and prioritize product roadmaps.",
+        "zh-CN": "Translate business needs into technical specifications and prioritize product roadmaps."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "Strong analytical skills with proficiency in SQL, Python, R, or other analytical tools.",
+        "zh-HK": "Strong analytical skills with proficiency in SQL, Python, R, or other analytical tools.",
+        "zh-CN": "Strong analytical skills with proficiency in SQL, Python, R, or other analytical tools."
+      },
+      {
+        "en-US": "Hands-on experience with modern data and analytics tools such as Databricks, Jupyter Notebook, and NoSQL databases.",
+        "zh-HK": "Hands-on experience with modern data and analytics tools such as Databricks, Jupyter Notebook, and NoSQL databases.",
+        "zh-CN": "Hands-on experience with modern data and analytics tools such as Databricks, Jupyter Notebook, and NoSQL databases."
+      },
+      {
+        "en-US": "Degree in Computer Science, Engineering, Data Science, or related technical field.",
+        "zh-HK": "Degree in Computer Science, Engineering, Data Science, or related technical field.",
+        "zh-CN": "Degree in Computer Science, Engineering, Data Science, or related technical field."
+      },
+      {
+        "en-US": "3 years of experience in product management or data-focused roles.",
+        "zh-HK": "3 years of experience in product management or data-focused roles.",
+        "zh-CN": "3 years of experience in product management or data-focused roles."
+      },
+      {
+        "en-US": "Less experience or fresh graduates with strong technical and analytical interest are also encouraged to apply for junior positions.",
+        "zh-HK": "Less experience or fresh graduates with strong technical and analytical interest are also encouraged to apply for junior positions.",
+        "zh-CN": "Less experience or fresh graduates with strong technical and analytical interest are also encouraged to apply for junior positions."
+      },
+      {
+        "en-US": "Excellent communication skills with the ability to convey complex technical insights to non-technical stakeholders.",
+        "zh-HK": "Excellent communication skills with the ability to convey complex technical insights to non-technical stakeholders.",
+        "zh-CN": "Excellent communication skills with the ability to convey complex technical insights to non-technical stakeholders."
+      },
+      {
+        "en-US": "Experience working cross-functionally with engineering and business teams to deliver products.",
+        "zh-HK": "Experience working cross-functionally with engineering and business teams to deliver products.",
+        "zh-CN": "Experience working cross-functionally with engineering and business teams to deliver products."
+      }
+    ],
+    "jobPluses": [
+      {
+        "en-US": "Experience building B2B or data-centric products.",
+        "zh-HK": "Experience building B2B or data-centric products.",
+        "zh-CN": "Experience building B2B or data-centric products."
+      },
+      {
+        "en-US": "Understanding of cloud services (AWS, Azure, or GCP).",
+        "zh-HK": "Understanding of cloud services (AWS, Azure, or GCP).",
+        "zh-CN": "Understanding of cloud services (AWS, Azure, or GCP)."
+      },
+      {
+        "en-US": "Track record of solving client-facing technical issues.",
+        "zh-HK": "Track record of solving client-facing technical issues.",
+        "zh-CN": "Track record of solving client-facing technical issues."
+      },
+      {
+        "en-US": "Knowledge of data visualization, statistical modeling, or exploratory data analysis.",
+        "zh-HK": "Knowledge of data visualization, statistical modeling, or exploratory data analysis.",
+        "zh-CN": "Knowledge of data visualization, statistical modeling, or exploratory data analysis."
+      }
+    ]
+  },
+  {
+    "jobTitle": {
+      "en-US": "APP QA SPECIALIST",
+      "zh-HK": "APP QA SPECIALIST",
+      "zh-CN": "APP QA SPECIALIST"
+    },
+    "jobDescriptions": [
+      {
+        "en-US": "Lead comprehensive quality assurance processes for mobile applications on both iOS and Android platforms.",
+        "zh-HK": "Lead comprehensive quality assurance processes for mobile applications on both iOS and Android platforms.",
+        "zh-CN": "Lead comprehensive quality assurance processes for mobile applications on both iOS and Android platforms."
+      },
+      {
+        "en-US": "Design and implement robust test strategies, including early-stage exploratory, usability, performance, and regression testing.",
+        "zh-HK": "Design and implement robust test strategies, including early-stage exploratory, usability, performance, and regression testing.",
+        "zh-CN": "Design and implement robust test strategies, including early-stage exploratory, usability, performance, and regression testing."
+      },
+      {
+        "en-US": "Develop and execute manual and automated test cases covering a wide range of mobile devices and OS versions.",
+        "zh-HK": "Develop and execute manual and automated test cases covering a wide range of mobile devices and OS versions.",
+        "zh-CN": "Develop and execute manual and automated test cases covering a wide range of mobile devices and OS versions."
+      },
+      {
+        "en-US": "Collaborate with developers, product managers, and cross-functional teams to define requirements and ensure high reliability from the earliest development phases.",
+        "zh-HK": "Collaborate with developers, product managers, and cross-functional teams to define requirements and ensure high reliability from the earliest development phases.",
+        "zh-CN": "Collaborate with developers, product managers, and cross-functional teams to define requirements and ensure high reliability from the earliest development phases."
+      },
+      {
+        "en-US": "Utilize modern QA tools to maximize test coverage and defect tracking.",
+        "zh-HK": "Utilize modern QA tools to maximize test coverage and defect tracking.",
+        "zh-CN": "Utilize modern QA tools to maximize test coverage and defect tracking."
+      },
+      {
+        "en-US": "Analyze test results, identify complex bugs, and provide actionable feedback to improve product quality.",
+        "zh-HK": "Analyze test results, identify complex bugs, and provide actionable feedback to improve product quality.",
+        "zh-CN": "Analyze test results, identify complex bugs, and provide actionable feedback to improve product quality."
+      },
+      {
+        "en-US": "Continuously refine QA methodologies and processes to ensure industry best practices.",
+        "zh-HK": "Continuously refine QA methodologies and processes to ensure industry best practices.",
+        "zh-CN": "Continuously refine QA methodologies and processes to ensure industry best practices."
+      }
+    ],
+    "jobRequirements": [
+      {
+        "en-US": "Minimum of 3 years experience in mobile app QA, with direct experience across both iOS and Android ecosystems.",
+        "zh-HK": "Minimum of 3 years experience in mobile app QA, with direct experience across both iOS and Android ecosystems.",
+        "zh-CN": "Minimum of 3 years experience in mobile app QA, with direct experience across both iOS and Android ecosystems."
+      },
+      {
+        "en-US": "Junior candidates or those with less experience and strong technical curiosity are invited to apply. Comprehensive training and mentorship is available for motivated applicants.",
+        "zh-HK": "Junior candidates or those with less experience and strong technical curiosity are invited to apply. Comprehensive training and mentorship is available for motivated applicants.",
+        "zh-CN": "Junior candidates or those with less experience and strong technical curiosity are invited to apply. Comprehensive training and mentorship is available for motivated applicants."
+      },
+      {
+        "en-US": "Deep understanding of mobile OS architecture, device fragmentation, and platform-specific constraints.",
+        "zh-HK": "Deep understanding of mobile OS architecture, device fragmentation, and platform-specific constraints.",
+        "zh-CN": "Deep understanding of mobile OS architecture, device fragmentation, and platform-specific constraints."
+      },
+      {
+        "en-US": "Proficiency in test automation tools.",
+        "zh-HK": "Proficiency in test automation tools.",
+        "zh-CN": "Proficiency in test automation tools."
+      },
+      {
+        "en-US": "Hands-on experience with bug tracking, test management, and CI/CD pipelines",
+        "zh-HK": "Hands-on experience with bug tracking, test management, and CI/CD pipelines",
+        "zh-CN": "Hands-on experience with bug tracking, test management, and CI/CD pipelines"
+      },
+      {
+        "en-US": "Strong analytical and problem-solving skills; attention to detail in documenting defects and edge cases.",
+        "zh-HK": "Strong analytical and problem-solving skills; attention to detail in documenting defects and edge cases.",
+        "zh-CN": "Strong analytical and problem-solving skills; attention to detail in documenting defects and edge cases."
+      },
+      {
+        "en-US": "Programming experience in Python, Java or JavaScript for mobile test scripting.",
+        "zh-HK": "Programming experience in Python, Java or JavaScript for mobile test scripting.",
+        "zh-CN": "Programming experience in Python, Java or JavaScript for mobile test scripting."
+      },
+      {
+        "en-US": "Effective communicator with proven experience in cross-team collaboration.",
+        "zh-HK": "Effective communicator with proven experience in cross-team collaboration.",
+        "zh-CN": "Effective communicator with proven experience in cross-team collaboration."
+      }
+    ],
+    "jobPluses": [
+      {
+        "en-US": "Track record of testing mobile apps for accessibility, localization, and performance.",
+        "zh-HK": "Track record of testing mobile apps for accessibility, localization, and performance.",
+        "zh-CN": "Track record of testing mobile apps for accessibility, localization, and performance."
+      },
+      {
+        "en-US": "Experience developing automated testing frameworks.",
+        "zh-HK": "Experience developing automated testing frameworks.",
+        "zh-CN": "Experience developing automated testing frameworks."
+      },
+      {
+        "en-US": "Knowledge of usability and UX testing methodologies.",
+        "zh-HK": "Knowledge of usability and UX testing methodologies.",
+        "zh-CN": "Knowledge of usability and UX testing methodologies."
+      },
+      {
+        "en-US": "Experience in app development and testing with multiple localized versions.",
+        "zh-HK": "Experience in app development and testing with multiple localized versions.",
+        "zh-CN": "Experience in app development and testing with multiple localized versions."
+      },
+      {
+        "en-US": "Bachelor’s degree in Computer Science, Engineering or equivalent field.",
+        "zh-HK": "Bachelor’s degree in Computer Science, Engineering or equivalent field.",
+        "zh-CN": "Bachelor’s degree in Computer Science, Engineering or equivalent field."
+      }
+    ]
+  },
+  {
+    "jobTitle": {
       "en-US": "DATA ANALYST",
       "zh-HK": "DATA ANALYST",
       "zh-CN": "DATA ANALYST"
