@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "0.1.0",
+  "serverInfo": {
+    "name": "Measurable AI",
+    "version": "1.0.0",
+    "description": "Measurable AI generates actionable consumer insights based on billions of transactional data points for emerging markets in Asia and the Middle East."
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://www.measurable.ai/mcp"
+  },
+  "capabilities": {
+    "tools": false,
+    "resources": false,
+    "prompts": false
+  }
+}

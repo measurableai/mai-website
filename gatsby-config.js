@@ -38,6 +38,23 @@ module.exports = {
       `,
         resolveSiteUrl: () => siteUrl,
         exclude: ["/en-US", "/en-US/**", "/termsOfUse", "/privacyPolicy"],
+        serialize: ({ query: { allSitePage, allWordpressPost } }) => {
+          const pages = allSitePage.nodes.map(node => ({
+            url: `${siteUrl}${node.path}`,
+            changefreq: node.path === "/" ? "daily" : "weekly",
+            priority: node.path === "/" ? 1.0 : 0.7,
+          }))
+          const posts = (
+            (allWordpressPost && allWordpressPost.edges) ||
+            []
+          ).map(({ node }) => ({
+            url: node.link,
+            changefreq: "weekly",
+            priority: 0.5,
+            lastmod: node.modified,
+          }))
+          return [...pages, ...posts]
+        },
       },
     },
     {

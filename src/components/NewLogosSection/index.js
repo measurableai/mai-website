@@ -254,6 +254,15 @@ const NewLogosSection = props => {
           }
         }
       }
+      theNewYorkTimes: file(
+        relativePath: { eq: "logos/the-new-york-times.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -266,17 +275,19 @@ const NewLogosSection = props => {
         tablet: 2,
         mobile: 1,
       },
-      logoWrapperSize: [148, 56],
+      logoWrapperWidth: 148,
       logos: [
         {
           name: "dalaAward",
           width: 88,
+          logoWrapperHeight: 56,
           description:
             "<p>Best Data Monetization Award</p><p>Best Data Tech Startup Award</p>",
         },
         {
           name: "retailInnovationAward",
           width: 70,
+          logoWrapperHeight: 56,
           description: "<p>Retailer Choice Award</p>",
         },
       ],
@@ -289,14 +300,15 @@ const NewLogosSection = props => {
         tablet: 3,
         mobile: 3,
       },
-      logoWrapperSize: [136, 50],
+      logoWrapperWidth: 160,
       logos: [
-        { name: "cnbc", width: 38 },
-        { name: "scmp", width: 41 },
-        { name: "marketingInteractive", width: 70 },
-        { name: "bloomberg", width: 82 },
-        { name: "hket", width: 43 },
-        { name: "yahooHkFinance", width: 65 },
+        { name: "theNewYorkTimes", width: 90, logoWrapperHeight: 30 },
+        { name: "cnbc", width: 30, logoWrapperHeight: 72 },
+        { name: "scmp", width: 50, logoWrapperHeight: 60 },
+        { name: "marketingInteractive", width: 60, logoWrapperHeight: 50 },
+        { name: "bloomberg", width: 65, logoWrapperHeight: 40 },
+        { name: "hket", width: 35, logoWrapperHeight: 50 },
+        { name: "yahooHkFinance", width: 50, logoWrapperHeight: 50 },
       ],
     },
 
@@ -308,17 +320,17 @@ const NewLogosSection = props => {
         tablet: 3,
         mobile: 3,
       },
-      logoWrapperSize: [136, 50],
+      logoWrapperWidth: 136,
       logos: [
-        { name: "cmu", width: 53 },
-        { name: "columbiaUniversity", width: 100 },
-        { name: "cuhk", width: 75 },
-        { name: "hkust", width: 95 },
-        { name: "texas", width: 70 },
-        { name: "mit", width: 80 },
-        { name: "polyu", width: 75 },
-        { name: "rutgers", width: 70 },
-        { name: "usc", width: 70 },
+        { name: "cmu", width: 53, logoWrapperHeight: 50 },
+        { name: "columbiaUniversity", width: 100, logoWrapperHeight: 50 },
+        { name: "cuhk", width: 75, logoWrapperHeight: 50 },
+        { name: "hkust", width: 95, logoWrapperHeight: 50 },
+        { name: "texas", width: 70, logoWrapperHeight: 50 },
+        { name: "mit", width: 80, logoWrapperHeight: 50 },
+        { name: "polyu", width: 75, logoWrapperHeight: 50 },
+        { name: "rutgers", width: 70, logoWrapperHeight: 50 },
+        { name: "usc", width: 70, logoWrapperHeight: 50 },
       ],
     },
     {
@@ -329,23 +341,23 @@ const NewLogosSection = props => {
         tablet: 3,
         mobile: 3,
       },
-      logoWrapperSize: [136, 50],
+      logoWrapperWidth: 136,
       logos: [
-        { name: "statista", width: 68 },
-        { name: "bloombergIntelligence", width: 90 },
-        { name: "ubs", width: 60 },
-        { name: "barclays", width: 90 },
-        { name: "gfSecurities", width: 60 },
-        { name: "maybank", width: 90 },
-        { name: "cubeAsia", width: 62 },
-        { name: "antenna", width: 60 },
-        { name: "momentumAsia", width: 65 },
-        { name: "htsc", width: 68 },
-        { name: "miraeAssetSecurities", width: 90 },
-        { name: "bahanaSekuritas", width: 90 },
-        { name: "chinaRenaissance", width: 78 },
-        { name: "bocom", width: 78 },
-        { name: "samuelSekuritas", width: 65 },
+        { name: "statista", width: 68, logoWrapperHeight: 50 },
+        { name: "bloombergIntelligence", width: 90, logoWrapperHeight: 50 },
+        { name: "ubs", width: 60, logoWrapperHeight: 50 },
+        { name: "barclays", width: 90, logoWrapperHeight: 50 },
+        { name: "gfSecurities", width: 60, logoWrapperHeight: 50 },
+        { name: "maybank", width: 90, logoWrapperHeight: 50 },
+        { name: "cubeAsia", width: 62, logoWrapperHeight: 50 },
+        { name: "antenna", width: 60, logoWrapperHeight: 50 },
+        { name: "momentumAsia", width: 65, logoWrapperHeight: 50 },
+        { name: "htsc", width: 68, logoWrapperHeight: 50 },
+        { name: "miraeAssetSecurities", width: 90, logoWrapperHeight: 50 },
+        { name: "bahanaSekuritas", width: 90, logoWrapperHeight: 50 },
+        { name: "chinaRenaissance", width: 78, logoWrapperHeight: 50 },
+        { name: "bocom", width: 78, logoWrapperHeight: 50 },
+        { name: "samuelSekuritas", width: 65, logoWrapperHeight: 50 },
       ],
     },
   ]
@@ -370,7 +382,10 @@ const NewLogosSection = props => {
                   <div>
                     <div
                       key={`${cid}${lid}`}
-                      css={logoWrapper(cat.logoWrapperSize)}
+                      css={logoWrapper([
+                        cat.logoWrapperWidth,
+                        logo.logoWrapperHeight,
+                      ])}
                     >
                       <Img
                         fluid={images[logo.name].childImageSharp.fluid}

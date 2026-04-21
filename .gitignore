@@ -74,3 +74,4 @@ schema.json
 
 # editor
 .vscode/
+.claude/settings.local.json

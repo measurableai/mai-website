@@ -51,6 +51,7 @@ export const currentOpeningsContainer = css`
 export const jobTitle = theme => css`
   color: ${theme.colors.purples.normal};
   border-bottom: 0.1rem solid ${theme.colors.purples.normal};
+  line-height: 2;
 
   ${mq.tablet} {
     font-size: 1.3rem;

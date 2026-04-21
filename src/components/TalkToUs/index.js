@@ -11,12 +11,19 @@ import {
   closeButton,
   closeSymbol,
   popoverBody,
+  popoverPadding,
   container,
 } from "./style"
 
 const TalkToUs = () => {
   const { state, isOpen, open, close, onClose } = useContext(TalkToUsContext)
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+
+  let newForm = true
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search)
+    newForm = params.get("form") !== "n"
+  }
 
   const handleSubmit = useCallback(() => {
     setIsFormSubmitted(true)
@@ -46,7 +53,7 @@ const TalkToUs = () => {
         <span css={helpSymbol}>?</span>
         <FormattedMessage id="requestADemo" defaultMessage="REQUEST A DEMO" />
       </button>
-      <div css={theme => container(theme, !isOpen)}>
+      <div css={theme => container(theme, !isOpen, newForm)}>
         <div css={popoverHeader}>
           {isFormSubmitted ? (
             <FormattedMessage
@@ -69,7 +76,7 @@ const TalkToUs = () => {
             <div css={closeSymbol} />
           </button>
         </div>
-        <div css={popoverBody}>
+        <div css={[popoverBody, !newForm && popoverPadding]}>
           {state && <LeaveMessage onSubmit={handleSubmit} />}
         </div>
       </div>

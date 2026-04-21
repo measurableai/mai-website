@@ -46,7 +46,7 @@ const PrivacyPolicySection = props => (
       </Content>
       <Content>&nbsp;</Content>
       <Content>
-        <strong>Effective date: Nov 11, 2022</strong>
+        <strong>Effective date: Dec 2, 2025</strong>
       </Content>
       <Content>
         <strong>
@@ -1030,44 +1030,12 @@ const PrivacyPolicySection = props => (
       </Content>
       <Content>
         <strong>
-          Physical address: 66 Shanghai St, Yau Ma Tei, Kowloon, Hong Kong{" "}
+          Physical address: 28 Wellington Street, Central, Hong Kong{" "}
         </strong>
       </Content>
       <Content>
         <strong>
           Email address for contact:{" "}
-          <Anchor href="mailto:business@measurable.ai">
-            business@measurable.ai
-          </Anchor>
-        </strong>
-      </Content>
-      <Content>
-        <strong>Designated representative and contact information</strong>
-      </Content>
-      <Content>
-        <strong>DP-Dock GmbH </strong>
-      </Content>
-      <Content>
-        <strong>Ballindamm 39 </strong>
-      </Content>
-      <Content>
-        <strong>20095 Hamburg </strong>
-      </Content>
-      <Content>
-        <strong>Tel.: +49 (0) 40 99999 – 3430 </strong>
-      </Content>
-      <Content>
-        <strong>Mob.: +49 (0) 172 918 22 22 </strong>
-      </Content>
-      <Content>
-        <strong>E-Mail: mailtime@gdpr-rep.com</strong>
-      </Content>
-      <Content>
-        <strong>Data Protection Officer and contact information</strong>
-      </Content>
-      <Content>
-        <strong>
-          Carson Ip,{" "}
           <Anchor href="mailto:business@measurable.ai">
             business@measurable.ai
           </Anchor>

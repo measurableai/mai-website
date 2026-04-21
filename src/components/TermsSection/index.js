@@ -40,9 +40,9 @@ const TermsSection = props => (
       <Content>
         <strong>
           These Terms of Use (the “Terms”) are a binding contract between you
-          and Mobile Internet Limited (“Measurable AI,” “we” and “us”). You must
-          agree to and accept all of the Terms, or you don’t have the right to
-          use the Services. Your using the Services in any way means that you
+          and Alternative Data Limited (“Measurable AI,” “we” and “us”). You
+          must agree to and accept all of the Terms, or you don’t have the right
+          to use the Services. Your using the Services in any way means that you
           agree to all of these Terms, and these Terms will remain in effect
           while you use the Services. These Terms include the provisions in this
           document, as well as those in the Privacy Policy.

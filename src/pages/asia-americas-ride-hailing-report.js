@@ -22,7 +22,7 @@ const shoutOutPadding = css`
 
 const AsiaAmericasRideHailingReportPage = () => {
   return (
-    <Layout headerMode="light">
+    <>
       <SEO
         title="Asia Americas Ride Hailing Report 2019-2023"
         description="Check out Measurable AI's latest Asia Americas Ride Hailing Overview Report capturing key insights across 11 markets from 2019 to 2023."
@@ -31,12 +31,22 @@ const AsiaAmericasRideHailingReportPage = () => {
             property: `og:image`,
             content: `https://www.measurable.ai${ogImageJpg}`,
           },
+          {
+            property: "og:image:width",
+            content: "1200",
+          },
+          {
+            property: "og:image:height",
+            content: "630",
+          },
         ]}
       />
-      <AnnualReportHero css={shoutOutPadding} />
-      <AnnualReportDetailSection />
-      <AnnualReportForm />
-    </Layout>
+      <Layout headerMode="light">
+        <AnnualReportHero css={shoutOutPadding} />
+        <AnnualReportDetailSection />
+        <AnnualReportForm />
+      </Layout>
+    </>
   )
 }
 

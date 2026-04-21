@@ -1,5 +1,5 @@
 import React from "react"
-import AnnualReportDashboardIframe from "@/components/DigitalEconomyAnnualReport2024/Dashboard"
+// import AnnualReportDashboardIframe from "@/components/DigitalEconomyAnnualReport2024/Dashboard"
 import {
   detailSection,
   regionsWrapper,
@@ -72,7 +72,7 @@ const AnnualReportDetailSection = () => {
         <br />
         <span>Pioneering Through Resilient Future</span>
       </h2>
-      <AnnualReportDashboardIframe />
+      {/* <AnnualReportDashboardIframe /> */}
       <div css={regionsWrapper}>
         <h3>
           Across <span className="triangle">{availableRegions.length}</span>{" "}

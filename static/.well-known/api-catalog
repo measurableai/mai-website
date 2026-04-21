@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.measurable.ai",
+      "service-doc": [
+        {
+          "href": "https://www.measurable.ai/all-reports",
+          "type": "text/html"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://www.measurable.ai/.well-known/api-catalog",
+          "type": "application/linkset+json"
+        }
+      ]
+    }
+  ]
+}
