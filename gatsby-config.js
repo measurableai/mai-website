@@ -38,7 +38,7 @@ module.exports = {
       `,
         resolveSiteUrl: () => siteUrl,
         exclude: ["/en-US", "/en-US/**", "/termsOfUse", "/privacyPolicy"],
-        serialize: ({ query: { allSitePage, allWordpressPost } }) => {
+        serialize: ({ allSitePage, allWordpressPost }) => {
           const pages = allSitePage.nodes.map(node => ({
             url: `${siteUrl}${node.path}`,
             changefreq: node.path === "/" ? "daily" : "weekly",
