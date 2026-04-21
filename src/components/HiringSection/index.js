@@ -29,7 +29,11 @@ const HiringSection = ({ openingJobs, ...props }) => (
         id="emailToApply"
         defaultMessage="Email <span>jobs@measurable.ai</span> to apply."
         values={{
-          span: str => <span css={emailStyle}>{str}</span>,
+          span: str => (
+            <a href="mailto:jobs@measurable.ai" css={emailStyle}>
+              {str}
+            </a>
+          ),
         }}
       />
     </p>

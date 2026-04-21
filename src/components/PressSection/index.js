@@ -38,10 +38,10 @@ const PressSection = props => (
         defaultMessage="Please contact <span>press@measurable.ai</span>"
         values={{
           span: str => (
-            <span css={emailStyle}>
+            <a href="mailto:press@measurable.ai" css={emailStyle}>
               <br />
               {str}
-            </span>
+            </a>
           ),
         }}
       />

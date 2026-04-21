@@ -71,6 +71,7 @@ export const emailStyle = theme => css`
   color: ${theme.colors.greens.dark};
   font-size: 2.8rem;
   font-weight: bold;
+  text-decoration: none;
 
   ${mq.tablet} {
     font-size: 1.4rem;
