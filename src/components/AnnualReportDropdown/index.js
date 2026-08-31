@@ -1,18 +1,19 @@
-import React, { forwardRef } from "react"
-import { Link } from "gatsby-plugin-intl"
-import { dropdown, listItem } from "./style"
+import React from "react"
+import { dropdown } from "./style"
 
-const ListItem = forwardRef(({ innerRef, to, children, ...props }, ref) => (
-  <Link to={to} ref={ref || innerRef} css={listItem} {...props}>
-    {children}
-  </Link>
-))
+// const ListItem = forwardRef(({ innerRef, to, children, ...props }, ref) => (
+//   <Link to={to} ref={ref || innerRef} css={listItem} {...props}>
+//     {children}
+//   </Link>
+// ))
 
 const AnnualReportDropdown = () => {
   return (
     <div css={dropdown}>
-      <button>Get Annual Report</button>
-      <div>
+      <button>
+        <a href="/annualreportgenerator">Get Annual Report</a>
+      </button>
+      {/* <div>
         <div>
           <ListItem to="/middle-east-online-delivery-report">
             Middle East Online Delivery Report 2020-2024: FOOD + GROCERY
@@ -28,7 +29,7 @@ const AnnualReportDropdown = () => {
             Asia Online Delivery 2019-2022: Food & Grocery
           </ListItem>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
