@@ -1,0 +1,424 @@
+/* ───────────────────────────────────────────────────────────────
+   Two worlds, deliberately.
+
+   The console is the website's identity — deep purple ground,
+   fluorescent green actions. The sheet it produces is the report's
+   identity. A dark instrument that prints a light page.
+
+   And the reports are themed per family: online delivery is aqua on
+   white, ride-hailing crimson on white. So the sheet's palette is
+   set from the data at render time, not fixed here — pick a
+   different industry and the page it prints changes identity too.
+
+   Single-theme by intent: this is a branded product surface, like
+   the reports themselves. Every colour is painted explicitly so the
+   page holds on either host ground.
+   ─────────────────────────────────────────────────────────────── */
+:root {
+  /* console — website identity */
+  --ground:      #0C0A24;
+  --ground-lift: #15113A;
+  --panel:       #1B1547;
+  --edge:        #2C2463;
+  --ink:         #E8E6F6;   /* off-white, violet bias */
+  --ink-dim:     #9B94C4;
+  --ink-faint:   #625A93;
+  --action:      #68FF92;   /* Lt. Fluorescent Green */
+  --action-deep: #39D965;
+
+  /* sheet — overwritten per industry from the dataset's palette */
+  --paper:    #FFFFFF;
+  --series:   #2ED9CC;
+  --deep:     #00B3A6;
+  --rule:     #BCE9E6;
+  --sheet-ink:#221852;
+  --contrast: #06231F;
+
+  --sheet-max: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "Roboto", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  background-image:
+    linear-gradient(135deg, rgba(46,217,204,.055) 0 1px, transparent 1px 42px),
+    linear-gradient(225deg, rgba(104,255,146,.045) 0 1px, transparent 1px 42px);
+}
+:focus-visible { outline: 2px solid var(--action); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { max-width: var(--sheet-max); margin: 0 auto; padding: clamp(1.5rem,4vw,3.5rem) clamp(1rem,3vw,2rem) 1.5rem; }
+
+/* ── masthead ─────────────────────────────────────────────── */
+.masthead { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--edge); padding-bottom: 1rem; }
+.masthead .home { display: inline-flex; align-items: center; }
+.logo { display: block; }
+.topnav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem,2.4vw,1.9rem); }
+
+/* "Get Annual Report" — square, cyan on deep navy, exactly as on measurable.ai
+   (text #00F9D8, ground #0A0A80, 1px cyan rule, Roboto 700, 0.5px tracking) */
+.nav-report {
+  font-family: "Roboto", system-ui, sans-serif; font-weight: 700;
+  font-size: .82rem; letter-spacing: .5px; text-transform: uppercase; text-decoration: none;
+  color: #00F9D8; background: #0A0A80; border: 1px solid #00F9D8; border-radius: 0;
+  padding: .55rem .85rem; white-space: nowrap; transition: background .16s, color .16s;
+}
+.nav-report:hover { background: #00F9D8; color: #0A0A80; }
+.nav-report[aria-current="page"] { background: #00F9D8; color: #0A0A80; }
+
+/* "Data Insights" — white, Roboto 400, 2px tracking */
+.nav-link {
+  font-family: "Roboto", system-ui, sans-serif; font-weight: 400;
+  font-size: .78rem; letter-spacing: 2px; text-transform: uppercase;
+  color: #FFF; text-decoration: none; white-space: nowrap;
+}
+.nav-link:hover { color: var(--action); }
+
+/* floating Request-a-demo pill — #68FF92 on #221852, fixed bottom-right */
+.demo-pill {
+  position: fixed; right: 50px; bottom: 60px; z-index: 40;
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: #68FF92; color: #221852; text-decoration: none;
+  border-radius: 24px; padding: 15px 20px;
+  font-family: "Roboto", system-ui, sans-serif; font-weight: 900;
+  font-size: .95rem; letter-spacing: 1.13px; text-transform: uppercase;
+  box-shadow: 0 6px 22px rgba(0,0,0,.35);
+  transition: transform .16s, background .16s;
+}
+.demo-pill:hover { background: var(--action-deep); transform: translateY(-2px); }
+@media (max-width: 700px) {
+  .demo-pill { right: 14px; bottom: 14px; padding: 11px 15px; font-size: .8rem; letter-spacing: .8px; }
+}
+@media (max-width: 460px) {
+  .topnav { gap: .75rem; }
+  .nav-report { font-size: .72rem; padding: .45rem .6rem; }
+  .nav-link { font-size: .68rem; letter-spacing: 1.2px; }
+}
+
+h1 {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700; text-transform: uppercase; text-wrap: balance;
+  font-size: clamp(2.4rem, 7vw, 4.6rem); line-height: .92; letter-spacing: -.005em;
+  margin: clamp(1.5rem,4vw,2.75rem) 0 0;
+}
+h1 em { font-style: normal; color: #2ED9CC; }
+.standfirst { max-width: 54ch; color: var(--ink-dim); margin: 1rem 0 0; font-size: 1.02rem; }
+
+/* ── console ──────────────────────────────────────────────── */
+.console { display: grid; gap: clamp(1rem,2.4vw,1.75rem); grid-template-columns: minmax(0, 320px) minmax(0, 1fr); margin-top: clamp(1.75rem,4vw,3rem); align-items: stretch; }
+@media (max-width: 1000px) {
+  .console { grid-template-columns: minmax(0,1fr); }
+  /* stacked, the rail is a wide band — a full-bleed button reads as a banner */
+  .picker > .generate { align-self: start; width: auto; padding: .8rem 3rem; }
+}
+@media (max-width: 480px) { .picker > .generate { width: 100%; padding: .8rem 1rem; } }
+
+.picker { background: var(--ground-lift); border: 1px solid var(--edge); padding: 1.35rem 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+.field { display: flex; flex-direction: column; gap: .6rem; }
+.field > .label { font-family: "Roboto Mono", ui-monospace, monospace; font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); display: flex; align-items: baseline; gap: .5rem; }
+.field > .label b { color: #2ED9CC; font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip {
+  font: inherit; font-size: .84rem; line-height: 1; padding: .55rem .7rem; cursor: pointer;
+  background: transparent; color: var(--ink-dim); border: 1px solid var(--edge); border-radius: 999px;
+  transition: background .16s, color .16s, border-color .16s;
+}
+.chip:hover:not(:disabled) { border-color: #2ED9CC; color: var(--ink); }
+.chip[aria-pressed="true"] { background: #2ED9CC; border-color: #2ED9CC; color: #06231F; font-weight: 500; }
+.chip:disabled { opacity: .3; cursor: not-allowed; }
+.chip .flag { margin-right: .3rem; }
+
+/* the action sits on the rail's bottom edge, level with the foot of the sheet */
+.picker > .generate { margin-top: auto; }
+.generate {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700; font-size: 1.32rem; text-transform: uppercase; letter-spacing: .05em;
+  padding: .8rem 1rem; cursor: pointer; width: 100%;
+  background: var(--action); color: #05230F; border: none; border-radius: 999px;
+  transition: transform .12s, background .16s;
+}
+.generate:hover:not(:disabled) { background: var(--action-deep); }
+.generate:active { transform: translateY(1px); }
+.generate:disabled { opacity: .4; cursor: not-allowed; }
+.hint { font-size: .74rem; color: var(--ink-faint); margin: 0; }
+
+/* ── stage ────────────────────────────────────────────────── */
+.stage { position: relative; min-height: 460px; display: flex; }
+.placeholder { flex: 1; border: 1px dashed var(--edge); display: grid; place-content: center; text-align: center; padding: 2rem; gap: .5rem; color: var(--ink-faint); }
+.placeholder .big { font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; text-transform: uppercase; color: var(--ink-dim); }
+
+.readout { flex: 1; background: var(--panel); border: 1px solid var(--edge); padding: 1.5rem; font-family: "Roboto Mono", ui-monospace, monospace; font-size: .8rem; color: #2ED9CC; display: flex; flex-direction: column; gap: .5rem; justify-content: center; }
+.readout div { opacity: 0; animation: linein .28s ease forwards; }
+.readout div::before { content: "▸ "; color: var(--ink-faint); }
+@keyframes linein { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+
+/* ── the sheet ────────────────────────────────────────────── */
+.sheet {
+  flex: 1; background: var(--paper); color: var(--sheet-ink);
+  padding: clamp(1.1rem,2.4vw,1.9rem); position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: .9rem;
+  animation: sheetin .5s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes sheetin { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+.sheet-head { display: flex; align-items: flex-start; gap: .75rem; border-bottom: 2px solid var(--series); padding-bottom: .55rem; }
+.sheet-head .market { font-family: "Barlow Condensed", sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(1.25rem,2.6vw,1.7rem); line-height: 1; white-space: nowrap; }
+.sheet-head .title { font-family: "Barlow Condensed", sans-serif; font-weight: 500; text-transform: uppercase; font-size: clamp(1.05rem,2.2vw,1.45rem); line-height: 1.05; color: var(--deep); border-left: 1px solid var(--rule); padding-left: .75rem; }
+.sheet-head .period { margin-left: auto; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.15rem; line-height: 1; color: var(--rule); font-weight: 600; white-space: nowrap; }
+.sheet-head .period b { display: block; color: var(--series); font-weight: 600; }
+
+.sheet-body { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,215px); gap: 1.25rem; align-items: stretch; flex: 1; }
+@media (max-width: 700px) { .sheet-body { grid-template-columns: minmax(0,1fr); } }
+
+.plot { position: relative; display: flex; flex-direction: column; justify-content: center; }
+/* Tiled attribution across the whole sheet. Any crop a screenshotter takes
+   still carries the mark, and it sits above the chart so it cannot be hidden
+   by the plot's own fills. */
+.wmark {
+  position: absolute; inset: 0; overflow: hidden; z-index: 3;
+  pointer-events: none; user-select: none; -webkit-user-select: none;
+}
+.wmark-grid {
+  position: absolute; inset: -40% -30%;
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr;
+  place-items: center; transform: rotate(-24deg);
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 600;
+  font-size: .95rem; letter-spacing: .12em; white-space: nowrap;
+}
+.wmark-dark  { color: var(--sheet-ink); opacity: .09; }
+.wmark-light { color: #FFFFFF; opacity: .15; }
+@media (max-width: 700px) {
+  .wmark-grid { grid-template-columns: repeat(3, 1fr); font-size: .82rem; }
+}
+svg.chart { display: block; width: 100%; height: auto; overflow: visible; }
+.grid line { stroke: var(--rule); stroke-width: 1; }
+.axis-lab { font-family: "Roboto", sans-serif; font-size: 11px; fill: var(--deep); font-weight: 700; font-variant-numeric: tabular-nums; }
+.year-lab { font-family: "Roboto", sans-serif; font-size: 11px; fill: var(--sheet-ink); font-weight: 700; }
+.series-line { fill: none; stroke: var(--series); stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.endpoint { fill: var(--series); }
+
+.readnote { font-size: .74rem; line-height: 1.5; margin-top: 1.1rem; }
+.readnote .cap { font-family: "Roboto Mono", monospace; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--deep); display: block; margin-bottom: .4rem; }
+.figure { font-family: "Barlow Condensed", sans-serif; font-size: 2.6rem; line-height: .9; font-variant-numeric: tabular-nums; }
+.figure small { display: block; font-family: "Roboto", sans-serif; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--deep); font-weight: 700; margin-top: .3rem; }
+
+.bars { display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.bar-row { display: grid; grid-template-columns: 44px minmax(0,1fr); align-items: stretch; gap: .6rem; flex: 1; }
+.bar-row .yr { align-self: center; font-size: .74rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.track { display: flex; min-height: 26px; max-height: 54px; background: var(--sheet-ink); overflow: hidden; }
+.track .on { background: var(--series); width: 0; transition: width .9s cubic-bezier(.2,.7,.3,1); display: flex; align-items: center; padding-left: .4rem; }
+.track .on span, .track .off span { font-size: .7rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.track .on span { color: var(--contrast); }
+.track .off { flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: .4rem; }
+.track .off span { color: #FFF; }
+.bar-key { display: flex; gap: 1rem; font-size: .68rem; font-weight: 700; margin-bottom: .5rem; }
+.bar-key i { width: 10px; height: 10px; display: inline-block; margin-right: .35rem; }
+
+.sheet-foot {
+  border-top: 1px solid var(--rule); padding-top: .55rem;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: .75rem 1.5rem; flex-wrap: wrap;
+}
+.foot-src { margin: 0; font-size: .6rem; line-height: 1.5; opacity: .62; max-width: 74ch; }
+.foot-brand { margin: 0; display: flex; align-items: center; gap: .55rem; flex-shrink: 0; }
+.foot-logo { display: block; height: 15px; width: auto; }
+.foot-brand span {
+  font-family: "Roboto Mono", ui-monospace, monospace; font-size: .58rem;
+  letter-spacing: .06em; color: var(--deep); font-weight: 500; white-space: nowrap;
+}
+
+/* ── gate ─────────────────────────────────────────────────── */
+/* The pitch is four short lines; the form is six fields. Giving the pitch the
+   wider column guaranteed a hole in it. Narrow rail for the copy, the width to
+   the form — then the two columns come out about the same depth on their own. */
+.gate { margin-top: 1rem; background: var(--ground-lift); border: 1px solid var(--edge); padding: 1.5rem; display: grid; grid-template-columns: minmax(0,330px) minmax(0,1fr); gap: 1.75rem; align-items: start; animation: sheetin .45s .15s cubic-bezier(.2,.7,.3,1) both; }
+@media (max-width: 760px) { .gate { grid-template-columns: minmax(0,1fr); } }
+.gate > div:first-child { display: flex; flex-direction: column; }
+.gate h2 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; font-size: 2rem; margin: 0 0 .5rem; line-height: .95; }
+.gate p { margin: 0 0 1.1rem; color: var(--ink-dim); font-size: .9rem; }
+/* the contents list carries the left rail's height instead of sitting as a
+   cramped block with dead space under it */
+.gate ul {
+  margin: 0 0 auto; padding: 0; list-style: none;
+  color: var(--ink-dim); font-size: .86rem; border-top: 1px solid var(--edge);
+}
+.gate ul li {
+  border-bottom: 1px solid var(--edge); padding: .8rem 0 .8rem 1.5rem;
+  position: relative;
+}
+.gate ul li::before {
+  content: "+"; position: absolute; left: .15rem; top: .8rem;
+  color: var(--action); font-weight: 700;
+}
+
+/* Two fields to a row, but only in the wide gate — the library page renders
+   the same form inside a 420px dialog, which must stay single file. */
+@media (min-width: 761px) {
+  .gate .gate-form { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem .9rem; }
+  .gate .gate-form > .frow { display: contents; }
+  .gate .gate-form > .consent,
+  .gate .gate-form > .err,
+  .gate .gate-form > button { grid-column: 1 / -1; }
+  .gate .gate-form > .consent { margin: .2rem 0 0; }
+  .gate .gate-form textarea { min-height: 100%; }
+}
+form { display: flex; flex-direction: column; gap: .5rem; }
+label { display: block; margin-bottom: .35rem; font-family: "Roboto Mono", monospace; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); }
+input { font: inherit; font-size: .9rem; padding: .55rem .65rem; color: var(--ink); width: 100%; background: var(--ground); border: 1px solid var(--edge); border-radius: 2px; }
+input:focus, select:focus, textarea:focus { border-color: #2ED9CC; outline: none; }
+select, textarea { font: inherit; font-size: .9rem; padding: .55rem .65rem; color: var(--ink); width: 100%; background: var(--ground); border: 1px solid var(--edge); border-radius: 2px; }
+textarea { resize: vertical; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+@media (max-width: 420px) { .frow { grid-template-columns: 1fr; } }
+.err { color: #FF8A9B; font-size: .74rem; min-height: 1.1em; }
+.sent { color: var(--action); font-size: 1rem; margin: 0 0 .9rem; }
+
+/* success state: the download is the payoff, so it gets the button treatment
+   the submit had, and the file it hands over is named underneath. */
+.dl-btn {
+  display: block; width: 100%; text-align: center; text-decoration: none;
+  padding: .8rem 1rem; animation: none;
+}
+.dl-note {
+  margin: .6rem 0 0; font-family: "Roboto Mono", ui-monospace, monospace;
+  font-size: .62rem; letter-spacing: .06em; color: var(--ink-faint); line-height: 1.5;
+}
+.dl-note::before { content: "PDF · "; color: var(--ink-dim); }
+/* Two deliberate notes side by side rather than one column hugging the left
+   edge with half the measure empty beside it. */
+.proto {
+  margin-top: 2.5rem; padding: 1rem 0 3.5rem; border-top: 1px solid var(--edge);
+  font-size: .72rem; color: var(--ink-faint);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: .6rem 2.5rem;
+}
+.proto p { margin: 0; max-width: 62ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ── shared extras ────────────────────────────────────────── */
+a.quiet { color: var(--action); text-decoration: none; }
+a.quiet:hover { text-decoration: underline; }
+
+/* ── entrance & micro-animation ───────────────────────────── */
+/* transform/opacity only — cheap to composite on mobile */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+h1 { animation: rise .55s cubic-bezier(.2,.7,.3,1) both; }
+.standfirst { animation: rise .55s .12s cubic-bezier(.2,.7,.3,1) both; }
+.picker { animation: rise .5s .22s cubic-bezier(.2,.7,.3,1) both; }
+.stage { animation: rise .5s .3s cubic-bezier(.2,.7,.3,1) both; }
+
+/* market chips pop in when the industry changes */
+@keyframes chippop { from { opacity: 0; transform: scale(.86); } to { opacity: 1; transform: none; } }
+.chips.fresh .chip { animation: chippop .3s cubic-bezier(.2,.7,.3,1) both; animation-delay: calc(var(--i) * 28ms); }
+
+/* the sheet's header rule draws itself, like a pen stroke */
+.sheet-head { border-bottom: none; position: relative; padding-bottom: .55rem; }
+.sheet-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: var(--series); transform-origin: left; animation: rulegrow .7s .15s cubic-bezier(.2,.7,.3,1) both; }
+@keyframes rulegrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.wmark-dark  { animation: wmarkD .8s .55s ease both; }
+.wmark-light { animation: wmarkL .8s .55s ease both; }
+@keyframes wmarkD { from { opacity: 0; } to { opacity: .09; } }
+@keyframes wmarkL { from { opacity: 0; } to { opacity: .15; } }
+
+/* the picker's Generate breathes once it's armed — only that one. The same
+   class is reused for submit buttons and download links, and a page of six
+   report cards all pulsing in step reads as a glitch, not an invitation. */
+@keyframes armed { 0%,100% { transform: none; } 50% { transform: scale(1.015); } }
+.picker .generate:not(:disabled) { animation: armed 2.6s ease-in-out infinite; }
+.picker .generate:disabled { animation: none; }
+
+/* coverage section */
+.coverage { margin-top: 3rem; border-top: 1px solid var(--edge); padding-top: 1.6rem; }
+.coverage h2 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; font-size: 1.6rem; margin: 0 0 1rem; }
+.coverage h3 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; font-size: 1.05rem; margin: 0 0 .4rem; color: #2ED9CC; letter-spacing: .04em; }
+.cov-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.coverage p { margin: 0; font-size: .85rem; line-height: 1.65; color: var(--ink-dim); max-width: 62ch; }
+.coverage em { font-style: normal; color: var(--ink); }
+.cov-note { margin-top: 1.2rem !important; font-size: .78rem !important; color: var(--ink-faint) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  h1, .standfirst, .picker, .stage, .chips.fresh .chip, .sheet-head::after, .wmark-grid, .picker .generate:not(:disabled) {
+    animation: none !important; opacity: 1; transform: none;
+  }
+  .wmark-dark { opacity: .09; }
+  .wmark-light { opacity: .15; }
+}
+
+/* ── idle state: a ghost report that keeps typesetting itself ── */
+.ghost {
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+  border: 1px solid var(--edge); background: rgba(255,255,255,.025);
+  padding: clamp(1.1rem,2.4vw,1.9rem); position: relative;
+}
+.ghost-head { display: flex; align-items: baseline; gap: .75rem; min-height: 2rem; }
+.ghost-labels { position: relative; flex: 1; height: 1.6rem; }
+.ghost-label {
+  position: absolute; inset: 0; opacity: 0;
+  font-family: "Barlow Condensed", sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: clamp(1.15rem,2.4vw,1.55rem); color: var(--ink-dim); white-space: nowrap;
+  animation: glabel var(--cycle) linear infinite; animation-delay: var(--d);
+}
+.ghost-label b { color: var(--gcol); font-weight: 500; }
+@keyframes glabel {
+  0% { opacity: 0; transform: translateY(6px); }
+  3%, 21% { opacity: 1; transform: none; }
+  25%, 100% { opacity: 0; transform: none; }
+}
+svg.ghost-chart { display: block; width: 100%; height: auto; margin-top: .6rem; }
+.gpath {
+  fill: none; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round;
+  stroke-dasharray: var(--len); stroke-dashoffset: var(--len); opacity: 0;
+  animation: gdraw var(--cycle) linear infinite; animation-delay: var(--d);
+}
+@keyframes gdraw {
+  0% { stroke-dashoffset: var(--len); opacity: 0; }
+  2% { opacity: .85; }
+  20% { stroke-dashoffset: 0; opacity: .85; }
+  25%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+.ghost-grid line { stroke: var(--edge); stroke-width: 1; }
+.ghost-cta { margin: 1.1rem 0 0; font-size: .86rem; color: var(--ink-dim); }
+.ghost-cta b { color: var(--action); }
+.ghost-cta .go { display: inline-block; animation: nudge 2.2s ease-in-out infinite; margin-right: .45rem; }
+@keyframes nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-5px); } }
+@media (max-width: 1000px) { .ghost-cta .go { animation: nudgeup 2.2s ease-in-out infinite; } }
+@keyframes nudgeup { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@media (prefers-reduced-motion: reduce) {
+  .gpath { animation: none; stroke-dashoffset: 0; opacity: 0; }
+  .gpath:first-of-type { opacity: .85; }
+  .ghost-label { animation: none; }
+  .ghost-label[data-first] { opacity: 1; }
+  .ghost-cta .go { animation: none; }
+}
+
+.consent { font-size: .68rem; line-height: 1.5; color: var(--ink-faint); margin: .2rem 0 0; }
+.consent a { color: var(--ink-dim); }
+
+/* ── demo dialog — mirrors the main site's Request-a-demo form ─────── */
+dialog#demobox {
+  background: var(--ground-lift); border: 1px solid var(--edge); color: var(--ink);
+  padding: 1.6rem; max-width: 480px; width: calc(100vw - 2rem); border-radius: 4px;
+  /* The dialog scrolls — NOT the form wrapper. HubSpot's embed measures its
+     container and sizes the iframe to match, and that iframe is scrolling="no".
+     Constraining the wrapper therefore made HubSpot render a 488px iframe for a
+     959px form and clip the submit button off the bottom with no way to reach
+     it. Leaving the wrapper unconstrained lets HubSpot size the iframe to the
+     full form; the overflow is handled out here instead. */
+  max-height: 88vh; overflow-y: auto; overscroll-behavior: contain;
+}
+dialog#demobox::backdrop { background: rgba(5,3,20,.75); }
+dialog#demobox h2 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; font-size: 1.7rem; margin: 0 0 .3rem; }
+dialog#demobox .which { font-size: .85rem; color: var(--ink-dim); margin: 0 0 1.1rem; }
+dialog#demobox .close { position: sticky; top: 0; float: right; z-index: 2; background: none; border: none; color: var(--ink-faint); font-size: 1.1rem; cursor: pointer; padding: 0 0 .4rem .6rem; }
+/* HubSpot injects its own light-theme markup; keep it readable on our ground.
+   Deliberately no max-height/overflow here — see the note on the dialog. */
+dialog#demobox .hs-form-frame { background: #FFF; border-radius: 3px; padding: .5rem; }
+dialog#demobox .hs-form-frame iframe { display: block; width: 100%; border: 0; }
