@@ -1,0 +1,3 @@
+[submodule "vendor/mai-report-generator"]
+	path = vendor/mai-report-generator
+	url = https://github.com/brownkun/mai-report-generator.git
