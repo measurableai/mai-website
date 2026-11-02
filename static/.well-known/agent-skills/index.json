@@ -1,4 +1,11 @@
 {
   "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
-  "skills": []
+  "skills": [
+    {
+      "name": "measurable-ai-reports",
+      "type": "skill-md",
+      "description": "Find Measurable AI's research reports on consumer spending in emerging markets, and the right way to contact the company.",
+      "url": "https://www.measurable.ai/.well-known/agent-skills/measurable-ai-reports/SKILL.md"
+    }
+  ]
 }

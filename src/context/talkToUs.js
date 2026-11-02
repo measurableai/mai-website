@@ -3,6 +3,7 @@ import React, {
   useMemo,
   useReducer,
   useCallback,
+  useEffect,
   useState,
 } from "react"
 
@@ -46,6 +47,13 @@ export const TalkToUsProvider = ({ children }) => {
     dispatch({ type: CLOSE })
   }, [])
   const [isOpen, setIsOpen] = useState(false)
+  useEffect(() => {
+    // A query param rather than a hash, as the intl redirect drops the hash
+    const params = new URLSearchParams(window.location.search)
+    if (params.has("contact")) {
+      setIsOpen(true)
+    }
+  }, [])
   const talkToUsContext = useMemo(
     () => ({
       state: state,

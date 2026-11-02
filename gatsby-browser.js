@@ -40,15 +40,14 @@ export const onClientEntry = async () => {
 
   config({ ssrFadeout: true })
 
-  if (
-    typeof navigator !== "undefined" &&
-    navigator.modelContext &&
-    typeof navigator.modelContext.registerTool === "function"
-  ) {
+  // Older Chrome builds expose the API on navigator instead of document
+  const modelContext = document.modelContext || navigator.modelContext
+
+  if (modelContext && typeof modelContext.registerTool === "function") {
     const controller = new AbortController()
     const signal = controller.signal
 
-    navigator.modelContext.registerTool(
+    modelContext.registerTool(
       {
         name: "browse-reports",
         description:
@@ -65,7 +64,7 @@ export const onClientEntry = async () => {
       { signal }
     )
 
-    navigator.modelContext.registerTool(
+    modelContext.registerTool(
       {
         name: "request-demo",
         description:
@@ -75,14 +74,14 @@ export const onClientEntry = async () => {
           properties: {},
         },
         execute: async () => {
-          window.location.href = "/#contact"
-          return { success: true, url: "https://www.measurable.ai/#contact" }
+          window.location.href = "/?contact=1"
+          return { success: true, url: "https://www.measurable.ai/?contact=1" }
         },
       },
       { signal }
     )
 
-    navigator.modelContext.registerTool(
+    modelContext.registerTool(
       {
         name: "view-jobs",
         description: "View open job positions at Measurable AI.",

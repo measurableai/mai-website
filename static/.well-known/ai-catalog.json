@@ -1,0 +1,21 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Measurable AI",
+    "identifier": "https://www.measurable.ai"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:www.measurable.ai:skills:measurable-ai-reports",
+      "displayName": "Measurable AI reports",
+      "type": "text/markdown",
+      "url": "https://www.measurable.ai/.well-known/agent-skills/measurable-ai-reports/SKILL.md",
+      "representativeQueries": [
+        "Food delivery market reports for emerging markets",
+        "Ride-hailing market data for Asia and the Americas",
+        "Online delivery trends in the Middle East",
+        "How to request a demo from Measurable AI"
+      ]
+    }
+  ]
+}
