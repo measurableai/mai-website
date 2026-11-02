@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react"
+import React, { forwardRef, useEffect, useState } from "react"
 import { Link } from "gatsby-plugin-intl"
 import { dropdown, listItem } from "./style"
 
@@ -9,6 +9,23 @@ const ListItem = forwardRef(({ innerRef, to, children, ...props }, ref) => (
 ))
 
 const AnnualReportDropdown = () => {
+  const [showLinkVersion, setShowLinkVersion] = useState(false)
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    setShowLinkVersion(params.get("test") === "true")
+  }, [])
+
+  if (showLinkVersion) {
+    return (
+      <div css={dropdown}>
+        <button>
+          <a href="/annualreportgenerator">Get Annual Report</a>
+        </button>
+      </div>
+    )
+  }
+
   return (
     <div css={dropdown}>
       <button>Get Annual Report</button>

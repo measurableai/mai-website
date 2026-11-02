@@ -67,6 +67,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "sync-static-sites": "node scripts/sync-static-sites.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
@@ -86,7 +87,12 @@
       "prettier --write",
       "git add"
     ],
-    "*.{js,jsx}": [
+    "{src,scripts}/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --max-warnings=0 --ignore-pattern '!.eslintrc.js' --fix",
+      "git add"
+    ],
+    "{.eslintrc,gatsby-browser,gatsby-config,gatsby-node,gatsby-ssr}.js": [
       "prettier --write",
       "eslint --max-warnings=0 --ignore-pattern '!.eslintrc.js' --fix",
       "git add"

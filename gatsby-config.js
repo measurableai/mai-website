@@ -123,7 +123,7 @@ module.exports = {
           ? [`en-US`, `zh-HK`, `zh-CN`]
           : [`en-US`],
         defaultLanguage: `en-US`,
-        redirect: true,
+        redirect: false,
         redirectComponent: `${__dirname}/src/components/seo.js`,
       },
     },

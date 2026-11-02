@@ -28,7 +28,7 @@ exports.onPostBuild = ({ reporter }) => {
     if (!content.includes("Content-Signal")) {
       content = content.replace(
         /^Allow: .*$/m,
-        "$&\nContent-Signal: ai-train=no, search=yes, ai-input=no"
+        "$&\nContent-Signal: ai-train=yes, search=yes, ai-input=yes"
       )
       fs.writeFileSync(robotsPath, content)
       reporter.info("Added Content-Signal directives to robots.txt")

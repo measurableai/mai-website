@@ -56,6 +56,11 @@ export const dropdown = () => css`
   & > button + div:hover {
     grid-template-rows: 1fr;
   }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
 `
 
 export const listItem = () => css`
