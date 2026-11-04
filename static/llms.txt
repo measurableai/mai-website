@@ -1,0 +1,25 @@
+# Measurable AI
+
+> Consumer insights for emerging markets based on e-receipt data, including food delivery, ride-hailing, and e-commerce.
+
+Report landing pages contain public summaries and request forms. Gated report requests require user details and explicit user approval before submission.
+Obtain the user's explicit approval of the details being sent before submitting a contact form. Public pages do not grant access to private datasets.
+
+## Overview
+
+- [Company overview](https://www.measurable.ai/index.md): Concise Markdown overview of the company, research, and contact options.
+- [Homepage](https://www.measurable.ai/): Public company website and product coverage.
+
+## Research
+
+- [Report directory and agent guidance](https://www.measurable.ai/.well-known/agent-skills/measurable-ai-reports/SKILL.md): Individual report links, coverage summaries, and request guidance.
+- [All reports](https://www.measurable.ai/all-reports): Public research landing page and report request form.
+- [Blog](https://blog.measurable.ai/): Data insights and articles.
+
+## Company and contact
+
+- [Sales and demos](https://www.measurable.ai/?contact=1): Contact form for inquiries.
+- [Press](https://www.measurable.ai/press): Journalist information and press contact.
+- [Jobs](https://www.measurable.ai/jobs): Open positions and application contact.
+- [Privacy policy](https://www.measurable.ai/privacyPolicy): Personal information policy.
+- [Terms of use](https://www.measurable.ai/termsOfUse): Website terms.
