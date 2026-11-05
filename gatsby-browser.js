@@ -10,25 +10,6 @@ import config from "react-reveal/globals"
 
 import theme from "./src/theme"
 
-export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
-  setPostBodyComponents(
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js.hs-scripts.com/20168923.js"
-    />
-  )
-
-  setPostBodyComponents(
-    <script
-      src="https://js-na2.hsforms.net/forms/embed/20168923.js"
-      defer
-    ></script>
-  )
-}
-
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>
 )

@@ -102,7 +102,7 @@ module.exports = {
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
         useACF: false,
-        includedRoutes: ["**/categories", "**/posts", "**/media"],
+        includedRoutes: ["/wp/v2/categories", "/wp/v2/posts", "/wp/v2/media"],
       },
     },
     `gatsby-plugin-emotion`,
