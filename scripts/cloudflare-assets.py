@@ -32,6 +32,7 @@ def asset_hash(content, path):
 
 def write_json(path, value):
     with open(path, "w", opener=lambda name, flags: os.open(name, flags, 0o600)) as output:
+        os.fchmod(output.fileno(), 0o600)
         json.dump(value, output, indent=2, sort_keys=True)
         output.write("\n")
 

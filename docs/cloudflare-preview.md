@@ -11,11 +11,20 @@ Use Node 12, as required by `package.json`. Run this from the repository root
 with Docker available:
 
 ```sh
-docker run --rm --platform linux/amd64 -v "$PWD:/app" -w /app node:12.22.12-bullseye sh -ec '
+docker run --rm --platform linux/arm64 -v "$PWD:/app" \
+  -v mai-preview-arm-deps:/app/node_modules \
+  -v mai-preview-arm-cache:/app/.cache \
+  -w /app node:12.22.12-bullseye sh -ec '
+  sed -i s,http://,https://,g /etc/apt/sources.list
+  apt-get update
+  apt-get install -y libcairo2-dev libpango1.0-dev libjpeg-dev librsvg2-dev
   yarn install --frozen-lockfile --non-interactive
-  GATSBY_TELEMETRY_DISABLED=1 yarn build
+  GATSBY_TELEMETRY_DISABLED=1 GATSBY_CPU_COUNT=2 yarn build
 '
 ```
+
+This recipe uses native ARM on Apple Silicon. Node 12 under x64 emulation
+exited with a segmentation fault during compilation on this machine.
 
 The build produces `public/`. Keep the existing production canonical URLs,
 Open Graph URLs, sitemap URLs, and discovery metadata. This preview tests the
@@ -64,11 +73,13 @@ and Workers Custom Domains access for the preview hostname. Follow the
    that value and copy `assets.config` and `compatibility_date` from
    `cloudflare-preview.json` into the metadata part, together with its
    `observability` settings. Add `assets.config._headers`
-   as a string containing `public/_headers`, followed by this preview-only block:
+   as a string containing `public/_headers`. Insert the preview-only header
+   into its existing `/*` block:
 
    ```text
    /*
      X-Robots-Tag: noindex
+     Link: <preserve the existing Link value>
    ```
 
    `_headers` is deployment metadata, not an uploaded public asset. Preserve the
