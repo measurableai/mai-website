@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import { useTheme } from "emotion-theming"
 
@@ -33,11 +33,17 @@ const Callback = ({ onSubmit }) => {
   const theme = useTheme()
   const intl = useIntl()
 
-  let newForm = true
-  if (typeof window !== "undefined") {
+  // Decide which form to show only after mount. The HubSpot embed script
+  // injects an iframe into .hs-form-frame; if that div is part of the SSR
+  // HTML, React's hydration strips the injected iframe on first page load.
+  // Rendering it client-side only lets HubSpot pick it up as a new element.
+  const [mounted, setMounted] = useState(false)
+  const [newForm, setNewForm] = useState(true)
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    newForm = params.get("form") !== "n"
-  }
+    setNewForm(params.get("form") !== "n")
+    setMounted(true)
+  }, [])
 
   const formOptions = useMemo(
     () => ({
@@ -57,6 +63,10 @@ const Callback = ({ onSubmit }) => {
     formOptions,
     onSubmit
   )
+
+  if (!mounted) {
+    return null
+  }
 
   if (newForm) {
     return (
