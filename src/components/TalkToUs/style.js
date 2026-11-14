@@ -51,7 +51,9 @@ export const popoverHeader = theme => css`
   letter-spacing: 1.2px;
   text-align: center;
   color: ${theme.colors.purples.normal};
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   padding: 1rem 0;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
