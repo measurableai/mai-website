@@ -9,6 +9,7 @@ import { ThemeProvider } from "emotion-theming"
 import config from "react-reveal/globals"
 
 import theme from "./src/theme"
+import { DEMO_FORM_ID } from "./src/hubspot"
 
 export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   setPostBodyComponents(
@@ -39,6 +40,15 @@ export const onClientEntry = async () => {
   }
 
   config({ ssrFadeout: true })
+
+  window.addEventListener("hs-form-event:on-submission:success", event => {
+    if (
+      event.detail?.formId === DEMO_FORM_ID &&
+      typeof window.gtag === "function"
+    ) {
+      window.gtag("event", "generate_lead", { form_name: "mai_request_demo" })
+    }
+  })
 
   // Older Chrome builds expose the API on navigator instead of document
   const modelContext = document.modelContext || navigator.modelContext
