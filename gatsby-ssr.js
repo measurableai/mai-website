@@ -12,7 +12,25 @@ import theme from "./src/theme"
 
 global.DOMParser = new jsdom.JSDOM().window.DOMParser
 
-export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
+export const onRenderBody = (
+  { setHeadComponents, setPostBodyComponents },
+  pluginOptions
+) => {
+  setHeadComponents([
+    <link
+      key="ai-catalog"
+      rel="ai-catalog"
+      href="/.well-known/ai-catalog.json"
+      type="application/json"
+    />,
+    <link
+      key="agent-skills"
+      rel="describedby"
+      href="/.well-known/agent-skills/index.json"
+      type="application/json"
+    />,
+  ])
+
   setPostBodyComponents(
     <script
       type="text/javascript"
