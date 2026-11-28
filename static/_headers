@@ -8,3 +8,9 @@
 /.well-known/agent-skills/index.json
   Content-Type: application/json
   Access-Control-Allow-Origin: *
+
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
